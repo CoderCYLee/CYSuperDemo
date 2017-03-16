@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E70616C51E795BF200762B56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616C41E795BF200762B56 /* main.m */; };
-		E70616C81E795BF200762B56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616C71E795BF200762B56 /* AppDelegate.m */; };
-		E70616CB1E795BF200762B56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616CA1E795BF200762B56 /* ViewController.m */; };
-		E70616CE1E795BF200762B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70616CC1E795BF200762B56 /* Main.storyboard */; };
+		C01E983CCF629EC207CFB2C4 /* libPods-CYSuperDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */; };
 		E70616D01E795BF200762B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70616CF1E795BF200762B56 /* Assets.xcassets */; };
 		E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70616D11E795BF200762B56 /* LaunchScreen.storyboard */; };
 		E70616DE1E795BF200762B56 /* CYSuperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616DD1E795BF200762B56 /* CYSuperDemoTests.m */; };
 		E70616E91E795BF200762B56 /* CYSuperDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */; };
+		E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */; };
+		E7688E311E7A48DA0064CD69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2D1E7A48DA0064CD69 /* main.m */; };
+		E7688E371E7A494A0064CD69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E361E7A494A0064CD69 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYSuperDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF91AFD3609077EE9187046 /* Pods-CYSuperDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E70616C01E795BF200762B56 /* CYSuperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYSuperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E70616C41E795BF200762B56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E70616C61E795BF200762B56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E70616C71E795BF200762B56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E70616C91E795BF200762B56 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E70616CA1E795BF200762B56 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E70616CD1E795BF200762B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E70616CF1E795BF200762B56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E70616D21E795BF200762B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E70616D41E795BF200762B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +47,12 @@
 		E70616E41E795BF200762B56 /* CYSuperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYSuperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYSuperDemoUITests.m; sourceTree = "<group>"; };
 		E70616EA1E795BF200762B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7688E2B1E7A48DA0064CD69 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7688E2D1E7A48DA0064CD69 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7688E351E7A494A0064CD69 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E7688E361E7A494A0064CD69 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01E983CCF629EC207CFB2C4 /* libPods-CYSuperDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3582003E5D7A95955E54D1AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */,
+				4CF91AFD3609077EE9187046 /* Pods-CYSuperDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E70616B71E795BF200762B56 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,8 @@
 				E70616DC1E795BF200762B56 /* CYSuperDemoTests */,
 				E70616E71E795BF200762B56 /* CYSuperDemoUITests */,
 				E70616C11E795BF200762B56 /* Products */,
+				3582003E5D7A95955E54D1AF /* Pods */,
+				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +123,9 @@
 		E70616C21E795BF200762B56 /* CYSuperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E70616C61E795BF200762B56 /* AppDelegate.h */,
-				E70616C71E795BF200762B56 /* AppDelegate.m */,
-				E70616C91E795BF200762B56 /* ViewController.h */,
-				E70616CA1E795BF200762B56 /* ViewController.m */,
-				E70616CC1E795BF200762B56 /* Main.storyboard */,
-				E70616CF1E795BF200762B56 /* Assets.xcassets */,
-				E70616D11E795BF200762B56 /* LaunchScreen.storyboard */,
-				E70616D41E795BF200762B56 /* Info.plist */,
+				E7688E291E7A48DA0064CD69 /* Classes */,
+				E7688E341E7A49150064CD69 /* Utility */,
+				E7688E331E7A49150064CD69 /* Resource */,
 				E70616C31E795BF200762B56 /* Supporting Files */,
 			);
 			path = CYSuperDemo;
@@ -117,7 +134,9 @@
 		E70616C31E795BF200762B56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E70616C41E795BF200762B56 /* main.m */,
+				E70616CF1E795BF200762B56 /* Assets.xcassets */,
+				E70616D11E795BF200762B56 /* LaunchScreen.storyboard */,
+				E70616D41E795BF200762B56 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +159,40 @@
 			path = CYSuperDemoUITests;
 			sourceTree = "<group>";
 		};
+		E7688E291E7A48DA0064CD69 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E7688E2A1E7A48DA0064CD69 /* Other */,
+				E7688E351E7A494A0064CD69 /* ViewController.h */,
+				E7688E361E7A494A0064CD69 /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E7688E2A1E7A48DA0064CD69 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E7688E2B1E7A48DA0064CD69 /* AppDelegate.h */,
+				E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */,
+				E7688E2D1E7A48DA0064CD69 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E7688E331E7A49150064CD69 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E7688E341E7A49150064CD69 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E70616ED1E795BF200762B56 /* Build configuration list for PBXNativeTarget "CYSuperDemo" */;
 			buildPhases = (
+				19CAEBC815547DAC6D831513 /* [CP] Check Pods Manifest.lock */,
 				E70616BC1E795BF200762B56 /* Sources */,
 				E70616BD1E795BF200762B56 /* Frameworks */,
 				E70616BE1E795BF200762B56 /* Resources */,
+				95F3204C4B069FDD75391222 /* [CP] Embed Pods Frameworks */,
+				A4EC3D04773514EEF87F5562 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,7 +307,6 @@
 			files = (
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
-				E70616CE1E795BF200762B56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +326,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19CAEBC815547DAC6D831513 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95F3204C4B069FDD75391222 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4EC3D04773514EEF87F5562 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E70616BC1E795BF200762B56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70616CB1E795BF200762B56 /* ViewController.m in Sources */,
-				E70616C81E795BF200762B56 /* AppDelegate.m in Sources */,
-				E70616C51E795BF200762B56 /* main.m in Sources */,
+				E7688E371E7A494A0064CD69 /* ViewController.m in Sources */,
+				E7688E311E7A48DA0064CD69 /* main.m in Sources */,
+				E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +417,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E70616CC1E795BF200762B56 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E70616CD1E795BF200762B56 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E70616D11E795BF200762B56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -423,6 +518,7 @@
 		};
 		E70616EE1E795BF200762B56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
@@ -435,6 +531,7 @@
 		};
 		E70616EF1E795BF200762B56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CF91AFD3609077EE9187046 /* Pods-CYSuperDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
@@ -514,6 +611,7 @@
 				E70616EF1E795BF200762B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E70616F01E795BF200762B56 /* Build configuration list for PBXNativeTarget "CYSuperDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +620,7 @@
 				E70616F21E795BF200762B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E70616F31E795BF200762B56 /* Build configuration list for PBXNativeTarget "CYSuperDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +629,7 @@
 				E70616F51E795BF200762B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
