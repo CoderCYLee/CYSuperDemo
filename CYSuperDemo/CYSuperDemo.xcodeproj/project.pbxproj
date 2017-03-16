@@ -36,6 +36,7 @@
 		E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E6E1E7A4B400064CD69 /* CYHeadImageToBig.m */; };
 		E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E701E7A4B400064CD69 /* CYTitleButton.m */; };
 		E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */; };
+		E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		E7688E701E7A4B400064CD69 /* CYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTitleButton.m; sourceTree = "<group>"; };
 		E7688E891E7A4C780064CD69 /* CYNetworkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNetworkUtility.h; sourceTree = "<group>"; };
 		E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNetworkUtility.m; sourceTree = "<group>"; };
+		E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAudioUtility.h; sourceTree = "<group>"; };
+		E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAudioUtility.m; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,6 +285,8 @@
 				E7688E401E7A4B400064CD69 /* CYTopWindow.m */,
 				E7688E891E7A4C780064CD69 /* CYNetworkUtility.h */,
 				E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */,
+				E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */,
+				E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */,
 				E7688E411E7A4B400064CD69 /* Foundation */,
 				E7688E4A1E7A4B400064CD69 /* Foundation+Log.m */,
 				E7688E4B1E7A4B400064CD69 /* UIButton+CYTouch.h */,
@@ -559,6 +564,7 @@
 				E7688E721E7A4B400064CD69 /* CYKit.m in Sources */,
 				E7688E761E7A4B400064CD69 /* NSObject+CY.m in Sources */,
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
+				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
 				E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

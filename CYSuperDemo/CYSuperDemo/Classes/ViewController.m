@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CYAudioUtility.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    [[[CYAudioUtility alloc] init] playAduio:@"8436" ext:@"wav"];
+    
+    
 }
 
 
