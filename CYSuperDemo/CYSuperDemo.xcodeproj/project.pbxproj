@@ -37,6 +37,7 @@
 		E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E701E7A4B400064CD69 /* CYTitleButton.m */; };
 		E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */; };
 		E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */; };
+		E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91621E9CDE8D0033E336 /* UIControl+CY.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNetworkUtility.m; sourceTree = "<group>"; };
 		E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAudioUtility.h; sourceTree = "<group>"; };
 		E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAudioUtility.m; sourceTree = "<group>"; };
+		E78F91611E9CDE8D0033E336 /* UIControl+CY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CY.h"; sourceTree = "<group>"; };
+		E78F91621E9CDE8D0033E336 /* UIControl+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CY.m"; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				E7688E3C1E7A4B400064CD69 /* CYExtension.h */,
+				E7688E411E7A4B400064CD69 /* Foundation */,
+				E7688E4D1E7A4B400064CD69 /* UIKit */,
 				E7688E3A1E7A4B400064CD69 /* CALayer+CY.h */,
 				E7688E3B1E7A4B400064CD69 /* CALayer+CY.m */,
 				E7688E3D1E7A4B400064CD69 /* CYKit.h */,
@@ -287,11 +292,9 @@
 				E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */,
 				E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */,
 				E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */,
-				E7688E411E7A4B400064CD69 /* Foundation */,
 				E7688E4A1E7A4B400064CD69 /* Foundation+Log.m */,
 				E7688E4B1E7A4B400064CD69 /* UIButton+CYTouch.h */,
 				E7688E4C1E7A4B400064CD69 /* UIButton+CYTouch.m */,
-				E7688E4D1E7A4B400064CD69 /* UIKit */,
 				E7688E621E7A4B400064CD69 /* ValueChecker.h */,
 			);
 			path = Category;
@@ -319,6 +322,8 @@
 				E7688E4F1E7A4B400064CD69 /* UIAlertController+CY.m */,
 				E7688E501E7A4B400064CD69 /* UIButton+CY.h */,
 				E7688E511E7A4B400064CD69 /* UIButton+CY.m */,
+				E78F91611E9CDE8D0033E336 /* UIControl+CY.h */,
+				E78F91621E9CDE8D0033E336 /* UIControl+CY.m */,
 				E7688E521E7A4B400064CD69 /* UIButton+TapScope.h */,
 				E7688E531E7A4B400064CD69 /* UIButton+TapScope.m */,
 				E7688E541E7A4B400064CD69 /* UIColor+CY.h */,
@@ -566,6 +571,7 @@
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
 				E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */,
+				E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
