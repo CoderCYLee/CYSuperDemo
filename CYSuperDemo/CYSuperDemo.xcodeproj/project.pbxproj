@@ -12,6 +12,7 @@
 		E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70616D11E795BF200762B56 /* LaunchScreen.storyboard */; };
 		E70616DE1E795BF200762B56 /* CYSuperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616DD1E795BF200762B56 /* CYSuperDemoTests.m */; };
 		E70616E91E795BF200762B56 /* CYSuperDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */; };
+		E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */; };
 		E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */; };
 		E7688E311E7A48DA0064CD69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2D1E7A48DA0064CD69 /* main.m */; };
 		E7688E371E7A494A0064CD69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E361E7A494A0064CD69 /* ViewController.m */; };
@@ -70,6 +71,8 @@
 		E70616E41E795BF200762B56 /* CYSuperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYSuperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYSuperDemoUITests.m; sourceTree = "<group>"; };
 		E70616EA1E795BF200762B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CYDisplay.h"; sourceTree = "<group>"; };
+		E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYDisplay.m"; sourceTree = "<group>"; };
 		E7688E2B1E7A48DA0064CD69 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E7688E2D1E7A48DA0064CD69 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				E7688E5B1E7A4B400064CD69 /* UILabel+CY.m */,
 				E7688E5E1E7A4B400064CD69 /* UIView+CY.h */,
 				E7688E5F1E7A4B400064CD69 /* UIView+CY.m */,
+				E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */,
+				E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				E7688E861E7A4B400064CD69 /* CY01BorderLineView.m in Sources */,
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
+				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E7688E371E7A494A0064CD69 /* ViewController.m in Sources */,

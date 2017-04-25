@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 Coder. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 // 获取一个字符串转换为URL
