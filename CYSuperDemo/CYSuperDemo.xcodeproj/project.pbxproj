@@ -38,6 +38,7 @@
 		E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E701E7A4B400064CD69 /* CYTitleButton.m */; };
 		E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */; };
 		E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */; };
+		E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7722E581F42D64300BBE9B6 /* CYMapManager.m */; };
 		E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91621E9CDE8D0033E336 /* UIControl+CY.m */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNetworkUtility.m; sourceTree = "<group>"; };
 		E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAudioUtility.h; sourceTree = "<group>"; };
 		E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAudioUtility.m; sourceTree = "<group>"; };
+		E7722E571F42D64300BBE9B6 /* CYMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMapManager.h; sourceTree = "<group>"; };
+		E7722E581F42D64300BBE9B6 /* CYMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMapManager.m; sourceTree = "<group>"; };
 		E78F91611E9CDE8D0033E336 /* UIControl+CY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CY.h"; sourceTree = "<group>"; };
 		E78F91621E9CDE8D0033E336 /* UIControl+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CY.m"; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 		E7688E641E7A4B400064CD69 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E7722E571F42D64300BBE9B6 /* CYMapManager.h */,
+				E7722E581F42D64300BBE9B6 /* CYMapManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 			files = (
 				E7688E861E7A4B400064CD69 /* CY01BorderLineView.m in Sources */,
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
+				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
 				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,

@@ -139,4 +139,23 @@
 /** Is Valid URL */
 - (BOOL)isValidUrl;
 
+/**
+ *  计算文本的高度
+ *
+ *  @param font  字体
+ *  @param width 固定的宽度
+ *
+ *  @return 高度
+ */
+- (CGFloat)heightWithLabelFont:(UIFont *)font withLabelWidth:(CGFloat)width;
+
+/**
+ *  计算文本的宽度
+ *
+ *  @param font 字体
+ *
+ *  @return 宽度
+ */
+- (CGFloat)widthWithLabelFont:(UIFont *)font;
+
 @end
