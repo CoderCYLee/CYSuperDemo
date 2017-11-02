@@ -13,7 +13,7 @@
 /**
  *  比较字符串 相同返回YES,不同返回NO
  */
--(BOOL)containsString:(NSString *)string
+- (BOOL)containsString:(NSString *)string
 {
     for (NSString *str in self) {
         if ([str isEqualToString:string]) {
@@ -28,8 +28,9 @@
  */
 - (id)safeObjectAtIndex:(NSUInteger)index
 {
-    if ( index >= self.count )
+    if ( index >= self.count ) {
         return nil;
+    }
     
     return [self objectAtIndex:index];
 }

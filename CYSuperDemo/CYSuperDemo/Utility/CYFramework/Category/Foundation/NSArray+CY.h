@@ -13,11 +13,17 @@
 /**
  *  比较字符串 相同返回YES,不同返回NO
  */
--(BOOL)containsString:(NSString*)string;
+- (BOOL)containsString:(NSString*)string;
 
 /**
  *  安全数组中的元素
  */
 - (id)safeObjectAtIndex:(NSUInteger)index;
+
+- (id)deepCopy;
+- (id)mutableDeepCopy;
+
+- (id)trueDeepCopy;
+- (id)trueDeepMutableCopy;
 
 @end
