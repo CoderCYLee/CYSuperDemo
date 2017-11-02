@@ -2,7 +2,7 @@
 //  UIImage+Extension.m
 //  WeiFantasy
 //
-//  Created by 李春阳 on 14/9/27.
+//  Created by cy on 14/9/27.
 //  Copyright (c) 2014年 Coder. All rights reserved.
 //
 

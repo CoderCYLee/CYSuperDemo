@@ -2,7 +2,7 @@
 //  UILabel+CY.h
 //  YinJi
 //
-//  Created by 李春阳 on 15/12/31.
+//  Created by cy on 15/12/31.
 //  Copyright © 2015年 FutureStar. All rights reserved.
 //
 

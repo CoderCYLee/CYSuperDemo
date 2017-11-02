@@ -2,7 +2,7 @@
 //  CYKit.h
 //  AFNDownloadZipFile
 //
-//  Created by 李春阳 on 15/10/22.
+//  Created by cy on 15/10/22.
 //  Copyright © 2015年 Cyrill. All rights reserved.
 //
 

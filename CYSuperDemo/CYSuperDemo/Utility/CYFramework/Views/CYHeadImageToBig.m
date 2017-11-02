@@ -2,7 +2,7 @@
 //  CYHeadImageToBig.m
 //  头像放大
 //
-//  Created by 李春阳 on 15/6/29.
+//  Created by cy on 15/6/29.
 //  Copyright (c) 2015年 Cyrill. All rights reserved.
 //
 
