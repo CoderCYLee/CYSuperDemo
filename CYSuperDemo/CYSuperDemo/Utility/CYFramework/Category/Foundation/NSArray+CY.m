@@ -35,4 +35,24 @@
     return [self objectAtIndex:index];
 }
 
+- (id)deepCopy
+{
+    return [[NSArray alloc] initWithArray:self copyItems:YES];
+}
+
+- (id)mutableDeepCopy
+{
+    return [[NSMutableArray alloc] initWithArray:self copyItems:YES];
+}
+
+- (id)trueDeepCopy
+{
+    return [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]];
+}
+
+- (id)trueDeepMutableCopy
+{
+    return [[NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]] mutableCopy];
+}
+
 @end
