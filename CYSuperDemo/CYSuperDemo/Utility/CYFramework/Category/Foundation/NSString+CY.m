@@ -139,6 +139,46 @@
     return output;
 }
 
+- (NSData *)hexStringToData
+{
+    if (!self.length) {
+        return nil;
+    }
+    
+    const char *ch = [[self lowercaseString] cStringUsingEncoding:NSUTF8StringEncoding];
+    NSMutableData* data = [[NSMutableData alloc] initWithCapacity:strlen(ch)/2];
+    while (*ch)
+    {
+        char byte = 0;
+        if ('0' <= *ch && *ch <= '9')
+        {
+            byte = *ch - '0';
+        }
+        else if ('a' <= *ch && *ch <= 'f')
+        {
+            byte = *ch - 'a' + 10;
+        }
+        ch++;
+        byte = byte << 4;
+        if (*ch)
+        {
+            if ('0' <= *ch && *ch <= '9')
+            {
+                byte += *ch - '0';
+            } else if ('a' <= *ch && *ch <= 'f')
+            {
+                byte += *ch - 'a' + 10;
+            }
+            ch++;
+        }
+        
+        [data appendBytes:&byte length:1];
+    }
+    
+    return data;
+}
+
+
 // md5
 + (NSString *)md5:(NSString *)str {
     const char *original_str = [str UTF8String];

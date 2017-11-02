@@ -12,6 +12,9 @@
 		E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70616D11E795BF200762B56 /* LaunchScreen.storyboard */; };
 		E70616DE1E795BF200762B56 /* CYSuperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616DD1E795BF200762B56 /* CYSuperDemoTests.m */; };
 		E70616E91E795BF200762B56 /* CYSuperDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */; };
+		E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E8571FAAE69E006E5695 /* NSDictionary+CY.m */; };
+		E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
+		E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */; };
 		E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */; };
 		E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */; };
 		E7688E311E7A48DA0064CD69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2D1E7A48DA0064CD69 /* main.m */; };
@@ -72,6 +75,12 @@
 		E70616E41E795BF200762B56 /* CYSuperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYSuperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYSuperDemoUITests.m; sourceTree = "<group>"; };
 		E70616EA1E795BF200762B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E717E8561FAAE69E006E5695 /* NSDictionary+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CY.h"; sourceTree = "<group>"; };
+		E717E8571FAAE69E006E5695 /* NSDictionary+CY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CY.m"; sourceTree = "<group>"; };
+		E717E8591FAAE6B3006E5695 /* NSDate+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CY.h"; sourceTree = "<group>"; };
+		E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CY.m"; sourceTree = "<group>"; };
+		E717E85C1FAAE80B006E5695 /* UIWebView+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+CY.h"; sourceTree = "<group>"; };
+		E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+CY.m"; sourceTree = "<group>"; };
 		E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CYDisplay.h"; sourceTree = "<group>"; };
 		E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYDisplay.m"; sourceTree = "<group>"; };
 		E7688E2B1E7A48DA0064CD69 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -311,6 +320,10 @@
 			children = (
 				E7688E421E7A4B400064CD69 /* NSArray+CY.h */,
 				E7688E431E7A4B400064CD69 /* NSArray+CY.m */,
+				E717E8561FAAE69E006E5695 /* NSDictionary+CY.h */,
+				E717E8571FAAE69E006E5695 /* NSDictionary+CY.m */,
+				E717E8591FAAE6B3006E5695 /* NSDate+CY.h */,
+				E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */,
 				E7688E441E7A4B400064CD69 /* NSData+CY.h */,
 				E7688E451E7A4B400064CD69 /* NSData+CY.m */,
 				E7688E461E7A4B400064CD69 /* NSObject+CY.h */,
@@ -344,6 +357,8 @@
 				E7688E5F1E7A4B400064CD69 /* UIView+CY.m */,
 				E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */,
 				E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */,
+				E717E85C1FAAE80B006E5695 /* UIWebView+CY.h */,
+				E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -560,6 +575,7 @@
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
+				E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */,
 				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
@@ -574,8 +590,10 @@
 				E7688E7F1E7A4B400064CD69 /* UIImage+CY.m in Sources */,
 				E7688E7A1E7A4B400064CD69 /* UIAlertController+CY.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
+				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
+				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,
 				E7688E721E7A4B400064CD69 /* CYKit.m in Sources */,

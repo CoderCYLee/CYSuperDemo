@@ -34,4 +34,25 @@
     return output;
 }
 
+- (NSString *)hexString
+{
+    NSUInteger len = [self length];
+    
+    if (len == 0)
+    {
+        return nil;
+    }
+    
+    const Byte *p = [self bytes];
+    
+    NSMutableString *hexString = [[NSMutableString alloc] initWithCapacity:len*2];
+    
+    for (int i=0; i < len; i++)
+    {
+        [hexString appendFormat:@"%02x", *p++];
+    }
+    
+    return [hexString uppercaseString];
+}
+
 @end

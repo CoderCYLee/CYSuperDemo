@@ -54,6 +54,8 @@
 /** SHA256 WithData */
 + (NSString *)getSHA_256StringWithData:(NSData *)data;
 
+- (NSData *)hexStringToData;    //从16进制的字符串格式转换为NSData
+
 /** SHA256 String */
 - (NSString *)getSHA_256String;
 

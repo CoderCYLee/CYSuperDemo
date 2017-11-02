@@ -14,4 +14,6 @@
 
 - (NSString *)SHA256String;
 
+- (NSString *)hexString;
+
 @end
