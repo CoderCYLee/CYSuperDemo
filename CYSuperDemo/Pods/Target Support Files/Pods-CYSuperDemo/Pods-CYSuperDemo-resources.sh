@@ -1,5 +1,13 @@
 #!/bin/sh
 set -e
+set -u
+set -o pipefail
+
+if [ -z ${UNLOCALIZED_RESOURCES_FOLDER_PATH+x} ]; then
+    # If UNLOCALIZED_RESOURCES_FOLDER_PATH is not set, then there's nowhere for us to copy
+    # resources to, so exit 0 (signalling the script phase was successful).
+    exit 0
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 
@@ -8,7 +16,11 @@ RESOURCES_TO_COPY=${PODS_ROOT}/resources-to-copy-${TARGETNAME}.txt
 
 XCASSET_FILES=()
 
-case "${TARGETED_DEVICE_FAMILY}" in
+# This protects against multiple targets copying the same framework dependency at the same time. The solution
+# was originally proposed here: https://lists.samba.org/archive/rsync/2008-February/020158.html
+RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
+
+case "${TARGETED_DEVICE_FAMILY:-}" in
   1,2)
     TARGET_DEVICE_ARGS="--target-device ipad --target-device iphone"
     ;;
@@ -20,6 +32,9 @@ case "${TARGETED_DEVICE_FAMILY}" in
     ;;
   3)
     TARGET_DEVICE_ARGS="--target-device tv"
+    ;;
+  4)
+    TARGET_DEVICE_ARGS="--target-device watch"
     ;;
   *)
     TARGET_DEVICE_ARGS="--target-device mac"
@@ -41,29 +56,29 @@ EOM
   fi
   case $RESOURCE_PATH in
     *.storyboard)
-      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .storyboard`.storyboardc $RESOURCE_PATH --sdk ${SDKROOT} ${TARGET_DEVICE_ARGS}"
+      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .storyboard`.storyboardc $RESOURCE_PATH --sdk ${SDKROOT} ${TARGET_DEVICE_ARGS}" || true
       ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .storyboard`.storyboardc" "$RESOURCE_PATH" --sdk "${SDKROOT}" ${TARGET_DEVICE_ARGS}
       ;;
     *.xib)
-      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib $RESOURCE_PATH --sdk ${SDKROOT} ${TARGET_DEVICE_ARGS}"
+      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib $RESOURCE_PATH --sdk ${SDKROOT} ${TARGET_DEVICE_ARGS}" || true
       ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib" "$RESOURCE_PATH" --sdk "${SDKROOT}" ${TARGET_DEVICE_ARGS}
       ;;
     *.framework)
-      echo "mkdir -p ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+      echo "mkdir -p ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}" || true
       mkdir -p "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
-      echo "rsync -av $RESOURCE_PATH ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
-      rsync -av "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+      echo "rsync --delete -av "${RSYNC_PROTECT_TMP_FILES[@]}" $RESOURCE_PATH ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}" || true
+      rsync --delete -av "${RSYNC_PROTECT_TMP_FILES[@]}" "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
       ;;
     *.xcdatamodel)
-      echo "xcrun momc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH"`.mom\""
+      echo "xcrun momc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH"`.mom\"" || true
       xcrun momc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcdatamodel`.mom"
       ;;
     *.xcdatamodeld)
-      echo "xcrun momc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcdatamodeld`.momd\""
+      echo "xcrun momc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcdatamodeld`.momd\"" || true
       xcrun momc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcdatamodeld`.momd"
       ;;
     *.xcmappingmodel)
-      echo "xcrun mapc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmappingmodel`.cdm\""
+      echo "xcrun mapc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmappingmodel`.cdm\"" || true
       xcrun mapc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmappingmodel`.cdm"
       ;;
     *.xcassets)
@@ -71,118 +86,118 @@ EOM
       XCASSET_FILES+=("$ABSOLUTE_XCASSET_FILE")
       ;;
     *)
-      echo "$RESOURCE_PATH"
+      echo "$RESOURCE_PATH" || true
       echo "$RESOURCE_PATH" >> "$RESOURCES_TO_COPY"
       ;;
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "ABCalendarPicker/ABCalendarPicker/GradientBar.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileDisabledSelected.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileNormal.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TilePattern.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileSelected.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileToday.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileTodaySelected.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-star.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-star@2x.png"
-  install_resource "BButton/BButton/resources/FontAwesome.ttf"
-  install_resource "DateTools/DateTools/DateTools.bundle"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/DeviceUtil/DeviceUtil.bundle"
-  install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
-  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/RETableViewManager/RETableViewManager.bundle"
-  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundError.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundError@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundMessage.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccess.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarning.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationButtonBackground.png"
-  install_resource "TSMessages/Pod/Assets/NotificationButtonBackground@2x.png"
-  install_resource "TSMessages/Pod/Assets/TSMessagesDefaultDesign.json"
-  install_resource "UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetsPickerController.xib"
-  install_resource "UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetPickerController.bundle"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/GradientBar.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileDisabledSelected.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileNormal.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TilePattern.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileSelected.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileToday.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileTodaySelected.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-star.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-star@2x.png"
+  install_resource "${PODS_ROOT}/BButton/BButton/resources/FontAwesome.ttf"
+  install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DeviceUtil/DeviceUtil.bundle"
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager/RETableViewManager.bundle"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json"
+  install_resource "${PODS_ROOT}/UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetsPickerController.xib"
+  install_resource "${PODS_ROOT}/UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetPickerController.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "ABCalendarPicker/ABCalendarPicker/GradientBar.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileDisabledSelected.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileNormal.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TilePattern.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileSelected.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileToday.png"
-  install_resource "ABCalendarPicker/ABCalendarPicker/TileTodaySelected.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-addbutton@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/bg-menuitem@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-plus@2x.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-star.png"
-  install_resource "AwesomeMenu/AwesomeMenu/Images/icon-star@2x.png"
-  install_resource "BButton/BButton/resources/FontAwesome.ttf"
-  install_resource "DateTools/DateTools/DateTools.bundle"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/DeviceUtil/DeviceUtil.bundle"
-  install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
-  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/RETableViewManager/RETableViewManager.bundle"
-  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png"
-  install_resource "StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundError.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundError@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundMessage.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccess.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarning.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png"
-  install_resource "TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png"
-  install_resource "TSMessages/Pod/Assets/NotificationButtonBackground.png"
-  install_resource "TSMessages/Pod/Assets/NotificationButtonBackground@2x.png"
-  install_resource "TSMessages/Pod/Assets/TSMessagesDefaultDesign.json"
-  install_resource "UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetsPickerController.xib"
-  install_resource "UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetPickerController.bundle"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/GradientBar.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileDisabledSelected.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileNormal.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TilePattern.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileSelected.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileToday.png"
+  install_resource "${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileTodaySelected.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton-highlighted@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-addbutton@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem-highlighted@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/bg-menuitem@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus-highlighted@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-plus@2x.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-star.png"
+  install_resource "${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-star@2x.png"
+  install_resource "${PODS_ROOT}/BButton/BButton/resources/FontAwesome.ttf"
+  install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DeviceUtil/DeviceUtil.bundle"
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager/RETableViewManager.bundle"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png"
+  install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground@2x.png"
+  install_resource "${PODS_ROOT}/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json"
+  install_resource "${PODS_ROOT}/UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetsPickerController.xib"
+  install_resource "${PODS_ROOT}/UzysAssetsPickerController/UzysAssetsPickerController/Library/UzysAssetPickerController.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
@@ -193,7 +208,7 @@ if [[ "${ACTION}" == "install" ]] && [[ "${SKIP_INSTALL}" == "NO" ]]; then
 fi
 rm -f "$RESOURCES_TO_COPY"
 
-if [[ -n "${WRAPPER_EXTENSION}" ]] && [ "`xcrun --find actool`" ] && [ -n "$XCASSET_FILES" ]
+if [[ -n "${WRAPPER_EXTENSION}" ]] && [ "`xcrun --find actool`" ] && [ -n "${XCASSET_FILES:-}" ]
 then
   # Find all other xcassets (this unfortunately includes those of path pods and other targets).
   OTHER_XCASSETS=$(find "$PWD" -iname "*.xcassets" -type d)
@@ -203,5 +218,9 @@ then
     fi
   done <<<"$OTHER_XCASSETS"
 
-  printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+  if [ -z ${ASSETCATALOG_COMPILER_APPICON_NAME+x} ]; then
+    printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+  else
+    printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}" --app-icon "${ASSETCATALOG_COMPILER_APPICON_NAME}" --output-partial-info-plist "${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist"
+  fi
 fi

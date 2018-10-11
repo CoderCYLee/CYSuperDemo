@@ -20,7 +20,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    [[[CYAudioUtility alloc] init] playAduio:@"8436" ext:@"wav"];
+//    [[[CYAudioUtility alloc] init] playAduio:@"8436" ext:@"wav"];
+    
+//    NSString *url = @"taobao://https://item.taobao.com/item.htm?id=577359137670";
+//    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+//        
+//    } else {
+//        NSLog(@"本地没有该软件");
+//    }
     
     
 }

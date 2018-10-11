@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface CY01BorderLineView : UIView
 
-@property (nonatomic, assign) BOOL isHorizontal;
+@property (nonatomic, assign) IBInspectable BOOL isHorizontal;
 
 @end

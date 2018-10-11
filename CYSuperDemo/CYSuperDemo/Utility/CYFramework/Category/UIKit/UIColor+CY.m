@@ -46,6 +46,27 @@
     return [UIColor colorWithRed: red green: green blue: blue alpha: alpha];
 }
 
+- (NSString *)hexString {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    size_t         count      = CGColorGetNumberOfComponents(self.CGColor);
+    
+    if(count == 2) {
+        
+        return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+                lroundf(components[0] * 255.0),
+                lroundf(components[0] * 255.0),
+                lroundf(components[0] * 255.0)];
+        
+    } else {
+        
+        return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+                lroundf(components[0] * 255.0),
+                lroundf(components[1] * 255.0),
+                lroundf(components[2] * 255.0)];
+    }
+
+}
+
 + (NSString*)stringWithColor:(UIColor *)color
 {
     if (color==nil) {
@@ -88,7 +109,7 @@
     return 0;
 }
 
-+(UIColor *) randomColor
++ (UIColor *)randomColor
 {
     CGFloat hue = ( arc4random() % 256 / 256.0 ); //0.0 to 1.0
     CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5; // 0.5 to 1.0,away from white

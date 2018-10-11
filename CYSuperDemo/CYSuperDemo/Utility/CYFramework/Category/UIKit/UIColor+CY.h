@@ -12,24 +12,31 @@
 #define kRGBAColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define kRGBColor16Bit(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
+#define CY_HexColor(hex)  [UIColor colorWithHexString:@#hex]
+
 @interface UIColor (CY)
 
 /**
- *  HexColor
- *
- *  hexString
- *
- *  @return color
+ HexColor
+
+ @param hexString hexString
+ @return color
  */
-+ (UIColor *)colorWithHexString: (NSString *) hexString;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
+
+- (NSString *)hexString;
+
 /**
- *  已知颜色，返回 [r,g,b,a]
+ 已知颜色，返回 [r,g,b,a]
+
+ @param color color
+ @return [r,g,b,a]
  */
-+ (NSString*)stringWithColor:(UIColor*)color;
++ (NSString *)stringWithColor:(UIColor*)color;
 /**
- *  随机色
- *
- *  @return UIcolor
+ 随机色
+
+ @return UIcolor
  */
 + (UIColor *)randomColor;
 

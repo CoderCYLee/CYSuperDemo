@@ -100,7 +100,7 @@ PODS:
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
-    - SDWebImage (!= 3.7.2, ~> 3.7)
+    - "SDWebImage (!= 3.7.2, ~> 3.7)"
   - MYBlurIntroductionView (1.0.3)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
@@ -117,9 +117,6 @@ PODS:
     - QuickDialog/Core (= 1.1.0)
   - QuickDialog/Core (1.1.0)
   - REFormattedNumberField (1.1.6)
-  - REFrostedViewController (2.4.8)
-  - REMenu (1.10)
-  - RESideMenu (4.0.7)
   - RETableViewManager (1.7):
     - REFormattedNumberField (~> 1.1.5)
     - REValidation (~> 0.1.4)
@@ -137,7 +134,7 @@ PODS:
     - HexColors (~> 2.2.0)
   - TTSwitch (0.0.6)
   - UICountingLabel (1.2.0)
-  - UITableView+FDTemplateLayoutCell (1.4)
+  - "UITableView+FDTemplateLayoutCell (1.4)"
   - UzysAssetsPickerController (0.9.9)
 
 DEPENDENCIES:
@@ -192,9 +189,6 @@ DEPENDENCIES:
   - pop (~> 1.0)
   - QBPopupMenu (~> 2.0)
   - QuickDialog (~> 1.1.0)
-  - REFrostedViewController (~> 2.4)
-  - REMenu (~> 1.10)
-  - RESideMenu (~> 4.0.7)
   - RETableViewManager (~> 1.6)
   - RWDropdownMenu (~> 1.0.2)
   - SAMTextView (~> 0.2.2)
@@ -204,8 +198,80 @@ DEPENDENCIES:
   - TimesSquare (~> 1.0.2)
   - TSMessages (~> 0.9.12)
   - TTSwitch (~> 0.0.6)
-  - UITableView+FDTemplateLayoutCell (~> 1.4)
+  - "UITableView+FDTemplateLayoutCell (~> 1.4)"
   - UzysAssetsPickerController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ABCalendarPicker
+    - ActionSheetPicker-3.0
+    - AFNetworking
+    - AMPopTip
+    - ASProgressPopUpView
+    - ASValueTrackingSlider
+    - AwesomeMenu
+    - BButton
+    - BlocksKit
+    - CubeController
+    - DACircularProgress
+    - DateTools
+    - DeviceUtil
+    - DTCoreText
+    - DTFoundation
+    - DWBubbleMenuButton
+    - DZNEmptyDataSet
+    - EAIntroView
+    - EARestrictedScrollView
+    - EGOCache
+    - FBAllocationTracker
+    - FBMemoryProfiler
+    - FBRetainCycleDetector
+    - GDataXML-HTML
+    - HexColors
+    - HMSegmentedControl
+    - iCarousel
+    - IGLDropDownMenu
+    - IQActionSheetPickerView
+    - IQKeyboardManager
+    - JazzHands
+    - JJTabBarController
+    - KGModal
+    - KLCPopup
+    - KxMenu
+    - LDProgressView
+    - M13BadgeView
+    - M13Checkbox
+    - M13ProgressSuite
+    - Masonry
+    - MBProgressHUD
+    - MDRadialProgress
+    - MGSwipeTableCell
+    - MJExtension
+    - MJRefresh
+    - MWPhotoBrowser
+    - MYBlurIntroductionView
+    - NJKWebViewProgress
+    - Onboard
+    - PDTSimpleCalendar
+    - PNChart
+    - pop
+    - QBPopupMenu
+    - QuickDialog
+    - REFormattedNumberField
+    - RETableViewManager
+    - REValidation
+    - RWDropdownMenu
+    - SAMTextView
+    - SDWebImage
+    - StyledPageControl
+    - SVProgressHUD
+    - SWTableViewCell
+    - TimesSquare
+    - TSMessages
+    - TTSwitch
+    - UICountingLabel
+    - "UITableView+FDTemplateLayoutCell"
+    - UzysAssetsPickerController
 
 EXTERNAL SOURCES:
   HCSStarRatingView:
@@ -273,9 +339,6 @@ SPEC CHECKSUMS:
   QBPopupMenu: e370cbc7ad8a8d09afe1726117aa18f92696f66a
   QuickDialog: 6954450c4c2d003a89fbfee48ec8fa4695436b01
   REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
-  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
-  REMenu: 30dad195930adf6c5eeb8041e3257aa60bf9fa49
-  RESideMenu: f24c508404b49c667344c54aba7e590883533958
   RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
   RWDropdownMenu: c7fda4b7adf4f3f63a46d96359c2f490a7713795
@@ -288,9 +351,9 @@ SPEC CHECKSUMS:
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
   TTSwitch: fef67a32dbd75e6981a3d27a7e954728e537de50
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
-  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  "UITableView+FDTemplateLayoutCell": 234e1582bcc4e18461af91155123bb96538ed030
   UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
 
-PODFILE CHECKSUM: 54c2a09663aeae00e7aea8ae95a46f9bb86904d0
+PODFILE CHECKSUM: cd79bdbbe51fe29f637863b162c05b240678417d
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.6.0.beta.1
