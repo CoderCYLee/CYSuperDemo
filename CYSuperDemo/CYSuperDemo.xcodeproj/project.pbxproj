@@ -299,8 +299,6 @@
 				E7F40586216B2A6E00B27415 /* ArrayDemo.m */,
 				E7F4058E216C97FE00B27415 /* WifiInfoViewController.h */,
 				E7F4058F216C97FE00B27415 /* WifiInfoViewController.m */,
-				E7F40594216C9F4F00B27415 /* CYWifiManager.h */,
-				E7F40595216C9F4F00B27415 /* CYWifiManager.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -422,6 +420,8 @@
 				E78A996A21421731002A9803 /* CYLocationManager.m */,
 				E7722E571F42D64300BBE9B6 /* CYMapManager.h */,
 				E7722E581F42D64300BBE9B6 /* CYMapManager.m */,
+				E7F40594216C9F4F00B27415 /* CYWifiManager.h */,
+				E7F40595216C9F4F00B27415 /* CYWifiManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
