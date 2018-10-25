@@ -1,13 +1,13 @@
 //
-//  ValueChecker.h
+//  CYValueChecker.h
 //  iOSShare
 //
-//  Created by Wang Min on 14-4-3.
-//  Copyright (c) 2014年 wujin. All rights reserved.
+//  Created by cy on 15-10-3.
+//  Copyright (c) 2015年 cy. All rights reserved.
 //
 
-#ifndef iOSShare_ValueChecker_h
-#define iOSShare_ValueChecker_h
+#ifndef __CYValueChecker_h
+#define __CYValueChecker_h
 
 #define nilOrNull(obj) ((obj)==nil || [(obj) isEqual:[NSNull null]])
 #define safeArray(obj) ((nilOrNull(obj) == NO && [(obj) respondsToSelector:@selector(objectAtIndex:)]) ? (obj) : nil)

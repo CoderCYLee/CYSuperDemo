@@ -10,6 +10,8 @@
 
 @interface UIDevice (CY)
 
+
+
 /**
  返回设备的mac地址
  */
@@ -22,4 +24,16 @@
  */
 + (BOOL)deviceIsJailBreak;
 
+
+/**
+ Device Model.
+ Search from:
+ https://www.theiphonewiki.com/wiki/Models
+
+ @return Device Model String
+ */
++ (NSString *)deviceModel;
+
 @end
+
+

@@ -6,8 +6,31 @@
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#ifndef CYCategories_h
-#define CYCategories_h
+#ifndef __CYCategories_h
+#define __CYCategories_h
 
+#import "CYCategoriesMacro.h"
+
+#pragma mark - Foundation
+#import "NSString+CY.h"
+#import "NSData+CY.h"
+#import "NSArray+CY.h"
+#import "NSObject+CY.h"
+#import "NSDictionary+CY.h"
+#import "NSDate+CY.h"
+
+
+#pragma mark - UIKit
+#import "UIColor+CY.h"
+#import "UILabel+CY.h"
+#import "UIView+CYAnimation.h"
+#import "UIImage+CY.h"
+#import "UIView+CY.h"
+#import "UIButton+CY.h"
+
+
+
+#pragma mark - QuartzCore
+#import "CALayer+CY.h"
 
 #endif /* CYCategories_h */

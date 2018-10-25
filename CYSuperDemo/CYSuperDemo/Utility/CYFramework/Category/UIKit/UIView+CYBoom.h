@@ -13,7 +13,7 @@
      [sender boomWithTileSize:CGSizeMake(2, 2) inDiameter:300];
      sender.hidden = YES;
      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-     sender.hidden = NO;
+        sender.hidden = NO;
      });
  }
  */

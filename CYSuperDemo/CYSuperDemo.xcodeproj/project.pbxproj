@@ -16,6 +16,7 @@
 		E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
 		E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */; };
 		E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */; };
+		E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7658E252180430F00EF05E9 /* HealthKit.framework */; };
 		E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */; };
 		E7688E311E7A48DA0064CD69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2D1E7A48DA0064CD69 /* main.m */; };
 		E7688E371E7A494A0064CD69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E361E7A494A0064CD69 /* ViewController.m */; };
@@ -93,6 +94,7 @@
 		E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CYDisplay.h"; sourceTree = "<group>"; };
 		E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYDisplay.m"; sourceTree = "<group>"; };
 		E7581060216F4D71009BB5C8 /* CYCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCategories.h; sourceTree = "<group>"; };
+		E7658E252180430F00EF05E9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E7688E2B1E7A48DA0064CD69 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E7688E2D1E7A48DA0064CD69 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 		E7688E361E7A494A0064CD69 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E7688E3A1E7A4B400064CD69 /* CALayer+CY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+CY.h"; sourceTree = "<group>"; };
 		E7688E3B1E7A4B400064CD69 /* CALayer+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+CY.m"; sourceTree = "<group>"; };
-		E7688E3C1E7A4B400064CD69 /* CYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYExtension.h; sourceTree = "<group>"; };
+		E7688E3C1E7A4B400064CD69 /* CYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCategoriesMacro.h; sourceTree = "<group>"; };
 		E7688E3D1E7A4B400064CD69 /* CYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYKit.h; sourceTree = "<group>"; };
 		E7688E3E1E7A4B400064CD69 /* CYKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYKit.m; sourceTree = "<group>"; };
 		E7688E3F1E7A4B400064CD69 /* CYTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTopWindow.h; sourceTree = "<group>"; };
@@ -132,7 +134,7 @@
 		E7688E5B1E7A4B400064CD69 /* UILabel+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CY.m"; sourceTree = "<group>"; };
 		E7688E5E1E7A4B400064CD69 /* UIView+CY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CY.h"; sourceTree = "<group>"; };
 		E7688E5F1E7A4B400064CD69 /* UIView+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CY.m"; sourceTree = "<group>"; };
-		E7688E621E7A4B400064CD69 /* ValueChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueChecker.h; sourceTree = "<group>"; };
+		E7688E621E7A4B400064CD69 /* CYValueChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYValueChecker.h; sourceTree = "<group>"; };
 		E7688E631E7A4B400064CD69 /* CYFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFramework.h; sourceTree = "<group>"; };
 		E7688E6B1E7A4B400064CD69 /* CY01BorderLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CY01BorderLineView.h; sourceTree = "<group>"; };
 		E7688E6C1E7A4B400064CD69 /* CY01BorderLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CY01BorderLineView.m; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */,
 				E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */,
 				C01E983CCF629EC207CFB2C4 /* libPods-CYSuperDemo.a in Frameworks */,
 			);
@@ -208,6 +211,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7658E252180430F00EF05E9 /* HealthKit.framework */,
 				E7F40592216C9C5900B27415 /* SystemConfiguration.framework */,
 				344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */,
 			);
@@ -276,6 +280,15 @@
 			path = CYSuperDemoUITests;
 			sourceTree = "<group>";
 		};
+		E7658E29218163F600EF05E9 /* QuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				E7688E3A1E7A4B400064CD69 /* CALayer+CY.h */,
+				E7688E3B1E7A4B400064CD69 /* CALayer+CY.m */,
+			);
+			path = QuartzCore;
+			sourceTree = "<group>";
+		};
 		E7688E291E7A48DA0064CD69 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,22 +344,11 @@
 		E7688E391E7A4B400064CD69 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				E7688E3C1E7A4B400064CD69 /* CYExtension.h */,
 				E7581060216F4D71009BB5C8 /* CYCategories.h */,
+				E7688E3C1E7A4B400064CD69 /* CYCategoriesMacro.h */,
 				E7688E411E7A4B400064CD69 /* Foundation */,
 				E7688E4D1E7A4B400064CD69 /* UIKit */,
-				E7688E3A1E7A4B400064CD69 /* CALayer+CY.h */,
-				E7688E3B1E7A4B400064CD69 /* CALayer+CY.m */,
-				E7688E3D1E7A4B400064CD69 /* CYKit.h */,
-				E7688E3E1E7A4B400064CD69 /* CYKit.m */,
-				E7688E3F1E7A4B400064CD69 /* CYTopWindow.h */,
-				E7688E401E7A4B400064CD69 /* CYTopWindow.m */,
-				E7688E891E7A4C780064CD69 /* CYNetworkUtility.h */,
-				E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */,
-				E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */,
-				E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */,
-				E7688E4A1E7A4B400064CD69 /* Foundation+Log.m */,
-				E7688E621E7A4B400064CD69 /* ValueChecker.h */,
+				E7658E29218163F600EF05E9 /* QuartzCore */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -375,10 +377,10 @@
 			children = (
 				E7688E4E1E7A4B400064CD69 /* UIAlertController+CY.h */,
 				E7688E4F1E7A4B400064CD69 /* UIAlertController+CY.m */,
-				E7688E501E7A4B400064CD69 /* UIButton+CY.h */,
-				E7688E511E7A4B400064CD69 /* UIButton+CY.m */,
 				E78F91611E9CDE8D0033E336 /* UIControl+CY.h */,
 				E78F91621E9CDE8D0033E336 /* UIControl+CY.m */,
+				E7688E501E7A4B400064CD69 /* UIButton+CY.h */,
+				E7688E511E7A4B400064CD69 /* UIButton+CY.m */,
 				E7688E521E7A4B400064CD69 /* UIButton+TapScope.h */,
 				E7688E531E7A4B400064CD69 /* UIButton+TapScope.m */,
 				E7688E4B1E7A4B400064CD69 /* UIButton+CYTouch.h */,
@@ -408,6 +410,14 @@
 		E7688E641E7A4B400064CD69 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E7688E3D1E7A4B400064CD69 /* CYKit.h */,
+				E7688E3E1E7A4B400064CD69 /* CYKit.m */,
+				E7688E891E7A4C780064CD69 /* CYNetworkUtility.h */,
+				E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */,
+				E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */,
+				E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */,
+				E7688E4A1E7A4B400064CD69 /* Foundation+Log.m */,
+				E7688E621E7A4B400064CD69 /* CYValueChecker.h */,
 				E78A996921421730002A9803 /* CYLocationManager.h */,
 				E78A996A21421731002A9803 /* CYLocationManager.m */,
 				E7722E571F42D64300BBE9B6 /* CYMapManager.h */,
@@ -419,6 +429,8 @@
 		E7688E6A1E7A4B400064CD69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7688E3F1E7A4B400064CD69 /* CYTopWindow.h */,
+				E7688E401E7A4B400064CD69 /* CYTopWindow.m */,
 				E78A996C214217F1002A9803 /* CYCustomSearchBar.h */,
 				E78A996D214217F1002A9803 /* CYCustomSearchBar.m */,
 				E7688E6B1E7A4B400064CD69 /* CY01BorderLineView.h */,
@@ -511,6 +523,12 @@
 							com.apple.AutoFillCredentialProvider = {
 								enabled = 0;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
 							com.apple.NetworkExtensions.iOS = {
 								enabled = 0;
 							};
@@ -521,7 +539,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -914,6 +932,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
 				INFOPLIST_FILE = CYSuperDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -931,6 +950,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
 				INFOPLIST_FILE = CYSuperDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

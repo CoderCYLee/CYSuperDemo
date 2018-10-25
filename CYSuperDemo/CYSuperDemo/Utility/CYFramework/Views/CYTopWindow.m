@@ -13,8 +13,9 @@ static UIWindow *window_;
 
 + (void)initialize
 {
+    CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
     window_ = [[UIWindow alloc] init];
-    window_.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20);
+    window_.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, statusHeight);
     window_.backgroundColor = [UIColor clearColor];
     window_.windowLevel = UIWindowLevelAlert;
     [window_ addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(windowClick)]];

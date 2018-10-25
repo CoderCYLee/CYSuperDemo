@@ -6,27 +6,16 @@
 //  Copyright (c) 2015年 Cyrill. All rights reserved.
 //
 
-#ifndef __CYExtension_h
-#define __CYExtension_h
+#ifndef __CYCategoriesMacro_h
+#define __CYCategoriesMacro_h
 
-#pragma mark - UIKit
 #import "CYKit.h"
-#import "UIColor+CY.h"
-#import "NSString+CY.h"
-#import "UIImage+CY.h"
-#import "UIView+CY.h"
-#import "UIButton+CY.h"
-#import "NSData+CY.h"
-#import "NSArray+CY.h"
-#import "NSObject+CY.h"
-#import "UILabel+CY.h"
-#import "CALayer+CY.h"
-#import "CYTopWindow.h"
-#import "ValueChecker.h"
-#import "Foundation+Log.m"
-#import "UIView+CYAnimation.h"
-//#import "MBProgressHUD+CY.h"
-#import "UIScrollView+EmptyDataSet.h"
+
+#ifndef CY_SWAP
+#define CY_SWap(_a_, _b_)  do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_; } while (0)
+#endif
+
+
 
 #ifdef DEBUG
 #    define kDebugLog(...)   NSLog(__VA_ARGS__)
