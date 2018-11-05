@@ -17,6 +17,9 @@
 		E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */; };
 		E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */; };
 		E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7658E252180430F00EF05E9 /* HealthKit.framework */; };
+		E7658E2C2181BBC700EF05E9 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7658E2B2181BBC700EF05E9 /* TabBarController.m */; };
+		E7658E2E2181BC4A00EF05E9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7658E2D2181BC4A00EF05E9 /* GameKit.framework */; };
+		E7658E312181BC8300EF05E9 /* SiriViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7658E302181BC8300EF05E9 /* SiriViewController.m */; };
 		E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */; };
 		E7688E311E7A48DA0064CD69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E2D1E7A48DA0064CD69 /* main.m */; };
 		E7688E371E7A494A0064CD69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E361E7A494A0064CD69 /* ViewController.m */; };
@@ -95,6 +98,11 @@
 		E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYDisplay.m"; sourceTree = "<group>"; };
 		E7581060216F4D71009BB5C8 /* CYCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCategories.h; sourceTree = "<group>"; };
 		E7658E252180430F00EF05E9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		E7658E2A2181BBC700EF05E9 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		E7658E2B2181BBC700EF05E9 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		E7658E2D2181BC4A00EF05E9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		E7658E2F2181BC8300EF05E9 /* SiriViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SiriViewController.h; sourceTree = "<group>"; };
+		E7658E302181BC8300EF05E9 /* SiriViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SiriViewController.m; sourceTree = "<group>"; };
 		E7688E2B1E7A48DA0064CD69 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7688E2C1E7A48DA0064CD69 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E7688E2D1E7A48DA0064CD69 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 				E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */,
 				E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */,
 				C01E983CCF629EC207CFB2C4 /* libPods-CYSuperDemo.a in Frameworks */,
+				E7658E2E2181BC4A00EF05E9 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +220,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7658E2D2181BC4A00EF05E9 /* GameKit.framework */,
 				E7658E252180430F00EF05E9 /* HealthKit.framework */,
 				E7F40592216C9C5900B27415 /* SystemConfiguration.framework */,
 				344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */,
@@ -295,6 +305,10 @@
 				E7688E2A1E7A48DA0064CD69 /* Other */,
 				E7688E351E7A494A0064CD69 /* ViewController.h */,
 				E7688E361E7A494A0064CD69 /* ViewController.m */,
+				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
+				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
+				E7658E2F2181BC8300EF05E9 /* SiriViewController.h */,
+				E7658E302181BC8300EF05E9 /* SiriViewController.m */,
 				E7F40585216B2A6E00B27415 /* ArrayDemo.h */,
 				E7F40586216B2A6E00B27415 /* ArrayDemo.m */,
 				E7F4058E216C97FE00B27415 /* WifiInfoViewController.h */,
@@ -520,10 +534,16 @@
 							com.apple.AccessWiFi = {
 								enabled = 1;
 							};
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.AutoFillCredentialProvider = {
 								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.GameCenter.iOS = {
 								enabled = 1;
 							};
 							com.apple.HealthKit = {
@@ -536,6 +556,9 @@
 								enabled = 0;
 							};
 							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
 								enabled = 1;
 							};
 							com.apple.iCloud = {
@@ -786,6 +809,8 @@
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
 				E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */,
+				E7658E2C2181BBC700EF05E9 /* TabBarController.m in Sources */,
+				E7658E312181BC8300EF05E9 /* SiriViewController.m in Sources */,
 				E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */,
 				E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */,
 			);
