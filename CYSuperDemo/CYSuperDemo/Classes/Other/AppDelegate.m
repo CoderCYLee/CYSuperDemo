@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "TabBarController.h"
 
 @interface AppDelegate ()
 
@@ -26,9 +27,10 @@
     } else {
         
     }
-    
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    self.window.rootViewController = nav;
+
+    TabBarController *tabbarVC = [[TabBarController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
+    self.window.rootViewController = tabbarVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TabBarController : UITabBarController
 
+@property (nonatomic, strong) UINavigationController *navigationController1;
+@property (nonatomic, strong) UINavigationController *navigationController2;
+@property (nonatomic, strong) UINavigationController *navigationController3;
+@property (nonatomic, strong) UINavigationController *navigationController4;
+
 @end
 
 NS_ASSUME_NONNULL_END

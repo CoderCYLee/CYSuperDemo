@@ -21,15 +21,37 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
 #import "IQActionSheetTitleBarButtonItem.h"
 
-@interface IQActionSheetToolbar : UIToolbar
+#import <UIKit/UIToolbar.h>
+
+/// These keys are used to set text attributes for both `Cancel` and `Done` toolbar buttons.
+/// Identifies an attributed string of the toolbar button title for normal state.
+extern NSString * _Nonnull const kIQActionSheetAttributesForNormalStateKey;
+/// Identifies an attributed string of the toolbar button title for highlighted state.
+extern NSString * _Nonnull const kIQActionSheetAttributesForHighlightedStateKey;
+
+
+@interface IQActionSheetToolbar : UIToolbar <UIInputViewAudioFeedback>
+
 
 @property(nullable, nonatomic, strong) UIBarButtonItem *cancelButton;
 
+/*!
+ A dictionary containing the attributed strings of the cancel button for normal and highlighted states.
+ */
+@property(nullable, nonatomic, strong) NSDictionary<NSString*,id> *cancelButtonAttributes UI_APPEARANCE_SELECTOR;
+
+
 @property(nullable, nonatomic, strong) IQActionSheetTitleBarButtonItem *titleButton;
 
+
 @property(nullable, nonatomic, strong) UIBarButtonItem *doneButton;
+
+/*!
+ A dictionary containing the attributed strings of the done button for normal and highlighted states.
+ */
+@property(nullable, nonatomic, strong) NSDictionary<NSString*,id> *doneButtonAttributes UI_APPEARANCE_SELECTOR;
+
 
 @end

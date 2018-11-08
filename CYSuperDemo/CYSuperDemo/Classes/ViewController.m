@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional · after loading the view, typically from a nib.
-    
     
 //    [[[CYAudioUtility alloc] init] playAduio:@"8436" ext:@"wav"];
     

@@ -1,26 +1,20 @@
 PODS:
   - ABCalendarPicker (1.1.2)
   - ActionSheetPicker-3.0 (1.6.2)
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - AMPopTip (0.9.14)
   - ASProgressPopUpView (0.9)
@@ -45,23 +39,23 @@ PODS:
   - CubeController (1.2.1)
   - DACircularProgress (2.3.1)
   - DateTools (1.7.0)
-  - DeviceUtil (1.3.8)
-  - DTCoreText (1.6.20):
-    - DTCoreText/Core (= 1.6.20)
+  - DeviceUtil (4.0.3)
+  - DTCoreText (1.6.21):
+    - DTCoreText/Core (= 1.6.21)
     - DTFoundation/Core (~> 1.7.5)
     - DTFoundation/DTAnimatedGIF (~> 1.7.5)
     - DTFoundation/DTHTMLParser (~> 1.7.5)
     - DTFoundation/UIKit (~> 1.7.5)
-  - DTCoreText/Core (1.6.20):
+  - DTCoreText/Core (1.6.21):
     - DTFoundation/Core (~> 1.7.5)
     - DTFoundation/DTAnimatedGIF (~> 1.7.5)
     - DTFoundation/DTHTMLParser (~> 1.7.5)
     - DTFoundation/UIKit (~> 1.7.5)
-  - DTFoundation/Core (1.7.12)
-  - DTFoundation/DTAnimatedGIF (1.7.12)
-  - DTFoundation/DTHTMLParser (1.7.12):
+  - DTFoundation/Core (1.7.13)
+  - DTFoundation/DTAnimatedGIF (1.7.13)
+  - DTFoundation/DTHTMLParser (1.7.13):
     - DTFoundation/Core
-  - DTFoundation/UIKit (1.7.12):
+  - DTFoundation/UIKit (1.7.13):
     - DTFoundation/Core
   - DWBubbleMenuButton (1.0.1)
   - DZNEmptyDataSet (1.8.1)
@@ -73,14 +67,14 @@ PODS:
   - FBMemoryProfiler (0.1.3):
     - FBAllocationTracker (~> 0.1)
     - FBRetainCycleDetector (~> 0.1)
-  - FBRetainCycleDetector (0.1.3)
+  - FBRetainCycleDetector (0.1.4)
   - GDataXML-HTML (1.3.0)
   - HCSStarRatingView (1.5)
   - HexColors (2.2.1)
-  - HMSegmentedControl (1.5.3)
+  - HMSegmentedControl (1.5.5)
   - iCarousel (1.8.3)
   - IGLDropDownMenu (1.0.0)
-  - IQActionSheetPickerView (1.0.4)
+  - IQActionSheetPickerView (1.0.8)
   - IQKeyboardManager (3.2.4)
   - JazzHands (2.0.8)
   - JJTabBarController (1.0.0)
@@ -91,12 +85,12 @@ PODS:
   - M13BadgeView (1.0.4)
   - M13Checkbox (1.1.2)
   - M13ProgressSuite (1.2.9)
-  - Masonry (1.0.2)
+  - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
   - MDRadialProgress (1.3.2)
   - MGSwipeTableCell (1.5.6)
-  - MJExtension (3.0.13)
-  - MJRefresh (3.0.8)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
@@ -111,7 +105,7 @@ PODS:
   - PDTSimpleCalendar (0.8.0)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
-  - pop (1.0.9)
+  - pop (1.0.12)
   - QBPopupMenu (2.0)
   - QuickDialog (1.1.0):
     - QuickDialog/Core (= 1.1.0)
@@ -134,13 +128,13 @@ PODS:
     - HexColors (~> 2.2.0)
   - TTSwitch (0.0.6)
   - UICountingLabel (1.2.0)
-  - "UITableView+FDTemplateLayoutCell (1.4)"
+  - "UITableView+FDTemplateLayoutCell (1.6)"
   - UzysAssetsPickerController (0.9.9)
 
 DEPENDENCIES:
   - ABCalendarPicker (~> 1.1.2)
   - ActionSheetPicker-3.0 (~> 1.6.2)
-  - AFNetworking (~> 2.0)
+  - AFNetworking
   - AMPopTip (~> 0.9.12)
   - ASProgressPopUpView (~> 0.8)
   - ASValueTrackingSlider (~> 0.11.2)
@@ -149,7 +143,7 @@ DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - CubeController (~> 1.2.1)
   - DateTools (~> 1.7.0)
-  - DeviceUtil (~> 1.3.7)
+  - DeviceUtil
   - DTCoreText (~> 1.6.15)
   - DWBubbleMenuButton (~> 1.0.1)
   - DZNEmptyDataSet (~> 1.8.1)
@@ -178,15 +172,15 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.1)
   - MDRadialProgress (~> 1.3.2)
   - MGSwipeTableCell (~> 1.5.1)
-  - MJExtension (~> 3.0.7)
-  - MJRefresh (~> 3.0.7)
+  - MJExtension
+  - MJRefresh
   - MWPhotoBrowser (~> 2.1.1)
   - MYBlurIntroductionView (~> 1.0.3)
   - NJKWebViewProgress (~> 0.2.3)
   - Onboard (~> 2.1.6)
   - PDTSimpleCalendar (~> 0.8.0)
-  - PNChart (~> 0.8.7)
-  - pop (~> 1.0)
+  - PNChart
+  - pop
   - QBPopupMenu (~> 2.0)
   - QuickDialog (~> 1.1.0)
   - RETableViewManager (~> 1.6)
@@ -285,7 +279,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ABCalendarPicker: dfa1269abd0d7b5697c9abe3001d31e5b901ed4b
   ActionSheetPicker-3.0: cc9f90ae785070623e9b972270013c3242190fb0
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AMPopTip: ee3d78d8a32421d63712781e471bbe0e93f7551c
   ASProgressPopUpView: dfe44c9a0313ac93a8092bd361b59f52c83a7560
   ASValueTrackingSlider: 45c9f78252da60de01d8f2afe869aaf90dd978d9
@@ -295,9 +289,9 @@ SPEC CHECKSUMS:
   CubeController: 817245a45f97b1285b0490440859bd3728f3c1ef
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
-  DeviceUtil: 9e91dd78b14cd51715d6fada8871c71b00283023
-  DTCoreText: 51904f2374af443e0d270d6fdc76035ab6f9ef8a
-  DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
+  DeviceUtil: 35f32c989a4428e9b3075028ef4324cf8f84dfad
+  DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
+  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   DWBubbleMenuButton: 4d9bdbb9d662bdf65c93ceb7fc65901871143d1e
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 76f68cc56242f2e25359419e6ecc2344ee7e1756
@@ -305,14 +299,14 @@ SPEC CHECKSUMS:
   EGOCache: f0295dbe041156acabd39021354ad1045ee49e72
   FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
   FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
-  FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   GDataXML-HTML: 7adc03668cab35c288f1dbb8929a179f0fece898
   HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
-  HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IGLDropDownMenu: 6fb4338dbf7092db9086ce61efd60c01d4ef717b
-  IQActionSheetPickerView: 38ac311461f0843f58cba28b917c906734edc02f
+  IQActionSheetPickerView: 389b565a788b601cd0a4009cb4ba4debd94acfd2
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
   JJTabBarController: c031ad6dd78746fc172711dfdb731ada1802e2a9
@@ -323,19 +317,19 @@ SPEC CHECKSUMS:
   M13BadgeView: 700dd0714fdc837c0cf1c8c004454963ec22441f
   M13Checkbox: 0c0bb08dcd144c4ea33f883b68270f3f56908ea2
   M13ProgressSuite: ea9f7263e73e9215e6849dfa54e29ee0ad6a145c
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MDRadialProgress: 1068574b9b4b870f64b605b07f734385bde5104d
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
-  MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   MYBlurIntroductionView: b12651c25574580472ff34989a4c5b81c157009f
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   Onboard: 4d92c763ed15f939071dec12e87ed9e8dc036746
   PDTSimpleCalendar: 165e96cd8b808c98b3204effa4f4d519a3b71580
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
-  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   QBPopupMenu: e370cbc7ad8a8d09afe1726117aa18f92696f66a
   QuickDialog: 6954450c4c2d003a89fbfee48ec8fa4695436b01
   REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
@@ -351,9 +345,9 @@ SPEC CHECKSUMS:
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
   TTSwitch: fef67a32dbd75e6981a3d27a7e954728e537de50
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
-  "UITableView+FDTemplateLayoutCell": 234e1582bcc4e18461af91155123bb96538ed030
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
 
-PODFILE CHECKSUM: cd79bdbbe51fe29f637863b162c05b240678417d
+PODFILE CHECKSUM: 1b8c00c7b10ec85746146a6436eafd2477702e46
 
 COCOAPODS: 1.6.0.beta.1

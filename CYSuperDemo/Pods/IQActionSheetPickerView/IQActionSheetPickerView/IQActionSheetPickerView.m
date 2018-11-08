@@ -21,24 +21,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 #import "IQActionSheetPickerView.h"
-#import <QuartzCore/QuartzCore.h>
 #import "IQActionSheetViewController.h"
 #import "IQActionSheetToolbar.h"
 
-NSString * const kIQActionSheetAttributesForNormalStateKey = @"kIQActionSheetAttributesForNormalStateKey";
-/// Identifies an attributed string of the toolbar title for highlighted state.
-NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionSheetAttributesForHighlightedStateKey";
+#import <UIKit/UIPickerView.h>
+#import <UIKit/UIDatePicker.h>
+#import <UIKit/UIWindow.h>
+#import <UIKit/UIScreen.h>
+#import <UIKit/UILabel.h>
 
 @interface IQActionSheetPickerView ()<UIPickerViewDataSource,UIPickerViewDelegate>
-{
-    UIPickerView    *_pickerView;
-    UIDatePicker    *_datePicker;
-    IQActionSheetToolbar    *_actionToolbar;
 
-    IQActionSheetViewController *_actionSheetController;
-}
+@property(nonatomic, strong) IQActionSheetViewController *actionSheetController;
+@property(nonatomic, strong) UIPickerView *pickerView;
+@property(nonatomic, strong) UIDatePicker *datePicker;
 
 @end
 
@@ -58,28 +55,27 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
 
 - (instancetype)initWithTitle:(NSString *)title delegate:(id<IQActionSheetPickerViewDelegate>)delegate
 {
-    CGRect rect = [[UIScreen mainScreen] bounds];
-    rect.size.height = 216+44;
-    
-    self = [super initWithFrame:rect];
+    self = [super init];
 
     if (self)
     {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
         //UIToolbar
         {
-            _actionToolbar = [[IQActionSheetToolbar alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, 44)];
+            _actionToolbar = [[IQActionSheetToolbar alloc] init];
+            [_actionToolbar sizeToFit];
             _actionToolbar.barStyle = UIBarStyleDefault;
             _actionToolbar.cancelButton.target = self;
             _actionToolbar.cancelButton.action = @selector(pickerCancelClicked:);
             _actionToolbar.doneButton.target = self;
             _actionToolbar.doneButton.action = @selector(pickerDoneClicked:);
             _actionToolbar.titleButton.title = title;
-            [self addSubview:_actionToolbar];
         }
 
         //UIPickerView
         {
-            _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_actionToolbar.frame) , CGRectGetWidth(_actionToolbar.frame), 216)];
+            _pickerView = [[UIPickerView alloc] init];
+            [_pickerView sizeToFit];
             _pickerView.backgroundColor = [UIColor whiteColor];
             [_pickerView setShowsSelectionIndicator:YES];
             [_pickerView setDelegate:self];
@@ -89,23 +85,32 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
         
         //UIDatePicker
         {
-            _datePicker = [[UIDatePicker alloc] initWithFrame:_pickerView.frame];
+            _datePicker = [[UIDatePicker alloc] init];
+            [_datePicker sizeToFit];
             [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
-            _datePicker.frame = _pickerView.frame;
             [_datePicker setDatePickerMode:UIDatePickerModeDate];
             [self addSubview:_datePicker];
         }
         
+        NSDictionary *viewDict = NSDictionaryOfVariableBindings(_pickerView, _datePicker);
+        _pickerView.translatesAutoresizingMaskIntoConstraints = NO;
+        _datePicker.translatesAutoresizingMaskIntoConstraints = NO;
+
+        NSArray<NSLayoutConstraint*>*horizontalPickerConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|[_pickerView]|" options:0 metrics:nil views:viewDict];
+        NSArray<NSLayoutConstraint*>*verticalPickerConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_pickerView]-|" options:NSLayoutFormatAlignAllLeading|NSLayoutFormatAlignAllTrailing metrics:nil views:viewDict];
+
+        NSArray<NSLayoutConstraint*>*horizontalDateConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|[_datePicker]|" options:0 metrics:nil views:viewDict];
+        NSArray<NSLayoutConstraint*>*verticalDateConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_datePicker]-|" options:0 metrics:nil views:viewDict];
+
+        [self addConstraints:horizontalPickerConstraints];
+        [self addConstraints:verticalPickerConstraints];
+        [self addConstraints:horizontalDateConstraints];
+        [self addConstraints:verticalDateConstraints];
+
         //Initial settings
         {
             self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-            [self setFrame:CGRectMake(0, 0, CGRectGetWidth(_pickerView.frame), CGRectGetMaxY(_pickerView.frame))];
             [self setActionSheetPickerStyle:IQActionSheetPickerStyleTextPicker];
-            
-            self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
-            _actionToolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            _pickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            _datePicker.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         }
     }
     
@@ -151,81 +156,6 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
  */
 -(void)setPickerViewBackgroundColor:(UIColor *)pickerViewBackgroundColor{
   _pickerView.backgroundColor = pickerViewBackgroundColor;
-}
-
-/**
- *  Set Cancel Button Title Attributes
- *
- *  @param cancelButtonAttributes Cancel Button Title Attributes
- */
--(void)setCancelButtonAttributes:(NSDictionary *)cancelButtonAttributes{
-  id attributesForCancelButtonNormalState = [cancelButtonAttributes objectForKey:kIQActionSheetAttributesForNormalStateKey];
-  if (attributesForCancelButtonNormalState != nil && [attributesForCancelButtonNormalState isKindOfClass:[NSDictionary class]]) {
-    [_actionToolbar.cancelButton setTitleTextAttributes:(NSDictionary *)attributesForCancelButtonNormalState forState:UIControlStateNormal];
-  }
-  
-  id attributesForCancelButtonnHighlightedState = [cancelButtonAttributes objectForKey:  kIQActionSheetAttributesForHighlightedStateKey];
-  if (attributesForCancelButtonnHighlightedState != nil && [attributesForCancelButtonnHighlightedState isKindOfClass:[NSDictionary class]]) {
-    [_actionToolbar.cancelButton setTitleTextAttributes:(NSDictionary *)attributesForCancelButtonnHighlightedState forState:UIControlStateHighlighted];
-  }
-}
-
-/**
- *  Set Done Button Title Attributes
- *
- *  @param cancelButtonAttributes Done Button Title Attributes
- */
--(void)setDoneButtonAttributes:(NSDictionary *)doneButtonAttributes{
-  id attributesForDoneButtonNormalState = [doneButtonAttributes objectForKey:kIQActionSheetAttributesForNormalStateKey];
-  if (attributesForDoneButtonNormalState != nil && [attributesForDoneButtonNormalState isKindOfClass:[NSDictionary class]]) {
-    [_actionToolbar.doneButton setTitleTextAttributes:(NSDictionary *)attributesForDoneButtonNormalState forState:UIControlStateNormal];
-  }
-  
-  
-  id attributesForDoneButtonnHighlightedState = [doneButtonAttributes objectForKey:  kIQActionSheetAttributesForHighlightedStateKey];
-  if (attributesForDoneButtonnHighlightedState != nil && [attributesForDoneButtonnHighlightedState isKindOfClass:[NSDictionary class]]) {
-    [_actionToolbar.doneButton setTitleTextAttributes:(NSDictionary *)attributesForDoneButtonnHighlightedState forState:UIControlStateHighlighted];
-  }
-}
-
-/**
- *  Set Action Bar Color
- *
- *  @param barColor Custom color for toolBar
- */
--(void)setToolbarTintColor:(UIColor *)toolbarTintColor{
-    _toolbarTintColor = toolbarTintColor;
-    
-    [_actionToolbar setBarTintColor:toolbarTintColor];
-}
-
-/**
- *  Set Action Tool Bar Button Color
- *
- *  @param buttonColor Custom color for toolBar button
- */
--(void)setToolbarButtonColor:(UIColor *)toolbarButtonColor{
-    _toolbarButtonColor = toolbarButtonColor;
-    
-    [_actionToolbar setTintColor:toolbarButtonColor];
-}
-
-/*!
- Font for the UIPickerView
- */
-- (void)setTitleFont:(UIFont *)titleFont {
-    _titleFont = titleFont;
-    
-    _actionToolbar.titleButton.font = titleFont;
-}
-
-/*!
- *  Color for the UIPickerView
- */
-- (void)setTitleColor:(UIColor *)titleColor {
-    _titleColor = titleColor;
-    
-    _actionToolbar.titleButton.titleColor = titleColor;
 }
 
 #pragma mark - Done/Cancel
@@ -282,8 +212,6 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
         case IQActionSheetPickerStyleTimePicker:
         {
             [self setDate:_datePicker.date];
-            
-            [self setSelectedTitles:@[_datePicker.date]];
             
             if ([self.delegate respondsToSelector:@selector(actionSheetPickerView:didSelectDate:)])
             {
@@ -433,21 +361,14 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
     //If having widths
     if (_widthsForComponents)
     {
-        //If object isKind of NSNumber class
-        if ([_widthsForComponents[component] isKindOfClass:[NSNumber class]])
-        {
-            CGFloat width = [_widthsForComponents[component] floatValue];
-            
-            //If width is 0, then calculating it's size.
-            if (width == 0)
-                return ((pickerView.bounds.size.width-20)-2*(_titlesForComponents.count-1))/_titlesForComponents.count;
-            //Else returning it's width.
-            else
-                return width;
-        }
-        //Else calculating it's size.
-        else
+        CGFloat width = [_widthsForComponents[component] floatValue];
+        
+        //If width is 0, then calculating it's size.
+        if (width <= 0)
             return ((pickerView.bounds.size.width-20)-2*(_titlesForComponents.count-1))/_titlesForComponents.count;
+        //Else returning it's width.
+        else
+            return width;
     }
     //Else calculating it's size.
     else
@@ -509,11 +430,19 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
 -(void)dismiss
 {
     [_actionSheetController dismissWithCompletion:nil];
+    _actionSheetController = nil;
 }
 
 -(void)dismissWithCompletion:(void (^)(void))completion
 {
     [_actionSheetController dismissWithCompletion:completion];
+    _actionSheetController = nil;
+}
+
+-(void)setDisableDismissOnTouchOutside:(BOOL)disableDismissOnTouchOutside
+{
+    _disableDismissOnTouchOutside = disableDismissOnTouchOutside;
+    _actionSheetController.disableDismissOnTouchOutside = _disableDismissOnTouchOutside;
 }
 
 -(void)show
@@ -525,8 +454,13 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
 {
     [_pickerView reloadAllComponents];
     
-    _actionSheetController = [[IQActionSheetViewController alloc] init];
-    [_actionSheetController showPickerView:self completion:completion];
+    if (_actionSheetController == nil)
+    {
+        _actionSheetController = [[IQActionSheetViewController alloc] init];
+        _actionSheetController.disableDismissOnTouchOutside = self.disableDismissOnTouchOutside;
+        [_actionSheetController showPickerView:self completion:completion];
+        
+    }
 }
 
 

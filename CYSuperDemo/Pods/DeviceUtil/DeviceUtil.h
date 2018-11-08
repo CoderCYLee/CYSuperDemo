@@ -7,6 +7,16 @@
 
 #import <UIKit/UIKit.h>
 
+/// Enum of the different Apple's device platforms
+typedef NS_ENUM(NSUInteger, Platform) {
+  iPhone,
+  iPodTouch,
+  iPad,
+  AppleTV,
+  AppleWatch,
+  Unknown
+};
+
 typedef NS_ENUM(NSUInteger, Hardware) {
   NOT_AVAILABLE,
   
@@ -30,14 +40,32 @@ typedef NS_ENUM(NSUInteger, Hardware) {
   IPHONE_6S,
   IPHONE_6S_PLUS,
   IPHONE_SE,
-
+  
+  IPHONE_7,
+  IPHONE_7_GSM,
+  IPHONE_7_PLUS,
+  IPHONE_7_PLUS_GSM,
+  
+  IPHONE_8,
+  IPHONE_8_CN,
+  IPHONE_8_PLUS,
+  IPHONE_8_PLUS_CN,
+  
+  IPHONE_X,
+  IPHONE_X_CN,
+  
+  IPHONE_XS,
+  IPHONE_XS_MAX,
+  IPHONE_XS_MAX_CN,
+  IPHONE_XR,
+  
   IPOD_TOUCH_1G,
   IPOD_TOUCH_2G,
   IPOD_TOUCH_3G,
   IPOD_TOUCH_4G,
   IPOD_TOUCH_5G,
   IPOD_TOUCH_6G,
-
+  
   IPAD,
   IPAD_2,
   IPAD_2_WIFI,
@@ -49,7 +77,7 @@ typedef NS_ENUM(NSUInteger, Hardware) {
   IPAD_4,
   IPAD_4_WIFI,
   IPAD_4_GSM_CDMA,
-
+  
   IPAD_MINI,
   IPAD_MINI_WIFI,
   IPAD_MINI_WIFI_CDMA,
@@ -60,21 +88,53 @@ typedef NS_ENUM(NSUInteger, Hardware) {
   IPAD_MINI_3_WIFI_CELLULAR_CN,
   IPAD_MINI_4_WIFI,
   IPAD_MINI_4_WIFI_CELLULAR,
-
+  
   IPAD_MINI_RETINA_WIFI_CELLULAR_CN,
-
+  
   IPAD_AIR_WIFI,
   IPAD_AIR_WIFI_GSM,
   IPAD_AIR_WIFI_CDMA,
   IPAD_AIR_2_WIFI,
   IPAD_AIR_2_WIFI_CELLULAR,
-
+  
   IPAD_PRO_97_WIFI,
   IPAD_PRO_97_WIFI_CELLULAR,
-
+  
   IPAD_PRO_WIFI,
   IPAD_PRO_WIFI_CELLULAR,
-
+  
+  IPAD_PRO_2G_WIFI,
+  IPAD_PRO_2G_WIFI_CELLULAR,
+  IPAD_PRO_105_WIFI,
+  IPAD_PRO_105_WIFI_CELLULAR,
+  
+  IPAD_5_WIFI,
+  IPAD_5_WIFI_CELLULAR,
+  
+  IPAD_6_WIFI,
+  IPAD_6_WIFI_CELLULAR,
+  
+  APPLE_TV_1G,
+  APPLE_TV_2G,
+  APPLE_TV_3G,
+  APPLE_TV_3_2G,
+  APPLE_TV_4G,
+  
+  APPLE_WATCH_38,
+  APPLE_WATCH_42,
+  APPLE_WATCH_SERIES_2_38,
+  APPLE_WATCH_SERIES_2_42,
+  APPLE_WATCH_SERIES_1_38,
+  APPLE_WATCH_SERIES_1_42,
+  APPLE_WATCH_SERIES_3_38_CELLULAR,
+  APPLE_WATCH_SERIES_3_42_CELLULAR,
+  APPLE_WATCH_SERIES_3_38,
+  APPLE_WATCH_SERIES_3_42,
+  APPLE_WATCH_SERIES_4_40,
+  APPLE_WATCH_SERIES_4_44,
+  APPLE_WATCH_SERIES_4_40_CELLULAR,
+  APPLE_WATCH_SERIES_4_44_CELLULAR,
+  
   SIMULATOR,
 
   HARDWARE_MAX
@@ -84,88 +144,126 @@ typedef NS_ENUM(NSUInteger, Hardware) {
  * Hardware string of devices
  */
 
-static NSString* const iPhone1_1 = @"iPhone1,1";
-static NSString* const iPhone1_2 = @"iPhone1,2";
-static NSString* const iPhone2_1 = @"iPhone2,1";
-static NSString* const iPhone3_1 = @"iPhone3,1";
-static NSString* const iPhone3_2 = @"iPhone3,2";
-static NSString* const iPhone3_3 = @"iPhone3,3";
-static NSString* const iPhone4_1 = @"iPhone4,1";
-static NSString* const iPhone5_1 = @"iPhone5,1";
-static NSString* const iPhone5_2 = @"iPhone5,2";
-static NSString* const iPhone5_3 = @"iPhone5,3";
-static NSString* const iPhone5_4 = @"iPhone5,4";
-static NSString* const iPhone6_1 = @"iPhone6,1";
-static NSString* const iPhone6_2 = @"iPhone6,2";
-static NSString* const iPhone7_1 = @"iPhone7,1";
-static NSString* const iPhone7_2 = @"iPhone7,2";
-static NSString* const iPhone8_1 = @"iPhone8,1";
-static NSString* const iPhone8_2 = @"iPhone8,2";
-static NSString* const iPhone8_4 = @"iPhone8,4";
+extern NSString* const iPhone1_1;
+extern NSString* const iPhone1_2;
+extern NSString* const iPhone2_1;
+extern NSString* const iPhone3_1;
+extern NSString* const iPhone3_2;
+extern NSString* const iPhone3_3;
+extern NSString* const iPhone4_1;
+extern NSString* const iPhone5_1;
+extern NSString* const iPhone5_2;
+extern NSString* const iPhone5_3;
+extern NSString* const iPhone5_4;
+extern NSString* const iPhone6_1;
+extern NSString* const iPhone6_2;
+extern NSString* const iPhone7_1;
+extern NSString* const iPhone7_2;
+extern NSString* const iPhone8_1;
+extern NSString* const iPhone8_2;
+extern NSString* const iPhone8_4;
+extern NSString* const iPhone9_1;
+extern NSString* const iPhone9_2;
+extern NSString* const iPhone9_3;
+extern NSString* const iPhone9_4;
+extern NSString* const iPhone10_1;
+extern NSString* const iPhone10_2;
+extern NSString* const iPhone10_3;
+extern NSString* const iPhone10_4;
+extern NSString* const iPhone10_5;
+extern NSString* const iPhone10_6;
+extern NSString* const iPhone11_2;
+extern NSString* const iPhone11_4;
+extern NSString* const iPhone11_8;
 
-static NSString* const iPod1_1 = @"iPod1,1";
-static NSString* const iPod2_1 = @"iPod2,1";
-static NSString* const iPod3_1 = @"iPod3,1";
-static NSString* const iPod4_1 = @"iPod4,1";
-static NSString* const iPod5_1 = @"iPod5,1";
-static NSString* const iPod7_1 = @"iPod7,1";
+extern NSString* const iPod1_1;
+extern NSString* const iPod2_1;
+extern NSString* const iPod3_1;
+extern NSString* const iPod4_1;
+extern NSString* const iPod5_1;
+extern NSString* const iPod7_1;
 
-static NSString* const iPad1_1 = @"iPad1,1";
-static NSString* const iPad1_2 = @"iPad1,2";
-static NSString* const iPad2_1 = @"iPad2,1";
-static NSString* const iPad2_2 = @"iPad2,2";
-static NSString* const iPad2_3 = @"iPad2,3";
-static NSString* const iPad2_4 = @"iPad2,4";
-static NSString* const iPad2_5 = @"iPad2,5";
-static NSString* const iPad2_6 = @"iPad2,6";
-static NSString* const iPad2_7 = @"iPad2,7";
-static NSString* const iPad3_1 = @"iPad3,1";
-static NSString* const iPad3_2 = @"iPad3,2";
-static NSString* const iPad3_3 = @"iPad3,3";
-static NSString* const iPad3_4 = @"iPad3,4";
-static NSString* const iPad3_5 = @"iPad3,5";
-static NSString* const iPad3_6 = @"iPad3,6";
-static NSString* const iPad4_1 = @"iPad4,1";
-static NSString* const iPad4_2 = @"iPad4,2";
-static NSString* const iPad4_3 = @"iPad4,3";
-static NSString* const iPad4_4 = @"iPad4,4";
-static NSString* const iPad4_5 = @"iPad4,5";
-static NSString* const iPad4_6 = @"iPad4,6";
-static NSString* const iPad4_7 = @"iPad4,7";
-static NSString* const iPad4_8 = @"iPad4,8";
-static NSString* const iPad4_9 = @"iPad4,9";
-static NSString* const iPad5_1 = @"iPad5,1";
-static NSString* const iPad5_2 = @"iPad5,2";
-static NSString* const iPad5_3 = @"iPad5,3";
-static NSString* const iPad5_4 = @"iPad5,4";
-static NSString* const iPad6_3 = @"iPad6,3";
-static NSString* const iPad6_4 = @"iPad6,4";
-static NSString* const iPad6_7 = @"iPad6,7";
-static NSString* const iPad6_8 = @"iPad6,8";
+extern NSString* const iPad1_1;
+extern NSString* const iPad1_2;
+extern NSString* const iPad2_1;
+extern NSString* const iPad2_2;
+extern NSString* const iPad2_3;
+extern NSString* const iPad2_4;
+extern NSString* const iPad2_5;
+extern NSString* const iPad2_6;
+extern NSString* const iPad2_7;
+extern NSString* const iPad3_1;
+extern NSString* const iPad3_2;
+extern NSString* const iPad3_3;
+extern NSString* const iPad3_4;
+extern NSString* const iPad3_5;
+extern NSString* const iPad3_6;
+extern NSString* const iPad4_1;
+extern NSString* const iPad4_2;
+extern NSString* const iPad4_3;
+extern NSString* const iPad4_4;
+extern NSString* const iPad4_5;
+extern NSString* const iPad4_6;
+extern NSString* const iPad4_7;
+extern NSString* const iPad4_8;
+extern NSString* const iPad4_9;
+extern NSString* const iPad5_1;
+extern NSString* const iPad5_2;
+extern NSString* const iPad5_3;
+extern NSString* const iPad5_4;
+extern NSString* const iPad6_3;
+extern NSString* const iPad6_4;
+extern NSString* const iPad6_7;
+extern NSString* const iPad6_8;
+extern NSString* const iPad7_1;
+extern NSString* const iPad7_2;
+extern NSString* const iPad7_3;
+extern NSString* const iPad7_4;
+extern NSString* const iPad7_5;
+extern NSString* const iPad7_6;
+extern NSString* const iPad6_11;
+extern NSString* const iPad6_12;
+extern NSString* const AppleTV1_1;
+extern NSString* const AppleTV2_1;
+extern NSString* const AppleTV3_1;
+extern NSString* const AppleTV3_2;
+extern NSString* const AppleTV5_3;
+extern NSString* const Watch1_1;
+extern NSString* const Watch1_2;
+extern NSString* const Watch2_3;
+extern NSString* const Watch2_4;
+extern NSString* const Watch2_6;
+extern NSString* const Watch2_7;
 
-static NSString* const i386_Sim    = @"i386";
-static NSString* const x86_64_Sim  = @"x86_64";
+extern NSString* const i386_Sim;
+extern NSString* const x86_64_Sim;
 
 
 @interface DeviceUtil : NSObject
 
-/** This method retruns the hardware type */
-+ (NSString*)hardwareString;
+/** This method returns the hardware type */
+- (NSString*)hardwareString;
+
+/** This method returns the Platform enum depending upon hardware string */
+- (Platform)platform;
 
 /** This method returns the Hardware enum depending upon hardware string */
-+ (Hardware)hardware;
+- (Hardware)hardware;
 
 /** This method returns the readable description of hardware string */
-+ (NSString*)hardwareDescription;
+- (NSString*)hardwareDescription;
+
+/** This method returns the readable simple description of hardware string */
+- (NSString*)hardwareSimpleDescription;
 
 /**
  This method returns the hardware number not actual but logically.
  e.g. if the hardware string is 5,1 then hardware number would be 5.1
  */
-+ (float)hardwareNumber;
+- (float)hardwareNumber;
 
 /** This method returns the resolution for still image that can be received
  from back camera of the current device. Resolution returned for image oriented landscape right. **/
-+ (CGSize)backCameraStillImageResolutionInPixels;
+- (CGSize)backCameraStillImageResolutionInPixels;
 
 @end

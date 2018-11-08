@@ -22,11 +22,13 @@
 // THE SOFTWARE.
 
 
-#import <UIKit/UIKit.h>
+#import "IQActionSheetToolbar.h"
 
-#if !(__has_feature(objc_instancetype))
-#define instancetype id
-#endif
+#import <UIKit/UIControl.h>
+#import <Foundation/NSArray.h>
+
+@class NSString, NSNumber, NSDate;
+@class UIFont, UIColor;
 
 /**
 Action Sheet style settings.
@@ -48,12 +50,6 @@ typedef NS_ENUM(NSUInteger, IQActionSheetPickerStyle) {
     IQActionSheetPickerStyleTimePicker,
 };
 
-/// These keys are used to set text attributes for both `Cancel` and `Done` toolbar buttons.
-/// Identifies an attributed string of the toolbar button title for normal state.
-extern NSString * const kIQActionSheetAttributesForNormalStateKey;
-/// Identifies an attributed string of the toolbar button title for highlighted state.
-extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
-
 @class IQActionSheetPickerView;
 
 /*!
@@ -62,11 +58,11 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 @protocol IQActionSheetPickerViewDelegate <NSObject>
 
 @optional
-- (void)actionSheetPickerView:(IQActionSheetPickerView *)pickerView didSelectTitles:(NSArray*)titles;
-- (void)actionSheetPickerView:(IQActionSheetPickerView *)pickerView didSelectDate:(NSDate*)date;
-- (void)actionSheetPickerView:(IQActionSheetPickerView *)pickerView didChangeRow:(NSInteger)row inComponent:(NSInteger)component;
-- (void)actionSheetPickerViewDidCancel:(IQActionSheetPickerView *)pickerView;
-- (void)actionSheetPickerViewWillCancel:(IQActionSheetPickerView *)pickerView;
+- (void)actionSheetPickerView:(nonnull IQActionSheetPickerView *)pickerView didSelectTitles:(nonnull NSArray<NSString*>*)titles;
+- (void)actionSheetPickerView:(nonnull IQActionSheetPickerView *)pickerView didSelectDate:(nonnull NSDate*)date;
+- (void)actionSheetPickerView:(nonnull IQActionSheetPickerView *)pickerView didChangeRow:(NSInteger)row inComponent:(NSInteger)component;
+- (void)actionSheetPickerViewDidCancel:(nonnull IQActionSheetPickerView *)pickerView;
+- (void)actionSheetPickerViewWillCancel:(nonnull IQActionSheetPickerView *)pickerView;
 @end
 
 /*!
@@ -77,12 +73,12 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 /*!
  Initialization method with a title for toolbar and a callback delegate
  */
-- (instancetype)initWithTitle:(NSString *)title delegate:(id<IQActionSheetPickerViewDelegate>)delegate;
+- (nonnull instancetype)initWithTitle:(nullable NSString *)title delegate:(nullable id<IQActionSheetPickerViewDelegate>)delegate;
 
 /*!
  delegate(weak reference) object to inform about the selected values in pickerView. Delegate method will be called on Done click.
  */
-@property(nonatomic, weak) id<IQActionSheetPickerViewDelegate> delegate;
+@property(nullable, nonatomic, weak) id<IQActionSheetPickerViewDelegate> delegate;
 
 /*!
  actionSheetPickerStyle to show in picker. Default is IQActionSheetPickerStyleTextPicker.
@@ -92,19 +88,7 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 /*!
  Color for toolBar
  */
-@property(nonatomic, strong) UIColor *toolbarTintColor UI_APPEARANCE_SELECTOR;
-/*!
- Color for buttons
- */
-@property(nonatomic, strong) UIColor *toolbarButtonColor UI_APPEARANCE_SELECTOR;
-/*!
- A dictionary containing the attributed strings of the cancel button for normal and highlighted states.
- */
-@property(nonatomic, strong) NSDictionary *cancelButtonAttributes UI_APPEARANCE_SELECTOR;
-/*!
- A dictionary containing the attributed strings of the done button for normal and highlighted states.
- */
-@property(nonatomic, strong) NSDictionary *doneButtonAttributes UI_APPEARANCE_SELECTOR;
+@property(nullable, nonatomic, readonly) IQActionSheetToolbar *actionToolbar;
 
 ///----------------------
 /// @name Show / Hide
@@ -119,7 +103,7 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 /*!
  Show picker view with slide up animation, completion block will be called on animation completion.
  */
--(void)showWithCompletion:(void (^)(void))completion;
+-(void)showWithCompletion:(nullable void (^)(void))completion;
 
 /*!
  Dismiss picker view with slide down animation.
@@ -129,7 +113,12 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 /*!
  Dismiss picker view with slide down animation, completion block will be called on animation completion.
  */
--(void)dismissWithCompletion:(void (^)(void))completion;
+-(void)dismissWithCompletion:(nullable void (^)(void))completion;
+
+/*!
+ Disable dismiss action sheet when touching blank area at the top.
+ */
+@property(nonatomic, assign) BOOL disableDismissOnTouchOutside;
 
 
 ///-----------------------------------------
@@ -137,53 +126,42 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 ///-----------------------------------------
 
 /*!
- selected titles for each component. Please use [ NSArray of NSString ] format. (Not Animated)
+ selected titles for each component. (Not Animated)
  */
-@property(nonatomic, strong) NSArray *selectedTitles;
+@property(nullable, nonatomic, strong) NSArray<NSString*> *selectedTitles;
 
 /*!
- set selected titles for each component. Please use [ NSArray of NSString ] format.
+ set selected titles for each component.
  */
--(void)setSelectedTitles:(NSArray *)selectedTitles animated:(BOOL)animated;
+-(void)setSelectedTitles:(nonnull NSArray<NSString*> *)selectedTitles animated:(BOOL)animated;
 
 /*!
- Titles to show for component. Please use [ NSArray(numberOfComponents) of [ NSArray of NSString ](RowValueForEachComponent)] format, even there is single row to show, For example.
-                @[ @[ @"1", @"2", @"3", ], @[ @"11", @"12", @"13", ], @[ @"21", @"22", @"23", ]].
+ Titles to show for component. For example. @[ @[ @"1", @"2", @"3", ], @[ @"11", @"12", @"13", ], @[ @"21", @"22", @"23", ]].
  */
-@property(nonatomic, strong) NSArray *titlesForComponents;
+@property(nullable, nonatomic, strong) NSArray<NSArray<NSString*> *> *titlesForComponents;
 
 /*!
- Width to adopt for each component. Please use [NSArray of NSNumber/NSNull] format. If you don't want to specify a row width then use NSNull to calculate row width automatically.
+ Width to adopt for each component. If you don't want to specify a row width then use @(0) to calculate row width automatically.
  */
-@property(nonatomic, strong) NSArray *widthsForComponents;
+@property(nullable, nonatomic, strong) NSArray<NSNumber*> *widthsForComponents;
 
 /*!
  Font for the UIPickerView components
  */
-@property(nonatomic, strong) UIFont *pickerComponentsFont UI_APPEARANCE_SELECTOR;
+@property(nullable, nonatomic, strong) UIFont *pickerComponentsFont UI_APPEARANCE_SELECTOR;
 /*!
  Background color for the `UIPickerView`
  */
-@property(nonatomic, strong) UIColor *pickerViewBackgroundColor UI_APPEARANCE_SELECTOR;
+@property(nullable, nonatomic, strong) UIColor *pickerViewBackgroundColor UI_APPEARANCE_SELECTOR;
 /*!
  *  Color for the UIPickerView
  */
-@property(nonatomic, strong) UIColor *pickerComponentsColor UI_APPEARANCE_SELECTOR;
-/*!
- Font for the UIToolBar title
- */
-@property(nonatomic, strong) UIFont *titleFont UI_APPEARANCE_SELECTOR;
+@property(nullable, nonatomic, strong) UIColor *pickerComponentsColor UI_APPEARANCE_SELECTOR;
 
 /*!
- *  Color for the UIToolBar title
+ Select the provided index row for each component. Ignore if actionSheetPickerStyle is IQActionSheetPickerStyleDatePicker.
  */
-@property(nonatomic, strong) UIColor *titleColor UI_APPEARANCE_SELECTOR;
-
-
-/*!
- Select the provided index row for each component. Please use [ NSArray of NSNumber ] format for indexes. Ignore if actionSheetPickerStyle is IQActionSheetPickerStyleDatePicker.
- */
--(void)selectIndexes:(NSArray *)indexes animated:(BOOL)animated;
+-(void)selectIndexes:(nonnull NSArray<NSNumber*> *)indexes animated:(BOOL)animated;
 
 /*!
  If YES then it will force to scroll third picker component to pick equal or larger row then the first.
@@ -208,22 +186,22 @@ extern NSString * const kIQActionSheetAttributesForHighlightedStateKey;
 /*!
  selected date. Can also be use as setter method (not animated).
  */
-@property(nonatomic, assign) NSDate *date; //get/set date.
+@property(nullable, nonatomic, assign) NSDate *date; //get/set date.
 
 /*!
  set selected date.
  */
--(void)setDate:(NSDate *)date animated:(BOOL)animated;
+-(void)setDate:(nonnull NSDate *)date animated:(BOOL)animated;
 
 /*!
  Minimum selectable date in UIDatePicker. Default is nil.
  */
-@property (nonatomic, retain) NSDate *minimumDate;
+@property (nullable, nonatomic, retain) NSDate *minimumDate;
 
 /*!
  Maximum selectable date in UIDatePicker. Default is nil.
  */
-@property (nonatomic, retain) NSDate *maximumDate;
+@property (nullable, nonatomic, retain) NSDate *maximumDate;
 
 @end
 
