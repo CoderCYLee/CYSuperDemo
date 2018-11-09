@@ -1,29 +1,24 @@
 //
-//  APISampleCodeListTableViewController.m
+//  IOS12APISampleCodeListTableViewController.m
 //  CYSuperDemo
 //
 //  Created by cyrill on 2018/11/8.
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import "APISampleCodeListTableViewController.h"
+#import "IOS12APISampleCodeListTableViewController.h"
+#import <DeviceCheck/DeviceCheck.h>
 
-@interface APISampleCodeListTableViewController ()
+@interface IOS12APISampleCodeListTableViewController ()
 
 @property (nonatomic, strong) NSArray *titleArr;
 
 @end
 
-@implementation APISampleCodeListTableViewController
+@implementation IOS12APISampleCodeListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
 }
@@ -38,7 +33,6 @@
     return self.titleArr.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellId" forIndexPath:indexPath];
     
@@ -48,16 +42,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *typeName = self.titleArr[indexPath.row];
-    NSString *className = [NSString stringWithFormat:@"%@APISampleCodeListTableViewController", typeName];
     
-    [self.navigationController pushViewController:[[NSClassFromString(className) alloc] init] animated:YES];
+    NSString *typeName = self.titleArr[indexPath.row];
+    [self.navigationController pushViewController:[self getControllerWithString:typeName] animated:YES];
+}
+
+- (id)getControllerWithString:(NSString *)string {
+    
+    NSString *className = [NSString stringWithFormat:@"%@ViewController", string];
+    return [[NSClassFromString(className) alloc] init];
 }
 
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"IOS9", @"IOS10", @"IOS11", @"IOS12"];
+        _titleArr = @[@"Network"];
     }
     return _titleArr;
 }
