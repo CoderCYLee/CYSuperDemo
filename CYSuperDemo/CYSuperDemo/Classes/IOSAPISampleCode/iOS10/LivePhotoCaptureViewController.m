@@ -1,30 +1,22 @@
- //
-//  NetworkViewController.m
+//
+//  LivePhotoCaptureViewController.m
 //  CYSuperDemo
 //
 //  Created by cyrill on 2018/11/9.
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import "NetworkViewController.h"
-#import <Network/Network.h>
+#import "LivePhotoCaptureViewController.h"
 
-@interface NetworkViewController ()
+@interface LivePhotoCaptureViewController ()
 
 @end
 
-@implementation NetworkViewController
+@implementation LivePhotoCaptureViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.view.layer.contents = (id)[UIImage imageNamed:@"Icon_Home"].CGImage;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon_Home"]];
-    
-    
-    
 }
 
 /*

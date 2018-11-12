@@ -1,20 +1,20 @@
 //
-//  IOS10APISampleCodeListTableViewController.m
+//  FrameworkCodeTableViewController.m
 //  CYSuperDemo
 //
-//  Created by cyrill on 2018/11/8.
+//  Created by cyrill on 2018/11/12.
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import "IOS10APISampleCodeListTableViewController.h"
+#import "FrameworkCodeTableViewController.h"
 
-@interface IOS10APISampleCodeListTableViewController ()
+@interface FrameworkCodeTableViewController ()
 
 @property (nonatomic, strong) NSArray *titleArr;
 
 @end
 
-@implementation IOS10APISampleCodeListTableViewController
+@implementation FrameworkCodeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,21 +41,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     NSString *typeName = self.titleArr[indexPath.row];
-    [self.navigationController pushViewController:[self getControllerWithString:typeName] animated:YES];
-}
-
-- (id)getControllerWithString:(NSString *)string {
+    NSString *className = [NSString stringWithFormat:@"%@ViewController", typeName];
     
-    NSString *className = [NSString stringWithFormat:@"%@ViewController", string];
-    return [[NSClassFromString(className) alloc] init];
+    [self.navigationController pushViewController:[[NSClassFromString(className) alloc] init] animated:YES];
 }
 
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"LivePhotoCapture"];
+        _titleArr = @[@"Accounts", @"AddressBook"];
     }
     return _titleArr;
 }

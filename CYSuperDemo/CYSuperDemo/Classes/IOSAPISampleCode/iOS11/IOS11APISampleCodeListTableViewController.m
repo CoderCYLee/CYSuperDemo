@@ -80,7 +80,7 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"DeviceCheck", @"CoreNFC", @"ARKit", @"MapKit"];
+        _titleArr = @[@"DeviceCheck", @"CoreNFC", @"ARKit", @"MapKit", @"PDFKit"];
     }
     return _titleArr;
 }

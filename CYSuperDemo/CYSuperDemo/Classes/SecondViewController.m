@@ -56,7 +56,7 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"APISampleCodeList"];
+        _titleArr = @[@"APISampleCodeList", @"FrameworkCode"];
     }
     return _titleArr;
 }
