@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
+    
 }
 
 #pragma mark - Table view data source

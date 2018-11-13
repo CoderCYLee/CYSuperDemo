@@ -147,11 +147,11 @@
     {
         _iconCenterImgV.hidden = YES;
         [UIView animateWithDuration:1 animations:^{
-            _textField.textAlignment = NSTextAlignmentLeft;
+            self.textField.textAlignment = NSTextAlignmentLeft;
             _iconImgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"123"]];
             _iconImgV.contentMode = UIViewContentModeScaleAspectFit;
-            _textField.leftView = _iconImgV;
-            _textField.leftViewMode =  UITextFieldViewModeAlways;
+            self.textField.leftView = _iconImgV;
+            self.textField.leftViewMode =  UITextFieldViewModeAlways;
         }];
     }
 }
@@ -291,8 +291,8 @@
     }
     if (!self.isHiddenCancelButton) {
         [UIView animateWithDuration:0.1 animations:^{
-            _cancelButton.hidden = NO;
-            _textField.frame = CGRectMake(7, 7, _cancelButton.frame.origin.x-7, 30);
+            self.cancelButton.hidden = NO;
+            self.textField.frame = CGRectMake(7, 7, self.cancelButton.frame.origin.x-7, 30);
 // _textField.transform = CGAffineTransformMakeTranslation(-_cancelButton.frame.size.width,0);
         }];
     }
@@ -328,8 +328,8 @@
     }
     if (!self.isHiddenCancelButton) {
         [UIView animateWithDuration:0.1 animations:^{
-            _cancelButton.hidden = YES;
-            _textField.frame = CGRectMake(7, 7, self.frame.size.width - 7*2, 30);
+            self.cancelButton.hidden = YES;
+            self.textField.frame = CGRectMake(7, 7, self.frame.size.width - 7*2, 30);
             // _textField.transform = CGAffineTransformMakeTranslation(-_cancelButton.frame.size.width,0);
         }];
     }

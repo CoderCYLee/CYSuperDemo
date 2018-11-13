@@ -1,7 +1,7 @@
 //
-//  UIView+Hierarchy.h
+// IQUIView+Hierarchy.h
 // https://github.com/hackiftekhar/IQKeyboardManager
-// Copyright (c) 2013-15 Iftekhar Qurashi.
+// Copyright (c) 2013-16 Iftekhar Qurashi.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,23 +22,15 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIView.h>
+#import <UIKit/UIViewController.h>
 #import "IQKeyboardManagerConstants.h"
 
-@class UICollectionView, UIScrollView, UITableView, NSArray;
+@class UICollectionView, UIScrollView, UITableView, UISearchBar, NSArray;
 
 /**
  UIView hierarchy category.
  */
 @interface UIView (IQ_UIView_Hierarchy)
-
-///------------------------------
-/// @name canBecomeFirstResponder
-///------------------------------
-
-/**
- Returns YES if IQKeyboardManager asking for `canBecomeFirstResponder. Useful when doing custom work in `textFieldShouldBeginEditing:` delegate.
- */
-@property (nonatomic, readonly) BOOL isAskingCanBecomeFirstResponder;
 
 ///----------------------
 /// @name viewControllers
@@ -47,12 +39,17 @@
 /**
  Returns the UIViewController object that manages the receiver.
  */
-@property (nonatomic, readonly, strong) UIViewController *viewController;
+@property (nullable, nonatomic, readonly, strong) UIViewController *viewContainingController;
 
 /**
  Returns the topMost UIViewController object in hierarchy.
  */
-@property (nonatomic, readonly, strong) UIViewController *topMostController;
+@property (nullable, nonatomic, readonly, strong) UIViewController *topMostController;
+
+/**
+ Returns the UIViewController object that is actually the parent of this object. Most of the time it's the viewController object which actually contains it, but result may be different if it's viewController is added as childViewController of another viewController.
+ */
+@property (nullable, nonatomic, readonly, strong) UIViewController *parentContainerViewController;
 
 ///-----------------------------------
 /// @name Superviews/Subviews/Siglings
@@ -61,26 +58,26 @@
 /**
  Returns the superView of provided class type.
  */
--(UIView*)superviewOfClassType:(Class)classType;
+-(nullable UIView*)superviewOfClassType:(nonnull Class)classType;
 
 /**
  Returns all siblings of the receiver which canBecomeFirstResponder.
  */
-@property (nonatomic, readonly, copy) NSArray *responderSiblings;
+@property (nonnull, nonatomic, readonly, copy) NSArray<__kindof UIView*> *responderSiblings;
 
 /**
  Returns all deep subViews of the receiver which canBecomeFirstResponder.
  */
-@property (nonatomic, readonly, copy) NSArray *deepResponderViews;
+@property (nonnull, nonatomic, readonly, copy) NSArray<__kindof UIView*> *deepResponderViews;
 
 ///-------------------------
 /// @name Special TextFields
 ///-------------------------
 
 /**
- Returns YES if the receiver object is UISearchBarTextField, otherwise return NO.
+ Returns searchBar if receiver object is UISearchBarTextField, otherwise return nil.
  */
-@property (nonatomic, getter=isSearchBarTextField, readonly) BOOL searchBarTextField;
+@property (nullable, nonatomic, readonly) UISearchBar *textFieldSearchBar;
 
 /**
  Returns YES if the receiver object is UIAlertSheetTextField, otherwise return NO.
@@ -94,7 +91,7 @@
 /**
  Returns current view transform with respect to the 'toView'.
  */
--(CGAffineTransform)convertTransformToView:(UIView*)toView;
+-(CGAffineTransform)convertTransformToView:(nullable UIView*)toView;
 
 ///-----------------
 /// @name Hierarchy
@@ -103,20 +100,26 @@
 /**
  Returns a string that represent the information about it's subview's hierarchy. You can use this method to debug the subview's positions.
  */
-@property (nonatomic, readonly, copy) NSString *subHierarchy;
+@property (nonnull, nonatomic, readonly, copy) NSString *subHierarchy;
 
 /**
  Returns an string that represent the information about it's upper hierarchy. You can use this method to debug the superview's positions.
  */
-@property (nonatomic, readonly, copy) NSString *superHierarchy;
+@property (nonnull, nonatomic, readonly, copy) NSString *superHierarchy;
 
 /**
  Returns an string that represent the information about it's frame positions. You can use this method to debug self positions.
  */
-@property (nonatomic, readonly, copy) NSString *debugHierarchy;
+@property (nonnull, nonatomic, readonly, copy) NSString *debugHierarchy;
 
 @end
 
+
+@interface UIViewController (IQ_UIView_Hierarchy)
+
+-(nullable UIViewController*)parentIQContainerViewController;
+
+@end
 
 /**
  NSObject category to used for logging purposes
@@ -126,6 +129,6 @@
 /**
  Short description for logging purpose.
  */
-@property (nonatomic, readonly, copy) NSString *_IQDescription;
+@property (nonnull, nonatomic, readonly, copy) NSString *_IQDescription;
 
 @end

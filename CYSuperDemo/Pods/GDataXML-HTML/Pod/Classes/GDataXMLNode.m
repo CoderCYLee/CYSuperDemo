@@ -19,6 +19,21 @@
 #define GDATAXMLNODE_DEFINE_GLOBALS 1
 #import "GDataXMLNode.h"
 
+// libxml includes require that the target Header Search Paths contain
+//
+//   /usr/include/libxml2
+//
+// and Other Linker Flags contain
+//
+//   -lxml2
+
+#import <libxml/tree.h>
+#import <libxml/parser.h>
+#import <libxml/xmlstring.h>
+#import <libxml/HTMLparser.h>
+#import <libxml/xpath.h>
+#import <libxml/xpathInternals.h>
+
 @class NSArray, NSDictionary, NSError, NSString, NSURL;
 @class GDataXMLElement, GDataXMLDocument;
 
@@ -155,7 +170,29 @@ static void RegisterNamespaces(NSDictionary *namespaces, xmlXPathContextPtr xpat
     }
 }
 
-@interface GDataXMLNode (PrivateMethods)
+@interface GDataXMLNode ()
+{
+@protected
+    // NSXMLNodes can have a namespace URI or prefix even if not part
+    // of a tree; xmlNodes cannot.  When we create nodes apart from
+    // a tree, we'll store the dangling prefix or URI in the xmlNode's name,
+    // like
+    //   "prefix:name"
+    // or
+    //   "{http://uri}:name"
+    //
+    // We will fix up the node's namespace and name (and those of any children)
+    // later when adding the node to a tree with addChild: or addAttribute:.
+    // See fixUpNamespacesForNode:.
+    
+    xmlNodePtr xmlNode_; // may also be an xmlAttrPtr or xmlNsPtr
+    BOOL shouldFreeXMLNode_; // if yes, xmlNode_ will be free'd in dealloc
+    
+    // cached values
+    NSString *cachedName_;
+    NSArray *cachedChildren_;
+    NSArray *cachedAttributes_;
+}
 
 // consuming a node implies it will later be freed when the instance is
 // dealloc'd; borrowing it implies that ownership and disposal remain the
@@ -171,9 +208,6 @@ static void RegisterNamespaces(NSDictionary *namespaces, xmlXPathContextPtr xpat
 - (xmlNodePtr)XMLNode;
 - (xmlNodePtr)XMLNodeCopy;
 
-// search for an underlying attribute
-- (GDataXMLNode *)attributeForXMLNode:(xmlAttrPtr)theXMLNode;
-
 // return an NSString for an xmlChar*, using our strings cache in the
 // document
 - (NSString *)stringFromXMLString:(const xmlChar *)chars;
@@ -184,7 +218,10 @@ static void RegisterNamespaces(NSDictionary *namespaces, xmlXPathContextPtr xpat
 
 @end
 
-@interface GDataXMLElement (PrivateMethods)
+@interface GDataXMLElement ()
+
+// search for an underlying attribute
+- (GDataXMLNode *)attributeForXMLNode:(xmlAttrPtr)theXMLNode;
 
 + (void)fixUpNamespacesForNode:(xmlNodePtr)nodeToFix
             graftingToTreeNode:(xmlNodePtr)graftPointNode;
@@ -573,6 +610,8 @@ static void RegisterNamespaces(NSDictionary *namespaces, xmlXPathContextPtr xpat
                 str = [self stringFromXMLString:(nsNode->prefix)];
             }
             
+        } else if (xmlNode_->type == XML_ENTITY_DECL) {
+            str = [self stringFromXMLString:(xmlNode_->name)];
         } else if (xmlNode_->ns != NULL && xmlNode_->ns->prefix != NULL) {
             
             // name of a non-namespace node
@@ -1645,7 +1684,13 @@ static void RegisterNamespaces(NSDictionary *namespaces, xmlXPathContextPtr xpat
 @end
 
 
-@interface GDataXMLDocument (PrivateMethods)
+@interface GDataXMLDocument ()
+{
+@protected
+    xmlDoc* xmlDoc_; // strong; always free'd in dealloc
+    NSStringEncoding _encoding;
+}
+
 - (void)addStringsCacheToDoc;
 const char *IANAEncodingCStringFromNSStringEncoding(NSStringEncoding encoding);
 @end

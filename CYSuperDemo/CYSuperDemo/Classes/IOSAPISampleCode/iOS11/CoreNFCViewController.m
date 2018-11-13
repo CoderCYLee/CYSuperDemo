@@ -51,10 +51,7 @@ API_AVAILABLE(ios(11.0))
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setTitle:@"Scan" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(scan) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Scan" style:UIBarButtonItemStyleDone target:self action:@selector(scan)];
     self.navigationItem.rightBarButtonItem = item;
 }
 
