@@ -50,7 +50,7 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"Accounts", @"AddressBook", @"Contacts"];
+        _titleArr = @[@"Accounts", @"AddressBook", @"AVFoundation", @"AVKit", @"Contacts", @"MediaPlayer"];
     }
     return _titleArr;
 }

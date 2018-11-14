@@ -75,9 +75,13 @@
 		E7780932219950B000E94CD3 /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7780931219950B000E94CD3 /* AddressBookViewController.m */; };
 		E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778093821995F3000E94CD3 /* FrameworkCodeTableViewController.m */; };
 		E778093D219965A900E94CD3 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778093C219965A900E94CD3 /* ContactsViewController.m */; };
+		E7832740219BF44000B0574C /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783273F219BF44000B0574C /* MediaPlayerViewController.m */; };
 		E78A996B21421731002A9803 /* CYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996A21421731002A9803 /* CYLocationManager.m */; };
 		E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996D214217F1002A9803 /* CYCustomSearchBar.m */; };
 		E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91621E9CDE8D0033E336 /* UIControl+CY.m */; };
+		E79252B7219BF51300E60577 /* AVKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E79252B6219BF51300E60577 /* AVKitViewController.m */; };
+		E79252BA219BF51D00E60577 /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E79252B9219BF51D00E60577 /* AVFoundationViewController.m */; };
+		E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E79252BC219BFB3B00E60577 /* video1.mp4 */; };
 		E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FC2190270E002BEAFD /* HomeViewController.m */; };
 		E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FF2192BBF3002BEAFD /* SecondViewController.m */; };
 		E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */; };
@@ -275,12 +279,19 @@
 		E778093C219965A900E94CD3 /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		E778093E219A9E8B00E94CD3 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		E7780942219AA4B900E94CD3 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		E783273E219BF44000B0574C /* MediaPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
+		E783273F219BF44000B0574C /* MediaPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; };
 		E78A996921421730002A9803 /* CYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLocationManager.h; sourceTree = "<group>"; };
 		E78A996A21421731002A9803 /* CYLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLocationManager.m; sourceTree = "<group>"; };
 		E78A996C214217F1002A9803 /* CYCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCustomSearchBar.h; sourceTree = "<group>"; };
 		E78A996D214217F1002A9803 /* CYCustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCustomSearchBar.m; sourceTree = "<group>"; };
 		E78F91611E9CDE8D0033E336 /* UIControl+CY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CY.h"; sourceTree = "<group>"; };
 		E78F91621E9CDE8D0033E336 /* UIControl+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CY.m"; sourceTree = "<group>"; };
+		E79252B5219BF51300E60577 /* AVKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVKitViewController.h; sourceTree = "<group>"; };
+		E79252B6219BF51300E60577 /* AVKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVKitViewController.m; sourceTree = "<group>"; };
+		E79252B8219BF51D00E60577 /* AVFoundationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationViewController.h; sourceTree = "<group>"; };
+		E79252B9219BF51D00E60577 /* AVFoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundationViewController.m; sourceTree = "<group>"; };
+		E79252BC219BFB3B00E60577 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
 		E796E5FB2190270E002BEAFD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E796E5FC2190270E002BEAFD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E796E5FE2192BBF3002BEAFD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -550,6 +561,7 @@
 		E7688E331E7A49150064CD69 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E79252BB219BFB0000E60577 /* Video */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -716,7 +728,10 @@
 			children = (
 				E77808C521952CE000E94CD3 /* Accounts */,
 				E77808C821952CE000E94CD3 /* AddressBook */,
+				E7832741219BF47400B0574C /* AVFoundation */,
+				E79252B4219BF4FB00E60577 /* AVKit */,
 				E77808B221952CE000E94CD3 /* Contacts */,
+				E783273C219BF42900B0574C /* MediaPlayer */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -778,6 +793,41 @@
 				E778092521994BA800E94CD3 /* Info.plist */,
 			);
 			path = ActionDemo;
+			sourceTree = "<group>";
+		};
+		E783273C219BF42900B0574C /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E783273E219BF44000B0574C /* MediaPlayerViewController.h */,
+				E783273F219BF44000B0574C /* MediaPlayerViewController.m */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		E7832741219BF47400B0574C /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				E79252B8219BF51D00E60577 /* AVFoundationViewController.h */,
+				E79252B9219BF51D00E60577 /* AVFoundationViewController.m */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		E79252B4219BF4FB00E60577 /* AVKit */ = {
+			isa = PBXGroup;
+			children = (
+				E79252B5219BF51300E60577 /* AVKitViewController.h */,
+				E79252B6219BF51300E60577 /* AVKitViewController.m */,
+			);
+			path = AVKit;
+			sourceTree = "<group>";
+		};
+		E79252BB219BFB0000E60577 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				E79252BC219BFB3B00E60577 /* video1.mp4 */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -983,6 +1033,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
+				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
 			);
@@ -1261,6 +1312,7 @@
 				E76A89CC219516310042D51F /* NetworkViewController.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
+				E79252BA219BF51D00E60577 /* AVFoundationViewController.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
 				E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
@@ -1269,6 +1321,7 @@
 				E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */,
 				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
+				E79252B7219BF51300E60577 /* AVKitViewController.m in Sources */,
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E72124262193CEF800129C5A /* IOS9APISampleCodeListTableViewController.m in Sources */,
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
@@ -1289,6 +1342,7 @@
 				E7688E7A1E7A4B400064CD69 /* UIAlertController+CY.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
 				E72124342194119C00129C5A /* ARKitViewController.m in Sources */,
+				E7832740219BF44000B0574C /* MediaPlayerViewController.m in Sources */,
 				E76A89D5219525DC0042D51F /* PDFKitViewController.m in Sources */,
 				E72124272193CEFA00129C5A /* IOS10APISampleCodeListTableViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
@@ -1522,6 +1576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1541,6 +1596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
