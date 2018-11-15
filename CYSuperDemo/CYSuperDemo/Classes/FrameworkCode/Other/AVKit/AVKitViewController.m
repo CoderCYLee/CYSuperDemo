@@ -35,7 +35,7 @@
     NSString *remoteStr = @"https://media.w3.org/2010/05/sintel/trailer.mp4";
     NSURL *remoteUrl = [NSURL URLWithString:remoteStr];
     
-    NSString *localStr = [[NSBundle mainBundle]pathForResource:@"video1" ofType:@"mp4"];
+    NSString *localStr = [[NSBundle mainBundle] pathForResource:@"video1" ofType:@"mp4"];
     NSURL *localUrl = [NSURL fileURLWithPath:localStr];
     
     self.avplayerVC = [[AVPlayerViewController alloc] init];
