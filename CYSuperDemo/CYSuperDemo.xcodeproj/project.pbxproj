@@ -96,6 +96,9 @@
 		E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */; };
 		E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816A521BF5118006F0B48 /* IADViewController.m */; };
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
+		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
+		E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B021BFBC82006F0B48 /* PassKit.framework */; };
+		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; };
 		E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */; };
 		E7F0106F21BDF74100DB3061 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F0106E21BDF74100DB3061 /* ThirdViewController.m */; };
 		E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107021BDF75200DB3061 /* Third.storyboard */; };
@@ -329,6 +332,8 @@
 		E7B816A521BF5118006F0B48 /* IADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADViewController.m; sourceTree = "<group>"; };
 		E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
 		E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
+		E7B816B021BFBC82006F0B48 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		E7BB58DB1FB19C310026BFD9 /* UIView+CYBoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CYBoom.h"; sourceTree = "<group>"; };
 		E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYBoom.m"; sourceTree = "<group>"; };
 		E7F0106D21BDF74100DB3061 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -355,6 +360,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */,
+				E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */,
 				E762F4F721A54F210086C13B /* CloudKit.framework in Frameworks */,
 				E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */,
 				E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */,
@@ -419,6 +426,8 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
+				E7B816B021BFBC82006F0B48 /* PassKit.framework */,
 				E762F4F621A54F210086C13B /* CloudKit.framework */,
 				E7780942219AA4B900E94CD3 /* ContactsUI.framework */,
 				E778093E219A9E8B00E94CD3 /* Contacts.framework */,
@@ -1051,11 +1060,14 @@
 							com.apple.AccessWiFi = {
 								enabled = 1;
 							};
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
 							};
 							com.apple.AutoFillCredentialProvider = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1064,6 +1076,9 @@
 								enabled = 1;
 							};
 							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 							com.apple.NearFieldCommunicationTagReading = {
@@ -1079,6 +1094,9 @@
 								enabled = 1;
 							};
 							com.apple.Siri = {
+								enabled = 1;
+							};
+							com.apple.Wallet = {
 								enabled = 1;
 							};
 							com.apple.iCloud = {
@@ -1509,6 +1527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */,
 				E778090B21994B3400E94CD3 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,25 +22,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="20" y="8" width="280" height="21"/>
+                                <rect key="frame" x="20" y="8" width="200" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ait-TZ-qbB">
+                                <rect key="frame" x="225" y="8" width="75" height="21"/>
+                                <state key="normal" title="More"/>
+                                <connections>
+                                    <action selector="tap:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="NhB-1A-n3V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="usL-zv-ZcF" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" symbolic="YES" id="0Q0-KW-PJ6"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" symbolic="YES" id="6Vq-gs-PHe"/>
-                            <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" symbolic="YES" id="L8K-9R-egU"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="hAo-0f-1A1" secondAttribute="bottom" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="usL-zv-ZcF" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="8" symbolic="YES" id="0Q0-KW-PJ6"/>
+                            <constraint firstAttribute="trailing" secondItem="ait-TZ-qbB" secondAttribute="trailing" constant="20" symbolic="YES" id="4r2-xE-3oe"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" symbolic="YES" id="6Vq-gs-PHe"/>
+                            <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="100" id="RTR-fy-d6u"/>
+                            <constraint firstItem="usL-zv-ZcF" firstAttribute="top" secondItem="ait-TZ-qbB" secondAttribute="bottom" constant="8" symbolic="YES" id="Sii-7f-6rF"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="hAo-0f-1A1" secondAttribute="bottom" constant="8" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="ait-TZ-qbB" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="5" id="raD-nI-hRZ"/>
+                            <constraint firstItem="ait-TZ-qbB" firstAttribute="top" secondItem="hAo-0f-1A1" secondAttribute="bottom" constant="8" symbolic="YES" id="ri6-nY-Dbt"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="label" destination="GcN-lo-r42" id="6U5-6x-Umf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.19999999999999" y="100.29985007496252"/>
         </scene>
     </scenes>
 </document>

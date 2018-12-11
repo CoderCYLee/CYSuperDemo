@@ -12,4 +12,6 @@
 
 - (NSString *)dateString;
 
++ (NSString *)currentDateString;
+
 @end

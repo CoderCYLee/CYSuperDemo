@@ -10,4 +10,6 @@
 
 @interface ActionViewController : UIViewController
 
+@property (nonatomic, copy) NSString *myString;
+
 @end

@@ -45,7 +45,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *typeName = self.titleArr[indexPath.row];
-    [self.navigationController pushViewController:[self getControllerWithString:typeName] animated:YES];
+    id vc = [self getControllerWithString:typeName];
+    if ([vc respondsToSelector:@selector(setTitle:)]) {
+        [vc performSelector:@selector(setTitle:) withObject:typeName];
+    }
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (id)getControllerWithString:(NSString *)string {

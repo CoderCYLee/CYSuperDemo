@@ -37,8 +37,19 @@
                         }];
                     }
                 }];
-                
                 imageFound = YES;
+                
+                break;
+            }
+            
+            if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeText]) {
+                
+                [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeText options:nil completionHandler:^(NSString *text, NSError * _Null_unspecified error) {
+                    
+                    if(!error) {
+                        self.myString = [text uppercaseString];
+                    }
+                }];
                 break;
             }
         }
@@ -53,7 +64,13 @@
 - (IBAction)done {
     // Return any edited content to the host app.
     // This template doesn't do anything, so we just echo the passed in items.
-    [self.extensionContext completeRequestReturningItems:self.extensionContext.inputItems completionHandler:nil];
+    NSExtensionItem *outputItem = [NSExtensionItem new];
+    NSItemProvider *item = [[NSItemProvider alloc] initWithItem:self.myString typeIdentifier:(NSString *)kUTTypeText];
+    outputItem.attachments = @[item];
+    NSArray *outputItems = @[outputItem];
+    
+    
+    [self.extensionContext completeRequestReturningItems:outputItems completionHandler:nil];
 }
 
 @end

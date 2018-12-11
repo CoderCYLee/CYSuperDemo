@@ -46,7 +46,11 @@
     NSString *typeName = self.titleArr[indexPath.row];
     NSString *className = [NSString stringWithFormat:@"%@ViewController", typeName];
     
-    [self.navigationController pushViewController:[[NSClassFromString(className) alloc] init] animated:YES];
+    id vc = [[NSClassFromString(className) alloc] init];
+    if ([vc respondsToSelector:@selector(setTitle:)]) {
+        [vc performSelector:@selector(setTitle:) withObject:typeName];
+    }
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSArray *)titleArr

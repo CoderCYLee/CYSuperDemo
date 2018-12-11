@@ -8,8 +8,10 @@
 
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import "NSDate+CY.h"
 
 @interface TodayViewController () <NCWidgetProviding>
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -27,7 +29,17 @@
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
 
+    self.label.text = [NSDate currentDateString];
+    
     completionHandler(NCUpdateResultNewData);
+}
+
+- (IBAction)tap:(id)sender {
+    // superdemo 是主体app定义的 schemes
+    NSURL *url = [NSURL URLWithString:@"superdemo://"];
+    [self.extensionContext openURL:url completionHandler:^(BOOL success) {
+        
+    }];
 }
 
 @end

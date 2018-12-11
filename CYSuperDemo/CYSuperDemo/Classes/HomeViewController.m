@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import <DeviceUtil.h>
 #import "ThirdViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface HomeViewController ()
 
@@ -31,10 +32,17 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Third" bundle:nil];
-    
-    ThirdViewController *vc = [sb instantiateInitialViewController];
-    [self.navigationController pushViewController:vc animated:YES];
+
+    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[@"myfhadjhfkda"] applicationActivities:nil];
+    [vc setCompletionWithItemsHandler:^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
+        // 接收
+        NSExtensionItem *item = [returnedItems firstObject];
+        NSItemProvider *itemProvider = [item.attachments firstObject];
+        [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeText options:nil completionHandler:^(NSString *text, NSError * _Null_unspecified error) {
+            NSLog(@"%@", text);
+        }];
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
