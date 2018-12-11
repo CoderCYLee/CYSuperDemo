@@ -10,4 +10,6 @@
 
 @interface NSDate (CY)
 
+- (NSString *)dateString;
+
 @end

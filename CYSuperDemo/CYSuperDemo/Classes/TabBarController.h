@@ -7,16 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "BaseNavigationController.h"
 
 @interface TabBarController : UITabBarController
 
-@property (nonatomic, strong) UINavigationController *navigationController1;
-@property (nonatomic, strong) UINavigationController *navigationController2;
-@property (nonatomic, strong) UINavigationController *navigationController3;
-@property (nonatomic, strong) UINavigationController *navigationController4;
+@property (nonatomic, strong) BaseNavigationController *navigationController1;
+@property (nonatomic, strong) BaseNavigationController *navigationController2;
+@property (nonatomic, strong) BaseNavigationController *navigationController3;
+@property (nonatomic, strong) BaseNavigationController *navigationController4;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

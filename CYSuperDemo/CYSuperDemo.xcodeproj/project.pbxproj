@@ -16,6 +16,8 @@
 		E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70616D11E795BF200762B56 /* LaunchScreen.storyboard */; };
 		E70616DE1E795BF200762B56 /* CYSuperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616DD1E795BF200762B56 /* CYSuperDemoTests.m */; };
 		E70616E91E795BF200762B56 /* CYSuperDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */; };
+		E7094D8E21A40763001E35B2 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7094D8D21A40763001E35B2 /* UIKitViewController.m */; };
+		E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7094D9021A40886001E35B2 /* FoundationViewController.m */; };
 		E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E8571FAAE69E006E5695 /* NSDictionary+CY.m */; };
 		E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
 		E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */; };
@@ -34,7 +36,19 @@
 		E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */ = {isa = PBXBuildFile; fileRef = E74EC0E9219D406C0017A64D /* AddressBook.md */; };
 		E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0EA219D406C0017A64D /* AddressBookViewController.m */; };
 		E74EC0FA219D406C0017A64D /* ARKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0EC219D406C0017A64D /* ARKitViewController.m */; };
+		E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC124219D549C0017A64D /* DeviceCheckViewController.m */; };
 		E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */; };
+		E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4EA21A541580086C13B /* BaseNavigationController.m */; };
+		E762F4EF21A54DDA0086C13B /* CloudKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4EE21A54DDA0086C13B /* CloudKitViewController.m */; };
+		E762F4F721A54F210086C13B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E762F4F621A54F210086C13B /* CloudKit.framework */; };
+		E762F4FB21A5532B0086C13B /* StoreKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4FA21A5532B0086C13B /* StoreKitViewController.m */; };
+		E762F4FE21A55A140086C13B /* CYDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4FD21A55A140086C13B /* CYDocument.m */; };
+		E762F50121A65A440086C13B /* CYICloudHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F50021A65A440086C13B /* CYICloudHandle.m */; };
+		E762F50421A695730086C13B /* CloudKeyValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F50321A695730086C13B /* CloudKeyValueViewController.m */; };
+		E762F50721A695810086C13B /* CloudDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F50621A695810086C13B /* CloudDocumentViewController.m */; };
+		E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F50921A695950086C13B /* CloudCloudKitViewController.m */; };
+		E762F50D21A6968E0086C13B /* CloudDocumentAddNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F50C21A6968E0086C13B /* CloudDocumentAddNewViewController.m */; };
+		E762F51021A697F90086C13B /* CloudCloudKitAddNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F50F21A697F90086C13B /* CloudCloudKitAddNewViewController.m */; };
 		E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7658E252180430F00EF05E9 /* HealthKit.framework */; };
 		E7658E2C2181BBC700EF05E9 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7658E2B2181BBC700EF05E9 /* TabBarController.m */; };
 		E7658E2E2181BC4A00EF05E9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7658E2D2181BC4A00EF05E9 /* GameKit.framework */; };
@@ -80,11 +94,17 @@
 		E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FC2190270E002BEAFD /* HomeViewController.m */; };
 		E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FF2192BBF3002BEAFD /* SecondViewController.m */; };
 		E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */; };
+		E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816A521BF5118006F0B48 /* IADViewController.m */; };
+		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */; };
+		E7F0106F21BDF74100DB3061 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F0106E21BDF74100DB3061 /* ThirdViewController.m */; };
+		E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107021BDF75200DB3061 /* Third.storyboard */; };
+		E7F0107321BDF86A00DB3061 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107221BDF86A00DB3061 /* bg.png */; };
 		E7F40587216B2A6E00B27415 /* ArrayDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F40586216B2A6E00B27415 /* ArrayDemo.m */; };
 		E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4058C216C876500B27415 /* CYRoundedButton.m */; };
 		E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F40592216C9C5900B27415 /* SystemConfiguration.framework */; };
 		E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F40595216C9F4F00B27415 /* CYWifiManager.m */; };
+		E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +176,10 @@
 		E70616E41E795BF200762B56 /* CYSuperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYSuperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70616E81E795BF200762B56 /* CYSuperDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYSuperDemoUITests.m; sourceTree = "<group>"; };
 		E70616EA1E795BF200762B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7094D8C21A40763001E35B2 /* UIKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitViewController.h; sourceTree = "<group>"; };
+		E7094D8D21A40763001E35B2 /* UIKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitViewController.m; sourceTree = "<group>"; };
+		E7094D8F21A40886001E35B2 /* FoundationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationViewController.h; sourceTree = "<group>"; };
+		E7094D9021A40886001E35B2 /* FoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationViewController.m; sourceTree = "<group>"; };
 		E717E8561FAAE69E006E5695 /* NSDictionary+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CY.h"; sourceTree = "<group>"; };
 		E717E8571FAAE69E006E5695 /* NSDictionary+CY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CY.m"; sourceTree = "<group>"; };
 		E717E8591FAAE6B3006E5695 /* NSDate+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CY.h"; sourceTree = "<group>"; };
@@ -189,9 +213,32 @@
 		E74EC0EA219D406C0017A64D /* AddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		E74EC0EC219D406C0017A64D /* ARKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARKitViewController.m; sourceTree = "<group>"; };
 		E74EC0ED219D406C0017A64D /* ARKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKitViewController.h; sourceTree = "<group>"; };
+		E74EC123219D549C0017A64D /* DeviceCheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCheckViewController.h; sourceTree = "<group>"; };
+		E74EC124219D549C0017A64D /* DeviceCheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCheckViewController.m; sourceTree = "<group>"; };
 		E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CYDisplay.h"; sourceTree = "<group>"; };
 		E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYDisplay.m"; sourceTree = "<group>"; };
 		E7581060216F4D71009BB5C8 /* CYCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCategories.h; sourceTree = "<group>"; };
+		E762F4E921A541580086C13B /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		E762F4EA21A541580086C13B /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		E762F4ED21A54DDA0086C13B /* CloudKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKitViewController.h; sourceTree = "<group>"; };
+		E762F4EE21A54DDA0086C13B /* CloudKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudKitViewController.m; sourceTree = "<group>"; };
+		E762F4F621A54F210086C13B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E762F4F921A5532B0086C13B /* StoreKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreKitViewController.h; sourceTree = "<group>"; };
+		E762F4FA21A5532B0086C13B /* StoreKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreKitViewController.m; sourceTree = "<group>"; };
+		E762F4FC21A55A140086C13B /* CYDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYDocument.h; sourceTree = "<group>"; };
+		E762F4FD21A55A140086C13B /* CYDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYDocument.m; sourceTree = "<group>"; };
+		E762F4FF21A65A440086C13B /* CYICloudHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYICloudHandle.h; sourceTree = "<group>"; };
+		E762F50021A65A440086C13B /* CYICloudHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYICloudHandle.m; sourceTree = "<group>"; };
+		E762F50221A695730086C13B /* CloudKeyValueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKeyValueViewController.h; sourceTree = "<group>"; };
+		E762F50321A695730086C13B /* CloudKeyValueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudKeyValueViewController.m; sourceTree = "<group>"; };
+		E762F50521A695810086C13B /* CloudDocumentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudDocumentViewController.h; sourceTree = "<group>"; };
+		E762F50621A695810086C13B /* CloudDocumentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudDocumentViewController.m; sourceTree = "<group>"; };
+		E762F50821A695950086C13B /* CloudCloudKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudCloudKitViewController.h; sourceTree = "<group>"; };
+		E762F50921A695950086C13B /* CloudCloudKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudCloudKitViewController.m; sourceTree = "<group>"; };
+		E762F50B21A6968E0086C13B /* CloudDocumentAddNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudDocumentAddNewViewController.h; sourceTree = "<group>"; };
+		E762F50C21A6968E0086C13B /* CloudDocumentAddNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudDocumentAddNewViewController.m; sourceTree = "<group>"; };
+		E762F50E21A697F90086C13B /* CloudCloudKitAddNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudCloudKitAddNewViewController.h; sourceTree = "<group>"; };
+		E762F50F21A697F90086C13B /* CloudCloudKitAddNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudCloudKitAddNewViewController.m; sourceTree = "<group>"; };
 		E7658E252180430F00EF05E9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E7658E2A2181BBC700EF05E9 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		E7658E2B2181BBC700EF05E9 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
@@ -278,8 +325,16 @@
 		E796E5FF2192BBF3002BEAFD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CYRoundTouch.m"; sourceTree = "<group>"; };
 		E7A226AD1FAC021600CF65A1 /* UIButton+CYRoundTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CYRoundTouch.h"; sourceTree = "<group>"; };
+		E7B816A421BF5118006F0B48 /* IADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IADViewController.h; sourceTree = "<group>"; };
+		E7B816A521BF5118006F0B48 /* IADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADViewController.m; sourceTree = "<group>"; };
+		E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
+		E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
 		E7BB58DB1FB19C310026BFD9 /* UIView+CYBoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CYBoom.h"; sourceTree = "<group>"; };
 		E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYBoom.m"; sourceTree = "<group>"; };
+		E7F0106D21BDF74100DB3061 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		E7F0106E21BDF74100DB3061 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		E7F0107021BDF75200DB3061 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
+		E7F0107221BDF86A00DB3061 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E7F40585216B2A6E00B27415 /* ArrayDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayDemo.h; sourceTree = "<group>"; };
 		E7F40586216B2A6E00B27415 /* ArrayDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayDemo.m; sourceTree = "<group>"; };
 		E7F4058B216C876500B27415 /* CYRoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRoundedButton.h; sourceTree = "<group>"; };
@@ -288,6 +343,8 @@
 		E7F40592216C9C5900B27415 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E7F40594216C9F4F00B27415 /* CYWifiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYWifiManager.h; sourceTree = "<group>"; };
 		E7F40595216C9F4F00B27415 /* CYWifiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYWifiManager.m; sourceTree = "<group>"; };
+		E7FD16EC219D57B70037D720 /* CoreVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreVideoViewController.h; sourceTree = "<group>"; };
+		E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreVideoViewController.m; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F64C022AD5801A8AE5087F9E /* Pods-TodayDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayDemo/Pods-TodayDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCEC4A525C31FA7D2ED9F81 /* libPods-CYSuperDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYSuperDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +355,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E762F4F721A54F210086C13B /* CloudKit.framework in Frameworks */,
 				E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */,
 				E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */,
 				C01E983CCF629EC207CFB2C4 /* libPods-CYSuperDemo.a in Frameworks */,
@@ -361,6 +419,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E762F4F621A54F210086C13B /* CloudKit.framework */,
 				E7780942219AA4B900E94CD3 /* ContactsUI.framework */,
 				E778093E219A9E8B00E94CD3 /* Contacts.framework */,
 				E7658E2D2181BC4A00EF05E9 /* GameKit.framework */,
@@ -450,13 +509,18 @@
 				E74EC0EB219D406C0017A64D /* ARKit */,
 				E74EC0D7219D406C0017A64D /* AVFoundation */,
 				E74EC0E4219D406C0017A64D /* AVKit */,
+				E762F4EC21A54D880086C13B /* CloudKit */,
 				E74EC0CE219D406C0017A64D /* Contacts */,
 				E74EC0E1219D406C0017A64D /* CoreNFC */,
+				E7FD16EB219D57A60037D720 /* CoreVideo */,
 				E74EC0CD219D406C0017A64D /* DeviceCheck */,
+				E7B816AA21BFAD74006F0B48 /* HealthKit */,
+				E7B816A321BF5100006F0B48 /* iAD */,
 				E74EC0DA219D406C0017A64D /* MapKit */,
 				E74EC0CA219D406C0017A64D /* MediaPlayer */,
 				E74EC0D1219D406C0017A64D /* Network */,
 				E74EC0D4219D406C0017A64D /* PDFKit */,
+				E762F4F821A5531A0086C13B /* StoreKit */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -473,6 +537,8 @@
 		E74EC0CD219D406C0017A64D /* DeviceCheck */ = {
 			isa = PBXGroup;
 			children = (
+				E74EC123219D549C0017A64D /* DeviceCheckViewController.h */,
+				E74EC124219D549C0017A64D /* DeviceCheckViewController.m */,
 			);
 			path = DeviceCheck;
 			sourceTree = "<group>";
@@ -507,8 +573,8 @@
 		E74EC0D7219D406C0017A64D /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC0D8219D406C0017A64D /* AVFoundationViewController.m */,
 				E74EC0D9219D406C0017A64D /* AVFoundationViewController.h */,
+				E74EC0D8219D406C0017A64D /* AVFoundationViewController.m */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -535,8 +601,8 @@
 		E74EC0E1219D406C0017A64D /* CoreNFC */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC0E2219D406C0017A64D /* CoreNFCViewController.m */,
 				E74EC0E3219D406C0017A64D /* CoreNFCViewController.h */,
+				E74EC0E2219D406C0017A64D /* CoreNFCViewController.m */,
 			);
 			path = CoreNFC;
 			sourceTree = "<group>";
@@ -569,6 +635,38 @@
 			path = ARKit;
 			sourceTree = "<group>";
 		};
+		E762F4EC21A54D880086C13B /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				E762F4ED21A54DDA0086C13B /* CloudKitViewController.h */,
+				E762F4EE21A54DDA0086C13B /* CloudKitViewController.m */,
+				E762F50221A695730086C13B /* CloudKeyValueViewController.h */,
+				E762F50321A695730086C13B /* CloudKeyValueViewController.m */,
+				E762F50521A695810086C13B /* CloudDocumentViewController.h */,
+				E762F50621A695810086C13B /* CloudDocumentViewController.m */,
+				E762F50B21A6968E0086C13B /* CloudDocumentAddNewViewController.h */,
+				E762F50C21A6968E0086C13B /* CloudDocumentAddNewViewController.m */,
+				E762F50821A695950086C13B /* CloudCloudKitViewController.h */,
+				E762F50921A695950086C13B /* CloudCloudKitViewController.m */,
+				E762F50E21A697F90086C13B /* CloudCloudKitAddNewViewController.h */,
+				E762F50F21A697F90086C13B /* CloudCloudKitAddNewViewController.m */,
+				E762F4FF21A65A440086C13B /* CYICloudHandle.h */,
+				E762F50021A65A440086C13B /* CYICloudHandle.m */,
+				E762F4FC21A55A140086C13B /* CYDocument.h */,
+				E762F4FD21A55A140086C13B /* CYDocument.m */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
+		E762F4F821A5531A0086C13B /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				E762F4F921A5532B0086C13B /* StoreKitViewController.h */,
+				E762F4FA21A5532B0086C13B /* StoreKitViewController.m */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
 		E7658E29218163F600EF05E9 /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,11 +682,16 @@
 				E7688E2A1E7A48DA0064CD69 /* Other */,
 				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
 				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
+				E762F4E921A541580086C13B /* BaseNavigationController.h */,
+				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
 				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
 				E796E5FC2190270E002BEAFD /* HomeViewController.m */,
 				E796E5FE2192BBF3002BEAFD /* SecondViewController.h */,
 				E796E5FF2192BBF3002BEAFD /* SecondViewController.m */,
 				E721242B2193DC4600129C5A /* Second.storyboard */,
+				E7F0106D21BDF74100DB3061 /* ThirdViewController.h */,
+				E7F0106E21BDF74100DB3061 /* ThirdViewController.m */,
+				E7F0107021BDF75200DB3061 /* Third.storyboard */,
 				E7688E351E7A494A0064CD69 /* ViewController.h */,
 				E7688E361E7A494A0064CD69 /* ViewController.m */,
 				E7F40585216B2A6E00B27415 /* ArrayDemo.h */,
@@ -611,6 +714,7 @@
 		E7688E331E7A49150064CD69 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E7F0107221BDF86A00DB3061 /* bg.png */,
 				E79252BB219BFB0000E60577 /* Video */,
 			);
 			path = Resource;
@@ -749,8 +853,8 @@
 				E778093721995F3000E94CD3 /* FrameworkCodeTableViewController.h */,
 				E778093821995F3000E94CD3 /* FrameworkCodeTableViewController.m */,
 				E77808D721952CE000E94CD3 /* Foundation */,
-				E74EC0C9219D406C0017A64D /* Other */,
 				E778089821952CE000E94CD3 /* UIKit */,
+				E74EC0C9219D406C0017A64D /* Other */,
 			);
 			path = FrameworkCode;
 			sourceTree = "<group>";
@@ -758,6 +862,8 @@
 		E778089821952CE000E94CD3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E7094D8C21A40763001E35B2 /* UIKitViewController.h */,
+				E7094D8D21A40763001E35B2 /* UIKitViewController.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -765,6 +871,8 @@
 		E77808D721952CE000E94CD3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				E7094D8F21A40886001E35B2 /* FoundationViewController.h */,
+				E7094D9021A40886001E35B2 /* FoundationViewController.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -798,6 +906,33 @@
 				E79252BC219BFB3B00E60577 /* video1.mp4 */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		E7B816A321BF5100006F0B48 /* iAD */ = {
+			isa = PBXGroup;
+			children = (
+				E7B816A421BF5118006F0B48 /* IADViewController.h */,
+				E7B816A521BF5118006F0B48 /* IADViewController.m */,
+			);
+			path = iAD;
+			sourceTree = "<group>";
+		};
+		E7B816AA21BFAD74006F0B48 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */,
+				E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		E7FD16EB219D57A60037D720 /* CoreVideo */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD16EC219D57B70037D720 /* CoreVideoViewController.h */,
+				E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */,
+			);
+			path = CoreVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -938,7 +1073,7 @@
 								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.SafariKeychain = {
 								enabled = 1;
@@ -1004,7 +1139,9 @@
 			files = (
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
+				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
+				E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
@@ -1280,7 +1417,9 @@
 			files = (
 				E7688E861E7A4B400064CD69 /* CY01BorderLineView.m in Sources */,
 				E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */,
+				E7F0106F21BDF74100DB3061 /* ThirdViewController.m in Sources */,
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
+				E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
@@ -1289,32 +1428,46 @@
 				E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */,
 				E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */,
 				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
+				E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */,
+				E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */,
+				E762F4FB21A5532B0086C13B /* StoreKitViewController.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
 				E7688E371E7A494A0064CD69 /* ViewController.m in Sources */,
+				E762F50D21A6968E0086C13B /* CloudDocumentAddNewViewController.m in Sources */,
 				E7688E821E7A4B400064CD69 /* UIView+CY.m in Sources */,
+				E762F50421A695730086C13B /* CloudKeyValueViewController.m in Sources */,
 				E7688E801E7A4B400064CD69 /* UILabel+CY.m in Sources */,
 				E7688E311E7A48DA0064CD69 /* main.m in Sources */,
 				E74EC0FA219D406C0017A64D /* ARKitViewController.m in Sources */,
 				E74EC0F4219D406C0017A64D /* AccountsViewController.m in Sources */,
+				E762F51021A697F90086C13B /* CloudCloudKitAddNewViewController.m in Sources */,
 				E7688E7B1E7A4B400064CD69 /* UIButton+CY.m in Sources */,
 				E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */,
+				E762F4EF21A54DDA0086C13B /* CloudKitViewController.m in Sources */,
 				E721242A2193D9B000129C5A /* UIViewController+CY.m in Sources */,
+				E762F50121A65A440086C13B /* CYICloudHandle.m in Sources */,
+				E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */,
+				E7094D8E21A40763001E35B2 /* UIKitViewController.m in Sources */,
 				E74EC0F3219D406C0017A64D /* MapKitViewController.m in Sources */,
+				E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */,
 				E7688E7E1E7A4B400064CD69 /* UIDevice+CY.m in Sources */,
 				E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */,
+				E762F50721A695810086C13B /* CloudDocumentViewController.m in Sources */,
 				E7688E781E7A4B400064CD69 /* Foundation+Log.m in Sources */,
 				E7688E7F1E7A4B400064CD69 /* UIImage+CY.m in Sources */,
 				E74EC0F7219D406C0017A64D /* AVKitViewController.m in Sources */,
 				E74EC0EE219D406C0017A64D /* MediaPlayerViewController.m in Sources */,
 				E7688E7A1E7A4B400064CD69 /* UIAlertController+CY.m in Sources */,
 				E74EC0F2219D406C0017A64D /* AVFoundationViewController.m in Sources */,
+				E762F4FE21A55A140086C13B /* CYDocument.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
+				E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */,
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,
@@ -1323,6 +1476,7 @@
 				E7688E761E7A4B400064CD69 /* NSObject+CY.m in Sources */,
 				E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */,
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
+				E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */,
 				E7F40587216B2A6E00B27415 /* ArrayDemo.m in Sources */,
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import <DeviceUtil.h>
+#import "ThirdViewController.h"
 
 @interface HomeViewController ()
 
@@ -27,6 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Third" bundle:nil];
+    
+    ThirdViewController *vc = [sb instantiateInitialViewController];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

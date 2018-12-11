@@ -52,7 +52,7 @@
     // 如果不能获取连接标志，则不能连接网络，直接返回
     if (!didRetrieveFlags)
     {
-        printf("Error. Could not recover network reachability flags\n");
+        printf("Error. Cloud not recover network reachability flags\n");
         return NO;
     }
     
@@ -133,7 +133,7 @@
     
     if (!didRetrieveFlags)
     {
-        printf("Error. Could not recover network reachability flags\n");
+        printf("Error. Cloud not recover network reachability flags\n");
         return NO;
     }
     

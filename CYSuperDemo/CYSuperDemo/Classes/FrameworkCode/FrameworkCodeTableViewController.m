@@ -20,6 +20,8 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -50,7 +52,7 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"Accounts", @"AddressBook", @"AVFoundation", @"AVKit", @"Contacts", @"MediaPlayer"];
+        _titleArr = @[@"Foundation", @"UIKit", @"Accounts", @"AddressBook", @"AVFoundation", @"AVKit", @"CloudKit", @"Contacts", @"CoreNFC", @"DeviceCheck", @"HealthKit", @"IAD", @"MapKit", @"MediaPlayer", @"PDFKit", @"StoreKit"];
     }
     return _titleArr;
 }

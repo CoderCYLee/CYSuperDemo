@@ -23,7 +23,7 @@
 #pragma mark - UIKit
 #import "UIColor+CY.h"
 #import "UILabel+CY.h"
-#import "UIView+CYAnimation.h"
+//#import "UIView+CYAnimation.h"
 #import "UIImage+CY.h"
 #import "UIView+CY.h"
 #import "UIButton+CY.h"

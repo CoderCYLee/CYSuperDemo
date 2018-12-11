@@ -44,7 +44,34 @@
 //    self.tabBar.shadowImage = [[UIImage alloc] init];
 //
     
+
+
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, -200) forBarMetrics:UIBarMetricsDefault];
     
+//    UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+//
+//    UIOffset offset;
+//
+//    offset.horizontal = - 500;
+//
+//    offset.vertical =  - 500;
+//
+//    [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
+    // 设置backButton的位置
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(5, 0) forBarMetrics:UIBarMetricsDefault];
+//
+//    UIImage *backButtonImage = [[UIImage imageNamed:@"Icon_Home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    [UINavigationBar appearance].backIndicatorImage = backButtonImage;
+//    [UINavigationBar appearance].backIndicatorTransitionMaskImage = backButtonImage;
+  
+    
+//    [UINavigationBar appearance].backIndicatorImage = [UIImage imageNamed:@"Icon_Home"];
+//    [UINavigationBar appearance].backIndicatorTransitionMaskImage = [UIImage imageNamed:@"Icon_Home"];
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, -10) forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance].backItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil]];
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"Icon_Home"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, -20) forBarMetrics:UIBarMetricsDefault];
+//    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"Icon_Home"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     UIColor *titleNormalColor = [UIColor blackColor];
     UIColor *titleSelectedColor = [UIColor orangeColor];
@@ -73,9 +100,12 @@
     
     
     
-    self.navigationController1 = [[UINavigationController alloc] initWithRootViewController:homeVc];
-    self.navigationController2 = [[UINavigationController alloc] initWithRootViewController:secondVC];
+    self.navigationController1 = [[BaseNavigationController alloc] initWithRootViewController:homeVc];
     
+    self.navigationController2 = [[BaseNavigationController alloc] initWithRootViewController:secondVC];
+    
+    
+//    self.navigationController2.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     //iOS 隐藏/去掉 导航栏返回按钮中的文字
     //    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
