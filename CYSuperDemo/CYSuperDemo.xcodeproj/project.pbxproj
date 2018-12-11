@@ -99,6 +99,14 @@
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
 		E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B021BFBC82006F0B48 /* PassKit.framework */; };
 		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; };
+		E7B816BA21BFC3FD006F0B48 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B816B821BFC3FD006F0B48 /* Interface.storyboard */; };
+		E7B816BC21BFC3FF006F0B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B816BB21BFC3FF006F0B48 /* Assets.xcassets */; };
+		E7B816C321BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7B816C921BFC3FF006F0B48 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816C821BFC3FF006F0B48 /* InterfaceController.m */; };
+		E7B816CC21BFC3FF006F0B48 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816CB21BFC3FF006F0B48 /* ExtensionDelegate.m */; };
+		E7B816CF21BFC3FF006F0B48 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816CE21BFC3FF006F0B48 /* NotificationController.m */; };
+		E7B816D121BFC400006F0B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B816D021BFC400006F0B48 /* Assets.xcassets */; };
+		E7B816D621BFC400006F0B48 /* CYSuperWatchDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */; };
 		E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */; };
 		E7F0106F21BDF74100DB3061 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F0106E21BDF74100DB3061 /* ThirdViewController.m */; };
 		E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107021BDF75200DB3061 /* Third.storyboard */; };
@@ -139,6 +147,20 @@
 			remoteGlobalIDString = E778091A21994BA800E94CD3;
 			remoteInfo = ActionDemo;
 		};
+		E7B816C421BFC3FF006F0B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7B816C121BFC3FF006F0B48;
+			remoteInfo = "CYSuperWatchDemo Extension";
+		};
+		E7B816D421BFC400006F0B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7B816B521BFC3FC006F0B48;
+			remoteInfo = CYSuperWatchDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -152,6 +174,28 @@
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B816DA21BFC400006F0B48 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E7B816C321BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B816DE21BFC400006F0B48 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E7B816D621BFC400006F0B48 /* CYSuperWatchDemo.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -334,6 +378,20 @@
 		E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
 		E7B816B021BFBC82006F0B48 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYSuperWatchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B816B921BFC3FD006F0B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E7B816BB21BFC3FF006F0B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7B816BD21BFC3FF006F0B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CYSuperWatchDemo Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B816C721BFC3FF006F0B48 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		E7B816C821BFC3FF006F0B48 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		E7B816CA21BFC3FF006F0B48 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		E7B816CB21BFC3FF006F0B48 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		E7B816CD21BFC3FF006F0B48 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		E7B816CE21BFC3FF006F0B48 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		E7B816D021BFC400006F0B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7B816D221BFC400006F0B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B816D321BFC400006F0B48 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		E7BB58DB1FB19C310026BFD9 /* UIView+CYBoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CYBoom.h"; sourceTree = "<group>"; };
 		E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYBoom.m"; sourceTree = "<group>"; };
 		E7F0106D21BDF74100DB3061 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -403,6 +461,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7B816BF21BFC3FF006F0B48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -452,6 +517,8 @@
 				E70616E71E795BF200762B56 /* CYSuperDemoUITests */,
 				E778090821994B3400E94CD3 /* TodayDemo */,
 				E778091C21994BA800E94CD3 /* ActionDemo */,
+				E7B816B721BFC3FD006F0B48 /* CYSuperWatchDemo */,
+				E7B816C621BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -466,6 +533,8 @@
 				E70616E41E795BF200762B56 /* CYSuperDemoUITests.xctest */,
 				E778090521994B3400E94CD3 /* TodayDemo.appex */,
 				E778091B21994BA800E94CD3 /* ActionDemo.appex */,
+				E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */,
+				E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -935,6 +1004,32 @@
 			path = HealthKit;
 			sourceTree = "<group>";
 		};
+		E7B816B721BFC3FD006F0B48 /* CYSuperWatchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E7B816B821BFC3FD006F0B48 /* Interface.storyboard */,
+				E7B816BB21BFC3FF006F0B48 /* Assets.xcassets */,
+				E7B816BD21BFC3FF006F0B48 /* Info.plist */,
+			);
+			path = CYSuperWatchDemo;
+			sourceTree = "<group>";
+		};
+		E7B816C621BFC3FF006F0B48 /* CYSuperWatchDemo Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7B816C721BFC3FF006F0B48 /* InterfaceController.h */,
+				E7B816C821BFC3FF006F0B48 /* InterfaceController.m */,
+				E7B816CA21BFC3FF006F0B48 /* ExtensionDelegate.h */,
+				E7B816CB21BFC3FF006F0B48 /* ExtensionDelegate.m */,
+				E7B816CD21BFC3FF006F0B48 /* NotificationController.h */,
+				E7B816CE21BFC3FF006F0B48 /* NotificationController.m */,
+				E7B816D021BFC400006F0B48 /* Assets.xcassets */,
+				E7B816D221BFC400006F0B48 /* Info.plist */,
+				E7B816D321BFC400006F0B48 /* PushNotificationPayload.apns */,
+			);
+			path = "CYSuperWatchDemo Extension";
+			sourceTree = "<group>";
+		};
 		E7FD16EB219D57A60037D720 /* CoreVideo */ = {
 			isa = PBXGroup;
 			children = (
@@ -957,12 +1052,14 @@
 				E70616BE1E795BF200762B56 /* Resources */,
 				A4EC3D04773514EEF87F5562 /* [CP] Copy Pods Resources */,
 				E778091621994B3400E94CD3 /* Embed App Extensions */,
+				E7B816DE21BFC400006F0B48 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E778091121994B3400E94CD3 /* PBXTargetDependency */,
 				E778092721994BA800E94CD3 /* PBXTargetDependency */,
+				E7B816D521BFC400006F0B48 /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1042,6 +1139,40 @@
 			productName = ActionDemo;
 			productReference = E778091B21994BA800E94CD3 /* ActionDemo.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B816DB21BFC400006F0B48 /* Build configuration list for PBXNativeTarget "CYSuperWatchDemo" */;
+			buildPhases = (
+				E7B816B421BFC3FC006F0B48 /* Resources */,
+				E7B816DA21BFC400006F0B48 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7B816C521BFC3FF006F0B48 /* PBXTargetDependency */,
+			);
+			name = CYSuperWatchDemo;
+			productName = CYSuperWatchDemo;
+			productReference = E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E7B816C121BFC3FF006F0B48 /* CYSuperWatchDemo Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B816D721BFC400006F0B48 /* Build configuration list for PBXNativeTarget "CYSuperWatchDemo Extension" */;
+			buildPhases = (
+				E7B816BE21BFC3FF006F0B48 /* Sources */,
+				E7B816BF21BFC3FF006F0B48 /* Frameworks */,
+				E7B816C021BFC3FF006F0B48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CYSuperWatchDemo Extension";
+			productName = "CYSuperWatchDemo Extension";
+			productReference = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1126,6 +1257,16 @@
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
+					E7B816B521BFC3FC006F0B48 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
+					E7B816C121BFC3FF006F0B48 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E70616BB1E795BF200762B56 /* Build configuration list for PBXProject "CYSuperDemo" */;
@@ -1146,6 +1287,8 @@
 				E70616E31E795BF200762B56 /* CYSuperDemoUITests */,
 				E778090421994B3400E94CD3 /* TodayDemo */,
 				E778091A21994BA800E94CD3 /* ActionDemo */,
+				E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */,
+				E7B816C121BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -1194,6 +1337,23 @@
 			files = (
 				E778091E21994BA800E94CD3 /* Media.xcassets in Resources */,
 				E778092421994BA800E94CD3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B816B421BFC3FC006F0B48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B816BC21BFC3FF006F0B48 /* Assets.xcassets in Resources */,
+				E7B816BA21BFC3FD006F0B48 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B816C021BFC3FF006F0B48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B816D121BFC400006F0B48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1540,6 +1700,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7B816BE21BFC3FF006F0B48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B816CC21BFC3FF006F0B48 /* ExtensionDelegate.m in Sources */,
+				E7B816C921BFC3FF006F0B48 /* InterfaceController.m in Sources */,
+				E7B816CF21BFC3FF006F0B48 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1562,6 +1732,16 @@
 			isa = PBXTargetDependency;
 			target = E778091A21994BA800E94CD3 /* ActionDemo */;
 			targetProxy = E778092621994BA800E94CD3 /* PBXContainerItemProxy */;
+		};
+		E7B816C521BFC3FF006F0B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7B816C121BFC3FF006F0B48 /* CYSuperWatchDemo Extension */;
+			targetProxy = E7B816C421BFC3FF006F0B48 /* PBXContainerItemProxy */;
+		};
+		E7B816D521BFC400006F0B48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */;
+			targetProxy = E7B816D421BFC400006F0B48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1588,6 +1768,14 @@
 				E778092321994BA800E94CD3 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		E7B816B821BFC3FD006F0B48 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7B816B921BFC3FD006F0B48 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1917,6 +2105,102 @@
 			};
 			name = Release;
 		};
+		E7B816D821BFC400006F0B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "CYSuperWatchDemo Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		E7B816D921BFC400006F0B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "CYSuperWatchDemo Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		E7B816DC21BFC400006F0B48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = CYSuperWatchDemo_Extension;
+				INFOPLIST_FILE = CYSuperWatchDemo/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		E7B816DD21BFC400006F0B48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = CYSuperWatchDemo_Extension;
+				INFOPLIST_FILE = CYSuperWatchDemo/Info.plist;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1970,6 +2254,24 @@
 			buildConfigurations = (
 				E778092A21994BA800E94CD3 /* Debug */,
 				E778092B21994BA800E94CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B816D721BFC400006F0B48 /* Build configuration list for PBXNativeTarget "CYSuperWatchDemo Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B816D821BFC400006F0B48 /* Debug */,
+				E7B816D921BFC400006F0B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B816DB21BFC400006F0B48 /* Build configuration list for PBXNativeTarget "CYSuperWatchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B816DC21BFC400006F0B48 /* Debug */,
+				E7B816DD21BFC400006F0B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
