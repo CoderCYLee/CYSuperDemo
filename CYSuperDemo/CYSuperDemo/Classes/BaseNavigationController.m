@@ -18,8 +18,9 @@
 
 + (void)initialize {
     UINavigationBar *barAppearance = [UINavigationBar appearance];
-    barAppearance.barTintColor = [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
-    [barAppearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    barAppearance.barTintColor = [UIColor whiteColor];
+    [barAppearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
+    barAppearance.tintColor = [UIColor blackColor];
     
     // 设置返回的图标样式 默认渲染成系统样式，渲染原图样式 UIImageRenderingModeAlwaysOriginal
 //    UIImage *backButtonImage = [[UIImage imageNamed:@"qiuzhi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

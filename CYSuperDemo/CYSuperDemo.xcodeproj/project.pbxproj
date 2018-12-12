@@ -120,6 +120,14 @@
 		E7F73D2021C0B104000ACDF4 /* ExtensionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D1F21C0B104000ACDF4 /* ExtensionTableViewController.m */; };
 		E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D2221C0E056000ACDF4 /* ExtensionActionViewController.m */; };
 		E7F73D2621C0E068000ACDF4 /* ExtensionShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D2521C0E068000ACDF4 /* ExtensionShareViewController.m */; };
+		E7F73D2F21C0E401000ACDF4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D2E21C0E401000ACDF4 /* ShareViewController.m */; };
+		E7F73D3221C0E402000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D3021C0E401000ACDF4 /* MainInterface.storyboard */; };
+		E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7F73D4021C0E616000ACDF4 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F73D3F21C0E616000ACDF4 /* Messages.framework */; };
+		E7F73D4421C0E616000ACDF4 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D4321C0E616000ACDF4 /* MessagesViewController.m */; };
+		E7F73D4721C0E616000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */; };
+		E7F73D4921C0E617000ACDF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D4821C0E617000ACDF4 /* Assets.xcassets */; };
+		E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +174,20 @@
 			remoteGlobalIDString = E7B816B521BFC3FC006F0B48;
 			remoteInfo = CYSuperWatchDemo;
 		};
+		E7F73D3421C0E402000ACDF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F73D2A21C0E401000ACDF4;
+			remoteInfo = ShareDemo;
+		};
+		E7F73D4B21C0E617000ACDF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F73D3D21C0E616000ACDF4;
+			remoteInfo = iMessageDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -176,7 +198,9 @@
 			dstSubfolderSpec = 13;
 			files = (
 				E778091221994B3400E94CD3 /* TodayDemo.appex in Embed App Extensions */,
+				E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */,
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
+				E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +444,18 @@
 		E7F73D2221C0E056000ACDF4 /* ExtensionActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionActionViewController.m; sourceTree = "<group>"; };
 		E7F73D2421C0E068000ACDF4 /* ExtensionShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionShareViewController.h; sourceTree = "<group>"; };
 		E7F73D2521C0E068000ACDF4 /* ExtensionShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionShareViewController.m; sourceTree = "<group>"; };
+		E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F73D2D21C0E401000ACDF4 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		E7F73D2E21C0E401000ACDF4 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		E7F73D3121C0E401000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E7F73D3321C0E402000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F73D3F21C0E616000ACDF4 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		E7F73D4221C0E616000ACDF4 /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		E7F73D4321C0E616000ACDF4 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		E7F73D4621C0E616000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E7F73D4821C0E617000ACDF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7F73D4A21C0E617000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FD16EC219D57B70037D720 /* CoreVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreVideoViewController.h; sourceTree = "<group>"; };
 		E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreVideoViewController.m; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -482,6 +518,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7F73D2821C0E401000ACDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F73D3B21C0E616000ACDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D4021C0E616000ACDF4 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -519,6 +570,7 @@
 				486C0FF0D95C601331762053 /* libPods-CYSuperDemoTests.a */,
 				FCCEC4A525C31FA7D2ED9F81 /* libPods-CYSuperDemoUITests.a */,
 				552C86DD6795D7F12E72E737 /* libPods-TodayDemo.a */,
+				E7F73D3F21C0E616000ACDF4 /* Messages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -533,6 +585,8 @@
 				E778091C21994BA800E94CD3 /* ActionDemo */,
 				E7B816B721BFC3FD006F0B48 /* CYSuperWatchDemo */,
 				E7B816C621BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
+				E7F73D2C21C0E401000ACDF4 /* ShareDemo */,
+				E7F73D4121C0E616000ACDF4 /* iMessageDemo */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -549,6 +603,8 @@
 				E778091B21994BA800E94CD3 /* ActionDemo.appex */,
 				E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */,
 				E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */,
+				E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */,
+				E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -772,9 +828,9 @@
 			isa = PBXGroup;
 			children = (
 				E7688E2A1E7A48DA0064CD69 /* Other */,
+				E7F73D1221C0A87F000ACDF4 /* Launch */,
 				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
 				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
-				E7F73D1221C0A87F000ACDF4 /* Launch */,
 				E762F4E921A541580086C13B /* BaseNavigationController.h */,
 				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
 				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
@@ -1069,6 +1125,29 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		E7F73D2C21C0E401000ACDF4 /* ShareDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E7F73D2D21C0E401000ACDF4 /* ShareViewController.h */,
+				E7F73D2E21C0E401000ACDF4 /* ShareViewController.m */,
+				E7F73D3021C0E401000ACDF4 /* MainInterface.storyboard */,
+				E7F73D3321C0E402000ACDF4 /* Info.plist */,
+			);
+			path = ShareDemo;
+			sourceTree = "<group>";
+		};
+		E7F73D4121C0E616000ACDF4 /* iMessageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E7F73D4221C0E616000ACDF4 /* MessagesViewController.h */,
+				E7F73D4321C0E616000ACDF4 /* MessagesViewController.m */,
+				E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */,
+				E7F73D4821C0E617000ACDF4 /* Assets.xcassets */,
+				E7F73D4A21C0E617000ACDF4 /* Info.plist */,
+			);
+			path = iMessageDemo;
+			sourceTree = "<group>";
+		};
 		E7FD16EB219D57A60037D720 /* CoreVideo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1099,6 +1178,8 @@
 				E778091121994B3400E94CD3 /* PBXTargetDependency */,
 				E778092721994BA800E94CD3 /* PBXTargetDependency */,
 				E7B816D521BFC400006F0B48 /* PBXTargetDependency */,
+				E7F73D3521C0E402000ACDF4 /* PBXTargetDependency */,
+				E7F73D4C21C0E617000ACDF4 /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1213,6 +1294,40 @@
 			productReference = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		E7F73D2A21C0E401000ACDF4 /* ShareDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F73D3721C0E402000ACDF4 /* Build configuration list for PBXNativeTarget "ShareDemo" */;
+			buildPhases = (
+				E7F73D2721C0E401000ACDF4 /* Sources */,
+				E7F73D2821C0E401000ACDF4 /* Frameworks */,
+				E7F73D2921C0E401000ACDF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareDemo;
+			productName = ShareDemo;
+			productReference = E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E7F73D3D21C0E616000ACDF4 /* iMessageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F73D4E21C0E617000ACDF4 /* Build configuration list for PBXNativeTarget "iMessageDemo" */;
+			buildPhases = (
+				E7F73D3A21C0E616000ACDF4 /* Sources */,
+				E7F73D3B21C0E616000ACDF4 /* Frameworks */,
+				E7F73D3C21C0E616000ACDF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iMessageDemo;
+			productName = iMessageDemo;
+			productReference = E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1306,6 +1421,16 @@
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
+					E7F73D2A21C0E401000ACDF4 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
+					E7F73D3D21C0E616000ACDF4 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E70616BB1E795BF200762B56 /* Build configuration list for PBXProject "CYSuperDemo" */;
@@ -1324,10 +1449,12 @@
 				E70616BF1E795BF200762B56 /* CYSuperDemo */,
 				E70616D81E795BF200762B56 /* CYSuperDemoTests */,
 				E70616E31E795BF200762B56 /* CYSuperDemoUITests */,
-				E778090421994B3400E94CD3 /* TodayDemo */,
-				E778091A21994BA800E94CD3 /* ActionDemo */,
 				E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */,
 				E7B816C121BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
+				E778090421994B3400E94CD3 /* TodayDemo */,
+				E778091A21994BA800E94CD3 /* ActionDemo */,
+				E7F73D2A21C0E401000ACDF4 /* ShareDemo */,
+				E7F73D3D21C0E616000ACDF4 /* iMessageDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -1394,6 +1521,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7B816D121BFC400006F0B48 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F73D2921C0E401000ACDF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D3221C0E402000ACDF4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F73D3C21C0E616000ACDF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D4921C0E617000ACDF4 /* Assets.xcassets in Resources */,
+				E7F73D4721C0E616000ACDF4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1754,6 +1898,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7F73D2721C0E401000ACDF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D2F21C0E401000ACDF4 /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F73D3A21C0E616000ACDF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D4421C0E616000ACDF4 /* MessagesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1786,6 +1946,16 @@
 			isa = PBXTargetDependency;
 			target = E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */;
 			targetProxy = E7B816D421BFC400006F0B48 /* PBXContainerItemProxy */;
+		};
+		E7F73D3521C0E402000ACDF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F73D2A21C0E401000ACDF4 /* ShareDemo */;
+			targetProxy = E7F73D3421C0E402000ACDF4 /* PBXContainerItemProxy */;
+		};
+		E7F73D4C21C0E617000ACDF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F73D3D21C0E616000ACDF4 /* iMessageDemo */;
+			targetProxy = E7F73D4B21C0E617000ACDF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1820,6 +1990,22 @@
 				E7B816B921BFC3FD006F0B48 /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		E7F73D3021C0E401000ACDF4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F73D3121C0E401000ACDF4 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F73D4621C0E616000ACDF4 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2245,6 +2431,98 @@
 			};
 			name = Release;
 		};
+		E7F73D3821C0E402000ACDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ShareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.ShareDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7F73D3921C0E402000ACDF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ShareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.ShareDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7F73D4F21C0E617000ACDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = iMessageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.iMessageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7F73D5021C0E617000ACDF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = iMessageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.iMessageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2316,6 +2594,24 @@
 			buildConfigurations = (
 				E7B816DC21BFC400006F0B48 /* Debug */,
 				E7B816DD21BFC400006F0B48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F73D3721C0E402000ACDF4 /* Build configuration list for PBXNativeTarget "ShareDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F73D3821C0E402000ACDF4 /* Debug */,
+				E7F73D3921C0E402000ACDF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F73D4E21C0E617000ACDF4 /* Build configuration list for PBXNativeTarget "iMessageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F73D4F21C0E617000ACDF4 /* Debug */,
+				E7F73D5021C0E617000ACDF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

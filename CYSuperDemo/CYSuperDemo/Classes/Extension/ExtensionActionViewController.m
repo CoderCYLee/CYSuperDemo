@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.textField = [[UITextField alloc] init];
     self.textField.frame = CGRectMake(0, 150, CGRectGetWidth(self.view.frame), 50);

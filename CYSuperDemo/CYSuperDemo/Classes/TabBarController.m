@@ -32,18 +32,25 @@
 }
 
 - (void)initTabBar {
+    [[UITabBar appearance] setTintColor:[UIColor blackColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setTranslucent:NO];
+    
+    UIColor *titleNormalColor = [UIColor lightGrayColor];
+    UIColor *titleSelectedColor = [UIColor blackColor];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleNormalColor, NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleSelectedColor, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
 //    [self.tabBar setBarTintColor:[UIColor yellowColor]];
-    
-    
 //    [self.tabBar setBackgroundColor:[UIColor redColor]];
-//
+
 //    [self.tabBar setBackgroundColor:[UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1]];
 ////        [self.tabBar setSelectionIndicatorImage:[UIImage imageNamed:@"bottomSelect_bg.png"]];//item选中时的背景
 //    self.tabBar.layer.masksToBounds = YES;
 //    self.tabBar.tintColor = [UIColor colorWithRed:1 green:0.4 blue:0.02 alpha:1];
 //    self.tabBar.shadowImage = [[UIImage alloc] init];
-//
-    
+
 
 
 //    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, -200) forBarMetrics:UIBarMetricsDefault];
@@ -73,31 +80,18 @@
 //    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, -20) forBarMetrics:UIBarMetricsDefault];
 //    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"Icon_Home"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
-    UIColor *titleNormalColor = [UIColor blackColor];
-    UIColor *titleSelectedColor = [UIColor orangeColor];
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleNormalColor, NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleSelectedColor, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
-    
     
     
     HomeViewController *homeVc = [[HomeViewController alloc] init];
-    UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"Icon_Home"] tag:1];
+    UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"shouye"] tag:1];
     homeVc.tabBarItem = item1;
-    
-    
-//    ViewController *vc = [[ViewController alloc] init];
-    
+
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Second" bundle:nil];
     SecondViewController *secondVC = [sb instantiateInitialViewController];
     
-//    vc.title = @"fdafd";
-    UITabBarItem *item2 = [[UITabBarItem alloc] initWithTitle:@"Second" image:nil tag:2];
+    UITabBarItem *item2 = [[UITabBarItem alloc] initWithTitle:@"系统" image:[UIImage imageNamed:@"xitong"] tag:2];
     secondVC.tabBarItem = item2;
-    
-    
-    
     
     
     self.navigationController1 = [[BaseNavigationController alloc] initWithRootViewController:homeVc];
