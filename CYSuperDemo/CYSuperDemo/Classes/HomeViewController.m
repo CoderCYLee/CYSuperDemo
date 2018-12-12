@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import <DeviceUtil.h>
 #import "ThirdViewController.h"
-#import <MobileCoreServices/MobileCoreServices.h>
+
 
 @interface HomeViewController ()
 
@@ -29,20 +29,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-
-    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[@"myfhadjhfkda"] applicationActivities:nil];
-    [vc setCompletionWithItemsHandler:^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
-        // 接收
-        NSExtensionItem *item = [returnedItems firstObject];
-        NSItemProvider *itemProvider = [item.attachments firstObject];
-        [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeText options:nil completionHandler:^(NSString *text, NSError * _Null_unspecified error) {
-            NSLog(@"%@", text);
-        }];
-    }];
-    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

@@ -9,9 +9,10 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "TabBarController.h"
+#import "LaunchView.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) LaunchView *launchView;
 @end
 
 @implementation AppDelegate
@@ -21,21 +22,49 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
         
     } else {
         
     }
-
+    
     TabBarController *tabbarVC = [[TabBarController alloc] init];
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
     self.window.rootViewController = tabbarVC;
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    // 获取LaunchScreen.storyborad
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
+//    //通过使用storyborardID去获取启动页viewcontroller
+//    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+//    self.window.rootViewController = viewController;
+    
+    
+    // 获取自定义LaunchView
+    self.launchView = [[[NSBundle mainBundle] loadNibNamed:@"LaunchView" owner:self options:nil] firstObject];
+    self.launchView.frame = self.window.bounds;
+    [self.window addSubview:self.launchView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.launchView showAnimation];
+        
+        //设置3秒定时触发
+        [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(closeLaunchScreen) userInfo:nil repeats:NO];
+        
+    });
+    
     
     return YES;
 }
+
+- (void)closeLaunchScreen {
+    [self.launchView hideAnimation];
+//    [UIView animateWithDuration:2 animations:^{
+//
+//    } completion:^(BOOL finished) {
+//
+//    }];
+}
+
 
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
     

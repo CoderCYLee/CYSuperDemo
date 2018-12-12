@@ -115,6 +115,11 @@
 		E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4058C216C876500B27415 /* CYRoundedButton.m */; };
 		E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F40592216C9C5900B27415 /* SystemConfiguration.framework */; };
 		E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F40595216C9F4F00B27415 /* CYWifiManager.m */; };
+		E7F73D1A21C0AEC2000ACDF4 /* LaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D1921C0AEC2000ACDF4 /* LaunchView.m */; };
+		E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D1B21C0AECD000ACDF4 /* LaunchView.xib */; };
+		E7F73D2021C0B104000ACDF4 /* ExtensionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D1F21C0B104000ACDF4 /* ExtensionTableViewController.m */; };
+		E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D2221C0E056000ACDF4 /* ExtensionActionViewController.m */; };
+		E7F73D2621C0E068000ACDF4 /* ExtensionShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D2521C0E068000ACDF4 /* ExtensionShareViewController.m */; };
 		E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -406,6 +411,15 @@
 		E7F40592216C9C5900B27415 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E7F40594216C9F4F00B27415 /* CYWifiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYWifiManager.h; sourceTree = "<group>"; };
 		E7F40595216C9F4F00B27415 /* CYWifiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYWifiManager.m; sourceTree = "<group>"; };
+		E7F73D1821C0AEC2000ACDF4 /* LaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchView.h; sourceTree = "<group>"; };
+		E7F73D1921C0AEC2000ACDF4 /* LaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchView.m; sourceTree = "<group>"; };
+		E7F73D1B21C0AECD000ACDF4 /* LaunchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
+		E7F73D1E21C0B104000ACDF4 /* ExtensionTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionTableViewController.h; sourceTree = "<group>"; };
+		E7F73D1F21C0B104000ACDF4 /* ExtensionTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionTableViewController.m; sourceTree = "<group>"; };
+		E7F73D2121C0E056000ACDF4 /* ExtensionActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionActionViewController.h; sourceTree = "<group>"; };
+		E7F73D2221C0E056000ACDF4 /* ExtensionActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionActionViewController.m; sourceTree = "<group>"; };
+		E7F73D2421C0E068000ACDF4 /* ExtensionShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionShareViewController.h; sourceTree = "<group>"; };
+		E7F73D2521C0E068000ACDF4 /* ExtensionShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionShareViewController.m; sourceTree = "<group>"; };
 		E7FD16EC219D57B70037D720 /* CoreVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreVideoViewController.h; sourceTree = "<group>"; };
 		E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreVideoViewController.m; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -760,6 +774,7 @@
 				E7688E2A1E7A48DA0064CD69 /* Other */,
 				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
 				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
+				E7F73D1221C0A87F000ACDF4 /* Launch */,
 				E762F4E921A541580086C13B /* BaseNavigationController.h */,
 				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
 				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
@@ -774,6 +789,7 @@
 				E7688E361E7A494A0064CD69 /* ViewController.m */,
 				E7F40585216B2A6E00B27415 /* ArrayDemo.h */,
 				E7F40586216B2A6E00B27415 /* ArrayDemo.m */,
+				E7F73D1D21C0B0E1000ACDF4 /* Extension */,
 				E778089721952CE000E94CD3 /* FrameworkCode */,
 			);
 			path = Classes;
@@ -1028,6 +1044,29 @@
 				E7B816D321BFC400006F0B48 /* PushNotificationPayload.apns */,
 			);
 			path = "CYSuperWatchDemo Extension";
+			sourceTree = "<group>";
+		};
+		E7F73D1221C0A87F000ACDF4 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E7F73D1821C0AEC2000ACDF4 /* LaunchView.h */,
+				E7F73D1921C0AEC2000ACDF4 /* LaunchView.m */,
+				E7F73D1B21C0AECD000ACDF4 /* LaunchView.xib */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		E7F73D1D21C0B0E1000ACDF4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7F73D1E21C0B104000ACDF4 /* ExtensionTableViewController.h */,
+				E7F73D1F21C0B104000ACDF4 /* ExtensionTableViewController.m */,
+				E7F73D2121C0E056000ACDF4 /* ExtensionActionViewController.h */,
+				E7F73D2221C0E056000ACDF4 /* ExtensionActionViewController.m */,
+				E7F73D2421C0E068000ACDF4 /* ExtensionShareViewController.h */,
+				E7F73D2521C0E068000ACDF4 /* ExtensionShareViewController.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E7FD16EB219D57A60037D720 /* CoreVideo */ = {
@@ -1304,6 +1343,7 @@
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
+				E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
 			);
@@ -1601,11 +1641,13 @@
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
+				E7F73D2621C0E068000ACDF4 /* ExtensionShareViewController.m in Sources */,
 				E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
 				E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */,
 				E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */,
 				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
+				E7F73D1A21C0AEC2000ACDF4 /* LaunchView.m in Sources */,
 				E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */,
 				E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */,
 				E762F4FB21A5532B0086C13B /* StoreKitViewController.m in Sources */,
@@ -1613,6 +1655,7 @@
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
 				E7688E371E7A494A0064CD69 /* ViewController.m in Sources */,
+				E7F73D2021C0B104000ACDF4 /* ExtensionTableViewController.m in Sources */,
 				E762F50D21A6968E0086C13B /* CloudDocumentAddNewViewController.m in Sources */,
 				E7688E821E7A4B400064CD69 /* UIView+CY.m in Sources */,
 				E762F50421A695730086C13B /* CloudKeyValueViewController.m in Sources */,
@@ -1657,6 +1700,7 @@
 				E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */,
 				E7F40587216B2A6E00B27415 /* ArrayDemo.m in Sources */,
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
+				E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
 				E74EC0F1219D406C0017A64D /* PDFKitViewController.m in Sources */,
 				E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */,
