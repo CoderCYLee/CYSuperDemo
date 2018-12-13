@@ -81,16 +81,16 @@
 //    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"Icon_Home"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     
-    
+    NSString *home = NSLocalizedString(@"Home", @"Home");
     HomeViewController *homeVc = [[HomeViewController alloc] init];
-    UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"shouye"] tag:1];
+    UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:home image:[UIImage imageNamed:@"shouye"] tag:1];
     homeVc.tabBarItem = item1;
 
-    
+    NSString *system = NSLocalizedString(@"System", @"System");
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Second" bundle:nil];
     SecondViewController *secondVC = [sb instantiateInitialViewController];
     
-    UITabBarItem *item2 = [[UITabBarItem alloc] initWithTitle:@"系统" image:[UIImage imageNamed:@"xitong"] tag:2];
+    UITabBarItem *item2 = [[UITabBarItem alloc] initWithTitle:system image:[UIImage imageNamed:@"xitong"] tag:2];
     secondVC.tabBarItem = item2;
     
     

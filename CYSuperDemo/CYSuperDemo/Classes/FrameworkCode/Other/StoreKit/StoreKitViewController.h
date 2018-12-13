@@ -6,11 +6,11 @@
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StoreKitViewController : UIViewController
+@interface StoreKitViewController : ViewController
 
 @end
 

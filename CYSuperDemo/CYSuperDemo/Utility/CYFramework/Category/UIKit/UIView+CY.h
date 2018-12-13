@@ -228,7 +228,7 @@ static inline CGRect CGRectCenter(CGRect rect,CGSize size)
 /**
  Returns the view's view controller (may be nil).
  */
-@property (nonatomic, readonly,nullable) UIViewController *viewController;
+@property (nonatomic, readonly, nullable) UIViewController *viewController;
 
 /**
  Returns the visible alpha on screen, taking into account superview and window.

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 #import <CloudKit/CloudKit.h>
 
 
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, CloudKit_type)
     CloudKit_type_edit,
 };
 
-@interface CloudCloudKitAddNewViewController : UIViewController
+@interface CloudCloudKitAddNewViewController : ViewController
 
 @property (nonatomic ,assign) CloudKit_type         type;
 @property (nonatomic ,strong) CKRecordID            *recordID;

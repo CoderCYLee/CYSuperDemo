@@ -16,7 +16,20 @@
 
 - (BOOL)isContentValid {
     // Do validation of contentText and/or NSExtensionContext attachments here
-    return YES;
+    // 自定义方式校验内容 validateContent
+    NSInteger messageLength = [self.contentText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length;
+    NSInteger charactersRemaining = 100 - messageLength;
+    self.charactersRemaining = @(charactersRemaining);
+    
+    if (charactersRemaining >= 0) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (void)didSelectCancel {
+    NSLog(@"点击了取消");
 }
 
 - (void)didSelectPost {

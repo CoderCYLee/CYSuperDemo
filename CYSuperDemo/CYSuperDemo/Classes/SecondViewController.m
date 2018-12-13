@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.navigationItem.title = @"系统";
+    NSString *system = NSLocalizedString(@"System", @"System");
+    self.navigationItem.title = system;
 }
 
 #pragma mark - Table view data source

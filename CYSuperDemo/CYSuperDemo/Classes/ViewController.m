@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
 //    [[[CYAudioUtility alloc] init] playAduio:@"8436" ext:@"wav"];
     
 //    NSString *url = @"taobao://https://item.taobao.com/item.htm?id=577359137670";

@@ -128,6 +128,12 @@
 		E7F73D4721C0E616000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */; };
 		E7F73D4921C0E617000ACDF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D4821C0E617000ACDF4 /* Assets.xcassets */; };
 		E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D5D21C0F6E4000ACDF4 /* Localizable.strings */; };
+		E7F73D6821C228CE000ACDF4 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */; };
+		E7F73D6A21C228CE000ACDF4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F73D6921C228CE000ACDF4 /* Photos.framework */; };
+		E7F73D6E21C228CE000ACDF4 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D6D21C228CE000ACDF4 /* PhotoEditingViewController.m */; };
+		E7F73D7121C228CE000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D6F21C228CE000ACDF4 /* MainInterface.storyboard */; };
+		E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -188,6 +194,13 @@
 			remoteGlobalIDString = E7F73D3D21C0E616000ACDF4;
 			remoteInfo = iMessageDemo;
 		};
+		E7F73D7321C228CE000ACDF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F73D6521C228CE000ACDF4;
+			remoteInfo = PhotoEditingDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -200,6 +213,7 @@
 				E778091221994B3400E94CD3 /* TodayDemo.appex in Embed App Extensions */,
 				E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */,
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
+				E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */,
 				E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -456,6 +470,23 @@
 		E7F73D4621C0E616000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E7F73D4821C0E617000ACDF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7F73D4A21C0E617000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F73D5121C0F2A1000ACDF4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E7F73D5321C0F69D000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		E7F73D5421C0F69E000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		E7F73D5521C0F69E000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		E7F73D5621C0F69E000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		E7F73D5721C0F69F000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		E7F73D5821C0F69F000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		E7F73D5C21C0F6E4000ACDF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E7F73D5E21C0F6E6000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E7F73D6021C1F97C000ACDF4 /* ActionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActionDemo.entitlements; sourceTree = "<group>"; };
+		E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhotoEditingDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		E7F73D6921C228CE000ACDF4 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		E7F73D6C21C228CE000ACDF4 /* PhotoEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoEditingViewController.h; sourceTree = "<group>"; };
+		E7F73D6D21C228CE000ACDF4 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
+		E7F73D7021C228CE000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E7F73D7221C228CE000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FD16EC219D57B70037D720 /* CoreVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreVideoViewController.h; sourceTree = "<group>"; };
 		E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreVideoViewController.m; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -533,6 +564,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7F73D6321C228CE000ACDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D6821C228CE000ACDF4 /* PhotosUI.framework in Frameworks */,
+				E7F73D6A21C228CE000ACDF4 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -571,6 +611,8 @@
 				FCCEC4A525C31FA7D2ED9F81 /* libPods-CYSuperDemoUITests.a */,
 				552C86DD6795D7F12E72E737 /* libPods-TodayDemo.a */,
 				E7F73D3F21C0E616000ACDF4 /* Messages.framework */,
+				E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */,
+				E7F73D6921C228CE000ACDF4 /* Photos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -587,6 +629,7 @@
 				E7B816C621BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
 				E7F73D2C21C0E401000ACDF4 /* ShareDemo */,
 				E7F73D4121C0E616000ACDF4 /* iMessageDemo */,
+				E7F73D6B21C228CE000ACDF4 /* PhotoEditingDemo */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -605,6 +648,7 @@
 				E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */,
 				E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */,
 				E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */,
+				E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -627,6 +671,8 @@
 				E70616CF1E795BF200762B56 /* Assets.xcassets */,
 				E70616D11E795BF200762B56 /* LaunchScreen.storyboard */,
 				E70616D41E795BF200762B56 /* Info.plist */,
+				E7F73D5D21C0F6E4000ACDF4 /* Localizable.strings */,
+				E7F73D5121C0F2A1000ACDF4 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -833,6 +879,8 @@
 				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
 				E762F4E921A541580086C13B /* BaseNavigationController.h */,
 				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
+				E7688E351E7A494A0064CD69 /* ViewController.h */,
+				E7688E361E7A494A0064CD69 /* ViewController.m */,
 				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
 				E796E5FC2190270E002BEAFD /* HomeViewController.m */,
 				E796E5FE2192BBF3002BEAFD /* SecondViewController.h */,
@@ -841,8 +889,6 @@
 				E7F0106D21BDF74100DB3061 /* ThirdViewController.h */,
 				E7F0106E21BDF74100DB3061 /* ThirdViewController.m */,
 				E7F0107021BDF75200DB3061 /* Third.storyboard */,
-				E7688E351E7A494A0064CD69 /* ViewController.h */,
-				E7688E361E7A494A0064CD69 /* ViewController.m */,
 				E7F40585216B2A6E00B27415 /* ArrayDemo.h */,
 				E7F40586216B2A6E00B27415 /* ArrayDemo.m */,
 				E7F73D1D21C0B0E1000ACDF4 /* Extension */,
@@ -1041,6 +1087,7 @@
 		E778091C21994BA800E94CD3 /* ActionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E7F73D6021C1F97C000ACDF4 /* ActionDemo.entitlements */,
 				E778091D21994BA800E94CD3 /* Media.xcassets */,
 				E778091F21994BA800E94CD3 /* ActionViewController.h */,
 				E778092021994BA800E94CD3 /* ActionViewController.m */,
@@ -1148,6 +1195,17 @@
 			path = iMessageDemo;
 			sourceTree = "<group>";
 		};
+		E7F73D6B21C228CE000ACDF4 /* PhotoEditingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E7F73D6C21C228CE000ACDF4 /* PhotoEditingViewController.h */,
+				E7F73D6D21C228CE000ACDF4 /* PhotoEditingViewController.m */,
+				E7F73D6F21C228CE000ACDF4 /* MainInterface.storyboard */,
+				E7F73D7221C228CE000ACDF4 /* Info.plist */,
+			);
+			path = PhotoEditingDemo;
+			sourceTree = "<group>";
+		};
 		E7FD16EB219D57A60037D720 /* CoreVideo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1238,7 @@
 				E7B816D521BFC400006F0B48 /* PBXTargetDependency */,
 				E7F73D3521C0E402000ACDF4 /* PBXTargetDependency */,
 				E7F73D4C21C0E617000ACDF4 /* PBXTargetDependency */,
+				E7F73D7421C228CE000ACDF4 /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1328,6 +1387,23 @@
 			productReference = E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
+		E7F73D6521C228CE000ACDF4 /* PhotoEditingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F73D7621C228CE000ACDF4 /* Build configuration list for PBXNativeTarget "PhotoEditingDemo" */;
+			buildPhases = (
+				E7F73D6221C228CE000ACDF4 /* Sources */,
+				E7F73D6321C228CE000ACDF4 /* Frameworks */,
+				E7F73D6421C228CE000ACDF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoEditingDemo;
+			productName = PhotoEditingDemo;
+			productReference = E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1349,7 +1425,7 @@
 								enabled = 0;
 							};
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.AutoFillCredentialProvider = {
 								enabled = 1;
@@ -1410,6 +1486,11 @@
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E7B816B521BFC3FC006F0B48 = {
 						CreatedOnToolsVersion = 10.1;
@@ -1431,6 +1512,11 @@
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
+					E7F73D6521C228CE000ACDF4 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E70616BB1E795BF200762B56 /* Build configuration list for PBXProject "CYSuperDemo" */;
@@ -1440,6 +1526,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = E70616B71E795BF200762B56;
 			productRefGroup = E70616C11E795BF200762B56 /* Products */;
@@ -1453,6 +1540,7 @@
 				E7B816C121BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
 				E778090421994B3400E94CD3 /* TodayDemo */,
 				E778091A21994BA800E94CD3 /* ActionDemo */,
+				E7F73D6521C228CE000ACDF4 /* PhotoEditingDemo */,
 				E7F73D2A21C0E401000ACDF4 /* ShareDemo */,
 				E7F73D3D21C0E616000ACDF4 /* iMessageDemo */,
 			);
@@ -1469,6 +1557,7 @@
 				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */,
+				E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
 				E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
@@ -1538,6 +1627,14 @@
 			files = (
 				E7F73D4921C0E617000ACDF4 /* Assets.xcassets in Resources */,
 				E7F73D4721C0E616000ACDF4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F73D6421C228CE000ACDF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D7121C228CE000ACDF4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1914,6 +2011,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7F73D6221C228CE000ACDF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F73D6E21C228CE000ACDF4 /* PhotoEditingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1957,6 +2062,11 @@
 			target = E7F73D3D21C0E616000ACDF4 /* iMessageDemo */;
 			targetProxy = E7F73D4B21C0E617000ACDF4 /* PBXContainerItemProxy */;
 		};
+		E7F73D7421C228CE000ACDF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F73D6521C228CE000ACDF4 /* PhotoEditingDemo */;
+			targetProxy = E7F73D7321C228CE000ACDF4 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1964,6 +2074,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E70616D21E795BF200762B56 /* Base */,
+				E7F73D5321C0F69D000ACDF4 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1972,6 +2083,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E778090D21994B3400E94CD3 /* Base */,
+				E7F73D5421C0F69E000ACDF4 /* zh-Hans */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -1980,6 +2092,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E778092321994BA800E94CD3 /* Base */,
+				E7F73D5521C0F69E000ACDF4 /* zh-Hans */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -1988,6 +2101,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E7B816B921BFC3FD006F0B48 /* Base */,
+				E7F73D5621C0F69E000ACDF4 /* zh-Hans */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1996,6 +2110,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E7F73D3121C0E401000ACDF4 /* Base */,
+				E7F73D5721C0F69F000ACDF4 /* zh-Hans */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -2004,6 +2119,24 @@
 			isa = PBXVariantGroup;
 			children = (
 				E7F73D4621C0E616000ACDF4 /* Base */,
+				E7F73D5821C0F69F000ACDF4 /* zh-Hans */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		E7F73D5D21C0F6E4000ACDF4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F73D5C21C0F6E4000ACDF4 /* en */,
+				E7F73D5E21C0F6E6000ACDF4 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E7F73D6F21C228CE000ACDF4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F73D7021C228CE000ACDF4 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -2015,6 +2148,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2070,6 +2204,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2125,6 +2260,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CYSuperDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = CYSuperDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2145,6 +2282,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CYSuperDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = CYSuperDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2276,6 +2415,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7835DA71D64C36C60CF6918F /* Pods-ActionDemo.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = ActionExtensionIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2288,6 +2428,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ActionDemo/ActionDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
@@ -2308,6 +2449,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83CB64CC1C9960A553D672C6 /* Pods-ActionDemo.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = ActionExtensionIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -2320,6 +2462,7 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ActionDemo/ActionDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
@@ -2488,6 +2631,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = iMessageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -2512,11 +2657,58 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = iMessageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.iMessageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7F73D7721C228CE000ACDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PhotoEditingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.PhotoEditingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7F73D7821C228CE000ACDF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PhotoEditingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.PhotoEditingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2612,6 +2804,15 @@
 			buildConfigurations = (
 				E7F73D4F21C0E617000ACDF4 /* Debug */,
 				E7F73D5021C0E617000ACDF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F73D7621C228CE000ACDF4 /* Build configuration list for PBXNativeTarget "PhotoEditingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F73D7721C228CE000ACDF4 /* Debug */,
+				E7F73D7821C228CE000ACDF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
