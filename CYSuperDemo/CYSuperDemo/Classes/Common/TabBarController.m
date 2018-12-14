@@ -94,9 +94,9 @@
     secondVC.tabBarItem = item2;
     
     
-    self.navigationController1 = [[BaseNavigationController alloc] initWithRootViewController:homeVc];
+    self.navigationController1 = [[NavigationController alloc] initWithRootViewController:homeVc];
     
-    self.navigationController2 = [[BaseNavigationController alloc] initWithRootViewController:secondVC];
+    self.navigationController2 = [[NavigationController alloc] initWithRootViewController:secondVC];
     
     
 //    self.navigationController2.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];

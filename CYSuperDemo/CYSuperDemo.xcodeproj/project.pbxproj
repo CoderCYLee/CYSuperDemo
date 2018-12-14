@@ -98,7 +98,7 @@
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
 		E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B021BFBC82006F0B48 /* PassKit.framework */; };
-		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; };
+		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7B816BA21BFC3FD006F0B48 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B816B821BFC3FD006F0B48 /* Interface.storyboard */; };
 		E7B816BC21BFC3FF006F0B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B816BB21BFC3FF006F0B48 /* Assets.xcassets */; };
 		E7B816C321BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -134,6 +134,11 @@
 		E7F73D6E21C228CE000ACDF4 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D6D21C228CE000ACDF4 /* PhotoEditingViewController.m */; };
 		E7F73D7121C228CE000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D6F21C228CE000ACDF4 /* MainInterface.storyboard */; };
 		E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7F73DA621C240B5000ACDF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DA521C240B5000ACDF4 /* BaseViewController.m */; };
+		E7F73DA921C240CF000ACDF4 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DA821C240CF000ACDF4 /* BaseTableViewController.m */; };
+		E7F73DAC21C240DE000ACDF4 /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DAB21C240DE000ACDF4 /* BaseCollectionViewController.m */; };
+		E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DAE21C24136000ACDF4 /* BaseTabBarController.m */; };
+		E7F73DB321C24193000ACDF4 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DB221C24193000ACDF4 /* NavigationController.m */; };
 		E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -487,6 +492,16 @@
 		E7F73D6D21C228CE000ACDF4 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
 		E7F73D7021C228CE000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E7F73D7221C228CE000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F73DA421C240B5000ACDF4 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E7F73DA521C240B5000ACDF4 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E7F73DA721C240CF000ACDF4 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		E7F73DA821C240CF000ACDF4 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		E7F73DAA21C240DE000ACDF4 /* BaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
+		E7F73DAB21C240DE000ACDF4 /* BaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewController.m; sourceTree = "<group>"; };
+		E7F73DAD21C24136000ACDF4 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		E7F73DAE21C24136000ACDF4 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		E7F73DB121C24193000ACDF4 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		E7F73DB221C24193000ACDF4 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		E7FD16EC219D57B70037D720 /* CoreVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreVideoViewController.h; sourceTree = "<group>"; };
 		E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreVideoViewController.m; sourceTree = "<group>"; };
 		F508F110EBD8B2E7A7049B7A /* Pods-CYSuperDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYSuperDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -875,12 +890,8 @@
 			children = (
 				E7688E2A1E7A48DA0064CD69 /* Other */,
 				E7F73D1221C0A87F000ACDF4 /* Launch */,
-				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
-				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
-				E762F4E921A541580086C13B /* BaseNavigationController.h */,
-				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
-				E7688E351E7A494A0064CD69 /* ViewController.h */,
-				E7688E361E7A494A0064CD69 /* ViewController.m */,
+				E7F73DA321C2409F000ACDF4 /* Base */,
+				E7F73DB021C2414C000ACDF4 /* Common */,
 				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
 				E796E5FC2190270E002BEAFD /* HomeViewController.m */,
 				E796E5FE2192BBF3002BEAFD /* SecondViewController.h */,
@@ -1204,6 +1215,36 @@
 				E7F73D7221C228CE000ACDF4 /* Info.plist */,
 			);
 			path = PhotoEditingDemo;
+			sourceTree = "<group>";
+		};
+		E7F73DA321C2409F000ACDF4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E7F73DAD21C24136000ACDF4 /* BaseTabBarController.h */,
+				E7F73DAE21C24136000ACDF4 /* BaseTabBarController.m */,
+				E762F4E921A541580086C13B /* BaseNavigationController.h */,
+				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
+				E7F73DA421C240B5000ACDF4 /* BaseViewController.h */,
+				E7F73DA521C240B5000ACDF4 /* BaseViewController.m */,
+				E7F73DA721C240CF000ACDF4 /* BaseTableViewController.h */,
+				E7F73DA821C240CF000ACDF4 /* BaseTableViewController.m */,
+				E7F73DAA21C240DE000ACDF4 /* BaseCollectionViewController.h */,
+				E7F73DAB21C240DE000ACDF4 /* BaseCollectionViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E7F73DB021C2414C000ACDF4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
+				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
+				E7F73DB121C24193000ACDF4 /* NavigationController.h */,
+				E7F73DB221C24193000ACDF4 /* NavigationController.m */,
+				E7688E351E7A494A0064CD69 /* ViewController.h */,
+				E7688E361E7A494A0064CD69 /* ViewController.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E7FD16EB219D57A60037D720 /* CoreVideo */ = {
@@ -1891,7 +1932,9 @@
 				E7F73D1A21C0AEC2000ACDF4 /* LaunchView.m in Sources */,
 				E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */,
 				E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */,
+				E7F73DA921C240CF000ACDF4 /* BaseTableViewController.m in Sources */,
 				E762F4FB21A5532B0086C13B /* StoreKitViewController.m in Sources */,
+				E7F73DAC21C240DE000ACDF4 /* BaseCollectionViewController.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
@@ -1909,6 +1952,7 @@
 				E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */,
 				E762F4EF21A54DDA0086C13B /* CloudKitViewController.m in Sources */,
 				E721242A2193D9B000129C5A /* UIViewController+CY.m in Sources */,
+				E7F73DB321C24193000ACDF4 /* NavigationController.m in Sources */,
 				E762F50121A65A440086C13B /* CYICloudHandle.m in Sources */,
 				E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */,
 				E7094D8E21A40763001E35B2 /* UIKitViewController.m in Sources */,
@@ -1931,6 +1975,8 @@
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
 				E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */,
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
+				E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */,
+				E7F73DA621C240B5000ACDF4 /* BaseViewController.m in Sources */,
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,
 				E74EC0F6219D406C0017A64D /* CoreNFCViewController.m in Sources */,
