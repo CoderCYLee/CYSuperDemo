@@ -77,6 +77,13 @@
 		E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E701E7A4B400064CD69 /* CYTitleButton.m */; };
 		E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */; };
 		E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */; };
+		E76F721321C8D76D00550C1E /* md1.md in Resources */ = {isa = PBXBuildFile; fileRef = E76F721221C8D76C00550C1E /* md1.md */; };
+		E76F721521C8D9DE00550C1E /* pdf1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E76F721421C8D9DE00550C1E /* pdf1.pdf */; };
+		E76F721721C8DA3400550C1E /* txt1.txt in Resources */ = {isa = PBXBuildFile; fileRef = E76F721621C8DA3300550C1E /* txt1.txt */; };
+		E76F721921C8DAD800550C1E /* doc1.docx in Resources */ = {isa = PBXBuildFile; fileRef = E76F721821C8DAD800550C1E /* doc1.docx */; };
+		E76F721B21C8DDCF00550C1E /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76F721A21C8DDCF00550C1E /* Speech.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E76F721F21C8DDEB00550C1E /* SpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76F721E21C8DDEB00550C1E /* SpeechViewController.m */; };
+		E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76F722021C8E22D00550C1E /* 1122334455.mp3 */; };
 		E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7722E581F42D64300BBE9B6 /* CYMapManager.m */; };
 		E778090721994B3400E94CD3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E778090621994B3400E94CD3 /* NotificationCenter.framework */; };
 		E778090B21994B3400E94CD3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778090A21994B3400E94CD3 /* TodayViewController.m */; };
@@ -98,6 +105,13 @@
 		E781AFD921C3B62C00AA845B /* NotifiContentDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E781AFE521C3B64800AA845B /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E781AFE421C3B64800AA845B /* NotificationService.m */; };
 		E781AFE921C3B64800AA845B /* NotifiServiceDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E781AFED21C8BF5600AA845B /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E778093E219A9E8B00E94CD3 /* Contacts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E781AFEE21C8BF6F00AA845B /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7780942219AA4B900E94CD3 /* ContactsUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E781AFF221C8C26100AA845B /* SafariServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E781AFF121C8C26100AA845B /* SafariServicesViewController.m */; };
+		E781AFFA21C8C7B600AA845B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = E781AFF921C8C7B600AA845B /* blockerList.json */; };
+		E781AFFD21C8C7B600AA845B /* ContentBlockerRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E781AFFC21C8C7B600AA845B /* ContentBlockerRequestHandler.m */; };
+		E781B00121C8C7B600AA845B /* ContentBlockerExtensionDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E781AFF721C8C7B600AA845B /* ContentBlockerExtensionDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E781B00821C8D46700AA845B /* QuickLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E781B00721C8D46700AA845B /* QuickLookViewController.m */; };
 		E78A996B21421731002A9803 /* CYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996A21421731002A9803 /* CYLocationManager.m */; };
 		E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996D214217F1002A9803 /* CYCustomSearchBar.m */; };
 		E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91621E9CDE8D0033E336 /* UIControl+CY.m */; };
@@ -109,7 +123,7 @@
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
 		E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B021BFBC82006F0B48 /* PassKit.framework */; };
-		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; };
 		E7B816BA21BFC3FD006F0B48 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B816B821BFC3FD006F0B48 /* Interface.storyboard */; };
 		E7B816BC21BFC3FF006F0B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B816BB21BFC3FF006F0B48 /* Assets.xcassets */; };
 		E7B816C321BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -196,6 +210,13 @@
 			remoteGlobalIDString = E781AFE021C3B64800AA845B;
 			remoteInfo = NotifiServiceDemo;
 		};
+		E781AFFF21C8C7B600AA845B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E781AFF621C8C7B600AA845B;
+			remoteInfo = ContentBlockerExtensionDemo;
+		};
 		E7B816C421BFC3FF006F0B48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E70616B81E795BF200762B56 /* Project object */;
@@ -244,6 +265,7 @@
 				E778091221994B3400E94CD3 /* TodayDemo.appex in Embed App Extensions */,
 				E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */,
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
+				E781B00121C8C7B600AA845B /* ContentBlockerExtensionDemo.appex in Embed App Extensions */,
 				E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */,
 				E781AFE921C3B64800AA845B /* NotifiServiceDemo.appex in Embed App Extensions */,
 				E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */,
@@ -416,6 +438,14 @@
 		E7688E8A1E7A4C780064CD69 /* CYNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNetworkUtility.m; sourceTree = "<group>"; };
 		E7688E8C1E7A51DE0064CD69 /* CYAudioUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAudioUtility.h; sourceTree = "<group>"; };
 		E7688E8D1E7A51DE0064CD69 /* CYAudioUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAudioUtility.m; sourceTree = "<group>"; };
+		E76F721221C8D76C00550C1E /* md1.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = md1.md; sourceTree = "<group>"; };
+		E76F721421C8D9DE00550C1E /* pdf1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf1.pdf; sourceTree = "<group>"; };
+		E76F721621C8DA3300550C1E /* txt1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = txt1.txt; sourceTree = "<group>"; };
+		E76F721821C8DAD800550C1E /* doc1.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = doc1.docx; sourceTree = "<group>"; };
+		E76F721A21C8DDCF00550C1E /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		E76F721D21C8DDEB00550C1E /* SpeechViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechViewController.h; sourceTree = "<group>"; };
+		E76F721E21C8DDEB00550C1E /* SpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechViewController.m; sourceTree = "<group>"; };
+		E76F722021C8E22D00550C1E /* 1122334455.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1122334455.mp3; sourceTree = "<group>"; };
 		E7722E571F42D64300BBE9B6 /* CYMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMapManager.h; sourceTree = "<group>"; };
 		E7722E581F42D64300BBE9B6 /* CYMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMapManager.m; sourceTree = "<group>"; };
 		E778090521994B3400E94CD3 /* TodayDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -449,6 +479,15 @@
 		E781AFE321C3B64800AA845B /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		E781AFE421C3B64800AA845B /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		E781AFE621C3B64800AA845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E781AFF021C8C26100AA845B /* SafariServicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafariServicesViewController.h; sourceTree = "<group>"; };
+		E781AFF121C8C26100AA845B /* SafariServicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafariServicesViewController.m; sourceTree = "<group>"; };
+		E781AFF721C8C7B600AA845B /* ContentBlockerExtensionDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContentBlockerExtensionDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E781AFF921C8C7B600AA845B /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		E781AFFB21C8C7B600AA845B /* ContentBlockerRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentBlockerRequestHandler.h; sourceTree = "<group>"; };
+		E781AFFC21C8C7B600AA845B /* ContentBlockerRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentBlockerRequestHandler.m; sourceTree = "<group>"; };
+		E781AFFE21C8C7B600AA845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E781B00621C8D46700AA845B /* QuickLookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickLookViewController.h; sourceTree = "<group>"; };
+		E781B00721C8D46700AA845B /* QuickLookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickLookViewController.m; sourceTree = "<group>"; };
 		E78A996921421730002A9803 /* CYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLocationManager.h; sourceTree = "<group>"; };
 		E78A996A21421731002A9803 /* CYLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLocationManager.m; sourceTree = "<group>"; };
 		E78A996C214217F1002A9803 /* CYCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCustomSearchBar.h; sourceTree = "<group>"; };
@@ -556,8 +595,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */,
+				E76F721B21C8DDCF00550C1E /* Speech.framework in Frameworks */,
+				E781AFEE21C8BF6F00AA845B /* ContactsUI.framework in Frameworks */,
+				E781AFED21C8BF5600AA845B /* Contacts.framework in Frameworks */,
 				E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */,
+				E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */,
 				E762F4F721A54F210086C13B /* CloudKit.framework in Frameworks */,
 				E7658E262180430F00EF05E9 /* HealthKit.framework in Frameworks */,
 				E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */,
@@ -609,6 +651,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E781AFDE21C3B64800AA845B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFF421C8C7B600AA845B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -669,6 +718,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E76F721A21C8DDCF00550C1E /* Speech.framework */,
 				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
 				E7B816B021BFBC82006F0B48 /* PassKit.framework */,
 				E762F4F621A54F210086C13B /* CloudKit.framework */,
@@ -707,6 +757,7 @@
 				E7F73D6B21C228CE000ACDF4 /* PhotoEditingDemo */,
 				E781AFCF21C3B62C00AA845B /* NotifiContentDemo */,
 				E781AFE221C3B64800AA845B /* NotifiServiceDemo */,
+				E781AFF821C8C7B600AA845B /* ContentBlockerExtensionDemo */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -728,6 +779,7 @@
 				E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */,
 				E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */,
 				E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */,
+				E781AFF721C8C7B600AA845B /* ContentBlockerExtensionDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -793,6 +845,9 @@
 				E74EC0CA219D406C0017A64D /* MediaPlayer */,
 				E74EC0D1219D406C0017A64D /* Network */,
 				E74EC0D4219D406C0017A64D /* PDFKit */,
+				E781B00521C8D43A00AA845B /* QuickLook */,
+				E781AFEF21C8C24D00AA845B /* SafariServices */,
+				E76F721C21C8DDD700550C1E /* Speech */,
 				E762F4F821A5531A0086C13B /* StoreKit */,
 			);
 			path = Other;
@@ -893,8 +948,8 @@
 			isa = PBXGroup;
 			children = (
 				E74EC0E8219D406C0017A64D /* AddressBookViewController.h */,
-				E74EC0E9219D406C0017A64D /* AddressBook.md */,
 				E74EC0EA219D406C0017A64D /* AddressBookViewController.m */,
+				E74EC0E9219D406C0017A64D /* AddressBook.md */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -985,6 +1040,11 @@
 		E7688E331E7A49150064CD69 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E76F722021C8E22D00550C1E /* 1122334455.mp3 */,
+				E76F721821C8DAD800550C1E /* doc1.docx */,
+				E76F721621C8DA3300550C1E /* txt1.txt */,
+				E76F721421C8D9DE00550C1E /* pdf1.pdf */,
+				E76F721221C8D76C00550C1E /* md1.md */,
 				E781AFC421C3AA2700AA845B /* png1.png */,
 				E781AFC221C3A9D700AA845B /* gif1.gif */,
 				E781AFBC21C3A79700AA845B /* jpg1.jpg */,
@@ -1122,6 +1182,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E76F721C21C8DDD700550C1E /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				E76F721D21C8DDEB00550C1E /* SpeechViewController.h */,
+				E76F721E21C8DDEB00550C1E /* SpeechViewController.m */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
 		E778089721952CE000E94CD3 /* FrameworkCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -1195,6 +1264,35 @@
 				E781AFE621C3B64800AA845B /* Info.plist */,
 			);
 			path = NotifiServiceDemo;
+			sourceTree = "<group>";
+		};
+		E781AFEF21C8C24D00AA845B /* SafariServices */ = {
+			isa = PBXGroup;
+			children = (
+				E781AFF021C8C26100AA845B /* SafariServicesViewController.h */,
+				E781AFF121C8C26100AA845B /* SafariServicesViewController.m */,
+			);
+			path = SafariServices;
+			sourceTree = "<group>";
+		};
+		E781AFF821C8C7B600AA845B /* ContentBlockerExtensionDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E781AFF921C8C7B600AA845B /* blockerList.json */,
+				E781AFFB21C8C7B600AA845B /* ContentBlockerRequestHandler.h */,
+				E781AFFC21C8C7B600AA845B /* ContentBlockerRequestHandler.m */,
+				E781AFFE21C8C7B600AA845B /* Info.plist */,
+			);
+			path = ContentBlockerExtensionDemo;
+			sourceTree = "<group>";
+		};
+		E781B00521C8D43A00AA845B /* QuickLook */ = {
+			isa = PBXGroup;
+			children = (
+				E781B00621C8D46700AA845B /* QuickLookViewController.h */,
+				E781B00721C8D46700AA845B /* QuickLookViewController.m */,
+			);
+			path = QuickLook;
 			sourceTree = "<group>";
 		};
 		E79252BB219BFB0000E60577 /* Video */ = {
@@ -1371,6 +1469,7 @@
 				E7F73D7421C228CE000ACDF4 /* PBXTargetDependency */,
 				E781AFD821C3B62C00AA845B /* PBXTargetDependency */,
 				E781AFE821C3B64800AA845B /* PBXTargetDependency */,
+				E781B00021C8C7B600AA845B /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1483,6 +1582,23 @@
 			name = NotifiServiceDemo;
 			productName = NotifiServiceDemo;
 			productReference = E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E781AFF621C8C7B600AA845B /* ContentBlockerExtensionDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E781B00221C8C7B600AA845B /* Build configuration list for PBXNativeTarget "ContentBlockerExtensionDemo" */;
+			buildPhases = (
+				E781AFF321C8C7B600AA845B /* Sources */,
+				E781AFF421C8C7B600AA845B /* Frameworks */,
+				E781AFF521C8C7B600AA845B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContentBlockerExtensionDemo;
+			productName = ContentBlockerExtensionDemo;
+			productReference = E781AFF721C8C7B600AA845B /* ContentBlockerExtensionDemo.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */ = {
@@ -1668,6 +1784,11 @@
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
+					E781AFF621C8C7B600AA845B = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
 					E7B816B521BFC3FC006F0B48 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = JXJV99SFC3;
@@ -1721,6 +1842,7 @@
 				E7F73D3D21C0E616000ACDF4 /* iMessageDemo */,
 				E781AFC921C3B62B00AA845B /* NotifiContentDemo */,
 				E781AFE021C3B64800AA845B /* NotifiServiceDemo */,
+				E781AFF621C8C7B600AA845B /* ContentBlockerExtensionDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -1730,8 +1852,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76F721321C8D76D00550C1E /* md1.md in Resources */,
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
 				E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */,
+				E76F721721C8DA3400550C1E /* txt1.txt in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
 				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
@@ -1739,11 +1863,14 @@
 				E781AFC321C3A9D700AA845B /* gif1.gif in Resources */,
 				E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
+				E76F721521C8D9DE00550C1E /* pdf1.pdf in Resources */,
 				E781AFBF21C3A7A500AA845B /* jpg2.jpg in Resources */,
 				E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
+				E76F721921C8DAD800550C1E /* doc1.docx in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
 				E781AFC521C3AA2700AA845B /* png1.png in Resources */,
+				E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1790,6 +1917,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFF521C8C7B600AA845B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E781AFFA21C8C7B600AA845B /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2075,6 +2210,7 @@
 				E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */,
 				E7F0106F21BDF74100DB3061 /* ThirdViewController.m in Sources */,
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
+				E76F721F21C8DDEB00550C1E /* SpeechViewController.m in Sources */,
 				E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
@@ -2136,10 +2272,12 @@
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,
 				E74EC0F6219D406C0017A64D /* CoreNFCViewController.m in Sources */,
+				E781B00821C8D46700AA845B /* QuickLookViewController.m in Sources */,
 				E7688E721E7A4B400064CD69 /* CYKit.m in Sources */,
 				E7688E761E7A4B400064CD69 /* NSObject+CY.m in Sources */,
 				E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */,
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
+				E781AFF221C8C26100AA845B /* SafariServicesViewController.m in Sources */,
 				E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */,
 				E7F40587216B2A6E00B27415 /* ArrayDemo.m in Sources */,
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
@@ -2200,6 +2338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E781AFE521C3B64800AA845B /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFF321C8C7B600AA845B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E781AFFD21C8C7B600AA845B /* ContentBlockerRequestHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2269,6 +2415,11 @@
 			isa = PBXTargetDependency;
 			target = E781AFE021C3B64800AA845B /* NotifiServiceDemo */;
 			targetProxy = E781AFE721C3B64800AA845B /* PBXContainerItemProxy */;
+		};
+		E781B00021C8C7B600AA845B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E781AFF621C8C7B600AA845B /* ContentBlockerExtensionDemo */;
+			targetProxy = E781AFFF21C8C7B600AA845B /* PBXContainerItemProxy */;
 		};
 		E7B816C521BFC3FF006F0B48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2802,6 +2953,53 @@
 			};
 			name = Release;
 		};
+		E781B00321C8C7B600AA845B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ContentBlockerExtensionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.ContentBlockerExtensionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E781B00421C8C7B600AA845B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ContentBlockerExtensionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.ContentBlockerExtensionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E7B816D821BFC400006F0B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3110,6 +3308,15 @@
 			buildConfigurations = (
 				E781AFEB21C3B64800AA845B /* Debug */,
 				E781AFEC21C3B64800AA845B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E781B00221C8C7B600AA845B /* Build configuration list for PBXNativeTarget "ContentBlockerExtensionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E781B00321C8C7B600AA845B /* Debug */,
+				E781B00421C8C7B600AA845B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
