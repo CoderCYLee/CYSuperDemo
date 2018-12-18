@@ -87,6 +87,17 @@
 		E778092421994BA800E94CD3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778092221994BA800E94CD3 /* MainInterface.storyboard */; };
 		E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E778091B21994BA800E94CD3 /* ActionDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778093821995F3000E94CD3 /* FrameworkCodeTableViewController.m */; };
+		E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E781AFBC21C3A79700AA845B /* jpg1.jpg */; };
+		E781AFBF21C3A7A500AA845B /* jpg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E781AFBE21C3A7A500AA845B /* jpg2.jpg */; };
+		E781AFC321C3A9D700AA845B /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = E781AFC221C3A9D700AA845B /* gif1.gif */; };
+		E781AFC521C3AA2700AA845B /* png1.png in Resources */ = {isa = PBXBuildFile; fileRef = E781AFC421C3AA2700AA845B /* png1.png */; };
+		E781AFCC21C3B62C00AA845B /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E781AFCB21C3B62C00AA845B /* UserNotifications.framework */; };
+		E781AFCE21C3B62C00AA845B /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E781AFCD21C3B62C00AA845B /* UserNotificationsUI.framework */; };
+		E781AFD221C3B62C00AA845B /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E781AFD121C3B62C00AA845B /* NotificationViewController.m */; };
+		E781AFD521C3B62C00AA845B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E781AFD321C3B62C00AA845B /* MainInterface.storyboard */; };
+		E781AFD921C3B62C00AA845B /* NotifiContentDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E781AFE521C3B64800AA845B /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E781AFE421C3B64800AA845B /* NotificationService.m */; };
+		E781AFE921C3B64800AA845B /* NotifiServiceDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E78A996B21421731002A9803 /* CYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996A21421731002A9803 /* CYLocationManager.m */; };
 		E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996D214217F1002A9803 /* CYCustomSearchBar.m */; };
 		E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91621E9CDE8D0033E336 /* UIControl+CY.m */; };
@@ -171,6 +182,20 @@
 			remoteGlobalIDString = E778091A21994BA800E94CD3;
 			remoteInfo = ActionDemo;
 		};
+		E781AFD721C3B62C00AA845B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E781AFC921C3B62B00AA845B;
+			remoteInfo = NotifiContentDemo;
+		};
+		E781AFE721C3B64800AA845B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E781AFE021C3B64800AA845B;
+			remoteInfo = NotifiServiceDemo;
+		};
 		E7B816C421BFC3FF006F0B48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E70616B81E795BF200762B56 /* Project object */;
@@ -215,10 +240,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				E781AFD921C3B62C00AA845B /* NotifiContentDemo.appex in Embed App Extensions */,
 				E778091221994B3400E94CD3 /* TodayDemo.appex in Embed App Extensions */,
 				E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */,
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
 				E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */,
+				E781AFE921C3B64800AA845B /* NotifiServiceDemo.appex in Embed App Extensions */,
 				E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -407,6 +434,21 @@
 		E778093821995F3000E94CD3 /* FrameworkCodeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkCodeTableViewController.m; sourceTree = "<group>"; };
 		E778093E219A9E8B00E94CD3 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		E7780942219AA4B900E94CD3 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		E781AFBC21C3A79700AA845B /* jpg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jpg1.jpg; sourceTree = "<group>"; };
+		E781AFBE21C3A7A500AA845B /* jpg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jpg2.jpg; sourceTree = "<group>"; };
+		E781AFC221C3A9D700AA845B /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif1.gif; sourceTree = "<group>"; };
+		E781AFC421C3AA2700AA845B /* png1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png1.png; sourceTree = "<group>"; };
+		E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotifiContentDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E781AFCB21C3B62C00AA845B /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		E781AFCD21C3B62C00AA845B /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		E781AFD021C3B62C00AA845B /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		E781AFD121C3B62C00AA845B /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		E781AFD421C3B62C00AA845B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E781AFD621C3B62C00AA845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotifiServiceDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E781AFE321C3B64800AA845B /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		E781AFE421C3B64800AA845B /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		E781AFE621C3B64800AA845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78A996921421730002A9803 /* CYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLocationManager.h; sourceTree = "<group>"; };
 		E78A996A21421731002A9803 /* CYLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLocationManager.m; sourceTree = "<group>"; };
 		E78A996C214217F1002A9803 /* CYCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCustomSearchBar.h; sourceTree = "<group>"; };
@@ -557,6 +599,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E781AFC721C3B62B00AA845B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E781AFCE21C3B62C00AA845B /* UserNotificationsUI.framework in Frameworks */,
+				E781AFCC21C3B62C00AA845B /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFDE21C3B64800AA845B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7B816BF21BFC3FF006F0B48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,6 +686,8 @@
 				E7F73D3F21C0E616000ACDF4 /* Messages.framework */,
 				E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */,
 				E7F73D6921C228CE000ACDF4 /* Photos.framework */,
+				E781AFCB21C3B62C00AA845B /* UserNotifications.framework */,
+				E781AFCD21C3B62C00AA845B /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -645,6 +705,8 @@
 				E7F73D2C21C0E401000ACDF4 /* ShareDemo */,
 				E7F73D4121C0E616000ACDF4 /* iMessageDemo */,
 				E7F73D6B21C228CE000ACDF4 /* PhotoEditingDemo */,
+				E781AFCF21C3B62C00AA845B /* NotifiContentDemo */,
+				E781AFE221C3B64800AA845B /* NotifiServiceDemo */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -664,6 +726,8 @@
 				E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */,
 				E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */,
 				E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */,
+				E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */,
+				E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -921,6 +985,10 @@
 		E7688E331E7A49150064CD69 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E781AFC421C3AA2700AA845B /* png1.png */,
+				E781AFC221C3A9D700AA845B /* gif1.gif */,
+				E781AFBC21C3A79700AA845B /* jpg1.jpg */,
+				E781AFBE21C3A7A500AA845B /* jpg2.jpg */,
 				E7F0107221BDF86A00DB3061 /* bg.png */,
 				E79252BB219BFB0000E60577 /* Video */,
 			);
@@ -1108,6 +1176,27 @@
 			path = ActionDemo;
 			sourceTree = "<group>";
 		};
+		E781AFCF21C3B62C00AA845B /* NotifiContentDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E781AFD021C3B62C00AA845B /* NotificationViewController.h */,
+				E781AFD121C3B62C00AA845B /* NotificationViewController.m */,
+				E781AFD321C3B62C00AA845B /* MainInterface.storyboard */,
+				E781AFD621C3B62C00AA845B /* Info.plist */,
+			);
+			path = NotifiContentDemo;
+			sourceTree = "<group>";
+		};
+		E781AFE221C3B64800AA845B /* NotifiServiceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E781AFE321C3B64800AA845B /* NotificationService.h */,
+				E781AFE421C3B64800AA845B /* NotificationService.m */,
+				E781AFE621C3B64800AA845B /* Info.plist */,
+			);
+			path = NotifiServiceDemo;
+			sourceTree = "<group>";
+		};
 		E79252BB219BFB0000E60577 /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -1280,6 +1369,8 @@
 				E7F73D3521C0E402000ACDF4 /* PBXTargetDependency */,
 				E7F73D4C21C0E617000ACDF4 /* PBXTargetDependency */,
 				E7F73D7421C228CE000ACDF4 /* PBXTargetDependency */,
+				E781AFD821C3B62C00AA845B /* PBXTargetDependency */,
+				E781AFE821C3B64800AA845B /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1358,6 +1449,40 @@
 			name = ActionDemo;
 			productName = ActionDemo;
 			productReference = E778091B21994BA800E94CD3 /* ActionDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E781AFC921C3B62B00AA845B /* NotifiContentDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E781AFDA21C3B62C00AA845B /* Build configuration list for PBXNativeTarget "NotifiContentDemo" */;
+			buildPhases = (
+				E781AFC621C3B62B00AA845B /* Sources */,
+				E781AFC721C3B62B00AA845B /* Frameworks */,
+				E781AFC821C3B62B00AA845B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotifiContentDemo;
+			productName = NotifiContentDemo;
+			productReference = E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E781AFE021C3B64800AA845B /* NotifiServiceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E781AFEA21C3B64800AA845B /* Build configuration list for PBXNativeTarget "NotifiServiceDemo" */;
+			buildPhases = (
+				E781AFDD21C3B64800AA845B /* Sources */,
+				E781AFDE21C3B64800AA845B /* Frameworks */,
+				E781AFDF21C3B64800AA845B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotifiServiceDemo;
+			productName = NotifiServiceDemo;
+			productReference = E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */ = {
@@ -1466,7 +1591,7 @@
 								enabled = 0;
 							};
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.AutoFillCredentialProvider = {
 								enabled = 1;
@@ -1529,9 +1654,19 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
+					};
+					E781AFC921C3B62B00AA845B = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+					};
+					E781AFE021C3B64800AA845B = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
 					};
 					E7B816B521BFC3FC006F0B48 = {
 						CreatedOnToolsVersion = 10.1;
@@ -1584,6 +1719,8 @@
 				E7F73D6521C228CE000ACDF4 /* PhotoEditingDemo */,
 				E7F73D2A21C0E401000ACDF4 /* ShareDemo */,
 				E7F73D3D21C0E616000ACDF4 /* iMessageDemo */,
+				E781AFC921C3B62B00AA845B /* NotifiContentDemo */,
+				E781AFE021C3B64800AA845B /* NotifiServiceDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -1594,15 +1731,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
+				E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
 				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E7F0107121BDF75200DB3061 /* Third.storyboard in Resources */,
+				E781AFC321C3A9D700AA845B /* gif1.gif in Resources */,
 				E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
+				E781AFBF21C3A7A500AA845B /* jpg2.jpg in Resources */,
 				E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
+				E781AFC521C3AA2700AA845B /* png1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1634,6 +1775,21 @@
 			files = (
 				E778091E21994BA800E94CD3 /* Media.xcassets in Resources */,
 				E778092421994BA800E94CD3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFC821C3B62B00AA845B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E781AFD521C3B62C00AA845B /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFDF21C3B64800AA845B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2031,6 +2187,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E781AFC621C3B62B00AA845B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E781AFD221C3B62C00AA845B /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E781AFDD21C3B64800AA845B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E781AFE521C3B64800AA845B /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7B816BE21BFC3FF006F0B48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2088,6 +2260,16 @@
 			target = E778091A21994BA800E94CD3 /* ActionDemo */;
 			targetProxy = E778092621994BA800E94CD3 /* PBXContainerItemProxy */;
 		};
+		E781AFD821C3B62C00AA845B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E781AFC921C3B62B00AA845B /* NotifiContentDemo */;
+			targetProxy = E781AFD721C3B62C00AA845B /* PBXContainerItemProxy */;
+		};
+		E781AFE821C3B64800AA845B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E781AFE021C3B64800AA845B /* NotifiServiceDemo */;
+			targetProxy = E781AFE721C3B64800AA845B /* PBXContainerItemProxy */;
+		};
 		E7B816C521BFC3FF006F0B48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7B816C121BFC3FF006F0B48 /* CYSuperWatchDemo Extension */;
@@ -2139,6 +2321,14 @@
 			children = (
 				E778092321994BA800E94CD3 /* Base */,
 				E7F73D5521C0F69E000ACDF4 /* zh-Hans */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		E781AFD321C3B62C00AA845B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E781AFD421C3B62C00AA845B /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -2474,7 +2664,6 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ActionDemo/ActionDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
@@ -2508,7 +2697,6 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ActionDemo/ActionDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXJV99SFC3;
@@ -2518,6 +2706,96 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.ActionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E781AFDB21C3B62C00AA845B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NotifiContentDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.NotifiContentDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E781AFDC21C3B62C00AA845B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NotifiContentDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.NotifiContentDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E781AFEB21C3B64800AA845B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NotifiServiceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.NotifiServiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E781AFEC21C3B64800AA845B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NotifiServiceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.NotifiServiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2814,6 +3092,24 @@
 			buildConfigurations = (
 				E778092A21994BA800E94CD3 /* Debug */,
 				E778092B21994BA800E94CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E781AFDA21C3B62C00AA845B /* Build configuration list for PBXNativeTarget "NotifiContentDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E781AFDB21C3B62C00AA845B /* Debug */,
+				E781AFDC21C3B62C00AA845B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E781AFEA21C3B64800AA845B /* Build configuration list for PBXNativeTarget "NotifiServiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E781AFEB21C3B64800AA845B /* Debug */,
+				E781AFEC21C3B64800AA845B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

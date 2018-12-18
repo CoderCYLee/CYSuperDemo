@@ -16,7 +16,7 @@
 #import "TabBarController.h"
 #import "LaunchView.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 @property (nonatomic, strong) LaunchView *launchView;
 @end
 
@@ -74,8 +74,146 @@
         
     });
     
+    if ([self.window respondsToSelector:@selector(traitCollection)]) {
+        if ([self.window.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
+            if (self.window.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+                NSMutableArray *arrShortcutItem = [NSMutableArray array];
+                
+                UIApplicationShortcutItem *shoreItem1 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openSearch" localizedTitle:@"搜索" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
+                [arrShortcutItem addObject:shoreItem1];
+                
+                UIApplicationShortcutItem *shoreItem2 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openCompose" localizedTitle:@"新消息" localizedSubtitle:@"123" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
+                [arrShortcutItem addObject:shoreItem2];
+                
+                [UIApplication sharedApplication].shortcutItems = arrShortcutItem;
+            }
+        }
+    }
+    
+    
+    if (@available(iOS 9.0, *)) {
+        
+//        NSMutableArray *arrShortcutItem = (NSMutableArray *)[UIApplication sharedApplication].shortcutItems;
+        
+//        NSMutableArray *arrShortcutItem = [NSMutableArray array];
+//
+//        UIApplicationShortcutItem *shoreItem1 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openSearch" localizedTitle:@"搜索" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
+//        [arrShortcutItem addObject:shoreItem1];
+//
+//        UIApplicationShortcutItem *shoreItem2 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openCompose" localizedTitle:@"新消息" localizedSubtitle:@"123" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
+//        [arrShortcutItem addObject:shoreItem2];
+//
+//        [UIApplication sharedApplication].shortcutItems = arrShortcutItem;
+        
+    } else {
+        
+    }
+    
+    
+    if (@available(iOS 10.0, *)) {
+
+        // 使用 UNUserNotificationCenter 来管理通知
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        //监听回调事件
+        center.delegate = self;
+        
+        //iOS 10 使用以下方法注册，才能得到授权，注册通知以后，会自动注册 deviceToken，如果获取不到 deviceToken，Xcode8下要注意开启 Capability->Push Notification。
+        /*
+         UNAuthorizationOptionBadge   = (1 << 0),
+         UNAuthorizationOptionSound   = (1 << 1),
+         UNAuthorizationOptionAlert   = (1 << 2),
+         UNAuthorizationOptionCarPlay = (1 << 3),
+         UNAuthorizationOptionCriticalAlert __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 4),
+         UNAuthorizationOptionProvidesAppNotificationSettings __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 5),
+         UNAuthorizationOptionProvisional
+         */
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge + UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            
+        }];
+        
+        //获取当前的通知设置，UNNotificationSettings 是只读对象，不能直接修改，只能通过以下方法获取
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            
+        }];
+        
+        
+//        // action
+//        //文本交互(iOS10之后支持对通知的文本交互)
+//
+//        /**options
+//         UNNotificationActionOptionAuthenticationRequired  用于文本
+//         UNNotificationActionOptionForeground  前台模式，进入APP
+//         UNNotificationActionOptionDestructive  销毁模式，不进入APP
+//         */
+//        UNTextInputNotificationAction *textInputAction = [UNTextInputNotificationAction actionWithIdentifier:@"textInputAction" title:@"请输入信息" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"输入" textInputPlaceholder:@"还有多少话要说……"];
+//
+//        //打开应用按钮
+//        UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"foreGround" title:@"打开" options:UNNotificationActionOptionForeground];
+//
+//        //不打开应用按钮
+//        UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"backGround" title:@"关闭" options:UNNotificationActionOptionDestructive];
+//
+//        //创建分类
+//        /**
+//         Identifier:分类的标识符，通知可以添加不同类型的分类交互按钮
+//         actions：交互按钮
+//         intentIdentifiers：分类内部标识符  没什么用 一般为空就行
+//         options:通知的参数   UNNotificationCategoryOptionCustomDismissAction:自定义交互按钮   UNNotificationCategoryOptionAllowInCarPlay:车载交互
+//         */
+//
+//
+//        UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[textInputAction,action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
+//
+//        [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObjects:category, nil]];
+//
+
+        
+    } else {
+        
+    }
+    
     
     return YES;
+}
+
+
+
+#pragma mark - iOS10 UNUserNotificationCenterDelegate
+// The method will be called on the delegate only if the application is in the foreground. If the method is not implemented or the handler is not called in a timely manner then the notification will not be presented. The application can choose to have the notification presented as a sound, badge, alert and/or in the notification list. This decision should be based on whether the information in the notification is otherwise visible to the user.
+// iOS 10.0
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    UNNotificationRequest *request = notification.request; // 收到推送的请求
+    UNNotificationContent *content = request.content; // 收到推送的消息内容
+    NSNumber *badge = content.badge;  // 推送消息的角标
+    NSString *body = content.body;    // 推送消息体
+    UNNotificationSound *sound = content.sound;  // 推送消息的声音
+    NSString *subtitle = content.subtitle;  // 推送消息的副标题
+    NSString *title = content.title;  // 推送消息的标题
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        NSLog(@"iOS10 前台收到远程通知:%@", body);
+        
+    } else {
+        // 判断为本地通知
+        NSLog(@"iOS10 前台收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+        
+    }
+    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
+   
+}
+
+// The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from application:didFinishLaunchingWithOptions:.
+// iOS 10.0
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
+    
+}
+
+// The method will be called on the delegate when the application is launched in response to the user's request to view in-app notification settings. Add UNAuthorizationOptionProvidesAppNotificationSettings as an option in requestAuthorizationWithOptions:completionHandler: to add a button to inline notification settings view and the notification settings view in Settings. The notification will be nil when opened from Settings.
+// iOS 12.0
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification {
+    
 }
 
 #pragma mark - URL 回调
@@ -134,18 +272,37 @@
 }
 
 #pragma mark - 后台 前台
+/*
+*  当应用从活动状态主动到非活动状态的应用程序时会调用这个方法。
+*  这可导致产生某些类型的临时中断（如传入电话呼叫或SMS消息）。
+*  或者当用户退出应用程 序，它开始过渡到的背景状态。
+*  使用此方法可以暂停正在进行的任务，禁用定时器，降低OpenGL ES的帧速率。
+*  游戏应该使用这种方法来暂停游戏。
+*  调用时机可能有以下几种：锁屏，按HOME键，下接状态栏，双击HOME键弹出低栏，等情况。
+*/
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
-
+/**
+ *  进入后台
+ *  当用户从台前状态转入后台时，调用此方法。使用此方法来释放资源共享，保存用户数据，无效计时器，
+ *  并储存足够的应用程序状态信息的情况下被终止后，将应用 程序恢复到目前的状态。如果您的应用程序支持后台运行，
+ *  这种方法被调用，否则调用applicationWillTerminate：用户退出。
+ *
+ *  @param application 应用
+ */
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-
+/**
+ *  程序将要进入前台台
+ *
+ *  @param application 应用
+ */
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     
@@ -153,19 +310,24 @@
 }
 
 
+// 当应用程序全新启动，或者在后台转到前台，完全激活时，都会调用这个方法。
+// 如果应用程序是以前运行在后台，这时可以选择刷新用户界面
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     NSLog(@"5");
 }
 
-
+// 当应用退出，并且进程即将结束时会调到这个方法，一般很少主动调到，更多是内存不足时是被迫调到的，我们应该在这个方法里做一些数据存储操作。
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     NSLog(@"7");
 }
 
 
-
+/*
+ *  当应用可用内存不足时，会调用此方法，在这个方法中
+ *  应该尽量去清理可能释放的内存。如果实在不行，可能会被强行退出应用
+ */
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {      // try to clean up as much memory as possible. next step is to terminate app
     
 }
@@ -174,7 +336,7 @@
     
 }
 
-#pragma mark -
+#pragma mark - StatusBar
 - (void)application:(UIApplication *)application willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation duration:(NSTimeInterval)duration {
     
 }
@@ -191,20 +353,42 @@
     // 2
 }
 
-#pragma mark -
+#pragma mark - notifi
 
-#ifndef __IPHONE_10_0
+//#ifndef __IPHONE_10_0
 
 // This callback will be made upon calling -[UIApplication registerUserNotificationSettings:]. The settings the user has granted to the application will be passed in as the second argument.
+/**
+ *  调用完registerUserNotificationSettings:方法之后执行
+ *  即调用startToGetPushToken获取权限后调用
+ *
+ *  @param application          应用
+ *  @param notificationSettings 通知方式
+ */
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
 
 }
 
-
+/**
+ *  接收远程通知的时候调用此方法
+ *  当应用在前台运行中，收到远程通知时，会回调这个方法。
+ *   当应用在后台状态时，点击push消息启动应用，也会回调这个方法。
+ *
+ *  @param application 应用
+ *  @param userInfo    通知信息
+ */
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
 }
 
+/**
+ *  接收本地通知的时候调用此方法
+ *  当应用收到本地通知时会调这个方法，同上面一个方法类似。
+ *  如果在前台运行状态直接调用，如果在后台状态，点击通知启动时，也会回调这个方法
+ *
+ *  @param application  应用
+ *  @param notification 本地通知
+ */
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     
 }
@@ -234,13 +418,25 @@
     
 }
 #pragma clang diagnostic pop
-#endif
+//#endif
 
-
+/**
+ *  客户端注册远程通知时，成功后回调这个方法。
+ *  客户端把deviceToken取出来发给服务端，push消息的时候要用。
+ *
+ *  @param application 应用
+ *  @param deviceToken 设备token
+ */
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
 }
 
+/**
+ 当客户端注册远程通知时,如果失败了，会回调这个方法。可以从error参数中看一下失败原因。
+
+ @param application 应用
+ @param error 错误
+ */
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
 }
@@ -259,11 +455,20 @@
     
 }
 
+#pragma mark - force touch
 #ifdef __IPHONE_9_0
 // Called when the user activates your application by selecting a shortcut on the home screen,
 // except when -application:willFinishLaunchingWithOptions: or -application:didFinishLaunchingWithOptions returns NO.
+/**
+ *  3D Touch 如果App是从快速入口启动的，则会执行这个方法。该方法的shortcutItem参数携带了。
+ *
+ *  @param application       应用
+ *  @param shortcutItem      从快速入口进入app时的标签参数
+ *  @param completionHandler completionHandler
+ */
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler {
-    
+    //不管APP在后台还是进程被杀死，只要通过主屏快捷操作进来的，都会调用这个方法
+    NSLog(@"name:%@\ntype:%@", shortcutItem.localizedTitle, shortcutItem.type);
 }
 
 - (void)applicationShouldRequestHealthAuthorization:(UIApplication *)application {
@@ -272,6 +477,7 @@
 
 #endif
 
+#pragma mark -
 // Applications using an NSURLSession with a background configuration may be launched or resumed in the background in order to handle the
 // completion of tasks in that session, or to handle authentication. This method will be called with the identifier of the session needing
 // attention. Once a session has been created from a configuration object with that identifier, the session's delegate will begin receiving

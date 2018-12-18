@@ -43,10 +43,6 @@
 	</array>
 	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
 	<string>$(TeamIdentifierPrefix)$(CFBundleIdentifier)</string>
-	<key>com.apple.security.application-groups</key>
-	<array>
-		<string>group.CY-ED3CCAF2-9B79-11E8-A510-6C40089D3C08.com.cydia.Extender</string>
-	</array>
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)developer.cy.superdemo</string>
