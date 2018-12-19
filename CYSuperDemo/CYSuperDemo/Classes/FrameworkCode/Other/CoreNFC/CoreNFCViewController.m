@@ -111,6 +111,8 @@ API_AVAILABLE(ios(11.0))
         [_session beginSession];
     } else {
         // Fallback on earlier versions
+        
+        ShowMsg(@"iOS 11.0 以上才能使用");
     }
     
 }

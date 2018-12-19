@@ -23,6 +23,9 @@
     
     if (@available(iOS 10.0, *)) {
         [self speech];
+    } else {
+        ShowMsg(@"iOS 10.0 以上才能使用");
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

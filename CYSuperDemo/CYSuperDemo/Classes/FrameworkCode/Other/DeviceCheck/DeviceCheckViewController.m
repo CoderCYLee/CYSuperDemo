@@ -38,6 +38,8 @@
         }];
     } else {
         // Fallback on earlier versions
+        ShowMsg(@"iOS 11.0 以上才能使用");
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

@@ -157,6 +157,8 @@
         vc.delegate = self;
         [self showDetailViewController:vc sender:self];
 //        [self presentViewController:vc animated:YES completion:nil];
+    } else {
+        ShowMsg(@"iOS 9.0 以上才能使用");
     }
 }
 
@@ -169,6 +171,7 @@
         [session start];
     } else {
         // Fallback on earlier versions
+        ShowMsg(@"iOS 11.0 以上才能使用");
     }
     
 }
