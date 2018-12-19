@@ -54,9 +54,12 @@
     [self.view addSubview:self.mainTableView];
     
     
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(handleRefresh) forControlEvents:UIControlEventValueChanged];
-    self.mainTableView.refreshControl = self.refreshControl;
+    if (@available(iOS 10.0, *)) {
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        [self.refreshControl addTarget:self action:@selector(handleRefresh) forControlEvents:UIControlEventValueChanged];
+        self.mainTableView.refreshControl = self.refreshControl;
+    }
+    
 }
 
 

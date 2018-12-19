@@ -21,6 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (@available(iOS 10.0, *)) {
+        [self speech];
+    }
+}
+
+- (void)speech {
     [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
         switch (status) {
             case SFSpeechRecognizerAuthorizationStatusNotDetermined:
@@ -39,22 +45,22 @@
                 break;
         }
     }];
-
+    
     //1.创建SFSpeechRecognizer识别实例
     self.speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];//中文识别
     //@"zh"在iOS9之后就不是简体中文了，而是TW繁体中文
-
-//    [SFSpeechRecognizer supportedLocales];//根据手机设置的语言识别
-//    for (NSLocale *lacal in [SFSpeechRecognizer supportedLocales].allObjects) {
-//        NSLog(@"countryCode:%@  languageCode:%@ ", lacal.countryCode, lacal.languageCode);
-//    }
-
+    
+    //    [SFSpeechRecognizer supportedLocales];//根据手机设置的语言识别
+    //    for (NSLocale *lacal in [SFSpeechRecognizer supportedLocales].allObjects) {
+    //        NSLog(@"countryCode:%@  languageCode:%@ ", lacal.countryCode, lacal.languageCode);
+    //    }
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"1122334455.mp3" ofType:nil];
     NSURL *url = [NSURL fileURLWithPath:path];
-
+    
     //2.创建识别请求
     SFSpeechURLRecognitionRequest *request = [[SFSpeechURLRecognitionRequest alloc] initWithURL:url];
-
+    
     //3.开始识别任务
     self.recognitionTask = [self recognitionTaskWithRequest1:request];
 }
@@ -86,6 +92,8 @@
 {
 
 }
+
+
 
 // Called for all recognitions, including non-final hypothesis
 - (void)speechRecognitionTask:(SFSpeechRecognitionTask *)task didHypothesizeTranscription:(SFTranscription *)transcription {

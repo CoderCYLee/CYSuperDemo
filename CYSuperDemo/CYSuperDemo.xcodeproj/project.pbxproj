@@ -123,7 +123,7 @@
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
 		E7B816B121BFBC82006F0B48 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B021BFBC82006F0B48 /* PassKit.framework */; };
-		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; };
+		E7B816B321BFBCA6006F0B48 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7B816BA21BFC3FD006F0B48 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B816B821BFC3FD006F0B48 /* Interface.storyboard */; };
 		E7B816BC21BFC3FF006F0B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B816BB21BFC3FF006F0B48 /* Assets.xcassets */; };
 		E7B816C321BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };

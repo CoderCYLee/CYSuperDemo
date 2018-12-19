@@ -21,19 +21,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    if ([self traitCollection].forceTouchCapability == UIForceTouchCapabilityAvailable) {
-        
-    } else {
-        
-    }
-}
-
-- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
-    if ([self traitCollection].forceTouchCapability == UIForceTouchCapabilityAvailable) {
-        
-    } else {
-        
-    }
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

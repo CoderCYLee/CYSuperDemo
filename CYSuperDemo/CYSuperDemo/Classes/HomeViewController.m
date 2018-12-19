@@ -32,6 +32,13 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    if (@available(iOS 10.0, *)) {
+        
+    } else {
+        return;
+    }
+    
     // 使用 UNUserNotificationCenter 来管理通知
     UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
     
