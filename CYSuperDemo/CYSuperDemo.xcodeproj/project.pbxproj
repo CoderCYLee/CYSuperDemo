@@ -856,8 +856,8 @@
 		E74EC0CA219D406C0017A64D /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */,
 				E74EC0CC219D406C0017A64D /* MediaPlayerViewController.h */,
+				E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */,
 			);
 			path = MediaPlayer;
 			sourceTree = "<group>";
@@ -892,8 +892,8 @@
 		E74EC0D4219D406C0017A64D /* PDFKit */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC0D5219D406C0017A64D /* PDFKitViewController.m */,
 				E74EC0D6219D406C0017A64D /* PDFKitViewController.h */,
+				E74EC0D5219D406C0017A64D /* PDFKitViewController.m */,
 			);
 			path = PDFKit;
 			sourceTree = "<group>";
@@ -910,8 +910,8 @@
 		E74EC0DA219D406C0017A64D /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC0DB219D406C0017A64D /* MapKitViewController.m */,
 				E74EC0DC219D406C0017A64D /* MapKitViewController.h */,
+				E74EC0DB219D406C0017A64D /* MapKitViewController.m */,
 			);
 			path = MapKit;
 			sourceTree = "<group>";
@@ -957,8 +957,8 @@
 		E74EC0EB219D406C0017A64D /* ARKit */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC0EC219D406C0017A64D /* ARKitViewController.m */,
 				E74EC0ED219D406C0017A64D /* ARKitViewController.h */,
+				E74EC0EC219D406C0017A64D /* ARKitViewController.m */,
 			);
 			path = ARKit;
 			sourceTree = "<group>";
