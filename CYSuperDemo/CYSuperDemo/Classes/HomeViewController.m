@@ -8,7 +8,6 @@
 
 #import "HomeViewController.h"
 #import <DeviceUtil.h>
-#import "ThirdViewController.h"
 
 @interface HomeViewController ()
 
