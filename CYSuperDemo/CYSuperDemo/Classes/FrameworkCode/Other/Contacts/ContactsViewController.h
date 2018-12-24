@@ -6,11 +6,11 @@
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ContactsViewController : ViewController
+@interface ContactsViewController : UITableViewController
 
 @end
 

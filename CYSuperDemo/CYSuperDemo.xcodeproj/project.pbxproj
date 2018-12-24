@@ -134,6 +134,9 @@
 		E7A9E3C221D0C42300A64CAC /* DeviceMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3C121D0C42300A64CAC /* DeviceMotionViewController.m */; };
 		E7A9E3C521D0C43100A64CAC /* ShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3C421D0C43100A64CAC /* ShakeViewController.m */; };
 		E7A9E3C821D0C43D00A64CAC /* ProximityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3C721D0C43D00A64CAC /* ProximityViewController.m */; };
+		E7A9E3CB21D0D6F200A64CAC /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3CA21D0D6F200A64CAC /* PedometerViewController.m */; };
+		E7A9E3CE21D0D7CC00A64CAC /* AltimeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3CD21D0D7CC00A64CAC /* AltimeterViewController.m */; };
+		E7A9E3D421D0D8C100A64CAC /* MotionActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3D321D0D8C100A64CAC /* MotionActivityViewController.m */; };
 		E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816A521BF5118006F0B48 /* IADViewController.m */; };
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
@@ -540,6 +543,12 @@
 		E7A9E3C421D0C43100A64CAC /* ShakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeViewController.m; sourceTree = "<group>"; };
 		E7A9E3C621D0C43D00A64CAC /* ProximityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProximityViewController.h; sourceTree = "<group>"; };
 		E7A9E3C721D0C43D00A64CAC /* ProximityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProximityViewController.m; sourceTree = "<group>"; };
+		E7A9E3C921D0D6F200A64CAC /* PedometerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PedometerViewController.h; sourceTree = "<group>"; };
+		E7A9E3CA21D0D6F200A64CAC /* PedometerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
+		E7A9E3CC21D0D7CC00A64CAC /* AltimeterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AltimeterViewController.h; sourceTree = "<group>"; };
+		E7A9E3CD21D0D7CC00A64CAC /* AltimeterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AltimeterViewController.m; sourceTree = "<group>"; };
+		E7A9E3D221D0D8C000A64CAC /* MotionActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionActivityViewController.h; sourceTree = "<group>"; };
+		E7A9E3D321D0D8C100A64CAC /* MotionActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionActivityViewController.m; sourceTree = "<group>"; };
 		E7B816A421BF5118006F0B48 /* IADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IADViewController.h; sourceTree = "<group>"; };
 		E7B816A521BF5118006F0B48 /* IADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADViewController.m; sourceTree = "<group>"; };
 		E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
@@ -1388,6 +1397,12 @@
 				E7A9E3C421D0C43100A64CAC /* ShakeViewController.m */,
 				E7A9E3C621D0C43D00A64CAC /* ProximityViewController.h */,
 				E7A9E3C721D0C43D00A64CAC /* ProximityViewController.m */,
+				E7A9E3C921D0D6F200A64CAC /* PedometerViewController.h */,
+				E7A9E3CA21D0D6F200A64CAC /* PedometerViewController.m */,
+				E7A9E3CC21D0D7CC00A64CAC /* AltimeterViewController.h */,
+				E7A9E3CD21D0D7CC00A64CAC /* AltimeterViewController.m */,
+				E7A9E3D221D0D8C000A64CAC /* MotionActivityViewController.h */,
+				E7A9E3D321D0D8C100A64CAC /* MotionActivityViewController.m */,
 			);
 			path = CoreMotion;
 			sourceTree = "<group>";
@@ -2322,6 +2337,7 @@
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
 				E7688E371E7A494A0064CD69 /* ViewController.m in Sources */,
+				E7A9E3CE21D0D7CC00A64CAC /* AltimeterViewController.m in Sources */,
 				E7F73D2021C0B104000ACDF4 /* ExtensionTableViewController.m in Sources */,
 				E7A9E3AF21D0B33200A64CAC /* UserNotificationsViewController.m in Sources */,
 				E762F50D21A6968E0086C13B /* CloudDocumentAddNewViewController.m in Sources */,
@@ -2346,6 +2362,7 @@
 				E7688E7E1E7A4B400064CD69 /* UIDevice+CY.m in Sources */,
 				E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */,
 				E762F50721A695810086C13B /* CloudDocumentViewController.m in Sources */,
+				E7A9E3CB21D0D6F200A64CAC /* PedometerViewController.m in Sources */,
 				E7688E781E7A4B400064CD69 /* Foundation+Log.m in Sources */,
 				E7688E7F1E7A4B400064CD69 /* UIImage+CY.m in Sources */,
 				E74EC0F7219D406C0017A64D /* AVKitViewController.m in Sources */,
@@ -2385,6 +2402,7 @@
 				E7A9E3B921D0C40300A64CAC /* AccelerometerViewController.m in Sources */,
 				E7A9E3C221D0C42300A64CAC /* DeviceMotionViewController.m in Sources */,
 				E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */,
+				E7A9E3D421D0D8C100A64CAC /* MotionActivityViewController.m in Sources */,
 				E74EC0F0219D406C0017A64D /* NetworkViewController.m in Sources */,
 				E7658E2C2181BBC700EF05E9 /* TabBarController.m in Sources */,
 				E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */,

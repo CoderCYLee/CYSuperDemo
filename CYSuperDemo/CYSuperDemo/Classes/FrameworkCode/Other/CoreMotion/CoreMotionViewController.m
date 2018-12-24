@@ -65,9 +65,11 @@
      "DeviceMotion" = "设备定位";
      "Shake" = "震动";
      "Proximity" = "距离传感器";
+     "Pedometer" = "计步器";
+     "Altimeter" = "高度仪";
      */
     if (!_titleArr) {
-        _titleArr = @[@"Accelerometer", @"Gyroscope", @"Megnetometer", @"DeviceMotion", @"Shake", @"Proximity"];
+        _titleArr = @[@"Accelerometer", @"Gyroscope", @"Megnetometer", @"DeviceMotion", @"Shake", @"Proximity", @"Pedometer", @"Altimeter", @"MotionActivity"];
     }
     return _titleArr;
 }

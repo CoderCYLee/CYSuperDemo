@@ -16,3 +16,5 @@
 "DeviceMotion" = "DeviceMotion";
 "Shake" = "Shake";
 "Proximity" = "Proximity";
+"Pedometer" = "Pedometer";
+"Altimeter" = "Altimeter";

@@ -16,3 +16,5 @@
 "DeviceMotion" = "设备定位";
 "Shake" = "震动";
 "Proximity" = "距离传感器";
+"Pedometer" = "计步器";
+"Altimeter" = "高度仪";
