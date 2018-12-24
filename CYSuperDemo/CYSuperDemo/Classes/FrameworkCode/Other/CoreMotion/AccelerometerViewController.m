@@ -31,7 +31,8 @@
     }];
 }
 
--(void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     // 不用时要关掉加速仪
     [_manager stopAccelerometerUpdates];
 }

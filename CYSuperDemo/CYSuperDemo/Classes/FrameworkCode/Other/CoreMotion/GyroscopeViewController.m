@@ -11,6 +11,8 @@
 
 @interface GyroscopeViewController ()
 
+@property (nonatomic, strong) CMMotionManager *manager;
+
 @end
 
 @implementation GyroscopeViewController
@@ -18,16 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _manager = [[CMMotionManager alloc] init];
+    
+    NSOperationQueue *q = [[NSOperationQueue alloc] init];
+    [_manager startGyroUpdatesToQueue:q withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
+        NSLog(@"x = %f", gyroData.rotationRate.x);
+        NSLog(@"y = %f", gyroData.rotationRate.y);
+        NSLog(@"z = %f", gyroData.rotationRate.z);
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    // 不用时要关掉加速仪
+    [_manager stopGyroUpdates];
 }
-*/
 
 @end
