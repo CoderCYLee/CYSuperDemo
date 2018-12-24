@@ -107,7 +107,7 @@ API_AVAILABLE(ios(11.0))
 
 - (void)scan {
     if (@available(iOS 11.0, *)) {
-        _session = [[NFCNDEFReaderSession alloc] initWithDelegate:self queue:dispatch_get_main_queue() invalidateAfterFirstRead:YES];
+        _session = [[NFCNDEFReaderSession alloc] initWithDelegate:self queue:nil invalidateAfterFirstRead:YES];
         [_session beginSession];
     } else {
         // Fallback on earlier versions

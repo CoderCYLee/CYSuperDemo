@@ -127,6 +127,7 @@
 		E7A9E3A621D0AC2C00A64CAC /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A9E3A521D0AC2C00A64CAC /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3A921D0AC5B00A64CAC /* PassKitViewController.m */; };
 		E7A9E3AF21D0B33200A64CAC /* UserNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */; };
+		E7A9E3B621D0B94C00A64CAC /* CoreMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3B521D0B94C00A64CAC /* CoreMotionViewController.m */; };
 		E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816A521BF5118006F0B48 /* IADViewController.m */; };
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
@@ -519,6 +520,8 @@
 		E7A9E3A921D0AC5B00A64CAC /* PassKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassKitViewController.m; sourceTree = "<group>"; };
 		E7A9E3AD21D0B33200A64CAC /* UserNotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserNotificationsViewController.h; sourceTree = "<group>"; };
 		E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserNotificationsViewController.m; sourceTree = "<group>"; };
+		E7A9E3B421D0B94C00A64CAC /* CoreMotionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMotionViewController.h; sourceTree = "<group>"; };
+		E7A9E3B521D0B94C00A64CAC /* CoreMotionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMotionViewController.m; sourceTree = "<group>"; };
 		E7B816A421BF5118006F0B48 /* IADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IADViewController.h; sourceTree = "<group>"; };
 		E7B816A521BF5118006F0B48 /* IADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADViewController.m; sourceTree = "<group>"; };
 		E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
@@ -851,6 +854,7 @@
 				E74EC0E4219D406C0017A64D /* AVKit */,
 				E762F4EC21A54D880086C13B /* CloudKit */,
 				E74EC0CE219D406C0017A64D /* Contacts */,
+				E7A9E3B021D0B71B00A64CAC /* CoreMotion */,
 				E74EC0E1219D406C0017A64D /* CoreNFC */,
 				E7FD16EB219D57A60037D720 /* CoreVideo */,
 				E74EC0CD219D406C0017A64D /* DeviceCheck */,
@@ -1347,6 +1351,15 @@
 				E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */,
 			);
 			path = UserNotifications;
+			sourceTree = "<group>";
+		};
+		E7A9E3B021D0B71B00A64CAC /* CoreMotion */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9E3B421D0B94C00A64CAC /* CoreMotionViewController.h */,
+				E7A9E3B521D0B94C00A64CAC /* CoreMotionViewController.m */,
+			);
+			path = CoreMotion;
 			sourceTree = "<group>";
 		};
 		E7B816A321BF5100006F0B48 /* iAD */ = {
@@ -2309,6 +2322,7 @@
 				E74EC0EE219D406C0017A64D /* MediaPlayerViewController.m in Sources */,
 				E7688E7A1E7A4B400064CD69 /* UIAlertController+CY.m in Sources */,
 				E74EC0F2219D406C0017A64D /* AVFoundationViewController.m in Sources */,
+				E7A9E3B621D0B94C00A64CAC /* CoreMotionViewController.m in Sources */,
 				E762F4FE21A55A140086C13B /* CYDocument.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,

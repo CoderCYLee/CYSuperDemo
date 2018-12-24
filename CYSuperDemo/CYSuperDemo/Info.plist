@@ -43,6 +43,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>需要您的同意, APP才能访问NFC</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>需要您的同意, APP才能访问媒体资料库</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
