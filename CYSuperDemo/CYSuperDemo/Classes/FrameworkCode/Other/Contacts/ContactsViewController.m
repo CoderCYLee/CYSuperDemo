@@ -81,6 +81,12 @@
 
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (@available(iOS 9.0, *)) {
+    } else {
+        ShowMsg(@"iOS 9.0 以上才能使用");
+        return;
+    }
+    
     switch (indexPath.row) {
         case 0:
             [self new];
