@@ -128,6 +128,12 @@
 		E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3A921D0AC5B00A64CAC /* PassKitViewController.m */; };
 		E7A9E3AF21D0B33200A64CAC /* UserNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */; };
 		E7A9E3B621D0B94C00A64CAC /* CoreMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3B521D0B94C00A64CAC /* CoreMotionViewController.m */; };
+		E7A9E3B921D0C40300A64CAC /* AccelerometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3B821D0C40300A64CAC /* AccelerometerViewController.m */; };
+		E7A9E3BC21D0C41000A64CAC /* GyroscopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3BB21D0C41000A64CAC /* GyroscopeViewController.m */; };
+		E7A9E3BF21D0C41A00A64CAC /* MegnetometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3BE21D0C41A00A64CAC /* MegnetometerViewController.m */; };
+		E7A9E3C221D0C42300A64CAC /* DeviceMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3C121D0C42300A64CAC /* DeviceMotionViewController.m */; };
+		E7A9E3C521D0C43100A64CAC /* ShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3C421D0C43100A64CAC /* ShakeViewController.m */; };
+		E7A9E3C821D0C43D00A64CAC /* ProximityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3C721D0C43D00A64CAC /* ProximityViewController.m */; };
 		E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816A521BF5118006F0B48 /* IADViewController.m */; };
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
@@ -522,6 +528,18 @@
 		E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserNotificationsViewController.m; sourceTree = "<group>"; };
 		E7A9E3B421D0B94C00A64CAC /* CoreMotionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMotionViewController.h; sourceTree = "<group>"; };
 		E7A9E3B521D0B94C00A64CAC /* CoreMotionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMotionViewController.m; sourceTree = "<group>"; };
+		E7A9E3B721D0C40300A64CAC /* AccelerometerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccelerometerViewController.h; sourceTree = "<group>"; };
+		E7A9E3B821D0C40300A64CAC /* AccelerometerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccelerometerViewController.m; sourceTree = "<group>"; };
+		E7A9E3BA21D0C40F00A64CAC /* GyroscopeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GyroscopeViewController.h; sourceTree = "<group>"; };
+		E7A9E3BB21D0C41000A64CAC /* GyroscopeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GyroscopeViewController.m; sourceTree = "<group>"; };
+		E7A9E3BD21D0C41A00A64CAC /* MegnetometerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MegnetometerViewController.h; sourceTree = "<group>"; };
+		E7A9E3BE21D0C41A00A64CAC /* MegnetometerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MegnetometerViewController.m; sourceTree = "<group>"; };
+		E7A9E3C021D0C42300A64CAC /* DeviceMotionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceMotionViewController.h; sourceTree = "<group>"; };
+		E7A9E3C121D0C42300A64CAC /* DeviceMotionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceMotionViewController.m; sourceTree = "<group>"; };
+		E7A9E3C321D0C43100A64CAC /* ShakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShakeViewController.h; sourceTree = "<group>"; };
+		E7A9E3C421D0C43100A64CAC /* ShakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeViewController.m; sourceTree = "<group>"; };
+		E7A9E3C621D0C43D00A64CAC /* ProximityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProximityViewController.h; sourceTree = "<group>"; };
+		E7A9E3C721D0C43D00A64CAC /* ProximityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProximityViewController.m; sourceTree = "<group>"; };
 		E7B816A421BF5118006F0B48 /* IADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IADViewController.h; sourceTree = "<group>"; };
 		E7B816A521BF5118006F0B48 /* IADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADViewController.m; sourceTree = "<group>"; };
 		E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
@@ -735,25 +753,25 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7A9E3A521D0AC2C00A64CAC /* ReplayKit.framework */,
-				E76F721A21C8DDCF00550C1E /* Speech.framework */,
 				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
-				E7B816B021BFBC82006F0B48 /* PassKit.framework */,
 				E762F4F621A54F210086C13B /* CloudKit.framework */,
-				E7780942219AA4B900E94CD3 /* ContactsUI.framework */,
 				E778093E219A9E8B00E94CD3 /* Contacts.framework */,
+				E7780942219AA4B900E94CD3 /* ContactsUI.framework */,
 				E7658E2D2181BC4A00EF05E9 /* GameKit.framework */,
 				E7658E252180430F00EF05E9 /* HealthKit.framework */,
-				E7F40592216C9C5900B27415 /* SystemConfiguration.framework */,
-				344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */,
-				E778090621994B3400E94CD3 /* NotificationCenter.framework */,
 				D3DBD3EC78E2FE8647FD5C3D /* libPods-ActionDemo.a */,
+				344EDD8AA1F49F50EA6CB319 /* libPods-CYSuperDemo.a */,
 				486C0FF0D95C601331762053 /* libPods-CYSuperDemoTests.a */,
 				FCCEC4A525C31FA7D2ED9F81 /* libPods-CYSuperDemoUITests.a */,
 				552C86DD6795D7F12E72E737 /* libPods-TodayDemo.a */,
 				E7F73D3F21C0E616000ACDF4 /* Messages.framework */,
-				E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */,
+				E778090621994B3400E94CD3 /* NotificationCenter.framework */,
+				E7B816B021BFBC82006F0B48 /* PassKit.framework */,
 				E7F73D6921C228CE000ACDF4 /* Photos.framework */,
+				E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */,
+				E7A9E3A521D0AC2C00A64CAC /* ReplayKit.framework */,
+				E76F721A21C8DDCF00550C1E /* Speech.framework */,
+				E7F40592216C9C5900B27415 /* SystemConfiguration.framework */,
 				E781AFCB21C3B62C00AA845B /* UserNotifications.framework */,
 				E781AFCD21C3B62C00AA845B /* UserNotificationsUI.framework */,
 			);
@@ -1358,6 +1376,18 @@
 			children = (
 				E7A9E3B421D0B94C00A64CAC /* CoreMotionViewController.h */,
 				E7A9E3B521D0B94C00A64CAC /* CoreMotionViewController.m */,
+				E7A9E3B721D0C40300A64CAC /* AccelerometerViewController.h */,
+				E7A9E3B821D0C40300A64CAC /* AccelerometerViewController.m */,
+				E7A9E3BA21D0C40F00A64CAC /* GyroscopeViewController.h */,
+				E7A9E3BB21D0C41000A64CAC /* GyroscopeViewController.m */,
+				E7A9E3BD21D0C41A00A64CAC /* MegnetometerViewController.h */,
+				E7A9E3BE21D0C41A00A64CAC /* MegnetometerViewController.m */,
+				E7A9E3C021D0C42300A64CAC /* DeviceMotionViewController.h */,
+				E7A9E3C121D0C42300A64CAC /* DeviceMotionViewController.m */,
+				E7A9E3C321D0C43100A64CAC /* ShakeViewController.h */,
+				E7A9E3C421D0C43100A64CAC /* ShakeViewController.m */,
+				E7A9E3C621D0C43D00A64CAC /* ProximityViewController.h */,
+				E7A9E3C721D0C43D00A64CAC /* ProximityViewController.m */,
 			);
 			path = CoreMotion;
 			sourceTree = "<group>";
@@ -2324,6 +2354,7 @@
 				E74EC0F2219D406C0017A64D /* AVFoundationViewController.m in Sources */,
 				E7A9E3B621D0B94C00A64CAC /* CoreMotionViewController.m in Sources */,
 				E762F4FE21A55A140086C13B /* CYDocument.m in Sources */,
+				E7A9E3BF21D0C41A00A64CAC /* MegnetometerViewController.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
@@ -2332,6 +2363,7 @@
 				E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */,
 				E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */,
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
+				E7A9E3BC21D0C41000A64CAC /* GyroscopeViewController.m in Sources */,
 				E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */,
 				E7F73DA621C240B5000ACDF4 /* BaseViewController.m in Sources */,
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
@@ -2347,7 +2379,11 @@
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
 				E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
+				E7A9E3C521D0C43100A64CAC /* ShakeViewController.m in Sources */,
+				E7A9E3C821D0C43D00A64CAC /* ProximityViewController.m in Sources */,
 				E74EC0F1219D406C0017A64D /* PDFKitViewController.m in Sources */,
+				E7A9E3B921D0C40300A64CAC /* AccelerometerViewController.m in Sources */,
+				E7A9E3C221D0C42300A64CAC /* DeviceMotionViewController.m in Sources */,
 				E7688E8B1E7A4C780064CD69 /* CYNetworkUtility.m in Sources */,
 				E74EC0F0219D406C0017A64D /* NetworkViewController.m in Sources */,
 				E7658E2C2181BBC700EF05E9 /* TabBarController.m in Sources */,

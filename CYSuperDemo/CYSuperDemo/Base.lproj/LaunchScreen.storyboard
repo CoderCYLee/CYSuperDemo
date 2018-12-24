@@ -22,17 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-Ys-mAw">
-                                <rect key="frame" x="94" y="140" width="187.5" height="187.5"/>
+                                <rect key="frame" x="87.5" y="163.5" width="200" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Tu2-2x-C8e"/>
                                     <constraint firstAttribute="width" secondItem="QM0-Ys-mAw" secondAttribute="height" multiplier="1:1" id="v4Z-QG-qXo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QM0-Ys-mAw" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1:2" id="KVw-NP-ucw"/>
                             <constraint firstItem="QM0-Ys-mAw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="woH-l9-bLb"/>
-                            <constraint firstItem="QM0-Ys-mAw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="y1E-UF-iRN"/>
+                            <constraint firstItem="QM0-Ys-mAw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-70" id="y1E-UF-iRN">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-70"/>
+                            </constraint>
                         </constraints>
                     </view>
                 </viewController>

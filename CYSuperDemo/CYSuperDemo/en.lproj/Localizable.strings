@@ -8,3 +8,11 @@
 
 "Home" = "Home";
 "System" = "System";
+
+// CoreMotion
+"Accelerometer" = "Accelerometer";
+"Gyroscope" = "Gyroscope";
+"Megnetometer" = "Megnetometer";
+"DeviceMotion" = "DeviceMotion";
+"Shake" = "Shake";
+"Proximity" = "Proximity";

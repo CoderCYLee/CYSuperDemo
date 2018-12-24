@@ -16,17 +16,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="7Lu-K2-hKz">
-                    <rect key="frame" x="94" y="140" width="187.5" height="187.5"/>
+                    <rect key="frame" x="87.5" y="163.5" width="200" height="200"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="7Lu-K2-hKz" secondAttribute="height" multiplier="1:1" id="oE0-4x-vt9"/>
+                        <constraint firstAttribute="width" constant="200" id="pB3-RP-QgO"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="7Lu-K2-hKz" firstAttribute="width" secondItem="w5H-XP-MWJ" secondAttribute="width" multiplier="1:2" id="K0v-HZ-Nh4"/>
                 <constraint firstItem="7Lu-K2-hKz" firstAttribute="centerX" secondItem="w5H-XP-MWJ" secondAttribute="centerX" id="PW3-NJ-WOR"/>
-                <constraint firstItem="7Lu-K2-hKz" firstAttribute="centerY" secondItem="w5H-XP-MWJ" secondAttribute="centerY" constant="-100" id="ZWF-8M-RvX"/>
+                <constraint firstItem="7Lu-K2-hKz" firstAttribute="centerY" secondItem="w5H-XP-MWJ" secondAttribute="centerY" constant="-70" id="ZWF-8M-RvX">
+                    <variation key="heightClass=compact-widthClass=compact" constant="-70"/>
+                </constraint>
             </constraints>
             <connections>
                 <outlet property="imageView" destination="7Lu-K2-hKz" id="Ode-lu-hxF"/>
