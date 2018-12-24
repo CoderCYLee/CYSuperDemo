@@ -22,6 +22,24 @@
     // Do any additional setup after loading the view.
     NSString *system = NSLocalizedString(@"System", @"System");
     self.navigationItem.title = system;
+    
+    
+    // 事实证明这个写在哪里都是可以的，不是非要写在appdelegate里
+    if ([self respondsToSelector:@selector(traitCollection)]) {
+        if ([self.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
+            if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+                NSMutableArray *arrShortcutItem = [NSMutableArray array];
+                
+                UIApplicationShortcutItem *shoreItem1 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openSearch" localizedTitle:@"搜索1" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
+                [arrShortcutItem addObject:shoreItem1];
+                
+                UIApplicationShortcutItem *shoreItem2 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openCompose" localizedTitle:@"新消息1" localizedSubtitle:@"123" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
+                [arrShortcutItem addObject:shoreItem2];
+                
+                [UIApplication sharedApplication].shortcutItems = arrShortcutItem;
+            }
+        }
+    }
 }
 
 #pragma mark - Table view data source

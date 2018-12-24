@@ -74,21 +74,21 @@
         
     });
     
-    if ([self.window respondsToSelector:@selector(traitCollection)]) {
-        if ([self.window.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
-            if (self.window.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
-                NSMutableArray *arrShortcutItem = [NSMutableArray array];
-                
-                UIApplicationShortcutItem *shoreItem1 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openSearch" localizedTitle:@"搜索" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
-                [arrShortcutItem addObject:shoreItem1];
-                
-                UIApplicationShortcutItem *shoreItem2 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openCompose" localizedTitle:@"新消息" localizedSubtitle:@"123" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
-                [arrShortcutItem addObject:shoreItem2];
-                
-                [UIApplication sharedApplication].shortcutItems = arrShortcutItem;
-            }
-        }
-    }
+//    if ([self.window respondsToSelector:@selector(traitCollection)]) {
+//        if ([self.window.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
+//            if (self.window.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+//                NSMutableArray *arrShortcutItem = [NSMutableArray array];
+//                
+//                UIApplicationShortcutItem *shoreItem1 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openSearch" localizedTitle:@"搜索" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
+//                [arrShortcutItem addObject:shoreItem1];
+//                
+//                UIApplicationShortcutItem *shoreItem2 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.damon.DM3DTouchDemo.openCompose" localizedTitle:@"新消息" localizedSubtitle:@"123" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
+//                [arrShortcutItem addObject:shoreItem2];
+//                
+//                [UIApplication sharedApplication].shortcutItems = arrShortcutItem;
+//            }
+//        }
+//    }
     
     
     if (@available(iOS 9.0, *)) {
