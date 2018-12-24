@@ -39,10 +39,11 @@
 
 #if TARGET_OS_IPHONE
 //iPhone Device
-#endif
+#define CY_SIMULATOR 0
 
-#if TARGET_IPHONE_SIMULATOR
+#elif TARGET_IPHONE_SIMULATOR
 //iPhone Simulator
+#define CY_SIMULATOR 1
 #endif
 
 #define EMPTY_STRING        @""

@@ -37,6 +37,12 @@
     
 }
 
+
+- (void)dealloc {
+    [_moviePlayer stop];
+    _moviePlayer = nil;
+}
+
 /*
 #pragma mark - Navigation
 

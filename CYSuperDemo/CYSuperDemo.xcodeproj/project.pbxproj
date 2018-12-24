@@ -119,6 +119,14 @@
 		E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FC2190270E002BEAFD /* HomeViewController.m */; };
 		E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FF2192BBF3002BEAFD /* SecondViewController.m */; };
 		E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */; };
+		E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E39821D0705800A64CAC /* SpeechDemo1ViewController.m */; };
+		E7A9E39B21D0705800A64CAC /* SpeechDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A9E39921D0705800A64CAC /* SpeechDemo1ViewController.xib */; };
+		E7A9E39F21D0708000A64CAC /* SpeechDemo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E39D21D0708000A64CAC /* SpeechDemo2ViewController.m */; };
+		E7A9E3A021D0708000A64CAC /* SpeechDemo2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A9E39E21D0708000A64CAC /* SpeechDemo2ViewController.xib */; };
+		E7A9E3A421D0ABC800A64CAC /* ReplayKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3A321D0ABC800A64CAC /* ReplayKitViewController.m */; };
+		E7A9E3A621D0AC2C00A64CAC /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A9E3A521D0AC2C00A64CAC /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3A921D0AC5B00A64CAC /* PassKitViewController.m */; };
+		E7A9E3AF21D0B33200A64CAC /* UserNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */; };
 		E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816A521BF5118006F0B48 /* IADViewController.m */; };
 		E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B816AC21BFAD97006F0B48 /* HealthKitViewController.m */; };
 		E7B816AE21BFB2A8006F0B48 /* NSDate+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85A1FAAE6B3006E5695 /* NSDate+CY.m */; };
@@ -501,6 +509,19 @@
 		E796E5FF2192BBF3002BEAFD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CYRoundTouch.m"; sourceTree = "<group>"; };
 		E7A226AD1FAC021600CF65A1 /* UIButton+CYRoundTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CYRoundTouch.h"; sourceTree = "<group>"; };
+		E7A9E39721D0705800A64CAC /* SpeechDemo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechDemo1ViewController.h; sourceTree = "<group>"; };
+		E7A9E39821D0705800A64CAC /* SpeechDemo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechDemo1ViewController.m; sourceTree = "<group>"; };
+		E7A9E39921D0705800A64CAC /* SpeechDemo1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechDemo1ViewController.xib; sourceTree = "<group>"; };
+		E7A9E39C21D0708000A64CAC /* SpeechDemo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechDemo2ViewController.h; sourceTree = "<group>"; };
+		E7A9E39D21D0708000A64CAC /* SpeechDemo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechDemo2ViewController.m; sourceTree = "<group>"; };
+		E7A9E39E21D0708000A64CAC /* SpeechDemo2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechDemo2ViewController.xib; sourceTree = "<group>"; };
+		E7A9E3A221D0ABC800A64CAC /* ReplayKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplayKitViewController.h; sourceTree = "<group>"; };
+		E7A9E3A321D0ABC800A64CAC /* ReplayKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplayKitViewController.m; sourceTree = "<group>"; };
+		E7A9E3A521D0AC2C00A64CAC /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		E7A9E3A821D0AC5B00A64CAC /* PassKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassKitViewController.h; sourceTree = "<group>"; };
+		E7A9E3A921D0AC5B00A64CAC /* PassKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassKitViewController.m; sourceTree = "<group>"; };
+		E7A9E3AD21D0B33200A64CAC /* UserNotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserNotificationsViewController.h; sourceTree = "<group>"; };
+		E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserNotificationsViewController.m; sourceTree = "<group>"; };
 		E7B816A421BF5118006F0B48 /* IADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IADViewController.h; sourceTree = "<group>"; };
 		E7B816A521BF5118006F0B48 /* IADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IADViewController.m; sourceTree = "<group>"; };
 		E7B816AB21BFAD97006F0B48 /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
@@ -595,6 +616,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A9E3A621D0AC2C00A64CAC /* ReplayKit.framework in Frameworks */,
 				E76F721B21C8DDCF00550C1E /* Speech.framework in Frameworks */,
 				E781AFEE21C8BF6F00AA845B /* ContactsUI.framework in Frameworks */,
 				E781AFED21C8BF5600AA845B /* Contacts.framework in Frameworks */,
@@ -718,6 +740,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7A9E3A521D0AC2C00A64CAC /* ReplayKit.framework */,
 				E76F721A21C8DDCF00550C1E /* Speech.framework */,
 				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
 				E7B816B021BFBC82006F0B48 /* PassKit.framework */,
@@ -844,11 +867,14 @@
 				E74EC0DA219D406C0017A64D /* MapKit */,
 				E74EC0CA219D406C0017A64D /* MediaPlayer */,
 				E74EC0D1219D406C0017A64D /* Network */,
+				E7A9E3A721D0AC4E00A64CAC /* PassKit */,
 				E74EC0D4219D406C0017A64D /* PDFKit */,
 				E781B00521C8D43A00AA845B /* QuickLook */,
+				E7A9E3A121D0ABAD00A64CAC /* ReplayKit */,
 				E781AFEF21C8C24D00AA845B /* SafariServices */,
 				E76F721C21C8DDD700550C1E /* Speech */,
 				E762F4F821A5531A0086C13B /* StoreKit */,
+				E7A9E3AB21D0B31900A64CAC /* UserNotifications */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1187,6 +1213,12 @@
 			children = (
 				E76F721D21C8DDEB00550C1E /* SpeechViewController.h */,
 				E76F721E21C8DDEB00550C1E /* SpeechViewController.m */,
+				E7A9E39721D0705800A64CAC /* SpeechDemo1ViewController.h */,
+				E7A9E39821D0705800A64CAC /* SpeechDemo1ViewController.m */,
+				E7A9E39921D0705800A64CAC /* SpeechDemo1ViewController.xib */,
+				E7A9E39C21D0708000A64CAC /* SpeechDemo2ViewController.h */,
+				E7A9E39D21D0708000A64CAC /* SpeechDemo2ViewController.m */,
+				E7A9E39E21D0708000A64CAC /* SpeechDemo2ViewController.xib */,
 			);
 			path = Speech;
 			sourceTree = "<group>";
@@ -1301,6 +1333,33 @@
 				E79252BC219BFB3B00E60577 /* video1.mp4 */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		E7A9E3A121D0ABAD00A64CAC /* ReplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9E3A221D0ABC800A64CAC /* ReplayKitViewController.h */,
+				E7A9E3A321D0ABC800A64CAC /* ReplayKitViewController.m */,
+			);
+			path = ReplayKit;
+			sourceTree = "<group>";
+		};
+		E7A9E3A721D0AC4E00A64CAC /* PassKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9E3A821D0AC5B00A64CAC /* PassKitViewController.h */,
+				E7A9E3A921D0AC5B00A64CAC /* PassKitViewController.m */,
+			);
+			path = PassKit;
+			sourceTree = "<group>";
+		};
+		E7A9E3AB21D0B31900A64CAC /* UserNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9E3AD21D0B33200A64CAC /* UserNotificationsViewController.h */,
+				E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */,
+			);
+			path = UserNotifications;
 			sourceTree = "<group>";
 		};
 		E7B816A321BF5100006F0B48 /* iAD */ = {
@@ -1854,6 +1913,7 @@
 			files = (
 				E76F721321C8D76D00550C1E /* md1.md in Resources */,
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
+				E7A9E3A021D0708000A64CAC /* SpeechDemo2ViewController.xib in Resources */,
 				E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */,
 				E76F721721C8DA3400550C1E /* txt1.txt in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
@@ -1867,6 +1927,7 @@
 				E781AFBF21C3A7A500AA845B /* jpg2.jpg in Resources */,
 				E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
+				E7A9E39B21D0705800A64CAC /* SpeechDemo1ViewController.xib in Resources */,
 				E76F721921C8DAD800550C1E /* doc1.docx in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
 				E781AFC521C3AA2700AA845B /* png1.png in Resources */,
@@ -2212,6 +2273,7 @@
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
 				E76F721F21C8DDEB00550C1E /* SpeechViewController.m in Sources */,
 				E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */,
+				E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
@@ -2220,6 +2282,7 @@
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
 				E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */,
 				E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */,
+				E7A9E3A421D0ABC800A64CAC /* ReplayKitViewController.m in Sources */,
 				E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */,
 				E7F73D1A21C0AEC2000ACDF4 /* LaunchView.m in Sources */,
 				E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */,
@@ -2232,7 +2295,9 @@
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
 				E7688E371E7A494A0064CD69 /* ViewController.m in Sources */,
 				E7F73D2021C0B104000ACDF4 /* ExtensionTableViewController.m in Sources */,
+				E7A9E3AF21D0B33200A64CAC /* UserNotificationsViewController.m in Sources */,
 				E762F50D21A6968E0086C13B /* CloudDocumentAddNewViewController.m in Sources */,
+				E7A9E39F21D0708000A64CAC /* SpeechDemo2ViewController.m in Sources */,
 				E7688E821E7A4B400064CD69 /* UIView+CY.m in Sources */,
 				E762F50421A695730086C13B /* CloudKeyValueViewController.m in Sources */,
 				E7688E801E7A4B400064CD69 /* UILabel+CY.m in Sources */,
@@ -2265,6 +2330,7 @@
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
+				E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */,
 				E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */,
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
 				E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */,

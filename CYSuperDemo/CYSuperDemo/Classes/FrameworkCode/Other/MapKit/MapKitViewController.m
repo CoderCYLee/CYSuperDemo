@@ -45,6 +45,10 @@
     
 }
 
+- (void)dealloc {
+    
+}
+
 #pragma mark - MKMapViewDelegate
 /**
  *  更新到用户的位置时就会调用(显示的位置、显示范围改变)

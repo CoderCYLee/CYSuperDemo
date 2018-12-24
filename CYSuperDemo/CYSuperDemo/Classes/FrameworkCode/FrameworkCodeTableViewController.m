@@ -56,7 +56,7 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"Foundation", @"UIKit", @"Accounts", @"AddressBook", @"AVFoundation", @"AVKit", @"CloudKit", @"Contacts", @"CoreNFC", @"DeviceCheck", @"HealthKit", @"IAD", @"MapKit", @"MediaPlayer", @"PDFKit", @"QuickLook", @"SafariServices", @"Speech", @"StoreKit"];
+        _titleArr = @[@"Foundation", @"UIKit", @"Accounts", @"AddressBook", @"AVFoundation", @"AVKit", @"CloudKit", @"Contacts", @"CoreNFC", @"DeviceCheck", @"HealthKit", @"IAD", @"MapKit", @"MediaPlayer", @"PassKit", @"PDFKit", @"QuickLook", @"ReplayKit", @"SafariServices", @"Speech", @"StoreKit", @"UserNotifications"];
     }
     return _titleArr;
 }

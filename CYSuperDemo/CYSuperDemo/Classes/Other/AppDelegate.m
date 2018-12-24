@@ -66,11 +66,11 @@
     self.launchView = [[[NSBundle mainBundle] loadNibNamed:@"LaunchView" owner:self options:nil] firstObject];
     self.launchView.frame = self.window.bounds;
     [self.window addSubview:self.launchView];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.launchView showAnimation];
         
         //设置3秒定时触发
-        [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(closeLaunchScreen) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(closeLaunchScreen) userInfo:nil repeats:NO];
         
     });
     

@@ -88,9 +88,9 @@
 
 // If you return nil, a preview presentation will not be performed
 - (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location NS_AVAILABLE_IOS(9_0) {
-    UIGestureRecognizer *previewingGestureRecognizerForFailureRelationship = previewingContext.previewingGestureRecognizerForFailureRelationship;
-    
-    id<UIViewControllerPreviewingDelegate> delegate = previewingContext.delegate;
+//    UIGestureRecognizer *previewingGestureRecognizerForFailureRelationship = previewingContext.previewingGestureRecognizerForFailureRelationship;
+//    
+//    id<UIViewControllerPreviewingDelegate> delegate = previewingContext.delegate;
     UITableViewCell *sourceView = (UITableViewCell *)previewingContext.sourceView;
     
     // This rect will be set to the bounds of sourceView before each call to
