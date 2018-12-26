@@ -163,6 +163,7 @@
 		E7C017D521D1C05F0053EF09 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C017D421D1C05F0053EF09 /* Stickers.xcassets */; };
 		E7C017D921D1C05F0053EF09 /* StickerPicksExDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */; };
+		E7EE6C2F21D30F2D005B2E9C /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7F0107321BDF86A00DB3061 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107221BDF86A00DB3061 /* bg.png */; };
 		E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4058C216C876500B27415 /* CYRoundedButton.m */; };
 		E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F40592216C9C5900B27415 /* SystemConfiguration.framework */; };
@@ -600,6 +601,7 @@
 		E7C017D621D1C05F0053EF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EE6C2B21D21491005B2E9C /* CYAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYAnnotation.h; sourceTree = "<group>"; };
 		E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYAnnotation.m; sourceTree = "<group>"; };
+		E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		E7F0107221BDF86A00DB3061 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E7F4058B216C876500B27415 /* CYRoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRoundedButton.h; sourceTree = "<group>"; };
 		E7F4058C216C876500B27415 /* CYRoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRoundedButton.m; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EE6C2F21D30F2D005B2E9C /* PDFKit.framework in Frameworks */,
 				E7C017CF21D1BF870053EF09 /* BusinessChat.framework in Frameworks */,
 				E7A9E3A621D0AC2C00A64CAC /* ReplayKit.framework in Frameworks */,
 				E76F721B21C8DDCF00550C1E /* Speech.framework in Frameworks */,
@@ -777,6 +780,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */,
 				E7C017CE21D1BF860053EF09 /* BusinessChat.framework */,
 				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
 				E762F4F621A54F210086C13B /* CloudKit.framework */,
