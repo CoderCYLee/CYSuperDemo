@@ -10,6 +10,7 @@
 "System" = "系统";
 "Third" = "第三方";
 
+
 // CoreMotion
 "Accelerometer" = "加速器";
 "Gyroscope" = "陀螺仪";
@@ -19,3 +20,13 @@
 "Proximity" = "距离传感器";
 "Pedometer" = "计步器";
 "Altimeter" = "高度仪";
+
+
+// PDF
+"PDF_FileName" = "文件名";
+"PDF_Title" = "标题";
+"PDF_Creator" = "创建者";
+"PDF_Producer" = "生产者";
+"PDF_CreationDate" = "创建时间";
+"PDF_ModDate" = "最近修改时间";
+

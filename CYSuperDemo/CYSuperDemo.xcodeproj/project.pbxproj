@@ -23,6 +23,12 @@
 		E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */; };
 		E721242A2193D9B000129C5A /* UIViewController+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E72124292193D9B000129C5A /* UIViewController+CY.m */; };
 		E721242C2193DC4600129C5A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E721242B2193DC4600129C5A /* Second.storyboard */; };
+		E72BE2C421D374CC000BF716 /* PDFThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */; };
+		E72BE2C821D374FA000BF716 /* PDFThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C621D374FA000BF716 /* PDFThumbnailCell.m */; };
+		E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2C721D374FA000BF716 /* PDFThumbnailCell.xib */; };
+		E72BE2CC21D38467000BF716 /* PDFOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2CB21D38467000BF716 /* PDFOutlineViewController.m */; };
+		E72BE2D021D38577000BF716 /* PDFOutlineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2CE21D38577000BF716 /* PDFOutlineCell.m */; };
+		E72BE2D121D385F3000BF716 /* PDFOutlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2CD21D38576000BF716 /* PDFOutlineCell.xib */; };
 		E74EC0EE219D406C0017A64D /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */; };
 		E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D0219D406C0017A64D /* ContactsViewController.m */; };
 		E74EC0F0219D406C0017A64D /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D3219D406C0017A64D /* NetworkViewController.m */; };
@@ -164,6 +170,13 @@
 		E7C017D921D1C05F0053EF09 /* StickerPicksExDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */; };
 		E7EE6C2F21D30F2D005B2E9C /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E7EE6C3121D34A3C005B2E9C /* pdf2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7EE6C3021D34A3B005B2E9C /* pdf2.pdf */; };
+		E7EE6C3721D34CEF005B2E9C /* PDFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EE6C3521D34CEF005B2E9C /* PDFDetailViewController.m */; };
+		E7EE6C3821D34CEF005B2E9C /* PDFDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7EE6C3621D34CEF005B2E9C /* PDFDetailViewController.xib */; };
+		E7EE6C3D21D355D2005B2E9C /* PDFKitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EE6C3B21D355D2005B2E9C /* PDFKitTableViewCell.m */; };
+		E7EE6C3E21D355D2005B2E9C /* PDFKitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7EE6C3C21D355D2005B2E9C /* PDFKitTableViewCell.xib */; };
+		E7EE6C4421D36D20005B2E9C /* 滴滴出行iOS端瘦身实践.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7EE6C4321D36AB8005B2E9C /* 滴滴出行iOS端瘦身实践.pdf */; };
+		E7EE6C4521D36D23005B2E9C /* pdf3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7EE6C4121D36AB7005B2E9C /* pdf3.pdf */; };
 		E7F0107321BDF86A00DB3061 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107221BDF86A00DB3061 /* bg.png */; };
 		E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4058C216C876500B27415 /* CYRoundedButton.m */; };
 		E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F40592216C9C5900B27415 /* SystemConfiguration.framework */; };
@@ -356,6 +369,16 @@
 		E72124282193D9B000129C5A /* UIViewController+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CY.h"; sourceTree = "<group>"; };
 		E72124292193D9B000129C5A /* UIViewController+CY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CY.m"; sourceTree = "<group>"; };
 		E721242B2193DC4600129C5A /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		E72BE2C221D374CC000BF716 /* PDFThumbnailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailViewController.h; sourceTree = "<group>"; };
+		E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFThumbnailViewController.m; sourceTree = "<group>"; };
+		E72BE2C521D374FA000BF716 /* PDFThumbnailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailCell.h; sourceTree = "<group>"; };
+		E72BE2C621D374FA000BF716 /* PDFThumbnailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFThumbnailCell.m; sourceTree = "<group>"; };
+		E72BE2C721D374FA000BF716 /* PDFThumbnailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFThumbnailCell.xib; sourceTree = "<group>"; };
+		E72BE2CA21D38467000BF716 /* PDFOutlineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFOutlineViewController.h; sourceTree = "<group>"; };
+		E72BE2CB21D38467000BF716 /* PDFOutlineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFOutlineViewController.m; sourceTree = "<group>"; };
+		E72BE2CD21D38576000BF716 /* PDFOutlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFOutlineCell.xib; sourceTree = "<group>"; };
+		E72BE2CE21D38577000BF716 /* PDFOutlineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFOutlineCell.m; sourceTree = "<group>"; };
+		E72BE2CF21D38577000BF716 /* PDFOutlineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFOutlineCell.h; sourceTree = "<group>"; };
 		E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; };
 		E74EC0CC219D406C0017A64D /* MediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
 		E74EC0CF219D406C0017A64D /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
@@ -602,6 +625,15 @@
 		E7EE6C2B21D21491005B2E9C /* CYAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYAnnotation.h; sourceTree = "<group>"; };
 		E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYAnnotation.m; sourceTree = "<group>"; };
 		E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
+		E7EE6C3021D34A3B005B2E9C /* pdf2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf2.pdf; sourceTree = "<group>"; };
+		E7EE6C3421D34CEF005B2E9C /* PDFDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFDetailViewController.h; sourceTree = "<group>"; };
+		E7EE6C3521D34CEF005B2E9C /* PDFDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFDetailViewController.m; sourceTree = "<group>"; };
+		E7EE6C3621D34CEF005B2E9C /* PDFDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFDetailViewController.xib; sourceTree = "<group>"; };
+		E7EE6C3A21D355D2005B2E9C /* PDFKitTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFKitTableViewCell.h; sourceTree = "<group>"; };
+		E7EE6C3B21D355D2005B2E9C /* PDFKitTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFKitTableViewCell.m; sourceTree = "<group>"; };
+		E7EE6C3C21D355D2005B2E9C /* PDFKitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFKitTableViewCell.xib; sourceTree = "<group>"; };
+		E7EE6C4121D36AB7005B2E9C /* pdf3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pdf3.pdf; sourceTree = "<group>"; };
+		E7EE6C4321D36AB8005B2E9C /* 滴滴出行iOS端瘦身实践.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "滴滴出行iOS端瘦身实践.pdf"; sourceTree = "<group>"; };
 		E7F0107221BDF86A00DB3061 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E7F4058B216C876500B27415 /* CYRoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRoundedButton.h; sourceTree = "<group>"; };
 		E7F4058C216C876500B27415 /* CYRoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRoundedButton.m; sourceTree = "<group>"; };
@@ -971,6 +1003,14 @@
 			children = (
 				E74EC0D6219D406C0017A64D /* PDFKitViewController.h */,
 				E74EC0D5219D406C0017A64D /* PDFKitViewController.m */,
+				E7EE6C3421D34CEF005B2E9C /* PDFDetailViewController.h */,
+				E7EE6C3521D34CEF005B2E9C /* PDFDetailViewController.m */,
+				E7EE6C3621D34CEF005B2E9C /* PDFDetailViewController.xib */,
+				E72BE2C221D374CC000BF716 /* PDFThumbnailViewController.h */,
+				E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */,
+				E72BE2CA21D38467000BF716 /* PDFOutlineViewController.h */,
+				E72BE2CB21D38467000BF716 /* PDFOutlineViewController.m */,
+				E7EE6C3921D355AF005B2E9C /* View */,
 			);
 			path = PDFKit;
 			sourceTree = "<group>";
@@ -1118,6 +1158,9 @@
 				E76F721821C8DAD800550C1E /* doc1.docx */,
 				E76F721621C8DA3300550C1E /* txt1.txt */,
 				E76F721421C8D9DE00550C1E /* pdf1.pdf */,
+				E7EE6C4321D36AB8005B2E9C /* 滴滴出行iOS端瘦身实践.pdf */,
+				E7EE6C4121D36AB7005B2E9C /* pdf3.pdf */,
+				E7EE6C3021D34A3B005B2E9C /* pdf2.pdf */,
 				E76F721221C8D76C00550C1E /* md1.md */,
 				E781AFC421C3AA2700AA845B /* png1.png */,
 				E781AFC221C3A9D700AA845B /* gif1.gif */,
@@ -1560,6 +1603,22 @@
 				E7C017D621D1C05F0053EF09 /* Info.plist */,
 			);
 			path = StickerPicksExDemo;
+			sourceTree = "<group>";
+		};
+		E7EE6C3921D355AF005B2E9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7EE6C3A21D355D2005B2E9C /* PDFKitTableViewCell.h */,
+				E7EE6C3B21D355D2005B2E9C /* PDFKitTableViewCell.m */,
+				E7EE6C3C21D355D2005B2E9C /* PDFKitTableViewCell.xib */,
+				E72BE2C521D374FA000BF716 /* PDFThumbnailCell.h */,
+				E72BE2C621D374FA000BF716 /* PDFThumbnailCell.m */,
+				E72BE2C721D374FA000BF716 /* PDFThumbnailCell.xib */,
+				E72BE2CF21D38577000BF716 /* PDFOutlineCell.h */,
+				E72BE2CE21D38577000BF716 /* PDFOutlineCell.m */,
+				E72BE2CD21D38576000BF716 /* PDFOutlineCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E7F73D1221C0A87F000ACDF4 /* Launch */ = {
@@ -2053,15 +2112,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EE6C3E21D355D2005B2E9C /* PDFKitTableViewCell.xib in Resources */,
 				E76F721321C8D76D00550C1E /* md1.md in Resources */,
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
 				E7A9E3A021D0708000A64CAC /* SpeechDemo2ViewController.xib in Resources */,
+				E7EE6C4521D36D23005B2E9C /* pdf3.pdf in Resources */,
 				E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */,
+				E7EE6C3821D34CEF005B2E9C /* PDFDetailViewController.xib in Resources */,
 				E76F721721C8DA3400550C1E /* txt1.txt in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
 				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
+				E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */,
 				E781AFC321C3A9D700AA845B /* gif1.gif in Resources */,
+				E7EE6C3121D34A3C005B2E9C /* pdf2.pdf in Resources */,
+				E7EE6C4421D36D20005B2E9C /* 滴滴出行iOS端瘦身实践.pdf in Resources */,
 				E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */,
 				E70616D01E795BF200762B56 /* Assets.xcassets in Resources */,
 				E76F721521C8D9DE00550C1E /* pdf1.pdf in Resources */,
@@ -2072,6 +2137,7 @@
 				E76F721921C8DAD800550C1E /* doc1.docx in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
 				E781AFC521C3AA2700AA845B /* png1.png in Resources */,
+				E72BE2D121D385F3000BF716 /* PDFOutlineCell.xib in Resources */,
 				E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2459,8 +2525,10 @@
 				E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */,
 				E7094D8E21A40763001E35B2 /* UIKitViewController.m in Sources */,
 				E74EC0F3219D406C0017A64D /* MapKitViewController.m in Sources */,
+				E72BE2C421D374CC000BF716 /* PDFThumbnailViewController.m in Sources */,
 				E7B816A621BF5118006F0B48 /* IADViewController.m in Sources */,
 				E7688E7E1E7A4B400064CD69 /* UIDevice+CY.m in Sources */,
+				E72BE2C821D374FA000BF716 /* PDFThumbnailCell.m in Sources */,
 				E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */,
 				E762F50721A695810086C13B /* CloudDocumentViewController.m in Sources */,
 				E7C017C721D0E73A0053EF09 /* CoreBluetoothViewController.m in Sources */,
@@ -2477,6 +2545,7 @@
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
+				E72BE2D021D38577000BF716 /* PDFOutlineCell.m in Sources */,
 				E7C017BE21D0E71B0053EF09 /* BusinessChatViewController.m in Sources */,
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
 				E7C017CA21D0E7450053EF09 /* CoreMLViewController.m in Sources */,
@@ -2491,14 +2560,17 @@
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,
 				E74EC0F6219D406C0017A64D /* CoreNFCViewController.m in Sources */,
+				E7EE6C3D21D355D2005B2E9C /* PDFKitTableViewCell.m in Sources */,
 				E781B00821C8D46700AA845B /* QuickLookViewController.m in Sources */,
 				E7688E721E7A4B400064CD69 /* CYKit.m in Sources */,
 				E7688E761E7A4B400064CD69 /* NSObject+CY.m in Sources */,
+				E72BE2CC21D38467000BF716 /* PDFOutlineViewController.m in Sources */,
 				E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */,
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
 				E781AFF221C8C26100AA845B /* SafariServicesViewController.m in Sources */,
 				E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */,
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
+				E7EE6C3721D34CEF005B2E9C /* PDFDetailViewController.m in Sources */,
 				E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
 				E7A9E3C521D0C43100A64CAC /* ShakeViewController.m in Sources */,

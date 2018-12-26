@@ -10,6 +10,7 @@
 "System" = "System";
 "Third" = "Third";
 
+
 // CoreMotion
 "Accelerometer" = "Accelerometer";
 "Gyroscope" = "Gyroscope";
@@ -19,3 +20,13 @@
 "Proximity" = "Proximity";
 "Pedometer" = "Pedometer";
 "Altimeter" = "Altimeter";
+
+
+// PDF
+"PDF_FileName" = "FileName";
+"PDF_Title" = "Title";
+"PDF_Creator" = "Creator";
+"PDF_Producer" = "Producer";
+"PDF_CreationDate" = "CreationDate";
+"PDF_ModDate" = "ModDate";
+

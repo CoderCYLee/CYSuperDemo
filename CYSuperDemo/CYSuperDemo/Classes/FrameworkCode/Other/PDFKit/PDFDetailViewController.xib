@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDFDetailViewController">
+            <connections>
+                <outlet property="btnZoomIn" destination="jjk-KC-1II" id="CRA-1P-bVh"/>
+                <outlet property="btnZoomOut" destination="gCF-5L-JfC" id="Fno-P9-FSd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zoomBaseView" destination="QC4-Og-yxZ" id="d5l-rz-pgf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC4-Og-yxZ">
+                    <rect key="frame" x="305" y="547" width="50" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjk-KC-1II">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="jjk-KC-1II" secondAttribute="height" multiplier="1:1" id="IBw-Tr-PVZ"/>
+                            </constraints>
+                            <state key="normal" image="fangda">
+                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="zoomInAction" destination="-1" eventType="touchUpInside" id="4du-dk-jkz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCF-5L-JfC">
+                            <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="gCF-5L-JfC" secondAttribute="height" multiplier="1:1" id="6KG-mi-Jrh"/>
+                            </constraints>
+                            <state key="normal" image="suoxiao">
+                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="zoomOutAction" destination="-1" eventType="touchUpInside" id="kbz-GE-VXd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gCF-5L-JfC" firstAttribute="leading" secondItem="QC4-Og-yxZ" secondAttribute="leading" id="4Y1-7o-upL"/>
+                        <constraint firstAttribute="height" constant="100" id="8Kx-6q-IcO"/>
+                        <constraint firstItem="gCF-5L-JfC" firstAttribute="width" secondItem="gCF-5L-JfC" secondAttribute="height" multiplier="1:1" id="EnR-t5-l5P"/>
+                        <constraint firstAttribute="bottom" secondItem="gCF-5L-JfC" secondAttribute="bottom" id="Gb6-27-hhx"/>
+                        <constraint firstAttribute="trailing" secondItem="gCF-5L-JfC" secondAttribute="trailing" id="Ofe-IL-xVz"/>
+                        <constraint firstAttribute="trailing" secondItem="jjk-KC-1II" secondAttribute="trailing" id="SaT-5X-wO1"/>
+                        <constraint firstAttribute="width" constant="50" id="Uct-vB-whi"/>
+                        <constraint firstItem="jjk-KC-1II" firstAttribute="leading" secondItem="QC4-Og-yxZ" secondAttribute="leading" id="oHb-cy-WFr"/>
+                        <constraint firstItem="jjk-KC-1II" firstAttribute="top" secondItem="QC4-Og-yxZ" secondAttribute="top" id="ygR-JZ-qSa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QcC-wv-eQ3" firstAttribute="trailing" secondItem="QC4-Og-yxZ" secondAttribute="trailing" constant="20" id="ciC-m2-B8N"/>
+                <constraint firstItem="QcC-wv-eQ3" firstAttribute="bottom" secondItem="QC4-Og-yxZ" secondAttribute="bottom" constant="20" id="hKe-cd-blE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QcC-wv-eQ3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fangda" width="30" height="30"/>
+        <image name="suoxiao" width="30" height="30"/>
+    </resources>
+</document>

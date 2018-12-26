@@ -7,65 +7,95 @@
 //
 
 #import "PDFKitViewController.h"
+#import "PDFDetailViewController.h"
+#import "PDFKitTableViewCell.h"
 #import <PDFKit/PDFKit.h>
-#import <Masonry.h>
 
-API_AVAILABLE(ios(11.0))
 @interface PDFKitViewController ()
 
-@property (nonatomic, strong) PDFView *pdfView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
 @implementation PDFKitViewController
 
+#pragma mark - life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"PDFKitTableViewCell" bundle:nil] forCellReuseIdentifier:@"CellId"];
+    [self requestData];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PDFKitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellId" forIndexPath:indexPath];
     if (@available(iOS 11.0, *)) {
-        
-        [self.view addSubview:self.pdfView];
-        [self.pdfView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+        cell.document = self.dataArray[indexPath.row];
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (@available(iOS 11.0, *)) {
+        PDFDocument *document = self.dataArray[indexPath.row];
+        PDFDetailViewController *vc = [[PDFDetailViewController alloc] initWithNibName:@"PDFDetailViewController" bundle:nil];
+        vc.document = document;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        // Fallback on earlier versions
+        ShowMsg(@"iOS 11.0 以上可用");
+    }
+}
+
+#pragma mark - event response
+
+#pragma mark - reuseable methods
+- (void)requestData {
+    NSArray<NSURL *> *arr = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"pdf" subdirectory:@""];
+  
+    if (@available(iOS 11.0, *)) {
+        NSMutableArray *tmpArr = [NSMutableArray array];
+        [arr enumerateObjectsUsingBlock:^(NSURL * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            PDFDocument *document = [[PDFDocument alloc] initWithURL:obj];
+            [tmpArr addObject:document];
         }];
         
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"pdf1.pdf" ofType:nil];
-        NSURL *url = [NSURL fileURLWithPath:path];
-        PDFDocument *document = [[PDFDocument alloc] initWithURL:url];
-        if (!document) {
-            return;
-        }
+        self.dataArray = tmpArr;
         
-        self.pdfView.document = document;
-        self.pdfView.autoScales = YES;
-        /*
-         kPDFDisplaySinglePage = 0, 单页显示，滚动只影响当前页
-         kPDFDisplaySinglePageContinuous = 1, 显示全部页面，默认垂直排列
-         kPDFDisplayTwoUp = 2,
-         kPDFDisplayTwoUpContinuous = 3
-         */
-        self.pdfView.displayMode = kPDFDisplaySinglePage;
-        self.pdfView.backgroundColor = [UIColor lightGrayColor];
+        
+        [self.tableView reloadData];
         
     } else {
         // Fallback on earlier versions
-        return;
     }
-    
     
     
 }
 
+#pragma mark - private methods
 
-
-- (PDFView *)pdfView
-API_AVAILABLE(ios(11.0)){
-    if (!_pdfView) {
-        _pdfView = [[PDFView alloc] init];
+#pragma mark - getters and setters
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [[NSMutableArray alloc] init];
     }
-    return _pdfView;
+    return _dataArray;
 }
-
 
 @end
