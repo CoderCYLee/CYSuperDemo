@@ -8,6 +8,7 @@
 
 "Home" = "首页";
 "System" = "系统";
+"Third" = "第三方";
 
 // CoreMotion
 "Accelerometer" = "加速器";

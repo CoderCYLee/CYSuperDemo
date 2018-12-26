@@ -151,6 +151,18 @@
 		E7B816D121BFC400006F0B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B816D021BFC400006F0B48 /* Assets.xcassets */; };
 		E7B816D621BFC400006F0B48 /* CYSuperWatchDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */; };
 		E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */; };
+		E7C017B821D0E7050053EF09 /* PushKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017B721D0E7050053EF09 /* PushKitViewController.m */; };
+		E7C017BB21D0E7110053EF09 /* CallKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017BA21D0E7110053EF09 /* CallKitViewController.m */; };
+		E7C017BE21D0E71B0053EF09 /* BusinessChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017BD21D0E71B0053EF09 /* BusinessChatViewController.m */; };
+		E7C017C121D0E7260053EF09 /* AudioToolboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017C021D0E7260053EF09 /* AudioToolboxViewController.m */; };
+		E7C017C421D0E7300053EF09 /* CoreAudioKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017C321D0E7300053EF09 /* CoreAudioKitViewController.m */; };
+		E7C017C721D0E73A0053EF09 /* CoreBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017C621D0E73A0053EF09 /* CoreBluetoothViewController.m */; };
+		E7C017CA21D0E7450053EF09 /* CoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017C921D0E7450053EF09 /* CoreMLViewController.m */; };
+		E7C017CD21D0E7510053EF09 /* CarPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C017CC21D0E7510053EF09 /* CarPlayViewController.m */; };
+		E7C017CF21D1BF870053EF09 /* BusinessChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C017CE21D1BF860053EF09 /* BusinessChat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E7C017D521D1C05F0053EF09 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C017D421D1C05F0053EF09 /* Stickers.xcassets */; };
+		E7C017D921D1C05F0053EF09 /* StickerPicksExDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */; };
 		E7F0107321BDF86A00DB3061 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F0107221BDF86A00DB3061 /* bg.png */; };
 		E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F4058C216C876500B27415 /* CYRoundedButton.m */; };
 		E7F40593216C9C5900B27415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F40592216C9C5900B27415 /* SystemConfiguration.framework */; };
@@ -163,11 +175,6 @@
 		E7F73D2F21C0E401000ACDF4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D2E21C0E401000ACDF4 /* ShareViewController.m */; };
 		E7F73D3221C0E402000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D3021C0E401000ACDF4 /* MainInterface.storyboard */; };
 		E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E7F73D4021C0E616000ACDF4 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F73D3F21C0E616000ACDF4 /* Messages.framework */; };
-		E7F73D4421C0E616000ACDF4 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73D4321C0E616000ACDF4 /* MessagesViewController.m */; };
-		E7F73D4721C0E616000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */; };
-		E7F73D4921C0E617000ACDF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D4821C0E617000ACDF4 /* Assets.xcassets */; };
-		E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D5D21C0F6E4000ACDF4 /* Localizable.strings */; };
 		E7F73D6821C228CE000ACDF4 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F73D6721C228CE000ACDF4 /* PhotosUI.framework */; };
 		E7F73D6A21C228CE000ACDF4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F73D6921C228CE000ACDF4 /* Photos.framework */; };
@@ -246,19 +253,19 @@
 			remoteGlobalIDString = E7B816B521BFC3FC006F0B48;
 			remoteInfo = CYSuperWatchDemo;
 		};
+		E7C017D721D1C05F0053EF09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7C017D121D1C05D0053EF09;
+			remoteInfo = StickerPicksExDemo;
+		};
 		E7F73D3421C0E402000ACDF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E70616B81E795BF200762B56 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E7F73D2A21C0E401000ACDF4;
 			remoteInfo = ShareDemo;
-		};
-		E7F73D4B21C0E617000ACDF4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E70616B81E795BF200762B56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E7F73D3D21C0E616000ACDF4;
-			remoteInfo = iMessageDemo;
 		};
 		E7F73D7321C228CE000ACDF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -278,12 +285,12 @@
 			files = (
 				E781AFD921C3B62C00AA845B /* NotifiContentDemo.appex in Embed App Extensions */,
 				E778091221994B3400E94CD3 /* TodayDemo.appex in Embed App Extensions */,
-				E7F73D4D21C0E617000ACDF4 /* iMessageDemo.appex in Embed App Extensions */,
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
 				E781B00121C8C7B600AA845B /* ContentBlockerExtensionDemo.appex in Embed App Extensions */,
 				E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */,
 				E781AFE921C3B64800AA845B /* NotifiServiceDemo.appex in Embed App Extensions */,
 				E7F73D3621C0E402000ACDF4 /* ShareDemo.appex in Embed App Extensions */,
+				E7C017D921D1C05F0053EF09 /* StickerPicksExDemo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +578,28 @@
 		E7B816D321BFC400006F0B48 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		E7BB58DB1FB19C310026BFD9 /* UIView+CYBoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CYBoom.h"; sourceTree = "<group>"; };
 		E7BB58DC1FB19C310026BFD9 /* UIView+CYBoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYBoom.m"; sourceTree = "<group>"; };
+		E7C017B621D0E7050053EF09 /* PushKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushKitViewController.h; sourceTree = "<group>"; };
+		E7C017B721D0E7050053EF09 /* PushKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushKitViewController.m; sourceTree = "<group>"; };
+		E7C017B921D0E7110053EF09 /* CallKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallKitViewController.h; sourceTree = "<group>"; };
+		E7C017BA21D0E7110053EF09 /* CallKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallKitViewController.m; sourceTree = "<group>"; };
+		E7C017BC21D0E71B0053EF09 /* BusinessChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessChatViewController.h; sourceTree = "<group>"; };
+		E7C017BD21D0E71B0053EF09 /* BusinessChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessChatViewController.m; sourceTree = "<group>"; };
+		E7C017BF21D0E7260053EF09 /* AudioToolboxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolboxViewController.h; sourceTree = "<group>"; };
+		E7C017C021D0E7260053EF09 /* AudioToolboxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxViewController.m; sourceTree = "<group>"; };
+		E7C017C221D0E7300053EF09 /* CoreAudioKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAudioKitViewController.h; sourceTree = "<group>"; };
+		E7C017C321D0E7300053EF09 /* CoreAudioKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAudioKitViewController.m; sourceTree = "<group>"; };
+		E7C017C521D0E73A0053EF09 /* CoreBluetoothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreBluetoothViewController.h; sourceTree = "<group>"; };
+		E7C017C621D0E73A0053EF09 /* CoreBluetoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreBluetoothViewController.m; sourceTree = "<group>"; };
+		E7C017C821D0E7450053EF09 /* CoreMLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreMLViewController.h; sourceTree = "<group>"; };
+		E7C017C921D0E7450053EF09 /* CoreMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMLViewController.m; sourceTree = "<group>"; };
+		E7C017CB21D0E7510053EF09 /* CarPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarPlayViewController.h; sourceTree = "<group>"; };
+		E7C017CC21D0E7510053EF09 /* CarPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarPlayViewController.m; sourceTree = "<group>"; };
+		E7C017CE21D1BF860053EF09 /* BusinessChat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BusinessChat.framework; path = System/Library/Frameworks/BusinessChat.framework; sourceTree = SDKROOT; };
+		E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickerPicksExDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7C017D421D1C05F0053EF09 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		E7C017D621D1C05F0053EF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7EE6C2B21D21491005B2E9C /* CYAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYAnnotation.h; sourceTree = "<group>"; };
+		E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYAnnotation.m; sourceTree = "<group>"; };
 		E7F0107221BDF86A00DB3061 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E7F4058B216C876500B27415 /* CYRoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRoundedButton.h; sourceTree = "<group>"; };
 		E7F4058C216C876500B27415 /* CYRoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRoundedButton.m; sourceTree = "<group>"; };
@@ -592,20 +621,13 @@
 		E7F73D2E21C0E401000ACDF4 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		E7F73D3121C0E401000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E7F73D3321C0E402000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F73D3F21C0E616000ACDF4 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
-		E7F73D4221C0E616000ACDF4 /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
-		E7F73D4321C0E616000ACDF4 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
-		E7F73D4621C0E616000ACDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		E7F73D4821C0E617000ACDF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E7F73D4A21C0E617000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7F73D5121C0F2A1000ACDF4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E7F73D5321C0F69D000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		E7F73D5421C0F69E000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
 		E7F73D5521C0F69E000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
 		E7F73D5621C0F69E000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		E7F73D5721C0F69F000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
-		E7F73D5821C0F69F000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
 		E7F73D5C21C0F6E4000ACDF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E7F73D5E21C0F6E6000ACDF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E7F73D6021C1F97C000ACDF4 /* ActionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActionDemo.entitlements; sourceTree = "<group>"; };
@@ -638,6 +660,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C017CF21D1BF870053EF09 /* BusinessChat.framework in Frameworks */,
 				E7A9E3A621D0AC2C00A64CAC /* ReplayKit.framework in Frameworks */,
 				E76F721B21C8DDCF00550C1E /* Speech.framework in Frameworks */,
 				E781AFEE21C8BF6F00AA845B /* ContactsUI.framework in Frameworks */,
@@ -722,14 +745,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7F73D3B21C0E616000ACDF4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7F73D4021C0E616000ACDF4 /* Messages.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E7F73D6321C228CE000ACDF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,6 +777,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7C017CE21D1BF860053EF09 /* BusinessChat.framework */,
 				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
 				E762F4F621A54F210086C13B /* CloudKit.framework */,
 				E778093E219A9E8B00E94CD3 /* Contacts.framework */,
@@ -798,11 +814,11 @@
 				E7B816B721BFC3FD006F0B48 /* CYSuperWatchDemo */,
 				E7B816C621BFC3FF006F0B48 /* CYSuperWatchDemo Extension */,
 				E7F73D2C21C0E401000ACDF4 /* ShareDemo */,
-				E7F73D4121C0E616000ACDF4 /* iMessageDemo */,
 				E7F73D6B21C228CE000ACDF4 /* PhotoEditingDemo */,
 				E781AFCF21C3B62C00AA845B /* NotifiContentDemo */,
 				E781AFE221C3B64800AA845B /* NotifiServiceDemo */,
 				E781AFF821C8C7B600AA845B /* ContentBlockerExtensionDemo */,
+				E7C017D321D1C05D0053EF09 /* StickerPicksExDemo */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -820,11 +836,11 @@
 				E7B816B621BFC3FC006F0B48 /* CYSuperWatchDemo.app */,
 				E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */,
 				E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */,
-				E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */,
 				E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */,
 				E781AFCA21C3B62B00AA845B /* NotifiContentDemo.appex */,
 				E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */,
 				E781AFF721C8C7B600AA845B /* ContentBlockerExtensionDemo.appex */,
+				E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -877,10 +893,17 @@
 				E74EC0DD219D406C0017A64D /* Accounts */,
 				E74EC0E7219D406C0017A64D /* AddressBook */,
 				E74EC0EB219D406C0017A64D /* ARKit */,
+				E7C017B221D0E6420053EF09 /* AudioToolbox */,
 				E74EC0D7219D406C0017A64D /* AVFoundation */,
 				E74EC0E4219D406C0017A64D /* AVKit */,
+				E7C017B321D0E6A60053EF09 /* BusinessChat */,
+				E7C017B421D0E6B80053EF09 /* CallKit */,
+				E7C017AD21D0E5830053EF09 /* CarPlay */,
 				E762F4EC21A54D880086C13B /* CloudKit */,
 				E74EC0CE219D406C0017A64D /* Contacts */,
+				E7C017B021D0E5D70053EF09 /* CoreAudioKit */,
+				E7C017AF21D0E5C20053EF09 /* CoreBluetooth */,
+				E7C017AE21D0E5A00053EF09 /* CoreML */,
 				E7A9E3B021D0B71B00A64CAC /* CoreMotion */,
 				E74EC0E1219D406C0017A64D /* CoreNFC */,
 				E7FD16EB219D57A60037D720 /* CoreVideo */,
@@ -892,6 +915,7 @@
 				E74EC0D1219D406C0017A64D /* Network */,
 				E7A9E3A721D0AC4E00A64CAC /* PassKit */,
 				E74EC0D4219D406C0017A64D /* PDFKit */,
+				E7C017B521D0E6FB0053EF09 /* PushKit */,
 				E781B00521C8D43A00AA845B /* QuickLook */,
 				E7A9E3A121D0ABAD00A64CAC /* ReplayKit */,
 				E781AFEF21C8C24D00AA845B /* SafariServices */,
@@ -961,6 +985,8 @@
 			children = (
 				E74EC0DC219D406C0017A64D /* MapKitViewController.h */,
 				E74EC0DB219D406C0017A64D /* MapKitViewController.m */,
+				E7EE6C2B21D21491005B2E9C /* CYAnnotation.h */,
+				E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */,
 			);
 			path = MapKit;
 			sourceTree = "<group>";
@@ -1232,8 +1258,8 @@
 				E76F721D21C8DDEB00550C1E /* SpeechViewController.h */,
 				E76F721E21C8DDEB00550C1E /* SpeechViewController.m */,
 				E7A9E39721D0705800A64CAC /* SpeechDemo1ViewController.h */,
-				E7A9E39821D0705800A64CAC /* SpeechDemo1ViewController.m */,
 				E7A9E39921D0705800A64CAC /* SpeechDemo1ViewController.xib */,
+				E7A9E39821D0705800A64CAC /* SpeechDemo1ViewController.m */,
 				E7A9E39C21D0708000A64CAC /* SpeechDemo2ViewController.h */,
 				E7A9E39D21D0708000A64CAC /* SpeechDemo2ViewController.m */,
 				E7A9E39E21D0708000A64CAC /* SpeechDemo2ViewController.xib */,
@@ -1451,6 +1477,87 @@
 			path = "CYSuperWatchDemo Extension";
 			sourceTree = "<group>";
 		};
+		E7C017AD21D0E5830053EF09 /* CarPlay */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017CB21D0E7510053EF09 /* CarPlayViewController.h */,
+				E7C017CC21D0E7510053EF09 /* CarPlayViewController.m */,
+			);
+			path = CarPlay;
+			sourceTree = "<group>";
+		};
+		E7C017AE21D0E5A00053EF09 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017C821D0E7450053EF09 /* CoreMLViewController.h */,
+				E7C017C921D0E7450053EF09 /* CoreMLViewController.m */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		E7C017AF21D0E5C20053EF09 /* CoreBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017C521D0E73A0053EF09 /* CoreBluetoothViewController.h */,
+				E7C017C621D0E73A0053EF09 /* CoreBluetoothViewController.m */,
+			);
+			path = CoreBluetooth;
+			sourceTree = "<group>";
+		};
+		E7C017B021D0E5D70053EF09 /* CoreAudioKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017C221D0E7300053EF09 /* CoreAudioKitViewController.h */,
+				E7C017C321D0E7300053EF09 /* CoreAudioKitViewController.m */,
+			);
+			path = CoreAudioKit;
+			sourceTree = "<group>";
+		};
+		E7C017B221D0E6420053EF09 /* AudioToolbox */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017BF21D0E7260053EF09 /* AudioToolboxViewController.h */,
+				E7C017C021D0E7260053EF09 /* AudioToolboxViewController.m */,
+			);
+			path = AudioToolbox;
+			sourceTree = "<group>";
+		};
+		E7C017B321D0E6A60053EF09 /* BusinessChat */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017BC21D0E71B0053EF09 /* BusinessChatViewController.h */,
+				E7C017BD21D0E71B0053EF09 /* BusinessChatViewController.m */,
+			);
+			path = BusinessChat;
+			sourceTree = "<group>";
+		};
+		E7C017B421D0E6B80053EF09 /* CallKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017B921D0E7110053EF09 /* CallKitViewController.h */,
+				E7C017BA21D0E7110053EF09 /* CallKitViewController.m */,
+			);
+			path = CallKit;
+			sourceTree = "<group>";
+		};
+		E7C017B521D0E6FB0053EF09 /* PushKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017B621D0E7050053EF09 /* PushKitViewController.h */,
+				E7C017B721D0E7050053EF09 /* PushKitViewController.m */,
+			);
+			path = PushKit;
+			sourceTree = "<group>";
+		};
+		E7C017D321D1C05D0053EF09 /* StickerPicksExDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E7C017D421D1C05F0053EF09 /* Stickers.xcassets */,
+				E7C017D621D1C05F0053EF09 /* Info.plist */,
+			);
+			path = StickerPicksExDemo;
+			sourceTree = "<group>";
+		};
 		E7F73D1221C0A87F000ACDF4 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -1483,18 +1590,6 @@
 				E7F73D3321C0E402000ACDF4 /* Info.plist */,
 			);
 			path = ShareDemo;
-			sourceTree = "<group>";
-		};
-		E7F73D4121C0E616000ACDF4 /* iMessageDemo */ = {
-			isa = PBXGroup;
-			children = (
-				E7F73D4221C0E616000ACDF4 /* MessagesViewController.h */,
-				E7F73D4321C0E616000ACDF4 /* MessagesViewController.m */,
-				E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */,
-				E7F73D4821C0E617000ACDF4 /* Assets.xcassets */,
-				E7F73D4A21C0E617000ACDF4 /* Info.plist */,
-			);
-			path = iMessageDemo;
 			sourceTree = "<group>";
 		};
 		E7F73D6B21C228CE000ACDF4 /* PhotoEditingDemo */ = {
@@ -1569,11 +1664,11 @@
 				E778092721994BA800E94CD3 /* PBXTargetDependency */,
 				E7B816D521BFC400006F0B48 /* PBXTargetDependency */,
 				E7F73D3521C0E402000ACDF4 /* PBXTargetDependency */,
-				E7F73D4C21C0E617000ACDF4 /* PBXTargetDependency */,
 				E7F73D7421C228CE000ACDF4 /* PBXTargetDependency */,
 				E781AFD821C3B62C00AA845B /* PBXTargetDependency */,
 				E781AFE821C3B64800AA845B /* PBXTargetDependency */,
 				E781B00021C8C7B600AA845B /* PBXTargetDependency */,
+				E7C017D821D1C05F0053EF09 /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1739,6 +1834,21 @@
 			productReference = E7B816C221BFC3FF006F0B48 /* CYSuperWatchDemo Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		E7C017D121D1C05D0053EF09 /* StickerPicksExDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C017DA21D1C05F0053EF09 /* Build configuration list for PBXNativeTarget "StickerPicksExDemo" */;
+			buildPhases = (
+				E7C017D021D1C05D0053EF09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickerPicksExDemo;
+			productName = StickerPicksExDemo;
+			productReference = E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		E7F73D2A21C0E401000ACDF4 /* ShareDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7F73D3721C0E402000ACDF4 /* Build configuration list for PBXNativeTarget "ShareDemo" */;
@@ -1755,23 +1865,6 @@
 			productName = ShareDemo;
 			productReference = E7F73D2B21C0E401000ACDF4 /* ShareDemo.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		E7F73D3D21C0E616000ACDF4 /* iMessageDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7F73D4E21C0E617000ACDF4 /* Build configuration list for PBXNativeTarget "iMessageDemo" */;
-			buildPhases = (
-				E7F73D3A21C0E616000ACDF4 /* Sources */,
-				E7F73D3B21C0E616000ACDF4 /* Frameworks */,
-				E7F73D3C21C0E616000ACDF4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = iMessageDemo;
-			productName = iMessageDemo;
-			productReference = E7F73D3E21C0E616000ACDF4 /* iMessageDemo.appex */;
-			productType = "com.apple.product-type.app-extension.messages";
 		};
 		E7F73D6521C228CE000ACDF4 /* PhotoEditingDemo */ = {
 			isa = PBXNativeTarget;
@@ -1903,12 +1996,12 @@
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
-					E7F73D2A21C0E401000ACDF4 = {
+					E7C017D121D1C05D0053EF09 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
-					E7F73D3D21C0E616000ACDF4 = {
+					E7F73D2A21C0E401000ACDF4 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
@@ -1943,7 +2036,7 @@
 				E778091A21994BA800E94CD3 /* ActionDemo */,
 				E7F73D6521C228CE000ACDF4 /* PhotoEditingDemo */,
 				E7F73D2A21C0E401000ACDF4 /* ShareDemo */,
-				E7F73D3D21C0E616000ACDF4 /* iMessageDemo */,
+				E7C017D121D1C05D0053EF09 /* StickerPicksExDemo */,
 				E781AFC921C3B62B00AA845B /* NotifiContentDemo */,
 				E781AFE021C3B64800AA845B /* NotifiServiceDemo */,
 				E781AFF621C8C7B600AA845B /* ContentBlockerExtensionDemo */,
@@ -2050,20 +2143,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7C017D021D1C05D0053EF09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C017D521D1C05F0053EF09 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7F73D2921C0E401000ACDF4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E7F73D3221C0E402000ACDF4 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E7F73D3C21C0E616000ACDF4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7F73D4921C0E617000ACDF4 /* Assets.xcassets in Resources */,
-				E7F73D4721C0E616000ACDF4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2318,8 +2410,10 @@
 				E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */,
 				E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
+				E7C017C121D0E7260053EF09 /* AudioToolboxViewController.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
+				E7C017BB21D0E7110053EF09 /* CallKitViewController.m in Sources */,
 				E7F73D2621C0E068000ACDF4 /* ExtensionShareViewController.m in Sources */,
 				E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
@@ -2330,7 +2424,9 @@
 				E7F73D1A21C0AEC2000ACDF4 /* LaunchView.m in Sources */,
 				E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */,
 				E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */,
+				E7C017CD21D0E7510053EF09 /* CarPlayViewController.m in Sources */,
 				E7F73DA921C240CF000ACDF4 /* BaseTableViewController.m in Sources */,
+				E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */,
 				E762F4FB21A5532B0086C13B /* StoreKitViewController.m in Sources */,
 				E7F73DAC21C240DE000ACDF4 /* BaseCollectionViewController.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
@@ -2355,6 +2451,7 @@
 				E721242A2193D9B000129C5A /* UIViewController+CY.m in Sources */,
 				E7F73DB321C24193000ACDF4 /* NavigationController.m in Sources */,
 				E762F50121A65A440086C13B /* CYICloudHandle.m in Sources */,
+				E7C017C421D0E7300053EF09 /* CoreAudioKitViewController.m in Sources */,
 				E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */,
 				E7094D8E21A40763001E35B2 /* UIKitViewController.m in Sources */,
 				E74EC0F3219D406C0017A64D /* MapKitViewController.m in Sources */,
@@ -2362,6 +2459,7 @@
 				E7688E7E1E7A4B400064CD69 /* UIDevice+CY.m in Sources */,
 				E7688E301E7A48DA0064CD69 /* AppDelegate.m in Sources */,
 				E762F50721A695810086C13B /* CloudDocumentViewController.m in Sources */,
+				E7C017C721D0E73A0053EF09 /* CoreBluetoothViewController.m in Sources */,
 				E7A9E3CB21D0D6F200A64CAC /* PedometerViewController.m in Sources */,
 				E7688E781E7A4B400064CD69 /* Foundation+Log.m in Sources */,
 				E7688E7F1E7A4B400064CD69 /* UIImage+CY.m in Sources */,
@@ -2375,10 +2473,13 @@
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
+				E7C017BE21D0E71B0053EF09 /* BusinessChatViewController.m in Sources */,
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
+				E7C017CA21D0E7450053EF09 /* CoreMLViewController.m in Sources */,
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
 				E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */,
 				E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */,
+				E7C017B821D0E7050053EF09 /* PushKitViewController.m in Sources */,
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
 				E7A9E3BC21D0C41000A64CAC /* GyroscopeViewController.m in Sources */,
 				E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */,
@@ -2485,14 +2586,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7F73D3A21C0E616000ACDF4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7F73D4421C0E616000ACDF4 /* MessagesViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E7F73D6221C228CE000ACDF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2549,15 +2642,15 @@
 			target = E7B816B521BFC3FC006F0B48 /* CYSuperWatchDemo */;
 			targetProxy = E7B816D421BFC400006F0B48 /* PBXContainerItemProxy */;
 		};
+		E7C017D821D1C05F0053EF09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7C017D121D1C05D0053EF09 /* StickerPicksExDemo */;
+			targetProxy = E7C017D721D1C05F0053EF09 /* PBXContainerItemProxy */;
+		};
 		E7F73D3521C0E402000ACDF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7F73D2A21C0E401000ACDF4 /* ShareDemo */;
 			targetProxy = E7F73D3421C0E402000ACDF4 /* PBXContainerItemProxy */;
-		};
-		E7F73D4C21C0E617000ACDF4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E7F73D3D21C0E616000ACDF4 /* iMessageDemo */;
-			targetProxy = E7F73D4B21C0E617000ACDF4 /* PBXContainerItemProxy */;
 		};
 		E7F73D7421C228CE000ACDF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2616,15 +2709,6 @@
 			children = (
 				E7F73D3121C0E401000ACDF4 /* Base */,
 				E7F73D5721C0F69F000ACDF4 /* zh-Hans */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		E7F73D4521C0E616000ACDF4 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7F73D4621C0E616000ACDF4 /* Base */,
-				E7F73D5821C0F69F000ACDF4 /* zh-Hans */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -3214,6 +3298,51 @@
 			};
 			name = Release;
 		};
+		E7C017DB21D1C05F0053EF09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StickerPicksExDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.StickerPicksExDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7C017DC21D1C05F0053EF09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StickerPicksExDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.StickerPicksExDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E7F73D3821C0E402000ACDF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3253,57 +3382,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.ShareDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E7F73D4F21C0E617000ACDF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JXJV99SFC3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = iMessageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.iMessageDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E7F73D5021C0E617000ACDF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JXJV99SFC3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = iMessageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.iMessageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3457,20 +3535,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E7C017DA21D1C05F0053EF09 /* Build configuration list for PBXNativeTarget "StickerPicksExDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C017DB21D1C05F0053EF09 /* Debug */,
+				E7C017DC21D1C05F0053EF09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7F73D3721C0E402000ACDF4 /* Build configuration list for PBXNativeTarget "ShareDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E7F73D3821C0E402000ACDF4 /* Debug */,
 				E7F73D3921C0E402000ACDF4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7F73D4E21C0E617000ACDF4 /* Build configuration list for PBXNativeTarget "iMessageDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7F73D4F21C0E617000ACDF4 /* Debug */,
-				E7F73D5021C0E617000ACDF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

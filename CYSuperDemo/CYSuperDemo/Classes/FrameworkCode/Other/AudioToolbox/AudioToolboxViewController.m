@@ -1,28 +1,22 @@
- //
-//  NetworkViewController.m
+//
+//  AudioToolboxViewController.m
 //  CYSuperDemo
 //
-//  Created by cyrill on 2018/11/9.
+//  Created by cyrill on 2018/12/24.
 //  Copyright © 2018 Cyrill. All rights reserved.
 //
 
-#import "NetworkViewController.h"
-#import <Network/Network.h>
+#import "AudioToolboxViewController.h"
 
-@interface NetworkViewController ()
+@interface AudioToolboxViewController ()
 
 @end
 
-@implementation NetworkViewController
+@implementation AudioToolboxViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.view.layer.contents = (id)[UIImage imageNamed:@"Icon_Home"].CGImage;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon_Home"]];
-    
 }
 
 /*
