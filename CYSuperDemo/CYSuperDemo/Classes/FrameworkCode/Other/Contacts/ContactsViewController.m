@@ -24,10 +24,10 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addressBookDidChange:) name:CNContactStoreDidChangeNotification object:nil];
-    
     
     if (@available(iOS 9.0, *)) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addressBookDidChange:) name:CNContactStoreDidChangeNotification object:nil];
+        
         CNContactStore *store = [[CNContactStore alloc] init];
 
         CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];

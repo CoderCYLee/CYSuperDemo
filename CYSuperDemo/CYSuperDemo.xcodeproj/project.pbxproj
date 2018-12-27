@@ -127,6 +127,8 @@
 		E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A996D214217F1002A9803 /* CYCustomSearchBar.m */; };
 		E78F91631E9CDE8D0033E336 /* UIControl+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91621E9CDE8D0033E336 /* UIControl+CY.m */; };
 		E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E79252BC219BFB3B00E60577 /* video1.mp4 */; };
+		E792EDB021D4C87400D35F21 /* AccountsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792EDAE21D4C87400D35F21 /* AccountsDetailViewController.m */; };
+		E792EDB121D4C87400D35F21 /* AccountsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E792EDAF21D4C87400D35F21 /* AccountsDetailViewController.xib */; };
 		E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FC2190270E002BEAFD /* HomeViewController.m */; };
 		E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FF2192BBF3002BEAFD /* SecondViewController.m */; };
 		E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */; };
@@ -563,6 +565,9 @@
 		E78F91611E9CDE8D0033E336 /* UIControl+CY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CY.h"; sourceTree = "<group>"; };
 		E78F91621E9CDE8D0033E336 /* UIControl+CY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CY.m"; sourceTree = "<group>"; };
 		E79252BC219BFB3B00E60577 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		E792EDAD21D4C87400D35F21 /* AccountsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountsDetailViewController.h; sourceTree = "<group>"; };
+		E792EDAE21D4C87400D35F21 /* AccountsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountsDetailViewController.m; sourceTree = "<group>"; };
+		E792EDAF21D4C87400D35F21 /* AccountsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountsDetailViewController.xib; sourceTree = "<group>"; };
 		E796E5FB2190270E002BEAFD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E796E5FC2190270E002BEAFD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E796E5FE2192BBF3002BEAFD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -1108,6 +1113,9 @@
 			children = (
 				E74EC0DE219D406C0017A64D /* AccountsViewController.h */,
 				E74EC0DF219D406C0017A64D /* AccountsViewController.m */,
+				E792EDAD21D4C87400D35F21 /* AccountsDetailViewController.h */,
+				E792EDAE21D4C87400D35F21 /* AccountsDetailViewController.m */,
+				E792EDAF21D4C87400D35F21 /* AccountsDetailViewController.xib */,
 				E74EC0E0219D406C0017A64D /* Accounts.md */,
 			);
 			path = Accounts;
@@ -2197,6 +2205,7 @@
 				E7E6B6E221D4AD77002F1C53 /* JsonTemplate.json in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */,
+				E792EDB121D4C87400D35F21 /* AccountsDetailViewController.xib in Resources */,
 				E781AFC321C3A9D700AA845B /* gif1.gif in Resources */,
 				E7EE6C3121D34A3C005B2E9C /* pdf2.pdf in Resources */,
 				E7EE6C4421D36D20005B2E9C /* 滴滴出行iOS端瘦身实践.pdf in Resources */,
@@ -2646,6 +2655,7 @@
 				E781B00821C8D46700AA845B /* QuickLookViewController.m in Sources */,
 				E7688E721E7A4B400064CD69 /* CYKit.m in Sources */,
 				E7688E761E7A4B400064CD69 /* NSObject+CY.m in Sources */,
+				E792EDB021D4C87400D35F21 /* AccountsDetailViewController.m in Sources */,
 				E72BE2CC21D38467000BF716 /* PDFOutlineViewController.m in Sources */,
 				E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */,
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
