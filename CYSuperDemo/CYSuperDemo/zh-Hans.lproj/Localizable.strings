@@ -29,4 +29,6 @@
 "PDF_Producer" = "生产者";
 "PDF_CreationDate" = "创建时间";
 "PDF_ModDate" = "最近修改时间";
+"PDF_Thumbnail" = "缩略图";
+"PDF_Outline" = "大纲";
 

@@ -29,6 +29,9 @@
 		E72BE2CC21D38467000BF716 /* PDFOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2CB21D38467000BF716 /* PDFOutlineViewController.m */; };
 		E72BE2D021D38577000BF716 /* PDFOutlineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2CE21D38577000BF716 /* PDFOutlineCell.m */; };
 		E72BE2D121D385F3000BF716 /* PDFOutlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2CD21D38576000BF716 /* PDFOutlineCell.xib */; };
+		E72BE2D421D460FE000BF716 /* PDFSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2D321D460FE000BF716 /* PDFSearchViewController.m */; };
+		E72BE2D821D4629C000BF716 /* PDFSeachCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2D721D4629B000BF716 /* PDFSeachCell.m */; };
+		E72BE2D921D462A1000BF716 /* PDFSeachCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2D521D4629B000BF716 /* PDFSeachCell.xib */; };
 		E74EC0EE219D406C0017A64D /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */; };
 		E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D0219D406C0017A64D /* ContactsViewController.m */; };
 		E74EC0F0219D406C0017A64D /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D3219D406C0017A64D /* NetworkViewController.m */; };
@@ -379,6 +382,11 @@
 		E72BE2CD21D38576000BF716 /* PDFOutlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFOutlineCell.xib; sourceTree = "<group>"; };
 		E72BE2CE21D38577000BF716 /* PDFOutlineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFOutlineCell.m; sourceTree = "<group>"; };
 		E72BE2CF21D38577000BF716 /* PDFOutlineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFOutlineCell.h; sourceTree = "<group>"; };
+		E72BE2D221D460FE000BF716 /* PDFSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFSearchViewController.h; sourceTree = "<group>"; };
+		E72BE2D321D460FE000BF716 /* PDFSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFSearchViewController.m; sourceTree = "<group>"; };
+		E72BE2D521D4629B000BF716 /* PDFSeachCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFSeachCell.xib; sourceTree = "<group>"; };
+		E72BE2D621D4629B000BF716 /* PDFSeachCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFSeachCell.h; sourceTree = "<group>"; };
+		E72BE2D721D4629B000BF716 /* PDFSeachCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFSeachCell.m; sourceTree = "<group>"; };
 		E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; };
 		E74EC0CC219D406C0017A64D /* MediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
 		E74EC0CF219D406C0017A64D /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
@@ -1010,6 +1018,8 @@
 				E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */,
 				E72BE2CA21D38467000BF716 /* PDFOutlineViewController.h */,
 				E72BE2CB21D38467000BF716 /* PDFOutlineViewController.m */,
+				E72BE2D221D460FE000BF716 /* PDFSearchViewController.h */,
+				E72BE2D321D460FE000BF716 /* PDFSearchViewController.m */,
 				E7EE6C3921D355AF005B2E9C /* View */,
 			);
 			path = PDFKit;
@@ -1617,6 +1627,9 @@
 				E72BE2CF21D38577000BF716 /* PDFOutlineCell.h */,
 				E72BE2CE21D38577000BF716 /* PDFOutlineCell.m */,
 				E72BE2CD21D38576000BF716 /* PDFOutlineCell.xib */,
+				E72BE2D621D4629B000BF716 /* PDFSeachCell.h */,
+				E72BE2D721D4629B000BF716 /* PDFSeachCell.m */,
+				E72BE2D521D4629B000BF716 /* PDFSeachCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2120,6 +2133,7 @@
 				E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */,
 				E7EE6C3821D34CEF005B2E9C /* PDFDetailViewController.xib in Resources */,
 				E76F721721C8DA3400550C1E /* txt1.txt in Resources */,
+				E72BE2D921D462A1000BF716 /* PDFSeachCell.xib in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
 				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
@@ -2483,6 +2497,7 @@
 				E7C017C121D0E7260053EF09 /* AudioToolboxViewController.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
 				E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */,
+				E72BE2D821D4629C000BF716 /* PDFSeachCell.m in Sources */,
 				E7C017BB21D0E7110053EF09 /* CallKitViewController.m in Sources */,
 				E7F73D2621C0E068000ACDF4 /* ExtensionShareViewController.m in Sources */,
 				E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */,
@@ -2556,6 +2571,7 @@
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
 				E7A9E3BC21D0C41000A64CAC /* GyroscopeViewController.m in Sources */,
 				E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */,
+				E72BE2D421D460FE000BF716 /* PDFSearchViewController.m in Sources */,
 				E7F73DA621C240B5000ACDF4 /* BaseViewController.m in Sources */,
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,

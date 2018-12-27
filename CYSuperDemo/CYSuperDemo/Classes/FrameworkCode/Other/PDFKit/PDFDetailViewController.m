@@ -10,11 +10,12 @@
 #import "NavigationController.h"
 #import "PDFOutlineViewController.h"
 #import "PDFThumbnailViewController.h"
+#import "PDFSearchViewController.h"
 #import <PDFKit/PDFKit.h>
 #import <Masonry.h>
 
 API_AVAILABLE(ios(11.0))
-@interface PDFDetailViewController () <PDFThumbnailViewControllerDelegate, PDFOutlineViewControllerDelegate>
+@interface PDFDetailViewController () <PDFThumbnailViewControllerDelegate, PDFOutlineViewControllerDelegate, PDFSearchViewControllerDelegate>
 
 @property (nonatomic, strong) PDFView *pdfView;
 @property (weak, nonatomic) IBOutlet UIView *zoomBaseView;
@@ -91,6 +92,14 @@ API_AVAILABLE(ios(11.0))
 
 #pragma mark - delegate
 
+#pragma mark -----PDFSearchViewControllerDelegate-----
+
+- (void)searchViewController:(nonnull PDFSearchViewController *)controller didSelectSearchResult:(nonnull PDFSelection *)selection  API_AVAILABLE(ios(11.0)){
+    selection.color = [UIColor yellowColor];
+    self.pdfView.currentSelection = selection;
+    [self.pdfView goToSelection:selection];
+}
+
 #pragma mark PDFOutlineViewControllerDelegate
 - (void)outlineViewController:(PDFOutlineViewController *)controller didSelectOutline:(PDFOutline *)outline  API_AVAILABLE(ios(11.0)){
     NSLog(@"%s",__func__);
@@ -139,6 +148,15 @@ API_AVAILABLE(ios(11.0))
 }
 
 - (void)searchAction {
+    if (@available(iOS 11.0, *)) {
+        PDFSearchViewController *vc = [[PDFSearchViewController alloc] init];
+        vc.document = self.document;
+        vc.delegate = self;
+        [self showDetailViewController:[[NavigationController alloc] initWithRootViewController:vc] sender:self];
+        
+    } else {
+        // Fallback on earlier versions
+    }
     
 }
 

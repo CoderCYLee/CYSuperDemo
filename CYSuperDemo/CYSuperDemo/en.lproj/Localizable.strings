@@ -29,4 +29,6 @@
 "PDF_Producer" = "Producer";
 "PDF_CreationDate" = "CreationDate";
 "PDF_ModDate" = "ModDate";
+"PDF_Thumbnail" = "Thumbnail";
+"PDF_Outline" = "Outline";
 
