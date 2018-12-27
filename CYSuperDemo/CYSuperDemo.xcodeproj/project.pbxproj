@@ -32,6 +32,8 @@
 		E72BE2D421D460FE000BF716 /* PDFSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2D321D460FE000BF716 /* PDFSearchViewController.m */; };
 		E72BE2D821D4629C000BF716 /* PDFSeachCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2D721D4629B000BF716 /* PDFSeachCell.m */; };
 		E72BE2D921D462A1000BF716 /* PDFSeachCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2D521D4629B000BF716 /* PDFSeachCell.xib */; };
+		E72BE2E121D47558000BF716 /* CoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2E021D47558000BF716 /* CoreTextViewController.m */; };
+		E72BE2E421D4A1F5000BF716 /* CTDemoView1.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2E321D4A1F5000BF716 /* CTDemoView1.m */; };
 		E74EC0EE219D406C0017A64D /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */; };
 		E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D0219D406C0017A64D /* ContactsViewController.m */; };
 		E74EC0F0219D406C0017A64D /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D3219D406C0017A64D /* NetworkViewController.m */; };
@@ -171,6 +173,14 @@
 		E7C017CF21D1BF870053EF09 /* BusinessChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C017CE21D1BF860053EF09 /* BusinessChat.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7C017D521D1C05F0053EF09 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C017D421D1C05F0053EF09 /* Stickers.xcassets */; };
 		E7C017D921D1C05F0053EF09 /* StickerPicksExDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7E6B6CC21D4A82B002F1C53 /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6CB21D4A82B002F1C53 /* CTFrameParserConfig.m */; };
+		E7E6B6CF21D4A83E002F1C53 /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6CE21D4A83E002F1C53 /* CTFrameParser.m */; };
+		E7E6B6D221D4A849002F1C53 /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6D121D4A849002F1C53 /* CoreTextData.m */; };
+		E7E6B6D521D4AA78002F1C53 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6D421D4AA78002F1C53 /* CoreTextImageData.m */; };
+		E7E6B6D821D4AA88002F1C53 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6D721D4AA87002F1C53 /* CoreTextLinkData.m */; };
+		E7E6B6DB21D4AC61002F1C53 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6DA21D4AC61002F1C53 /* CoreTextUtils.m */; };
+		E7E6B6DE21D4ACBE002F1C53 /* CTDemoView2.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B6DD21D4ACBE002F1C53 /* CTDemoView2.m */; };
+		E7E6B6E221D4AD77002F1C53 /* JsonTemplate.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E6B6E121D4AD71002F1C53 /* JsonTemplate.json */; };
 		E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */; };
 		E7EE6C2F21D30F2D005B2E9C /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E7EE6C3121D34A3C005B2E9C /* pdf2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7EE6C3021D34A3B005B2E9C /* pdf2.pdf */; };
@@ -387,6 +397,10 @@
 		E72BE2D521D4629B000BF716 /* PDFSeachCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFSeachCell.xib; sourceTree = "<group>"; };
 		E72BE2D621D4629B000BF716 /* PDFSeachCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFSeachCell.h; sourceTree = "<group>"; };
 		E72BE2D721D4629B000BF716 /* PDFSeachCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFSeachCell.m; sourceTree = "<group>"; };
+		E72BE2DF21D47558000BF716 /* CoreTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextViewController.h; sourceTree = "<group>"; };
+		E72BE2E021D47558000BF716 /* CoreTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextViewController.m; sourceTree = "<group>"; };
+		E72BE2E221D4A1F5000BF716 /* CTDemoView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDemoView1.h; sourceTree = "<group>"; };
+		E72BE2E321D4A1F5000BF716 /* CTDemoView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDemoView1.m; sourceTree = "<group>"; };
 		E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; };
 		E74EC0CC219D406C0017A64D /* MediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
 		E74EC0CF219D406C0017A64D /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
@@ -630,6 +644,21 @@
 		E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickerPicksExDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C017D421D1C05F0053EF09 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		E7C017D621D1C05F0053EF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7E6B6CA21D4A82B002F1C53 /* CTFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParserConfig.h; sourceTree = "<group>"; };
+		E7E6B6CB21D4A82B002F1C53 /* CTFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
+		E7E6B6CD21D4A83E002F1C53 /* CTFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParser.h; sourceTree = "<group>"; };
+		E7E6B6CE21D4A83E002F1C53 /* CTFrameParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParser.m; sourceTree = "<group>"; };
+		E7E6B6D021D4A849002F1C53 /* CoreTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextData.h; sourceTree = "<group>"; };
+		E7E6B6D121D4A849002F1C53 /* CoreTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextData.m; sourceTree = "<group>"; };
+		E7E6B6D321D4AA78002F1C53 /* CoreTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
+		E7E6B6D421D4AA78002F1C53 /* CoreTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
+		E7E6B6D621D4AA87002F1C53 /* CoreTextLinkData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextLinkData.h; sourceTree = "<group>"; };
+		E7E6B6D721D4AA87002F1C53 /* CoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
+		E7E6B6D921D4AC61002F1C53 /* CoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		E7E6B6DA21D4AC61002F1C53 /* CoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		E7E6B6DC21D4ACBE002F1C53 /* CTDemoView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDemoView2.h; sourceTree = "<group>"; };
+		E7E6B6DD21D4ACBE002F1C53 /* CTDemoView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDemoView2.m; sourceTree = "<group>"; };
+		E7E6B6E121D4AD71002F1C53 /* JsonTemplate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonTemplate.json; sourceTree = "<group>"; };
 		E7EE6C2B21D21491005B2E9C /* CYAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYAnnotation.h; sourceTree = "<group>"; };
 		E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYAnnotation.m; sourceTree = "<group>"; };
 		E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
@@ -931,6 +960,32 @@
 			path = CYSuperDemoUITests;
 			sourceTree = "<group>";
 		};
+		E72BE2DE21D4751B000BF716 /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				E7E6B6E121D4AD71002F1C53 /* JsonTemplate.json */,
+				E72BE2DF21D47558000BF716 /* CoreTextViewController.h */,
+				E72BE2E021D47558000BF716 /* CoreTextViewController.m */,
+				E72BE2E221D4A1F5000BF716 /* CTDemoView1.h */,
+				E72BE2E321D4A1F5000BF716 /* CTDemoView1.m */,
+				E7E6B6DC21D4ACBE002F1C53 /* CTDemoView2.h */,
+				E7E6B6DD21D4ACBE002F1C53 /* CTDemoView2.m */,
+				E7E6B6CA21D4A82B002F1C53 /* CTFrameParserConfig.h */,
+				E7E6B6CB21D4A82B002F1C53 /* CTFrameParserConfig.m */,
+				E7E6B6CD21D4A83E002F1C53 /* CTFrameParser.h */,
+				E7E6B6CE21D4A83E002F1C53 /* CTFrameParser.m */,
+				E7E6B6D021D4A849002F1C53 /* CoreTextData.h */,
+				E7E6B6D121D4A849002F1C53 /* CoreTextData.m */,
+				E7E6B6D321D4AA78002F1C53 /* CoreTextImageData.h */,
+				E7E6B6D421D4AA78002F1C53 /* CoreTextImageData.m */,
+				E7E6B6D621D4AA87002F1C53 /* CoreTextLinkData.h */,
+				E7E6B6D721D4AA87002F1C53 /* CoreTextLinkData.m */,
+				E7E6B6D921D4AC61002F1C53 /* CoreTextUtils.h */,
+				E7E6B6DA21D4AC61002F1C53 /* CoreTextUtils.m */,
+			);
+			path = CoreText;
+			sourceTree = "<group>";
+		};
 		E74EC0C9219D406C0017A64D /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -950,6 +1005,7 @@
 				E7C017AE21D0E5A00053EF09 /* CoreML */,
 				E7A9E3B021D0B71B00A64CAC /* CoreMotion */,
 				E74EC0E1219D406C0017A64D /* CoreNFC */,
+				E72BE2DE21D4751B000BF716 /* CoreText */,
 				E7FD16EB219D57A60037D720 /* CoreVideo */,
 				E74EC0CD219D406C0017A64D /* DeviceCheck */,
 				E7B816AA21BFAD74006F0B48 /* HealthKit */,
@@ -2136,6 +2192,7 @@
 				E72BE2D921D462A1000BF716 /* PDFSeachCell.xib in Resources */,
 				E79252BD219BFB3B00E60577 /* video1.mp4 in Resources */,
 				E7F0107321BDF86A00DB3061 /* bg.png in Resources */,
+				E7E6B6E221D4AD77002F1C53 /* JsonTemplate.json in Resources */,
 				E70616D31E795BF200762B56 /* LaunchScreen.storyboard in Resources */,
 				E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */,
 				E781AFC321C3A9D700AA845B /* gif1.gif in Resources */,
@@ -2491,8 +2548,10 @@
 				E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */,
 				E7688E751E7A4B400064CD69 /* NSData+CY.m in Sources */,
 				E76F721F21C8DDEB00550C1E /* SpeechViewController.m in Sources */,
+				E72BE2E421D4A1F5000BF716 /* CTDemoView1.m in Sources */,
 				E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */,
 				E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */,
+				E7E6B6D521D4AA78002F1C53 /* CoreTextImageData.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7C017C121D0E7260053EF09 /* AudioToolboxViewController.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,
@@ -2531,6 +2590,7 @@
 				E74EC0F4219D406C0017A64D /* AccountsViewController.m in Sources */,
 				E762F51021A697F90086C13B /* CloudCloudKitAddNewViewController.m in Sources */,
 				E7688E7B1E7A4B400064CD69 /* UIButton+CY.m in Sources */,
+				E7E6B6CC21D4A82B002F1C53 /* CTFrameParserConfig.m in Sources */,
 				E7BB58DD1FB19C310026BFD9 /* UIView+CYBoom.m in Sources */,
 				E762F4EF21A54DDA0086C13B /* CloudKitViewController.m in Sources */,
 				E721242A2193D9B000129C5A /* UIViewController+CY.m in Sources */,
@@ -2538,6 +2598,7 @@
 				E762F50121A65A440086C13B /* CYICloudHandle.m in Sources */,
 				E7C017C421D0E7300053EF09 /* CoreAudioKitViewController.m in Sources */,
 				E7B816AD21BFAD97006F0B48 /* HealthKitViewController.m in Sources */,
+				E7E6B6DB21D4AC61002F1C53 /* CoreTextUtils.m in Sources */,
 				E7094D8E21A40763001E35B2 /* UIKitViewController.m in Sources */,
 				E74EC0F3219D406C0017A64D /* MapKitViewController.m in Sources */,
 				E72BE2C421D374CC000BF716 /* PDFThumbnailViewController.m in Sources */,
@@ -2558,14 +2619,17 @@
 				E762F4FE21A55A140086C13B /* CYDocument.m in Sources */,
 				E7A9E3BF21D0C41A00A64CAC /* MegnetometerViewController.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
+				E7E6B6DE21D4ACBE002F1C53 /* CTDemoView2.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
 				E72BE2D021D38577000BF716 /* PDFOutlineCell.m in Sources */,
 				E7C017BE21D0E71B0053EF09 /* BusinessChatViewController.m in Sources */,
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
 				E7C017CA21D0E7450053EF09 /* CoreMLViewController.m in Sources */,
+				E7E6B6D221D4A849002F1C53 /* CoreTextData.m in Sources */,
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
 				E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */,
+				E7E6B6D821D4AA88002F1C53 /* CoreTextLinkData.m in Sources */,
 				E762F50A21A695950086C13B /* CloudCloudKitViewController.m in Sources */,
 				E7C017B821D0E7050053EF09 /* PushKitViewController.m in Sources */,
 				E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */,
@@ -2585,12 +2649,14 @@
 				E7688E731E7A4B400064CD69 /* CYTopWindow.m in Sources */,
 				E781AFF221C8C26100AA845B /* SafariServicesViewController.m in Sources */,
 				E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */,
+				E72BE2E121D47558000BF716 /* CoreTextViewController.m in Sources */,
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
 				E7EE6C3721D34CEF005B2E9C /* PDFDetailViewController.m in Sources */,
 				E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */,
 				E7688E8E1E7A51DE0064CD69 /* CYAudioUtility.m in Sources */,
 				E7A9E3C521D0C43100A64CAC /* ShakeViewController.m in Sources */,
 				E7A9E3C821D0C43D00A64CAC /* ProximityViewController.m in Sources */,
+				E7E6B6CF21D4A83E002F1C53 /* CTFrameParser.m in Sources */,
 				E74EC0F1219D406C0017A64D /* PDFKitViewController.m in Sources */,
 				E7A9E3B921D0C40300A64CAC /* AccelerometerViewController.m in Sources */,
 				E7A9E3C221D0C42300A64CAC /* DeviceMotionViewController.m in Sources */,
