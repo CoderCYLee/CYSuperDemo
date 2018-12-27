@@ -659,6 +659,7 @@
 		E7E6B6DC21D4ACBE002F1C53 /* CTDemoView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDemoView2.h; sourceTree = "<group>"; };
 		E7E6B6DD21D4ACBE002F1C53 /* CTDemoView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDemoView2.m; sourceTree = "<group>"; };
 		E7E6B6E121D4AD71002F1C53 /* JsonTemplate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonTemplate.json; sourceTree = "<group>"; };
+		E7E6B7F021D4C053002F1C53 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		E7EE6C2B21D21491005B2E9C /* CYAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYAnnotation.h; sourceTree = "<group>"; };
 		E7EE6C2C21D21491005B2E9C /* CYAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYAnnotation.m; sourceTree = "<group>"; };
 		E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
@@ -849,6 +850,7 @@
 		90BDAA71ABA9BF39286FE6BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7E6B7F021D4C053002F1C53 /* ARKit.framework */,
 				E7EE6C2E21D30F2D005B2E9C /* PDFKit.framework */,
 				E7C017CE21D1BF860053EF09 /* BusinessChat.framework */,
 				E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */,
