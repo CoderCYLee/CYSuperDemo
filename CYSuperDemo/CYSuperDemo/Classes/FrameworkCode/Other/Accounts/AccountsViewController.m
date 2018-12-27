@@ -87,13 +87,14 @@
         if (granted) {
             NSLog(@"授权通过了");
             
-            NSArray *accounts = [accountStore accountsWithAccountType:accountType];
-            if (accounts.count == 0) {
-                ShowMsg(@"您没有配置账号");
-                return;
-            }
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                NSArray *accounts = [accountStore accountsWithAccountType:accountType];
+                if (accounts.count == 0) {
+                    ShowMsg(@"您没有配置账号");
+                    return;
+                }
                 AccountsDetailViewController *vc = [[AccountsDetailViewController alloc] init];
                 vc.accounts = accounts;
                 vc.navigationItem.title = title;
