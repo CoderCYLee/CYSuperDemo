@@ -46,17 +46,18 @@
     NSString *typeName = self.titleArr[indexPath.row];
     NSString *className = [NSString stringWithFormat:@"%@ViewController", typeName];
     
-    id vc = [[NSClassFromString(className) alloc] init];
-    if ([vc respondsToSelector:@selector(setTitle:)]) {
-        [vc performSelector:@selector(setTitle:) withObject:typeName];
-    }
+    __kindof UIViewController *vc = [[NSClassFromString(className) alloc] init];
+    vc.navigationItem.title = typeName;
+//    if ([vc respondsToSelector:@selector(setTitle:)]) {
+//        [vc performSelector:@selector(setTitle:) withObject:typeName];
+//    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"Foundation", @"UIKit", @"Accounts", @"AddressBook", @"ARKit", @"AudioToolbox", @"AVFoundation", @"AVKit", @"BusinessChat", @"CallKit", @"CarPlay", @"CloudKit", @"Contacts", @"CoreAudioKit", @"CoreBluetooth", @"CoreML", @"CoreMotion", @"CoreNFC", @"CoreText", @"CoreVideo", @"DeviceCheck", @"HealthKit", @"IAD", @"MapKit", @"MediaPlayer", @"Network", @"PassKit", @"PDFKit", @"PushKit", @"QuickLook", @"ReplayKit", @"SafariServices", @"Speech", @"StoreKit", @"UserNotifications"];
+        _titleArr = @[@"Foundation", @"UIKit", @"Accounts", @"AddressBook", @"ARKit", @"AudioToolbox", @"AuthenticationServices", @"AVFoundation", @"AVKit", @"BusinessChat", @"CallKit", @"CarPlay", @"CloudKit", @"Contacts", @"CoreAudioKit", @"CoreBluetooth", @"CoreML", @"CoreMotion", @"CoreNFC", @"CoreText", @"CoreVideo", @"DeviceCheck", @"HealthKit", @"IAD", @"MapKit", @"MediaPlayer", @"Network", @"PassKit", @"PDFKit", @"PushKit", @"QuickLook", @"ReplayKit", @"SafariServices", @"Speech", @"StoreKit", @"UserNotifications"];
     }
     return _titleArr;
 }

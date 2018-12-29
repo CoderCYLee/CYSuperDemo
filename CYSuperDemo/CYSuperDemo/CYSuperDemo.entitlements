@@ -6,7 +6,8 @@
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:www.cyrill.win</string>
+		<string>applinks:cyrill.win</string>
+		<string>webcredentials:cyrill.win</string>
 	</array>
 	<key>com.apple.developer.authentication-services.autofill-credential-provider</key>
 	<true/>

@@ -163,7 +163,7 @@
 }
 
 - (void)SFAuthenticationSession {
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURL *url = [NSURL URLWithString:@"https://cyrill.win"];
     if (@available(iOS 11.0, *)) {
         SFAuthenticationSession *session = [[SFAuthenticationSession alloc] initWithURL:url callbackURLScheme:@"superdemo" completionHandler:^(NSURL * _Nullable callbackURL, NSError * _Nullable error) {
             

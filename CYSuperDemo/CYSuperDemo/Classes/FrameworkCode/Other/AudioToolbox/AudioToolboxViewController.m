@@ -7,6 +7,7 @@
 //
 
 #import "AudioToolboxViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface AudioToolboxViewController ()
 

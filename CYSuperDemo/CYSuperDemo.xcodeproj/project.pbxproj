@@ -49,6 +49,12 @@
 		E74EC0FA219D406C0017A64D /* ARKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0EC219D406C0017A64D /* ARKitViewController.m */; };
 		E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC124219D549C0017A64D /* DeviceCheckViewController.m */; };
 		E7560DD71EAEE91F00BDF928 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */; };
+		E759B01E21D5C4430016F14B /* AuthenticationServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759B01C21D5C4430016F14B /* AuthenticationServicesViewController.m */; };
+		E759B01F21D5C4430016F14B /* AuthenticationServicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E759B01D21D5C4430016F14B /* AuthenticationServicesViewController.xib */; };
+		E759B02521D60AD80016F14B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B816B221BFBCA6006F0B48 /* AuthenticationServices.framework */; };
+		E759B02921D60AD80016F14B /* CredentialProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759B02821D60AD80016F14B /* CredentialProviderViewController.m */; };
+		E759B02C21D60AD80016F14B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E759B02A21D60AD80016F14B /* MainInterface.storyboard */; };
+		E759B03121D60AD80016F14B /* AutofillCredentialProviderExDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E759B02421D60AD80016F14B /* AutofillCredentialProviderExDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4EA21A541580086C13B /* BaseNavigationController.m */; };
 		E762F4EF21A54DDA0086C13B /* CloudKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4EE21A54DDA0086C13B /* CloudKitViewController.m */; };
 		E762F4F721A54F210086C13B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E762F4F621A54F210086C13B /* CloudKit.framework */; };
@@ -233,6 +239,13 @@
 			remoteGlobalIDString = E70616BF1E795BF200762B56;
 			remoteInfo = CYSuperDemo;
 		};
+		E759B02F21D60AD80016F14B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70616B81E795BF200762B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E759B02321D60AD70016F14B;
+			remoteInfo = AutofillCredentialProviderExDemo;
+		};
 		E778091021994B3400E94CD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E70616B81E795BF200762B56 /* Project object */;
@@ -315,6 +328,7 @@
 				E781AFD921C3B62C00AA845B /* NotifiContentDemo.appex in Embed App Extensions */,
 				E778091221994B3400E94CD3 /* TodayDemo.appex in Embed App Extensions */,
 				E778092821994BA800E94CD3 /* ActionDemo.appex in Embed App Extensions */,
+				E759B03121D60AD80016F14B /* AutofillCredentialProviderExDemo.appex in Embed App Extensions */,
 				E781B00121C8C7B600AA845B /* ContentBlockerExtensionDemo.appex in Embed App Extensions */,
 				E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */,
 				E781AFE921C3B64800AA845B /* NotifiServiceDemo.appex in Embed App Extensions */,
@@ -432,6 +446,15 @@
 		E7560DD51EAEE91F00BDF928 /* UIView+CYDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CYDisplay.h"; sourceTree = "<group>"; };
 		E7560DD61EAEE91F00BDF928 /* UIView+CYDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CYDisplay.m"; sourceTree = "<group>"; };
 		E7581060216F4D71009BB5C8 /* CYCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCategories.h; sourceTree = "<group>"; };
+		E759B01B21D5C4430016F14B /* AuthenticationServicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationServicesViewController.h; sourceTree = "<group>"; };
+		E759B01C21D5C4430016F14B /* AuthenticationServicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationServicesViewController.m; sourceTree = "<group>"; };
+		E759B01D21D5C4430016F14B /* AuthenticationServicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationServicesViewController.xib; sourceTree = "<group>"; };
+		E759B02421D60AD80016F14B /* AutofillCredentialProviderExDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutofillCredentialProviderExDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E759B02721D60AD80016F14B /* CredentialProviderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CredentialProviderViewController.h; sourceTree = "<group>"; };
+		E759B02821D60AD80016F14B /* CredentialProviderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CredentialProviderViewController.m; sourceTree = "<group>"; };
+		E759B02B21D60AD80016F14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E759B02D21D60AD80016F14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E759B02E21D60AD80016F14B /* AutofillCredentialProviderExDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutofillCredentialProviderExDemo.entitlements; sourceTree = "<group>"; };
 		E762F4E921A541580086C13B /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		E762F4EA21A541580086C13B /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		E762F4ED21A54DDA0086C13B /* CloudKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKitViewController.h; sourceTree = "<group>"; };
@@ -769,6 +792,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E759B02121D60AD70016F14B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E759B02521D60AD80016F14B /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E778090221994B3400E94CD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -899,6 +930,7 @@
 				E781AFE221C3B64800AA845B /* NotifiServiceDemo */,
 				E781AFF821C8C7B600AA845B /* ContentBlockerExtensionDemo */,
 				E7C017D321D1C05D0053EF09 /* StickerPicksExDemo */,
+				E759B02621D60AD80016F14B /* AutofillCredentialProviderExDemo */,
 				E70616C11E795BF200762B56 /* Products */,
 				3582003E5D7A95955E54D1AF /* Pods */,
 				90BDAA71ABA9BF39286FE6BD /* Frameworks */,
@@ -921,6 +953,7 @@
 				E781AFE121C3B64800AA845B /* NotifiServiceDemo.appex */,
 				E781AFF721C8C7B600AA845B /* ContentBlockerExtensionDemo.appex */,
 				E7C017D221D1C05D0053EF09 /* StickerPicksExDemo.appex */,
+				E759B02421D60AD80016F14B /* AutofillCredentialProviderExDemo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1000,6 +1033,7 @@
 				E74EC0E7219D406C0017A64D /* AddressBook */,
 				E74EC0EB219D406C0017A64D /* ARKit */,
 				E7C017B221D0E6420053EF09 /* AudioToolbox */,
+				E759B01721D5C3FA0016F14B /* AuthenticationServices */,
 				E74EC0D7219D406C0017A64D /* AVFoundation */,
 				E74EC0E4219D406C0017A64D /* AVKit */,
 				E7C017B321D0E6A60053EF09 /* BusinessChat */,
@@ -1156,6 +1190,28 @@
 				E74EC0EC219D406C0017A64D /* ARKitViewController.m */,
 			);
 			path = ARKit;
+			sourceTree = "<group>";
+		};
+		E759B01721D5C3FA0016F14B /* AuthenticationServices */ = {
+			isa = PBXGroup;
+			children = (
+				E759B01B21D5C4430016F14B /* AuthenticationServicesViewController.h */,
+				E759B01C21D5C4430016F14B /* AuthenticationServicesViewController.m */,
+				E759B01D21D5C4430016F14B /* AuthenticationServicesViewController.xib */,
+			);
+			path = AuthenticationServices;
+			sourceTree = "<group>";
+		};
+		E759B02621D60AD80016F14B /* AutofillCredentialProviderExDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E759B02721D60AD80016F14B /* CredentialProviderViewController.h */,
+				E759B02821D60AD80016F14B /* CredentialProviderViewController.m */,
+				E759B02A21D60AD80016F14B /* MainInterface.storyboard */,
+				E759B02D21D60AD80016F14B /* Info.plist */,
+				E759B02E21D60AD80016F14B /* AutofillCredentialProviderExDemo.entitlements */,
+			);
+			path = AutofillCredentialProviderExDemo;
 			sourceTree = "<group>";
 		};
 		E762F4EC21A54D880086C13B /* CloudKit */ = {
@@ -1811,6 +1867,7 @@
 				E781AFE821C3B64800AA845B /* PBXTargetDependency */,
 				E781B00021C8C7B600AA845B /* PBXTargetDependency */,
 				E7C017D821D1C05F0053EF09 /* PBXTargetDependency */,
+				E759B03021D60AD80016F14B /* PBXTargetDependency */,
 			);
 			name = CYSuperDemo;
 			productName = CYSuperDemo;
@@ -1854,6 +1911,23 @@
 			productName = CYSuperDemoUITests;
 			productReference = E70616E41E795BF200762B56 /* CYSuperDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E759B02321D60AD70016F14B /* AutofillCredentialProviderExDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E759B03221D60AD80016F14B /* Build configuration list for PBXNativeTarget "AutofillCredentialProviderExDemo" */;
+			buildPhases = (
+				E759B02021D60AD70016F14B /* Sources */,
+				E759B02121D60AD70016F14B /* Frameworks */,
+				E759B02221D60AD70016F14B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutofillCredentialProviderExDemo;
+			productName = AutofillCredentialProviderExDemo;
+			productReference = E759B02421D60AD80016F14B /* AutofillCredentialProviderExDemo.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		E778090421994B3400E94CD3 /* TodayDemo */ = {
 			isa = PBXNativeTarget;
@@ -2098,6 +2172,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E70616BF1E795BF200762B56;
 					};
+					E759B02321D60AD70016F14B = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = JXJV99SFC3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
+					};
 					E778090421994B3400E94CD3 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = JXJV99SFC3;
@@ -2182,6 +2266,7 @@
 				E781AFC921C3B62B00AA845B /* NotifiContentDemo */,
 				E781AFE021C3B64800AA845B /* NotifiServiceDemo */,
 				E781AFF621C8C7B600AA845B /* ContentBlockerExtensionDemo */,
+				E759B02321D60AD70016F14B /* AutofillCredentialProviderExDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -2196,6 +2281,7 @@
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
 				E7A9E3A021D0708000A64CAC /* SpeechDemo2ViewController.xib in Resources */,
 				E7EE6C4521D36D23005B2E9C /* pdf3.pdf in Resources */,
+				E759B01F21D5C4430016F14B /* AuthenticationServicesViewController.xib in Resources */,
 				E781AFBD21C3A79700AA845B /* jpg1.jpg in Resources */,
 				E7EE6C3821D34CEF005B2E9C /* PDFDetailViewController.xib in Resources */,
 				E76F721721C8DA3400550C1E /* txt1.txt in Resources */,
@@ -2235,6 +2321,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E759B02221D60AD70016F14B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E759B02C21D60AD80016F14B /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2579,6 +2673,7 @@
 				E7F73D1A21C0AEC2000ACDF4 /* LaunchView.m in Sources */,
 				E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */,
 				E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */,
+				E759B01E21D5C4430016F14B /* AuthenticationServicesViewController.m in Sources */,
 				E7C017CD21D0E7510053EF09 /* CarPlayViewController.m in Sources */,
 				E7F73DA921C240CF000ACDF4 /* BaseTableViewController.m in Sources */,
 				E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */,
@@ -2697,6 +2792,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E759B02021D60AD70016F14B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E759B02921D60AD80016F14B /* CredentialProviderViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E778090121994B3400E94CD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2777,6 +2880,11 @@
 			target = E70616BF1E795BF200762B56 /* CYSuperDemo */;
 			targetProxy = E70616E51E795BF200762B56 /* PBXContainerItemProxy */;
 		};
+		E759B03021D60AD80016F14B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E759B02321D60AD70016F14B /* AutofillCredentialProviderExDemo */;
+			targetProxy = E759B02F21D60AD80016F14B /* PBXContainerItemProxy */;
+		};
 		E778091121994B3400E94CD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E778090421994B3400E94CD3 /* TodayDemo */;
@@ -2837,6 +2945,14 @@
 				E7F73D5321C0F69D000ACDF4 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E759B02A21D60AD80016F14B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E759B02B21D60AD80016F14B /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		E778090C21994B3400E94CD3 /* MainInterface.storyboard */ = {
@@ -3104,6 +3220,53 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYSuperDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = CYSuperDemo;
+			};
+			name = Release;
+		};
+		E759B03321D60AD80016F14B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = AutofillCredentialProviderExDemo/AutofillCredentialProviderExDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AutofillCredentialProviderExDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.AutofillCredentialProviderExDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E759B03421D60AD80016F14B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = AutofillCredentialProviderExDemo/AutofillCredentialProviderExDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AutofillCredentialProviderExDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.cy.superdemo.AutofillCredentialProviderExDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -3638,6 +3801,15 @@
 			buildConfigurations = (
 				E70616F41E795BF200762B56 /* Debug */,
 				E70616F51E795BF200762B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E759B03221D60AD80016F14B /* Build configuration list for PBXNativeTarget "AutofillCredentialProviderExDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E759B03321D60AD80016F14B /* Debug */,
+				E759B03421D60AD80016F14B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
