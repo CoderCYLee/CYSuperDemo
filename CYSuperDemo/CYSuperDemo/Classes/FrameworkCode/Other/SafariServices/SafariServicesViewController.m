@@ -15,6 +15,8 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *titleArr;
 
+@property (nonatomic, strong) SFAuthenticationSession *session;
+
 @end
 
 @implementation SafariServicesViewController
@@ -163,12 +165,12 @@
 }
 
 - (void)SFAuthenticationSession {
-    NSURL *url = [NSURL URLWithString:@"https://cyrill.win"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/login/oauth/authorize?client_id=93d44edf898098d26435&scope=user+repo+notifications"];
     if (@available(iOS 11.0, *)) {
-        SFAuthenticationSession *session = [[SFAuthenticationSession alloc] initWithURL:url callbackURLScheme:@"superdemo" completionHandler:^(NSURL * _Nullable callbackURL, NSError * _Nullable error) {
+        _session = [[SFAuthenticationSession alloc] initWithURL:url callbackURLScheme:@"superdemo://" completionHandler:^(NSURL * _Nullable callbackURL, NSError * _Nullable error) {
             
         }];
-        [session start];
+        [_session start];
     } else {
         // Fallback on earlier versions
         ShowMsg(@"iOS 11.0 以上才能使用");
