@@ -115,9 +115,6 @@
         // 使用 UNUserNotificationCenter 来管理通知
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         
-        //2.通知中心设置分类
-        [center setNotificationCategories:[NSSet setWithObjects:[self createCatrgory], nil]];
-        
         //监听回调事件
         center.delegate = self;
         
@@ -129,9 +126,21 @@
          UNAuthorizationOptionCarPlay = (1 << 3), 车载通知
          UNAuthorizationOptionCriticalAlert __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 4),
          UNAuthorizationOptionProvidesAppNotificationSettings __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 5),
-         UNAuthorizationOptionProvisional
+         UNAuthorizationOptionProvisional __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 6)
          */
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge + UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        
+        UNAuthorizationOptions options = UNAuthorizationOptionBadge + UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionCarPlay;
+        
+        if (@available(iOS 12.0, *)) {
+            options += UNAuthorizationOptionCriticalAlert;
+            options += UNAuthorizationOptionProvidesAppNotificationSettings;
+            options += UNAuthorizationOptionProvisional;
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        
+        [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
             
             if (granted) {
                 NSLog(@"授权成功");
@@ -145,37 +154,37 @@
         }];
         
         
-//        // action
-//        //文本交互(iOS10之后支持对通知的文本交互)
-//
-//        /**options
-//         UNNotificationActionOptionAuthenticationRequired  用于文本
-//         UNNotificationActionOptionForeground  前台模式，进入APP
-//         UNNotificationActionOptionDestructive  销毁模式，不进入APP
-//         */
-//        UNTextInputNotificationAction *textInputAction = [UNTextInputNotificationAction actionWithIdentifier:@"textInputAction" title:@"请输入信息" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"输入" textInputPlaceholder:@"还有多少话要说……"];
-//
-//        //打开应用按钮
-//        UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"foreGround" title:@"打开" options:UNNotificationActionOptionForeground];
-//
-//        //不打开应用按钮
-//        UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"backGround" title:@"关闭" options:UNNotificationActionOptionDestructive];
-//
-//        //创建分类
-//        /**
-//         Identifier:分类的标识符，通知可以添加不同类型的分类交互按钮
-//         actions：交互按钮
-//         intentIdentifiers：分类内部标识符  没什么用 一般为空就行
-//         options:通知的参数   UNNotificationCategoryOptionCustomDismissAction:自定义交互按钮   UNNotificationCategoryOptionAllowInCarPlay:车载交互
-//         */
-//
-//
-//        UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[textInputAction,action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
-//
-//        [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObjects:category, nil]];
-//
+        // action
+        //文本交互(iOS10之后支持对通知的文本交互)
 
-        
+        /**options
+         UNNotificationActionOptionAuthenticationRequired  用于文本
+         UNNotificationActionOptionForeground  前台模式，进入APP
+         UNNotificationActionOptionDestructive  销毁模式，不进入APP
+         */
+        UNTextInputNotificationAction *textInputAction = [UNTextInputNotificationAction actionWithIdentifier:@"textInputAction" title:@"请输入信息" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"输入" textInputPlaceholder:@"还有多少话要说……"];
+
+        //打开应用按钮
+        UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"foreGround" title:@"打开" options:UNNotificationActionOptionForeground];
+
+        //不打开应用按钮
+        UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"backGround" title:@"关闭" options:UNNotificationActionOptionDestructive];
+
+        //创建分类
+        /**
+         Identifier:分类的标识符，通知可以添加不同类型的分类交互按钮
+         actions：交互按钮
+         intentIdentifiers：分类内部标识符  没什么用 一般为空就行
+         options:通知的参数   UNNotificationCategoryOptionCustomDismissAction:自定义交互按钮   UNNotificationCategoryOptionAllowInCarPlay:车载交互
+         */
+
+
+        UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[textInputAction,action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
+
+        [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObjects:category, nil]];
+
+
+          
     } else {
         
     }
@@ -184,39 +193,6 @@
     return YES;
 }
 
-
-#pragma mark - 创建通知分类（交互按钮）
-
-- (UNNotificationCategory *)createCatrgory
-{
-    //文本交互(iOS10之后支持对通知的文本交互)
-    
-    /**options
-     UNNotificationActionOptionAuthenticationRequired  用于文本
-     UNNotificationActionOptionForeground  前台模式，进入APP
-     UNNotificationActionOptionDestructive  销毁模式，不进入APP
-     */
-    UNTextInputNotificationAction *textInputAction = [UNTextInputNotificationAction actionWithIdentifier:@"textInputAction" title:@"请输入信息" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"输入" textInputPlaceholder:@"还有多少话要说……"];
-    
-    //打开应用按钮
-    UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"foreGround" title:@"打开" options:UNNotificationActionOptionForeground];
-    
-    //不打开应用按钮
-    UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"backGround" title:@"关闭" options:UNNotificationActionOptionDestructive];
-    
-    //创建分类
-    /**
-     Identifier:分类的标识符，通知可以添加不同类型的分类交互按钮
-     actions：交互按钮
-     intentIdentifiers：分类内部标识符  没什么用 一般为空就行
-     options:通知的参数   UNNotificationCategoryOptionCustomDismissAction:自定义交互按钮   UNNotificationCategoryOptionAllowInCarPlay:车载交互
-     */
-    
-    
-    UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[textInputAction,action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
-    
-    return category;
-}
 
 
 #pragma mark - iOS10 UNUserNotificationCenterDelegate
@@ -287,7 +263,7 @@
 // The method will be called on the delegate when the application is launched in response to the user's request to view in-app notification settings. Add UNAuthorizationOptionProvidesAppNotificationSettings as an option in requestAuthorizationWithOptions:completionHandler: to add a button to inline notification settings view and the notification settings view in Settings. The notification will be nil when opened from Settings.
 // iOS 12.0
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification {
-    
+    NSLog(@"从系统的设置 -> 本App -> 通知 -> \"App\"通知设置");
 }
 
 #pragma mark - URL 回调
