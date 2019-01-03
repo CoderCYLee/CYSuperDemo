@@ -1,24 +1,22 @@
-
 //
-//  CoreBluetoothViewController.m
+//  EventKitViewController.m
 //  CYSuperDemo
 //
-//  Created by cyrill on 2018/12/24.
-//  Copyright © 2018 Cyrill. All rights reserved.
+//  Created by cyrill on 2019/1/2.
+//  Copyright © 2019 Cyrill. All rights reserved.
 //
 
-#import "CoreBluetoothViewController.h"
-#import <CoreBluetooth/CoreBluetooth.h>
+#import "EventKitViewController.h"
 
-@interface CoreBluetoothViewController ()
+@interface EventKitViewController ()
 
 @end
 
-@implementation CoreBluetoothViewController
+@implementation EventKitViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 /*

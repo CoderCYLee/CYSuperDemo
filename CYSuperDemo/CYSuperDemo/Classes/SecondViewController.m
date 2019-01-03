@@ -120,6 +120,13 @@
     [self showViewController:viewControllerToCommit sender:self];
 }
 
+- (void)restoreUserActivityState:(NSUserActivity *)activity{
+    if ([activity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        
+    } else {
+        
+    }
+}
 
 - (NSArray *)titleArr
 {

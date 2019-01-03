@@ -114,20 +114,28 @@
 
         // 使用 UNUserNotificationCenter 来管理通知
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        
+        //2.通知中心设置分类
+        [center setNotificationCategories:[NSSet setWithObjects:[self createCatrgory], nil]];
+        
         //监听回调事件
         center.delegate = self;
         
         //iOS 10 使用以下方法注册，才能得到授权，注册通知以后，会自动注册 deviceToken，如果获取不到 deviceToken，Xcode8下要注意开启 Capability->Push Notification。
         /*
-         UNAuthorizationOptionBadge   = (1 << 0),
-         UNAuthorizationOptionSound   = (1 << 1),
-         UNAuthorizationOptionAlert   = (1 << 2),
-         UNAuthorizationOptionCarPlay = (1 << 3),
+         UNAuthorizationOptionBadge   = (1 << 0), 红色圆圈
+         UNAuthorizationOptionSound   = (1 << 1), 声音
+         UNAuthorizationOptionAlert   = (1 << 2), 内容
+         UNAuthorizationOptionCarPlay = (1 << 3), 车载通知
          UNAuthorizationOptionCriticalAlert __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 4),
          UNAuthorizationOptionProvidesAppNotificationSettings __IOS_AVAILABLE(12.0) __TVOS_AVAILABLE(12.0) __OSX_AVAILABLE(10.14) __WATCHOS_AVAILABLE(5.0) = (1 << 5),
          UNAuthorizationOptionProvisional
          */
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge + UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            
+            if (granted) {
+                NSLog(@"授权成功");
+            }
             
         }];
         
@@ -177,30 +185,80 @@
 }
 
 
+#pragma mark - 创建通知分类（交互按钮）
+
+- (UNNotificationCategory *)createCatrgory
+{
+    //文本交互(iOS10之后支持对通知的文本交互)
+    
+    /**options
+     UNNotificationActionOptionAuthenticationRequired  用于文本
+     UNNotificationActionOptionForeground  前台模式，进入APP
+     UNNotificationActionOptionDestructive  销毁模式，不进入APP
+     */
+    UNTextInputNotificationAction *textInputAction = [UNTextInputNotificationAction actionWithIdentifier:@"textInputAction" title:@"请输入信息" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"输入" textInputPlaceholder:@"还有多少话要说……"];
+    
+    //打开应用按钮
+    UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"foreGround" title:@"打开" options:UNNotificationActionOptionForeground];
+    
+    //不打开应用按钮
+    UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"backGround" title:@"关闭" options:UNNotificationActionOptionDestructive];
+    
+    //创建分类
+    /**
+     Identifier:分类的标识符，通知可以添加不同类型的分类交互按钮
+     actions：交互按钮
+     intentIdentifiers：分类内部标识符  没什么用 一般为空就行
+     options:通知的参数   UNNotificationCategoryOptionCustomDismissAction:自定义交互按钮   UNNotificationCategoryOptionAllowInCarPlay:车载交互
+     */
+    
+    
+    UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[textInputAction,action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
+    
+    return category;
+}
+
 
 #pragma mark - iOS10 UNUserNotificationCenterDelegate
 // The method will be called on the delegate only if the application is in the foreground. If the method is not implemented or the handler is not called in a timely manner then the notification will not be presented. The application can choose to have the notification presented as a sound, badge, alert and/or in the notification list. This decision should be based on whether the information in the notification is otherwise visible to the user.
 // iOS 10.0
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    // 前台收到通知
     
-    NSDictionary * userInfo = notification.request.content.userInfo;
-    UNNotificationRequest *request = notification.request; // 收到推送的请求
-    UNNotificationContent *content = request.content; // 收到推送的消息内容
-    NSNumber *badge = content.badge;  // 推送消息的角标
-    NSString *body = content.body;    // 推送消息体
-    UNNotificationSound *sound = content.sound;  // 推送消息的声音
-    NSString *subtitle = content.subtitle;  // 推送消息的副标题
-    NSString *title = content.title;  // 推送消息的标题
+    //弹出一个网页
+    UIWebView *webview = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 400, 500)];
+    webview.center = self.window.center;
+    [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+    [self.window addSubview:webview];
     
-    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        NSLog(@"iOS10 前台收到远程通知:%@", body);
-        
-    } else {
-        // 判断为本地通知
-        NSLog(@"iOS10 前台收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
-        
-    }
-    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
+    //弹出动画
+    webview.alpha = 0;
+    [UIView animateWithDuration:1 animations:^{
+        webview.alpha = 1;
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [webview removeFromSuperview];
+    });
+    
+//    NSDictionary * userInfo = notification.request.content.userInfo;
+//    UNNotificationRequest *request = notification.request; // 收到推送的请求
+//    UNNotificationContent *content = request.content; // 收到推送的消息内容
+//    NSNumber *badge = content.badge;  // 推送消息的角标
+//    NSString *body = content.body;    // 推送消息体
+//    UNNotificationSound *sound = content.sound;  // 推送消息的声音
+//    NSString *subtitle = content.subtitle;  // 推送消息的副标题
+//    NSString *title = content.title;  // 推送消息的标题
+//
+//    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+//        NSLog(@"iOS10 前台收到远程通知:%@", body);
+//
+//    } else {
+//        // 判断为本地通知
+//        NSLog(@"iOS10 前台收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+//
+//    }
+//    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
    
 }
 
@@ -208,6 +266,22 @@
 // iOS 10.0
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
     
+    //按钮点击事件
+    
+    
+    //根据identifer判断按钮类型，如果是textInput则获取输入的文字
+    if ([response.actionIdentifier isEqualToString:@"textInputAction"]) {
+        
+        //获取文本响应
+        UNTextInputNotificationResponse *textResponse = (UNTextInputNotificationResponse *)response;
+        
+        NSLog(@"输入的内容为：%@",textResponse.userText);
+    }
+    
+    //处理其他时间
+    NSLog(@"%@",response.actionIdentifier);
+    
+    completionHandler();
 }
 
 // The method will be called on the delegate when the application is launched in response to the user's request to view in-app notification settings. Add UNAuthorizationOptionProvidesAppNotificationSettings as an option in requestAuthorizationWithOptions:completionHandler: to add a button to inline notification settings view and the notification settings view in Settings. The notification will be nil when opened from Settings.
@@ -557,6 +631,12 @@
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler {
     // 从通用链接过来
     NSLog(@"userActivity : %@",userActivity.webpageURL.description);
+    
+    TabBarController *tabBarVC = (TabBarController *)self.window.rootViewController;
+    [tabBarVC.navigationController2.topViewController restoreUserActivityState:userActivity];
+    
+    
+    
     return YES;
 }
 

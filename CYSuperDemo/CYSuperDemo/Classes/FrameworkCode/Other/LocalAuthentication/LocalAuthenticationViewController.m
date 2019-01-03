@@ -1,27 +1,27 @@
 //
-//  FoundationViewController.m
+//  LocalAuthenticationViewController.m
 //  CYSuperDemo
 //
-//  Created by cyrill on 2018/11/20.
-//  Copyright © 2018 Cyrill. All rights reserved.
+//  Created by cyrill on 2019/1/2.
+//  Copyright © 2019 Cyrill. All rights reserved.
 //
 
-#import "FoundationViewController.h"
-#import <Foundation/Foundation.h>
+#import "LocalAuthenticationViewController.h"
 
-@interface FoundationViewController ()
+@interface LocalAuthenticationViewController ()
 
 @property (nonatomic, strong) NSArray *titleArr;
 
 @end
 
-@implementation FoundationViewController
+@implementation LocalAuthenticationViewController
+
+#pragma mark - life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
-    
 }
 
 #pragma mark - Table view data source
@@ -52,15 +52,17 @@
     //        [vc performSelector:@selector(setTitle:) withObject:typeName];
     //    }
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
+
+#pragma mark - getter
 
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"NSArray"];
+        _titleArr = @[@"TouchID", @"FaceID"];
     }
     return _titleArr;
 }
-
 
 @end

@@ -12,6 +12,12 @@
 API_AVAILABLE(ios(12.0))
 @interface AuthenticationServicesViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *userTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *newpasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *codeTextField;
+
 @property (nonatomic, strong) ASWebAuthenticationSession *session;
 
 @end
@@ -22,64 +28,53 @@ API_AVAILABLE(ios(12.0))
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, 200, 20)];
-    userLabel.font = [UIFont systemFontOfSize:14.0f];
-    userLabel.textColor = [UIColor blackColor];
-    userLabel.text = @"账号";
-    [self.view addSubview:userLabel];
-    // 用户名
-    UITextField *userField = [[UITextField alloc] initWithFrame:CGRectMake(30, 130, 200, 30)];
-    userField.layer.borderColor= [UIColor grayColor].CGColor;
-    userField.layer.borderWidth= 1.0f;
-    userField.placeholder = @"";
-    userField.font = [UIFont systemFontOfSize:14.0f];
-    userField.textColor = [UIColor blackColor];
-    userField.keyboardType = UIKeyboardTypeAlphabet;
-    userField.returnKeyType = UIReturnKeyDone;
+    _userTextField.layer.borderColor= [UIColor grayColor].CGColor;
+    _userTextField.layer.borderWidth= 1.0f;
+    _userTextField.placeholder = @"";
+    _userTextField.font = [UIFont systemFontOfSize:14.0f];
+    _userTextField.textColor = [UIColor blackColor];
+    _userTextField.keyboardType = UIKeyboardTypeAlphabet;
+    _userTextField.returnKeyType = UIReturnKeyDone;
     if (@available(iOS 11.0, *)) {
-        userField.textContentType = UITextContentTypeUsername;
+        _userTextField.textContentType = UITextContentTypeUsername;
     } else {
         // Fallback on earlier versions
     }
-//    userField.delegate = self;
-    //    [userField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
-    [self.view addSubview:userField];
-    
-    UILabel *codeLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 170, 200, 20)];
-    codeLabel.font = [UIFont systemFontOfSize:14.0f];
-    codeLabel.textColor = [UIColor blackColor];
-    codeLabel.text = @"密码";
-    [self.view addSubview:codeLabel];
-    // 密码
-    UITextField *codeField = [[UITextField alloc] initWithFrame:CGRectMake(30, 200, 200, 30)];
-    codeField.layer.borderColor= [UIColor grayColor].CGColor;
-    codeField.layer.borderWidth= 1.0f;
-    codeField.placeholder = @"";
-    codeField.font = [UIFont systemFontOfSize:14.0f];
-    codeField.textColor = [UIColor blackColor];
-    codeField.keyboardType = UIKeyboardTypeAlphabet;
-    codeField.returnKeyType = UIReturnKeyDone;
+//    _userTextField.delegate = self;
+    //    [_userTextField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
+   
+
+    _passwordTextField.layer.borderColor= [UIColor grayColor].CGColor;
+    _passwordTextField.layer.borderWidth= 1.0f;
+    _passwordTextField.placeholder = @"";
+    _passwordTextField.font = [UIFont systemFontOfSize:14.0f];
+    _passwordTextField.textColor = [UIColor blackColor];
+    _passwordTextField.keyboardType = UIKeyboardTypeAlphabet;
+    _passwordTextField.returnKeyType = UIReturnKeyDone;
     if (@available(iOS 11.0, *)) {
-        codeField.textContentType = UITextContentTypePassword;
+        _passwordTextField.textContentType = UITextContentTypePassword;
     } else {
-        // Fallback on earlier versions
+        
     }
-    codeField.secureTextEntry = YES;
-//    codeField.delegate = self;
+    _passwordTextField.secureTextEntry = YES;
+//    _codeField.delegate = self;
     //    [userField addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
-    [self.view addSubview:codeField];
     
     
-    UIButton *login = [[UIButton alloc] initWithFrame:CGRectMake(30, 250, 50, 30)];
-    [login setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [login.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
-    [login setTitle:@"登录" forState:UIControlStateNormal];
-    login.layer.borderColor= [UIColor blueColor].CGColor;
-    login.layer.borderWidth= 1.0f;
-    [self.view addSubview:login];
+    if (@available(iOS 12.0, *)) {
+        // 强密码提示
+//        _newpasswordTextField.textContentType = UITextContentTypeNewPassword;
+    } else {
+        
+    }
     
+    if (@available(iOS 12.0, *)) {
+        // 短信验证码
+        _codeTextField.textContentType = UITextContentTypeOneTimeCode;
+    } else {
+        
+    }
     
-    [login addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     
 //    ASCredentialIdentityStore *store = [ASCredentialIdentityStore sharedStore];
 //
@@ -124,7 +119,7 @@ API_AVAILABLE(ios(12.0))
 //    }];
 }
 
-- (void)login {
+- (IBAction)login {
     if (@available(iOS 12.0, *)) {
         NSURL *url = [NSURL URLWithString:@"https://github.com/login/oauth/authorize?client_id=93d44edf898098d26435&scope=user+repo+notifications"];
         // 这里要强引用，不然会消失
@@ -157,11 +152,15 @@ API_AVAILABLE(ios(12.0))
     }
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    
-//    ASCredentialProviderViewController *vc = [[ASCredentialProviderViewController alloc] init];
-//
+- (IBAction)taobao {
+    // taobao://m.tb.cn/h.3rX08Px?sm=d73436
+    NSString *url = @"taobao://item.taobao.com/item.htm?id=577359137670";
+    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        
+    } else {
+        NSLog(@"本地没有该软件");
+    }
 }
 
 @end

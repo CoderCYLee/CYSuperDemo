@@ -10,6 +10,7 @@
 #import <SafariServices/SafariServices.h>
 #import <Masonry.h>
 
+API_AVAILABLE(ios(11.0))
 @interface SafariServicesViewController () <UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;

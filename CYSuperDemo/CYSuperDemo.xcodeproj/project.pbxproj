@@ -55,6 +55,11 @@
 		E759B02921D60AD80016F14B /* CredentialProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759B02821D60AD80016F14B /* CredentialProviderViewController.m */; };
 		E759B02C21D60AD80016F14B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E759B02A21D60AD80016F14B /* MainInterface.storyboard */; };
 		E759B03121D60AD80016F14B /* AutofillCredentialProviderExDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E759B02421D60AD80016F14B /* AutofillCredentialProviderExDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E75E874221DCA5070018269E /* FaceIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75E874021DCA5070018269E /* FaceIDViewController.xib */; };
+		E75E874321DCA8880018269E /* FaceIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75E873F21DCA5070018269E /* FaceIDViewController.m */; };
+		E75E874621DCB55E0018269E /* NSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75E874521DCB55E0018269E /* NSArrayViewController.m */; };
+		E75E874B21DCBBE30018269E /* EventKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75E874921DCBBE30018269E /* EventKitViewController.m */; };
+		E75E874C21DCBBE30018269E /* EventKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75E874A21DCBBE30018269E /* EventKitViewController.xib */; };
 		E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4EA21A541580086C13B /* BaseNavigationController.m */; };
 		E762F4EF21A54DDA0086C13B /* CloudKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762F4EE21A54DDA0086C13B /* CloudKitViewController.m */; };
 		E762F4F721A54F210086C13B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E762F4F621A54F210086C13B /* CloudKit.framework */; };
@@ -102,6 +107,7 @@
 		E76F721F21C8DDEB00550C1E /* SpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76F721E21C8DDEB00550C1E /* SpeechViewController.m */; };
 		E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76F722021C8E22D00550C1E /* 1122334455.mp3 */; };
 		E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7722E581F42D64300BBE9B6 /* CYMapManager.m */; };
+		E777912121DDFC4E00FF326D /* UserNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */; };
 		E778090721994B3400E94CD3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E778090621994B3400E94CD3 /* NotificationCenter.framework */; };
 		E778090B21994B3400E94CD3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778090A21994B3400E94CD3 /* TodayViewController.m */; };
 		E778090E21994B3400E94CD3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778090C21994B3400E94CD3 /* MainInterface.storyboard */; };
@@ -137,6 +143,9 @@
 		E792EDB121D4C87400D35F21 /* AccountsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E792EDAF21D4C87400D35F21 /* AccountsDetailViewController.xib */; };
 		E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FC2190270E002BEAFD /* HomeViewController.m */; };
 		E796E6002192BBF3002BEAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E796E5FF2192BBF3002BEAFD /* SecondViewController.m */; };
+		E79C0E3921DCA3A3004CC463 /* LocalAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E79C0E3821DCA3A3004CC463 /* LocalAuthenticationViewController.m */; };
+		E79C0E3D21DCA4AA004CC463 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E79C0E3B21DCA4A9004CC463 /* TouchIDViewController.m */; };
+		E79C0E3E21DCA4AA004CC463 /* TouchIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E79C0E3C21DCA4A9004CC463 /* TouchIDViewController.xib */; };
 		E7A226AE1FAC021600CF65A1 /* UIButton+CYRoundTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */; };
 		E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A9E39821D0705800A64CAC /* SpeechDemo1ViewController.m */; };
 		E7A9E39B21D0705800A64CAC /* SpeechDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A9E39921D0705800A64CAC /* SpeechDemo1ViewController.xib */; };
@@ -455,6 +464,14 @@
 		E759B02B21D60AD80016F14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E759B02D21D60AD80016F14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E759B02E21D60AD80016F14B /* AutofillCredentialProviderExDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutofillCredentialProviderExDemo.entitlements; sourceTree = "<group>"; };
+		E75E873E21DCA5070018269E /* FaceIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceIDViewController.h; sourceTree = "<group>"; };
+		E75E873F21DCA5070018269E /* FaceIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceIDViewController.m; sourceTree = "<group>"; };
+		E75E874021DCA5070018269E /* FaceIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaceIDViewController.xib; sourceTree = "<group>"; };
+		E75E874421DCB55E0018269E /* NSArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSArrayViewController.h; sourceTree = "<group>"; };
+		E75E874521DCB55E0018269E /* NSArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSArrayViewController.m; sourceTree = "<group>"; };
+		E75E874821DCBBE30018269E /* EventKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventKitViewController.h; sourceTree = "<group>"; };
+		E75E874921DCBBE30018269E /* EventKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventKitViewController.m; sourceTree = "<group>"; };
+		E75E874A21DCBBE30018269E /* EventKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventKitViewController.xib; sourceTree = "<group>"; };
 		E762F4E921A541580086C13B /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		E762F4EA21A541580086C13B /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		E762F4ED21A54DDA0086C13B /* CloudKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKitViewController.h; sourceTree = "<group>"; };
@@ -541,6 +558,7 @@
 		E76F722021C8E22D00550C1E /* 1122334455.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1122334455.mp3; sourceTree = "<group>"; };
 		E7722E571F42D64300BBE9B6 /* CYMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMapManager.h; sourceTree = "<group>"; };
 		E7722E581F42D64300BBE9B6 /* CYMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMapManager.m; sourceTree = "<group>"; };
+		E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNotificationsViewController.xib; sourceTree = "<group>"; };
 		E778090521994B3400E94CD3 /* TodayDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E778090621994B3400E94CD3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		E778090921994B3400E94CD3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -595,6 +613,11 @@
 		E796E5FC2190270E002BEAFD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E796E5FE2192BBF3002BEAFD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E796E5FF2192BBF3002BEAFD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E79C0E3721DCA3A3004CC463 /* LocalAuthenticationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalAuthenticationViewController.h; sourceTree = "<group>"; };
+		E79C0E3821DCA3A3004CC463 /* LocalAuthenticationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalAuthenticationViewController.m; sourceTree = "<group>"; };
+		E79C0E3A21DCA4A9004CC463 /* TouchIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
+		E79C0E3B21DCA4A9004CC463 /* TouchIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
+		E79C0E3C21DCA4A9004CC463 /* TouchIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchIDViewController.xib; sourceTree = "<group>"; };
 		E7A226AC1FAC021600CF65A1 /* UIButton+CYRoundTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CYRoundTouch.m"; sourceTree = "<group>"; };
 		E7A226AD1FAC021600CF65A1 /* UIButton+CYRoundTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CYRoundTouch.h"; sourceTree = "<group>"; };
 		E7A9E39721D0705800A64CAC /* SpeechDemo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechDemo1ViewController.h; sourceTree = "<group>"; };
@@ -1049,8 +1072,10 @@
 				E72BE2DE21D4751B000BF716 /* CoreText */,
 				E7FD16EB219D57A60037D720 /* CoreVideo */,
 				E74EC0CD219D406C0017A64D /* DeviceCheck */,
+				E75E874721DCBBCA0018269E /* EventKit */,
 				E7B816AA21BFAD74006F0B48 /* HealthKit */,
 				E7B816A321BF5100006F0B48 /* iAD */,
+				E79C0E3621DCA36C004CC463 /* LocalAuthentication */,
 				E74EC0DA219D406C0017A64D /* MapKit */,
 				E74EC0CA219D406C0017A64D /* MediaPlayer */,
 				E74EC0D1219D406C0017A64D /* Network */,
@@ -1212,6 +1237,16 @@
 				E759B02E21D60AD80016F14B /* AutofillCredentialProviderExDemo.entitlements */,
 			);
 			path = AutofillCredentialProviderExDemo;
+			sourceTree = "<group>";
+		};
+		E75E874721DCBBCA0018269E /* EventKit */ = {
+			isa = PBXGroup;
+			children = (
+				E75E874821DCBBE30018269E /* EventKitViewController.h */,
+				E75E874921DCBBE30018269E /* EventKitViewController.m */,
+				E75E874A21DCBBE30018269E /* EventKitViewController.xib */,
+			);
+			path = EventKit;
 			sourceTree = "<group>";
 		};
 		E762F4EC21A54D880086C13B /* CloudKit */ = {
@@ -1472,6 +1507,8 @@
 			children = (
 				E7094D8F21A40886001E35B2 /* FoundationViewController.h */,
 				E7094D9021A40886001E35B2 /* FoundationViewController.m */,
+				E75E874421DCB55E0018269E /* NSArrayViewController.h */,
+				E75E874521DCB55E0018269E /* NSArrayViewController.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1558,6 +1595,21 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		E79C0E3621DCA36C004CC463 /* LocalAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				E79C0E3721DCA3A3004CC463 /* LocalAuthenticationViewController.h */,
+				E79C0E3821DCA3A3004CC463 /* LocalAuthenticationViewController.m */,
+				E79C0E3A21DCA4A9004CC463 /* TouchIDViewController.h */,
+				E79C0E3B21DCA4A9004CC463 /* TouchIDViewController.m */,
+				E79C0E3C21DCA4A9004CC463 /* TouchIDViewController.xib */,
+				E75E873E21DCA5070018269E /* FaceIDViewController.h */,
+				E75E873F21DCA5070018269E /* FaceIDViewController.m */,
+				E75E874021DCA5070018269E /* FaceIDViewController.xib */,
+			);
+			path = LocalAuthentication;
+			sourceTree = "<group>";
+		};
 		E7A9E3A121D0ABAD00A64CAC /* ReplayKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1581,6 +1633,7 @@
 			children = (
 				E7A9E3AD21D0B33200A64CAC /* UserNotificationsViewController.h */,
 				E7A9E3AE21D0B33200A64CAC /* UserNotificationsViewController.m */,
+				E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */,
 			);
 			path = UserNotifications;
 			sourceTree = "<group>";
@@ -2278,6 +2331,7 @@
 			files = (
 				E7EE6C3E21D355D2005B2E9C /* PDFKitTableViewCell.xib in Resources */,
 				E76F721321C8D76D00550C1E /* md1.md in Resources */,
+				E75E874C21DCBBE30018269E /* EventKitViewController.xib in Resources */,
 				E721242C2193DC4600129C5A /* Second.storyboard in Resources */,
 				E7A9E3A021D0708000A64CAC /* SpeechDemo2ViewController.xib in Resources */,
 				E7EE6C4521D36D23005B2E9C /* pdf3.pdf in Resources */,
@@ -2301,10 +2355,13 @@
 				E781AFBF21C3A7A500AA845B /* jpg2.jpg in Resources */,
 				E7F73D1C21C0AECD000ACDF4 /* LaunchView.xib in Resources */,
 				E74EC0F8219D406C0017A64D /* AddressBook.md in Resources */,
+				E79C0E3E21DCA4AA004CC463 /* TouchIDViewController.xib in Resources */,
 				E7A9E39B21D0705800A64CAC /* SpeechDemo1ViewController.xib in Resources */,
+				E75E874221DCA5070018269E /* FaceIDViewController.xib in Resources */,
 				E76F721921C8DAD800550C1E /* doc1.docx in Resources */,
 				E74EC0F5219D406C0017A64D /* Accounts.md in Resources */,
 				E781AFC521C3AA2700AA845B /* png1.png in Resources */,
+				E777912121DDFC4E00FF326D /* UserNotificationsViewController.xib in Resources */,
 				E72BE2D121D385F3000BF716 /* PDFOutlineCell.xib in Resources */,
 				E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */,
 			);
@@ -2664,7 +2721,9 @@
 				E72BE2D821D4629C000BF716 /* PDFSeachCell.m in Sources */,
 				E7C017BB21D0E7110053EF09 /* CallKitViewController.m in Sources */,
 				E7F73D2621C0E068000ACDF4 /* ExtensionShareViewController.m in Sources */,
+				E79C0E3D21DCA4AA004CC463 /* TouchIDViewController.m in Sources */,
 				E796E5FD2190270E002BEAFD /* HomeViewController.m in Sources */,
+				E75E874621DCB55E0018269E /* NSArrayViewController.m in Sources */,
 				E7688E871E7A4B400064CD69 /* CYHeadImageToBig.m in Sources */,
 				E717E85B1FAAE6B3006E5695 /* NSDate+CY.m in Sources */,
 				E7F40596216C9F4F00B27415 /* CYWifiManager.m in Sources */,
@@ -2691,6 +2750,7 @@
 				E7688E821E7A4B400064CD69 /* UIView+CY.m in Sources */,
 				E762F50421A695730086C13B /* CloudKeyValueViewController.m in Sources */,
 				E7688E801E7A4B400064CD69 /* UILabel+CY.m in Sources */,
+				E79C0E3921DCA3A3004CC463 /* LocalAuthenticationViewController.m in Sources */,
 				E7688E311E7A48DA0064CD69 /* main.m in Sources */,
 				E74EC0FA219D406C0017A64D /* ARKitViewController.m in Sources */,
 				E74EC0F4219D406C0017A64D /* AccountsViewController.m in Sources */,
@@ -2725,6 +2785,7 @@
 				E762F4FE21A55A140086C13B /* CYDocument.m in Sources */,
 				E7A9E3BF21D0C41A00A64CAC /* MegnetometerViewController.m in Sources */,
 				E7688E7C1E7A4B400064CD69 /* UIButton+TapScope.m in Sources */,
+				E75E874B21DCBBE30018269E /* EventKitViewController.m in Sources */,
 				E7E6B6DE21D4ACBE002F1C53 /* CTDemoView2.m in Sources */,
 				E74EC0F9219D406C0017A64D /* AddressBookViewController.m in Sources */,
 				E717E8581FAAE69E006E5695 /* NSDictionary+CY.m in Sources */,
@@ -2764,6 +2825,7 @@
 				E7A9E3C521D0C43100A64CAC /* ShakeViewController.m in Sources */,
 				E7A9E3C821D0C43D00A64CAC /* ProximityViewController.m in Sources */,
 				E7E6B6CF21D4A83E002F1C53 /* CTFrameParser.m in Sources */,
+				E75E874321DCA8880018269E /* FaceIDViewController.m in Sources */,
 				E74EC0F1219D406C0017A64D /* PDFKitViewController.m in Sources */,
 				E7A9E3B921D0C40300A64CAC /* AccelerometerViewController.m in Sources */,
 				E7A9E3C221D0C42300A64CAC /* DeviceMotionViewController.m in Sources */,
