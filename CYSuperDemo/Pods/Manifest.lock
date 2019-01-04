@@ -39,7 +39,7 @@ PODS:
   - CubeController (1.2.1)
   - DACircularProgress (2.3.1)
   - DateTools (2.0.0)
-  - DeviceUtil (4.0.3)
+  - DeviceUtil (5.0.0)
   - DTCoreText (1.6.21):
     - DTCoreText/Core (= 1.6.21)
     - DTFoundation/Core (~> 1.7.5)
@@ -130,6 +130,9 @@ PODS:
   - UICountingLabel (1.2.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - UzysAssetsPickerController (0.9.9)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - ABCalendarPicker (~> 1.1.2)
@@ -194,6 +197,7 @@ DEPENDENCIES:
   - TTSwitch (~> 0.0.6)
   - "UITableView+FDTemplateLayoutCell"
   - UzysAssetsPickerController
+  - YYKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -266,6 +270,7 @@ SPEC REPOS:
     - UICountingLabel
     - "UITableView+FDTemplateLayoutCell"
     - UzysAssetsPickerController
+    - YYKit
 
 EXTERNAL SOURCES:
   HCSStarRatingView:
@@ -289,7 +294,7 @@ SPEC CHECKSUMS:
   CubeController: 817245a45f97b1285b0490440859bd3728f3c1ef
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
-  DeviceUtil: 35f32c989a4428e9b3075028ef4324cf8f84dfad
+  DeviceUtil: effb5fd6d301a1bd42e0ac367b3391696651431e
   DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   DWBubbleMenuButton: 4d9bdbb9d662bdf65c93ceb7fc65901871143d1e
@@ -347,7 +352,8 @@ SPEC CHECKSUMS:
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 98c08aed398a67f00859c297168b1e0d597bb46c
+PODFILE CHECKSUM: 2acf78abe16ec42c724f3a9315f0dd095a83e3dc
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.5.3

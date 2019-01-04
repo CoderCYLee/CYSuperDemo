@@ -11,7 +11,7 @@ target 'CYSuperDemo' do
 	# Pods for CYSuperDemo
 
 	#----------------------常用工具----------------------
-	pod "AFNetworking"
+	pod 'AFNetworking'
 	pod 'EGOCache', '~> 2.1.3'  #缓存处理,可以缓存NSString、UIImage、NSImage以及NSData,支持多线程（thread-safe）,可以自定义过期的时间
 
 	pod 'IQKeyboardManager' #解决键盘遮挡住输入框的问题(推荐)
@@ -113,7 +113,7 @@ target 'CYSuperDemo' do
 
 	#----------------------其它工具----------------------
 	pod 'DeviceUtil'    #获取设备三件版本号，如 iPhone 4,iPad mini2
-
+    pod 'YYKit'
 
 
 	#********************* test *********************

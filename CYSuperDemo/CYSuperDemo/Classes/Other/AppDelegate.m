@@ -15,6 +15,7 @@
 
 #import "TabBarController.h"
 #import "LaunchView.h"
+#import "YYFPSLabel.h"
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 @property (nonatomic, strong) LaunchView *launchView;
@@ -184,7 +185,7 @@
         [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObjects:category, nil]];
 
 
-          
+        
     } else {
         
     }
@@ -643,6 +644,9 @@
 #pragma mark - event response
 - (void)closeLaunchScreen {
     [self.launchView hideAnimation];
+    
+    // 刷新率
+    [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(20, [UIApplication sharedApplication].statusBarFrame.size.height, 0, 0)]];
 }
 
 #pragma mark - reuseable methods

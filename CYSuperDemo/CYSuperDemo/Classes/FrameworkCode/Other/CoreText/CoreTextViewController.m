@@ -48,9 +48,8 @@
 //        make.height.equalTo(@200);
 //    }];
     
-    
     //创建画布
-    CTDemoView2 *dispaleView = [[CTDemoView2 alloc] initWithFrame:self.view.bounds];
+    CTDemoView2 *dispaleView = [[CTDemoView2 alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), self.view.width, self.view.height)];
     dispaleView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:dispaleView];
     

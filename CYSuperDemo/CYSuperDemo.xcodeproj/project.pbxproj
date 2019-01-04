@@ -108,6 +108,7 @@
 		E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76F722021C8E22D00550C1E /* 1122334455.mp3 */; };
 		E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7722E581F42D64300BBE9B6 /* CYMapManager.m */; };
 		E777912121DDFC4E00FF326D /* UserNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */; };
+		E777912621DF02B300FF326D /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E777912521DF02B300FF326D /* YYFPSLabel.m */; };
 		E778090721994B3400E94CD3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E778090621994B3400E94CD3 /* NotificationCenter.framework */; };
 		E778090B21994B3400E94CD3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778090A21994B3400E94CD3 /* TodayViewController.m */; };
 		E778090E21994B3400E94CD3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778090C21994B3400E94CD3 /* MainInterface.storyboard */; };
@@ -557,6 +558,8 @@
 		E7722E571F42D64300BBE9B6 /* CYMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMapManager.h; sourceTree = "<group>"; };
 		E7722E581F42D64300BBE9B6 /* CYMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMapManager.m; sourceTree = "<group>"; };
 		E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNotificationsViewController.xib; sourceTree = "<group>"; };
+		E777912421DF02B300FF326D /* YYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		E777912521DF02B300FF326D /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		E778090521994B3400E94CD3 /* TodayDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E778090621994B3400E94CD3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		E778090921994B3400E94CD3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -773,6 +776,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B80F724F72F68A81F8D5643 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56E56E70B68E57B12899597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E70616BD1E795BF200762B56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1291,11 +1308,7 @@
 				E7F73D1221C0A87F000ACDF4 /* Launch */,
 				E7F73DA321C2409F000ACDF4 /* Base */,
 				E7F73DB021C2414C000ACDF4 /* Common */,
-				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
-				E796E5FC2190270E002BEAFD /* HomeViewController.m */,
-				E796E5FE2192BBF3002BEAFD /* SecondViewController.h */,
-				E796E5FF2192BBF3002BEAFD /* SecondViewController.m */,
-				E721242B2193DC4600129C5A /* Second.storyboard */,
+				E777912721DF045A00FF326D /* Main */,
 				E7F73D1D21C0B0E1000ACDF4 /* Extension */,
 				E778089721952CE000E94CD3 /* FrameworkCode */,
 			);
@@ -1473,6 +1486,40 @@
 				E7A9E39E21D0708000A64CAC /* SpeechDemo2ViewController.xib */,
 			);
 			path = Speech;
+			sourceTree = "<group>";
+		};
+		E777912221DF027C00FF326D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
+				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
+				E7F73DB121C24193000ACDF4 /* NavigationController.h */,
+				E7F73DB221C24193000ACDF4 /* NavigationController.m */,
+				E7688E351E7A494A0064CD69 /* ViewController.h */,
+				E7688E361E7A494A0064CD69 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E777912321DF029400FF326D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E777912421DF02B300FF326D /* YYFPSLabel.h */,
+				E777912521DF02B300FF326D /* YYFPSLabel.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E777912721DF045A00FF326D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E796E5FB2190270E002BEAFD /* HomeViewController.h */,
+				E796E5FC2190270E002BEAFD /* HomeViewController.m */,
+				E796E5FE2192BBF3002BEAFD /* SecondViewController.h */,
+				E796E5FF2192BBF3002BEAFD /* SecondViewController.m */,
+				E721242B2193DC4600129C5A /* Second.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		E778089721952CE000E94CD3 /* FrameworkCode */ = {
@@ -1864,12 +1911,8 @@
 		E7F73DB021C2414C000ACDF4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E7658E2A2181BBC700EF05E9 /* TabBarController.h */,
-				E7658E2B2181BBC700EF05E9 /* TabBarController.m */,
-				E7F73DB121C24193000ACDF4 /* NavigationController.h */,
-				E7F73DB221C24193000ACDF4 /* NavigationController.m */,
-				E7688E351E7A494A0064CD69 /* ViewController.h */,
-				E7688E361E7A494A0064CD69 /* ViewController.m */,
+				E777912321DF029400FF326D /* Views */,
+				E777912221DF027C00FF326D /* Controllers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2065,6 +2108,7 @@
 			buildPhases = (
 				E7B816B421BFC3FC006F0B48 /* Resources */,
 				E7B816DA21BFC400006F0B48 /* Embed App Extensions */,
+				3B80F724F72F68A81F8D5643 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2098,6 +2142,7 @@
 			buildConfigurationList = E7C017DA21D1C05F0053EF09 /* Build configuration list for PBXNativeTarget "StickerPicksExDemo" */;
 			buildPhases = (
 				E7C017D021D1C05D0053EF09 /* Resources */,
+				E56E56E70B68E57B12899597 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2553,7 +2598,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh",
 				"${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/GradientBar.png",
 				"${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileDisabledSelected.png",
 				"${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileNormal.png",
@@ -2664,7 +2709,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5B39C6D780CDDB918D95DC5 /* [CP] Check Pods Manifest.lock */ = {
@@ -2806,6 +2851,7 @@
 				E781AFF221C8C26100AA845B /* SafariServicesViewController.m in Sources */,
 				E74EC125219D549C0017A64D /* DeviceCheckViewController.m in Sources */,
 				E72BE2E121D47558000BF716 /* CoreTextViewController.m in Sources */,
+				E777912621DF02B300FF326D /* YYFPSLabel.m in Sources */,
 				E78A996E214217F1002A9803 /* CYCustomSearchBar.m in Sources */,
 				E7EE6C3721D34CEF005B2E9C /* PDFDetailViewController.m in Sources */,
 				E7F73D2321C0E056000ACDF4 /* ExtensionActionViewController.m in Sources */,

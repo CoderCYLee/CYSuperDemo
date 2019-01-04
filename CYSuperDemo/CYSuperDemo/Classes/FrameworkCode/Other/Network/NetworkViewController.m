@@ -18,10 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.view.layer.contents = (id)[UIImage imageNamed:@"Icon_Home"].CGImage;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon_Home"]];
+//    
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.layer.contents = (id)[UIImage imageNamed:@"Icon_Home"].CGImage;
+//    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon_Home"]];
     
 }
 
