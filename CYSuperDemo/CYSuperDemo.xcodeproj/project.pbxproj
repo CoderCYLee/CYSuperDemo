@@ -226,8 +226,6 @@
 		E7F73D7121C228CE000ACDF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F73D6F21C228CE000ACDF4 /* MainInterface.storyboard */; };
 		E7F73D7521C228CE000ACDF4 /* PhotoEditingDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F73D6621C228CE000ACDF4 /* PhotoEditingDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7F73DA621C240B5000ACDF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DA521C240B5000ACDF4 /* BaseViewController.m */; };
-		E7F73DA921C240CF000ACDF4 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DA821C240CF000ACDF4 /* BaseTableViewController.m */; };
-		E7F73DAC21C240DE000ACDF4 /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DAB21C240DE000ACDF4 /* BaseCollectionViewController.m */; };
 		E7F73DAF21C24136000ACDF4 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DAE21C24136000ACDF4 /* BaseTabBarController.m */; };
 		E7F73DB321C24193000ACDF4 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F73DB221C24193000ACDF4 /* NavigationController.m */; };
 		E7FD16EE219D57B70037D720 /* CoreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FD16ED219D57B70037D720 /* CoreVideoViewController.m */; };
@@ -763,10 +761,6 @@
 		E7F73D7221C228CE000ACDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7F73DA421C240B5000ACDF4 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		E7F73DA521C240B5000ACDF4 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		E7F73DA721C240CF000ACDF4 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
-		E7F73DA821C240CF000ACDF4 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
-		E7F73DAA21C240DE000ACDF4 /* BaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
-		E7F73DAB21C240DE000ACDF4 /* BaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewController.m; sourceTree = "<group>"; };
 		E7F73DAD21C24136000ACDF4 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		E7F73DAE21C24136000ACDF4 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		E7F73DB121C24193000ACDF4 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
@@ -1863,10 +1857,6 @@
 				E762F4EA21A541580086C13B /* BaseNavigationController.m */,
 				E7F73DA421C240B5000ACDF4 /* BaseViewController.h */,
 				E7F73DA521C240B5000ACDF4 /* BaseViewController.m */,
-				E7F73DA721C240CF000ACDF4 /* BaseTableViewController.h */,
-				E7F73DA821C240CF000ACDF4 /* BaseTableViewController.m */,
-				E7F73DAA21C240DE000ACDF4 /* BaseCollectionViewController.h */,
-				E7F73DAB21C240DE000ACDF4 /* BaseCollectionViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -2734,10 +2724,8 @@
 				E762F4EB21A541580086C13B /* BaseNavigationController.m in Sources */,
 				E759B01E21D5C4430016F14B /* AuthenticationServicesViewController.m in Sources */,
 				E7C017CD21D0E7510053EF09 /* CarPlayViewController.m in Sources */,
-				E7F73DA921C240CF000ACDF4 /* BaseTableViewController.m in Sources */,
 				E7EE6C2D21D21491005B2E9C /* CYAnnotation.m in Sources */,
 				E762F4FB21A5532B0086C13B /* StoreKitViewController.m in Sources */,
-				E7F73DAC21C240DE000ACDF4 /* BaseCollectionViewController.m in Sources */,
 				E7688E791E7A4B400064CD69 /* UIButton+CYTouch.m in Sources */,
 				E7688E771E7A4B400064CD69 /* NSString+CY.m in Sources */,
 				E778093921995F3000E94CD3 /* FrameworkCodeTableViewController.m in Sources */,
