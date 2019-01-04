@@ -11,6 +11,7 @@
 @interface LaunchView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end
 
@@ -23,6 +24,13 @@
     rotationAnimation.cumulative = YES;//旋转累加角度
     rotationAnimation.repeatCount = 100000;//旋转次数
     [self.imageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    
+    self.versionLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Version", @"Version"), AppVersion];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.versionLabel.alpha = 1;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (void)hideAnimation {
@@ -30,6 +38,7 @@
     //    [self.imageView.layer removeAllAnimations];
     
     [UIView animateWithDuration:1 animations:^{
+        self.versionLabel.alpha = 0;
         self.imageView.alpha = 0;
         self.backgroundColor = [UIColor clearColor];
     } completion:^(BOOL finished) {

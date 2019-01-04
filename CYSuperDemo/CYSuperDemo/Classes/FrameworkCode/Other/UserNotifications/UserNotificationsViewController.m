@@ -53,11 +53,11 @@
     //    NSString *icon = [[infoPlist valueForKeyPath:@"CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles"] lastObject];
 
     // 附件
-    UNNotificationAttachment *jpgAtt = [UNNotificationAttachment attachmentWithIdentifier:@"jpg" URL:[NSURL fileURLWithPath:path1] options:nil error:&error];
-
-    UNNotificationAttachment *pngAtt = [UNNotificationAttachment attachmentWithIdentifier:@"png" URL:[NSURL fileURLWithPath:path2] options:nil error:&error];
-
-    UNNotificationAttachment *gifAtt = [UNNotificationAttachment attachmentWithIdentifier:@"gif" URL:[NSURL fileURLWithPath:path3] options:nil error:&error];
+//    UNNotificationAttachment *jpgAtt = [UNNotificationAttachment attachmentWithIdentifier:@"jpg" URL:[NSURL fileURLWithPath:path1] options:nil error:&error];
+//
+//    UNNotificationAttachment *pngAtt = [UNNotificationAttachment attachmentWithIdentifier:@"png" URL:[NSURL fileURLWithPath:path2] options:nil error:&error];
+//
+//    UNNotificationAttachment *gifAtt = [UNNotificationAttachment attachmentWithIdentifier:@"gif" URL:[NSURL fileURLWithPath:path3] options:nil error:&error];
 
     UNNotificationAttachment *videoAtt = [UNNotificationAttachment attachmentWithIdentifier:@"video" URL:[NSURL fileURLWithPath:path4] options:nil error:&error];
 

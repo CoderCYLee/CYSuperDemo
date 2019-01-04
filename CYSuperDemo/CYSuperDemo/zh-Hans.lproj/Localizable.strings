@@ -6,6 +6,9 @@
   Copyright © 2018 Cyrill. All rights reserved.
 */
 
+
+"Version" = "版本";
+
 "Home" = "首页";
 "System" = "系统";
 "Third" = "第三方";
