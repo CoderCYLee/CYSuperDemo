@@ -54,7 +54,7 @@
     CGSize size = [message sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15.0f]}];
     CGSize textSize = CGSizeMake(ceilf(size.width), ceilf(size.height));
     
-    UILabel * msg = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, textSize.width + 30, textSize.height + 20)];
+    UILabel * msg = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, textSize.width + 30, textSize.height + 20)];
 //    msg.center = CGPointMake([[UIScreen mainScreen] bounds].size.width / 2, [[UIScreen mainScreen] bounds].size.height * 8.0 / 9.0);
     
     msg.center = CGPointMake([[UIScreen mainScreen] bounds].size.width / 2, [[UIScreen mainScreen] bounds].size.height / 2.0);

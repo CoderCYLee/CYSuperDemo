@@ -43,9 +43,9 @@
 
     NSError *error = nil;
 
-    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"jpg1" ofType:@"jpg"];
-    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"png1" ofType:@"png"];
-    NSString *path3 = [[NSBundle mainBundle] pathForResource:@"gif1" ofType:@"gif"];
+//    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"jpg1" ofType:@"jpg"];
+//    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"png1" ofType:@"png"];
+//    NSString *path3 = [[NSBundle mainBundle] pathForResource:@"gif1" ofType:@"gif"];
     NSString *path4 = [[NSBundle mainBundle] pathForResource:@"video1" ofType:@"mp4"];
 
     //    NSDictionary *infoPlist = [[NSBundle mainBundle] infoDictionary];

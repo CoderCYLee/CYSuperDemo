@@ -9,6 +9,7 @@
 #import "AccountsViewController.h"
 #import <Accounts/Accounts.h>
 #import "AccountsDetailViewController.h"
+#import <SVProgressHUD.h>
 
 @interface AccountsViewController ()
 @property (nonatomic, strong) NSArray *titleArr;
@@ -81,6 +82,9 @@
     [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
         if (error) {
             NSLog(@"error = %@", [error localizedDescription]);
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+            }];
             return;
         }
         
