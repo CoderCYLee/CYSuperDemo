@@ -179,21 +179,16 @@
          options:通知的参数   UNNotificationCategoryOptionCustomDismissAction:自定义交互按钮   UNNotificationCategoryOptionAllowInCarPlay:车载交互
          */
 
-
         UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[textInputAction,action1,action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
 
         [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:[NSSet setWithObjects:category, nil]];
-
-
         
     } else {
         
     }
     
-    
     return YES;
 }
-
 
 
 #pragma mark - iOS10 UNUserNotificationCenterDelegate
