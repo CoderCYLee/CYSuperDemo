@@ -33,25 +33,50 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-4F-77Z">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJK-JF-AbJ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="464"/>
-                            </imageView>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73H-Eg-STP">
+                                        <rect key="frame" x="50" y="50" width="220" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ku8-Ky-EK3" userLabel="Label">
+                                        <rect key="frame" x="50" y="100" width="220" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="73H-Eg-STP" firstAttribute="top" secondItem="iJK-JF-AbJ" secondAttribute="top" constant="50" id="DH2-1K-f5p"/>
+                                    <constraint firstItem="73H-Eg-STP" firstAttribute="leading" secondItem="iJK-JF-AbJ" secondAttribute="leading" constant="50" id="YfF-uT-aRm"/>
+                                    <constraint firstItem="Ku8-Ky-EK3" firstAttribute="top" secondItem="73H-Eg-STP" secondAttribute="bottom" constant="20" id="bUg-Mq-yd6"/>
+                                    <constraint firstItem="73H-Eg-STP" firstAttribute="centerX" secondItem="iJK-JF-AbJ" secondAttribute="centerX" id="e3m-vY-U35"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ku8-Ky-EK3" secondAttribute="trailing" constant="50" id="hgo-VU-D7y"/>
+                                    <constraint firstAttribute="trailing" secondItem="73H-Eg-STP" secondAttribute="trailing" constant="50" id="vKO-yd-XU9"/>
+                                    <constraint firstItem="Ku8-Ky-EK3" firstAttribute="leading" secondItem="iJK-JF-AbJ" secondAttribute="leading" constant="50" id="zAy-kA-ffj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iJK-JF-AbJ" secondAttribute="trailing" id="80a-Fv-bRT"/>
                             <constraint firstAttribute="trailing" secondItem="NOA-Dm-cuz" secondAttribute="trailing" id="A05-Pj-hrr"/>
-                            <constraint firstItem="9ga-4F-77Z" firstAttribute="top" secondItem="NOA-Dm-cuz" secondAttribute="bottom" id="Fps-3D-QQW"/>
+                            <constraint firstAttribute="bottom" secondItem="iJK-JF-AbJ" secondAttribute="bottom" id="Aa8-hs-AiD"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="HxO-8t-aoh"/>
-                            <constraint firstAttribute="trailing" secondItem="9ga-4F-77Z" secondAttribute="trailing" id="Ozw-Hg-0yh"/>
-                            <constraint firstItem="9ga-4F-77Z" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="XH5-ld-ONA"/>
-                            <constraint firstItem="4Hm-ta-FAN" firstAttribute="top" secondItem="9ga-4F-77Z" secondAttribute="bottom" id="eQg-nn-Zy4"/>
+                            <constraint firstItem="iJK-JF-AbJ" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="SlH-sG-3jN"/>
+                            <constraint firstItem="iJK-JF-AbJ" firstAttribute="top" secondItem="NOA-Dm-cuz" secondAttribute="bottom" id="kCy-Ij-jdv"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="top" secondItem="PYt-cS-754" secondAttribute="bottom" id="we0-1t-bgp"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
-                        <outlet property="imageView" destination="9ga-4F-77Z" id="5y6-5w-9QO"/>
+                        <outlet property="label" destination="Ku8-Ky-EK3" id="EHP-i5-jJW"/>
+                        <outlet property="textField" destination="73H-Eg-STP" id="3Wj-nm-dgB"/>
                         <outlet property="view" destination="zMn-AG-sqS" id="Qma-de-2ek"/>
                     </connections>
                 </viewController>

@@ -172,7 +172,7 @@ API_AVAILABLE(ios(11.0)){
         _tableView.dataSource = self;
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PDFSeachCell class]) bundle:nil] forCellReuseIdentifier:@"CellId"];
         _tableView.tableFooterView = [UIView new];
-        _tableView.rowHeight = 150;
+        _tableView.rowHeight = 100;
     }
     
     return _tableView;

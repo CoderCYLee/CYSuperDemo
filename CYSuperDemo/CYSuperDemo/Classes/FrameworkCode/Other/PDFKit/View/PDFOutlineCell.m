@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    [self.btnArrow setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
