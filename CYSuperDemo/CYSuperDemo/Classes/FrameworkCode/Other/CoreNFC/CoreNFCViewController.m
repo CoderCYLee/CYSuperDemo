@@ -35,7 +35,7 @@ API_AVAILABLE(ios(11.0))
 @end
 
 API_AVAILABLE(ios(11.0))
-@interface CoreNFCViewController () <NFCNDEFReaderSessionDelegate>
+@interface CoreNFCViewController () <NFCNDEFReaderSessionDelegate, NFCReaderSessionDelegate>
 
 @property (nonatomic, strong) NSMutableArray<NFCNDEFPayload *> *payloads;
 @property (nonatomic, strong) NFCNDEFReaderSession *session;
@@ -77,8 +77,34 @@ API_AVAILABLE(ios(11.0))
     
 }
 
-#pragma mark - Core NFC delegate
+#pragma mark - NFCReaderSessionDelegate
+/*!
+ * @method readerSessionDidBecomeActive:
+ *
+ * @param session   The session object in the active state.
+ *
+ * @discussion      Gets called when the NFC reader session has become active. RF is enabled and reader is scanning for tags.
+ *                  The @link readerSession:didDetectTags: @link/ will be called when a tag is detected.
+ */
+- (void)readerSessionDidBecomeActive:(NFCReaderSession *)session  API_AVAILABLE(ios(11.0)){
+    
+}
 
+/*!
+ * @method readerSession:didDetectTags:
+ *
+ * @param session   The session object used for tag detection.
+ * @param tags      Array of @link NFCTag @link/ objects.
+ *
+ * @discussion      Gets called when the reader detects NFC tag(s) in the polling sequence.
+ */
+- (void)readerSession:(NFCReaderSession *)session didDetectTags:(NSArray<__kindof id<NFCTag>> *)tags  API_AVAILABLE(ios(11.0)){
+    
+}
+
+#pragma mark - NFCReaderSessionDelegate
+
+// Process detected NFCNDEFMessage objects
 - (void)readerSession:(nonnull NFCNDEFReaderSession *)session didDetectNDEFs:(nonnull NSArray<NFCNDEFMessage *> *)messages  API_AVAILABLE(ios(11.0)){
     NFCNDEFMessage *message = [messages firstObject];
     if (message) {
@@ -90,6 +116,8 @@ API_AVAILABLE(ios(11.0))
     }
 }
 
+// Check invalidation reason from the returned error. A new session instance is required to read new tags.
+// 识别出现Error后会话会自动终止，此时就需要程序重新开启会话
 - (void)readerSession:(nonnull NFCNDEFReaderSession *)session didInvalidateWithError:(nonnull NSError *)error  API_AVAILABLE(ios(11.0)){
     if (!error) {
         return;
@@ -97,7 +125,7 @@ API_AVAILABLE(ios(11.0))
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Session Invalidated" message:@"error.localizedDescription" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Session Invalidated" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alert animated:YES completion:nil];
     });
@@ -107,9 +135,18 @@ API_AVAILABLE(ios(11.0))
 
 - (void)scan {
     if (@available(iOS 11.0, *)) {
+//        if ([NFCISO15693ReaderSession readingAvailable]) {
+//            NFCISO15693ReaderSession *session = [[NFCISO15693ReaderSession alloc] initWithDelegate:self queue:nil];
+////            [session restartPolling];
+//            [session beginSession];
+//        }
         
-        _session = [[NFCNDEFReaderSession alloc] initWithDelegate:self queue:nil invalidateAfterFirstRead:YES];
-        [_session beginSession];
+        if ([NFCNDEFReaderSession readingAvailable]) {
+            _session = [[NFCNDEFReaderSession alloc] initWithDelegate:self queue:nil invalidateAfterFirstRead:YES];
+            [_session beginSession];
+        } else {
+            ShowMsg(@"设备不支持NFC，或NFC不可用");
+        }
     } else {
         // Fallback on earlier versions
         
