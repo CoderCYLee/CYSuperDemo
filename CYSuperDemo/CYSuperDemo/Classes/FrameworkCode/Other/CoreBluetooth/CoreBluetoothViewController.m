@@ -12,6 +12,8 @@
 
 @interface CoreBluetoothViewController () <CBCentralManagerDelegate, CBPeripheralDelegate>
 
+@property (nonatomic, strong) CBCentralManager *manager;
+
 @end
 
 @implementation CoreBluetoothViewController
@@ -20,12 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Scan" style:UIBarButtonItemStyleDone target:self action:@selector(scan)];
+    self.navigationItem.rightBarButtonItem = item;
+    
     /**
      第一个参数：代理
      第二个参数：队列（nil为不指定队列，默认为主队列）
      第三个参数：实现状态保存的时候需要用到 eg:@{CBCentralManagerOptionRestoreIdentifierKey:@"centralManagerIdentifier"}
      */
-    CBCentralManager *manager = [[CBCentralManager alloc]initWithDelegate:self queue:nil options:nil];
+    _manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
     
     // centralManagerDidUpdateState
     
@@ -58,7 +63,20 @@
  *  @see            state
  *
  */
+// 中心设备的蓝牙状态发生变化之后会调用此方法 [必须实现的方法]
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
+    
+    /*
+     // 中心设备状态枚举
+     typedef NS_ENUM(NSInteger, CBCentralManagerState) {
+     CBCentralManagerStateUnknown = CBManagerStateUnknown,// 蓝牙状态未知
+     CBCentralManagerStateResetting = CBManagerStateResetting,
+     CBCentralManagerStateUnsupported = CBManagerStateUnsupported, // 不支持蓝牙
+     CBCentralManagerStateUnauthorized = CBManagerStateUnauthorized, // 蓝牙未授权
+     CBCentralManagerStatePoweredOff = CBManagerStatePoweredOff, // 蓝牙关闭状态
+     CBCentralManagerStatePoweredOn = CBManagerStatePoweredOn, // 蓝牙开启状态
+     } NS_DEPRECATED(NA, NA, 5_0, 10_0, "Use CBManagerState instead");
+     */
     
 }
 
@@ -78,8 +96,13 @@
  *  @seealso            CBCentralManagerRestoredStateScanOptionsKey;
  *
  */
+// 应用从后台恢复到前台的时候,会和系统蓝牙进行同步,调用此方法
 - (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *, id> *)dict {
-    
+    /*
+     CBCentralManagerRestoredStatePeripheralsKey // 返回一个中心设备正在连接的所有外设数组
+     CBCentralManagerRestoredStateScanServicesKey // 返回一个中心设备正在扫描的所有服务UUID的数组
+     CBCentralManagerRestoredStateScanOptionsKey // 返回一个字典包含正在被使用的外设的扫描选项
+     */
 }
 
 /*!
@@ -445,5 +468,13 @@
     
 }
 
+#pragma mark - event response
+- (void)scan {
+    
+    [_manager scanForPeripheralsWithServices:nil options:nil];
+    
+}
+
+#pragma mark - getters and setters
 
 @end
