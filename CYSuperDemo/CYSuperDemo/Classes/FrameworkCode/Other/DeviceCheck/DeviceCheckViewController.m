@@ -23,17 +23,26 @@
 }
 
 - (void)deviceCheck {
+    
     if (@available(iOS 11.0, *)) {
         [[DCDevice currentDevice] generateTokenWithCompletionHandler:^(NSData * _Nullable token, NSError * _Nullable error) {
+            
+            NSString *string = @"";
+            
             if (error) {
                 // Do what you want
+                string = [NSString stringWithFormat:@"error: %@", error.localizedDescription];
                 
             } else {
                 // Upload token to App server
                 NSLog(@"%@", token ?: @"No Data");
-                
-                //                [token ]
+                string = [NSString stringWithFormat:@"token: %@", token];
             }
+            
+            UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"提示" message:string preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [vc addAction:action];
+            [self presentViewController:vc animated:YES completion:nil];
             
         }];
     } else {
