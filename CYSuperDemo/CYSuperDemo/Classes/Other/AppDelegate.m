@@ -194,6 +194,7 @@
 #pragma mark - iOS10 UNUserNotificationCenterDelegate
 // The method will be called on the delegate only if the application is in the foreground. If the method is not implemented or the handler is not called in a timely manner then the notification will not be presented. The application can choose to have the notification presented as a sound, badge, alert and/or in the notification list. This decision should be based on whether the information in the notification is otherwise visible to the user.
 // iOS 10.0
+//  iOS 10: App在前台获取到通知
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
     // 前台收到通知
     
@@ -236,6 +237,7 @@
 
 // The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from application:didFinishLaunchingWithOptions:.
 // iOS 10.0
+//  iOS 10: 点击通知进入App时触发
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
     
     //按钮点击事件
@@ -645,6 +647,59 @@
 }
 
 #pragma mark - reuseable methods
+/** 注册用户通知 */
+- (void)registerUserNotification {
+    
+    /*
+     警告：Xcode8的需要手动开启“TARGETS -> Capabilities -> Push Notifications”
+     */
+    
+    /*
+     警告：该方法需要开发者自定义，以下代码根据APP支持的iOS系统不同，代码可以对应修改。
+     以下为演示代码，注意根据实际需要修改，注意测试支持的iOS系统都能获取到DeviceToken
+     */
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0 // Xcode 8编译会调用
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError *_Nullable error) {
+            if (!error) {
+                NSLog(@"request authorization succeeded!");
+            }
+        }];
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+#else // Xcode 7编译会调用
+        UIUserNotificationType types = (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+#endif
+    } else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        // 判读系统版本是否是“iOS 8.0”以上
+        
+        // 定义用户通知类型(Remote.远程 - Badge.标记 Alert.提示 Sound.声音)
+        UIUserNotificationType types = (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
+        // 定义用户通知设置
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        // 注册用户通知 - 根据用户通知设置
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+    } else { // iOS8.0 以前远程推送设置方式
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        
+        // 定义远程通知类型(Remote.远程 - Badge.标记 Alert.提示 Sound.声音)
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+        
+        // 注册远程通知 -根据远程通知类型
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+        
+#pragma clang diagnostic pop
+    }
+}
 
 #pragma mark - private methods
 

@@ -7,6 +7,7 @@
 //
 
 #import "EventKitViewController.h"
+#import <EventKit/EventKit.h>
 
 @interface EventKitViewController ()
 

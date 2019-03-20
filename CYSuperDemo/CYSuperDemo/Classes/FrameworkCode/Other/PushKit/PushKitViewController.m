@@ -7,6 +7,7 @@
 //
 
 #import "PushKitViewController.h"
+#import <PushKit/PushKit.h>
 
 @interface PushKitViewController ()
 
