@@ -23,6 +23,7 @@
 		E717E85E1FAAE80B006E5695 /* UIWebView+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E717E85D1FAAE80B006E5695 /* UIWebView+CY.m */; };
 		E721242A2193D9B000129C5A /* UIViewController+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E72124292193D9B000129C5A /* UIViewController+CY.m */; };
 		E721242C2193DC4600129C5A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E721242B2193DC4600129C5A /* Second.storyboard */; };
+		E723D5DC22432EFC00E37FFF /* CoreTelephonyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5DB22432EFC00E37FFF /* CoreTelephonyViewController.m */; };
 		E72BE2C421D374CC000BF716 /* PDFThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */; };
 		E72BE2C821D374FA000BF716 /* PDFThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C621D374FA000BF716 /* PDFThumbnailCell.m */; };
 		E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2C721D374FA000BF716 /* PDFThumbnailCell.xib */; };
@@ -105,7 +106,7 @@
 		E76F721921C8DAD800550C1E /* doc1.docx in Resources */ = {isa = PBXBuildFile; fileRef = E76F721821C8DAD800550C1E /* doc1.docx */; };
 		E76F721B21C8DDCF00550C1E /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76F721A21C8DDCF00550C1E /* Speech.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E76F721F21C8DDEB00550C1E /* SpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76F721E21C8DDEB00550C1E /* SpeechViewController.m */; };
-		E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76F722021C8E22D00550C1E /* 1122334455.mp3 */; };
+		E76F722121C8E37F00550C1E /* mp31.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76F722021C8E22D00550C1E /* mp31.mp3 */; };
 		E7722E591F42D64300BBE9B6 /* CYMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7722E581F42D64300BBE9B6 /* CYMapManager.m */; };
 		E777912121DDFC4E00FF326D /* UserNotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */; };
 		E777912621DF02B300FF326D /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E777912521DF02B300FF326D /* YYFPSLabel.m */; };
@@ -406,6 +407,8 @@
 		E72124282193D9B000129C5A /* UIViewController+CY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CY.h"; sourceTree = "<group>"; };
 		E72124292193D9B000129C5A /* UIViewController+CY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CY.m"; sourceTree = "<group>"; };
 		E721242B2193DC4600129C5A /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		E723D5DA22432EFC00E37FFF /* CoreTelephonyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTelephonyViewController.h; sourceTree = "<group>"; };
+		E723D5DB22432EFC00E37FFF /* CoreTelephonyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTelephonyViewController.m; sourceTree = "<group>"; };
 		E72BE2C221D374CC000BF716 /* PDFThumbnailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailViewController.h; sourceTree = "<group>"; };
 		E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFThumbnailViewController.m; sourceTree = "<group>"; };
 		E72BE2C521D374FA000BF716 /* PDFThumbnailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailCell.h; sourceTree = "<group>"; };
@@ -554,7 +557,7 @@
 		E76F721A21C8DDCF00550C1E /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		E76F721D21C8DDEB00550C1E /* SpeechViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechViewController.h; sourceTree = "<group>"; };
 		E76F721E21C8DDEB00550C1E /* SpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechViewController.m; sourceTree = "<group>"; };
-		E76F722021C8E22D00550C1E /* 1122334455.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1122334455.mp3; sourceTree = "<group>"; };
+		E76F722021C8E22D00550C1E /* mp31.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mp31.mp3; sourceTree = "<group>"; };
 		E7722E571F42D64300BBE9B6 /* CYMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMapManager.h; sourceTree = "<group>"; };
 		E7722E581F42D64300BBE9B6 /* CYMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMapManager.m; sourceTree = "<group>"; };
 		E777912021DDFC4E00FF326D /* UserNotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNotificationsViewController.xib; sourceTree = "<group>"; };
@@ -1034,6 +1037,22 @@
 			path = CYSuperDemoUITests;
 			sourceTree = "<group>";
 		};
+		E723D5D122432E6D00E37FFF /* CoreTelephony */ = {
+			isa = PBXGroup;
+			children = (
+				E723D5DA22432EFC00E37FFF /* CoreTelephonyViewController.h */,
+				E723D5DB22432EFC00E37FFF /* CoreTelephonyViewController.m */,
+			);
+			path = CoreTelephony;
+			sourceTree = "<group>";
+		};
+		E723D5D222432E8200E37FFF /* CoreSpotlight */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreSpotlight;
+			sourceTree = "<group>";
+		};
 		E72BE2DE21D4751B000BF716 /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
@@ -1080,6 +1099,8 @@
 				E7C017AE21D0E5A00053EF09 /* CoreML */,
 				E7A9E3B021D0B71B00A64CAC /* CoreMotion */,
 				E74EC0E1219D406C0017A64D /* CoreNFC */,
+				E723D5D222432E8200E37FFF /* CoreSpotlight */,
+				E723D5D122432E6D00E37FFF /* CoreTelephony */,
 				E72BE2DE21D4751B000BF716 /* CoreText */,
 				E7FD16EB219D57A60037D720 /* CoreVideo */,
 				E74EC0CD219D406C0017A64D /* DeviceCheck */,
@@ -1328,7 +1349,7 @@
 		E7688E331E7A49150064CD69 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E76F722021C8E22D00550C1E /* 1122334455.mp3 */,
+				E76F722021C8E22D00550C1E /* mp31.mp3 */,
 				E76F721821C8DAD800550C1E /* doc1.docx */,
 				E76F721621C8DA3300550C1E /* txt1.txt */,
 				E76F721421C8D9DE00550C1E /* pdf1.pdf */,
@@ -2398,7 +2419,7 @@
 				E781AFC521C3AA2700AA845B /* png1.png in Resources */,
 				E777912121DDFC4E00FF326D /* UserNotificationsViewController.xib in Resources */,
 				E72BE2D121D385F3000BF716 /* PDFOutlineCell.xib in Resources */,
-				E76F722121C8E37F00550C1E /* 1122334455.mp3 in Resources */,
+				E76F722121C8E37F00550C1E /* mp31.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2749,6 +2770,7 @@
 				E7094D9121A40886001E35B2 /* FoundationViewController.m in Sources */,
 				E7A9E3AA21D0AC5B00A64CAC /* PassKitViewController.m in Sources */,
 				E7E6B6D521D4AA78002F1C53 /* CoreTextImageData.m in Sources */,
+				E723D5DC22432EFC00E37FFF /* CoreTelephonyViewController.m in Sources */,
 				E78A996B21421731002A9803 /* CYLocationManager.m in Sources */,
 				E7C017C121D0E7260053EF09 /* AudioToolboxViewController.m in Sources */,
 				E7F4058D216C876500B27415 /* CYRoundedButton.m in Sources */,

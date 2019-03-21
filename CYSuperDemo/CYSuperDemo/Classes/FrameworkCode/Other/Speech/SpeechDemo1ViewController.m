@@ -139,7 +139,7 @@
 - (IBAction)tap:(id)sender {
     
     //2.创建识别请求
-    SFSpeechURLRecognitionRequest *request = [[SFSpeechURLRecognitionRequest alloc] initWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"1122334455.mp3" ofType:nil]]];
+    SFSpeechURLRecognitionRequest *request = [[SFSpeechURLRecognitionRequest alloc] initWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"mp31.mp3" ofType:nil]]];
     
     //3.开始识别任务
     self.recognitionTask = [self recognitionTaskWithRequest1:request];
