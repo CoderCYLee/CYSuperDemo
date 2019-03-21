@@ -27,6 +27,7 @@
 		E723D5E5224338C000E37FFF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5E4224338C000E37FFF /* KeyboardViewController.m */; };
 		E723D5E9224338C000E37FFF /* CustomKeyboardDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E723D5E1224338BF00E37FFF /* CustomKeyboardDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E723D5F022433AAB00E37FFF /* AdSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5EF22433AAB00E37FFF /* AdSupportViewController.m */; };
+		E723D5F322436DD300E37FFF /* CoreSpotlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5F222436DD300E37FFF /* CoreSpotlightViewController.m */; };
 		E72BE2C421D374CC000BF716 /* PDFThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */; };
 		E72BE2C821D374FA000BF716 /* PDFThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C621D374FA000BF716 /* PDFThumbnailCell.m */; };
 		E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2C721D374FA000BF716 /* PDFThumbnailCell.xib */; };
@@ -426,6 +427,8 @@
 		E723D5E6224338C000E37FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E723D5EE22433AAB00E37FFF /* AdSupportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdSupportViewController.h; sourceTree = "<group>"; };
 		E723D5EF22433AAB00E37FFF /* AdSupportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdSupportViewController.m; sourceTree = "<group>"; };
+		E723D5F122436DD300E37FFF /* CoreSpotlightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreSpotlightViewController.h; sourceTree = "<group>"; };
+		E723D5F222436DD300E37FFF /* CoreSpotlightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreSpotlightViewController.m; sourceTree = "<group>"; };
 		E72BE2C221D374CC000BF716 /* PDFThumbnailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailViewController.h; sourceTree = "<group>"; };
 		E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFThumbnailViewController.m; sourceTree = "<group>"; };
 		E72BE2C521D374FA000BF716 /* PDFThumbnailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailCell.h; sourceTree = "<group>"; };
@@ -1075,6 +1078,8 @@
 		E723D5D222432E8200E37FFF /* CoreSpotlight */ = {
 			isa = PBXGroup;
 			children = (
+				E723D5F122436DD300E37FFF /* CoreSpotlightViewController.h */,
+				E723D5F222436DD300E37FFF /* CoreSpotlightViewController.m */,
 			);
 			path = CoreSpotlight;
 			sourceTree = "<group>";
@@ -2939,6 +2944,7 @@
 				E7F73DA621C240B5000ACDF4 /* BaseViewController.m in Sources */,
 				E7688E7D1E7A4B400064CD69 /* UIColor+CY.m in Sources */,
 				E7688E741E7A4B400064CD69 /* NSArray+CY.m in Sources */,
+				E723D5F322436DD300E37FFF /* CoreSpotlightViewController.m in Sources */,
 				E74EC0F6219D406C0017A64D /* CoreNFCViewController.m in Sources */,
 				E7EE6C3D21D355D2005B2E9C /* PDFKitTableViewCell.m in Sources */,
 				E781B00821C8D46700AA845B /* QuickLookViewController.m in Sources */,

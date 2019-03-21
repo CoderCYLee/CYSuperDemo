@@ -17,6 +17,8 @@
 #import "LaunchView.h"
 #import "YYFPSLabel.h"
 
+#import <CoreSpotlight/CoreSpotlight.h>
+
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 @property (nonatomic, strong) LaunchView *launchView;
 @end
@@ -603,13 +605,29 @@
 // invoked with the user activity. Invoking the restorationHandler is optional. It may be copied and invoked later, and it will bounce to the main thread to complete its work and call
 // restoreUserActivityState on all objects.
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler {
-    // 从通用链接过来
-    NSLog(@"userActivity : %@",userActivity.webpageURL.description);
+    
+    if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        // 从通用链接过来
+        NSLog(@"userActivity : %@",userActivity.webpageURL.description);
+        
+        
+    } else if ([userActivity.activityType isEqualToString:CSSearchableItemActionType]) {
+        //获取唯一ID，在MarkDisk中，它即是文件的相对路径
+        NSString *uniqueIdentifier = [userActivity.userInfo objectForKey:CSSearchableItemActivityIdentifier];
+        NSLog(@"索引连接:%@", uniqueIdentifier);
+        //显示对应的文件，代码略
+    } else if ([userActivity.activityType isEqualToString:NSUserActivityDocumentURLKey]) {
+        
+    } else if ([userActivity.activityType isEqualToString:CSSearchableItemActionType]) {
+        
+    } else if ([userActivity.activityType isEqualToString:CSSearchableItemActionType]) {
+        
+    } else if ([userActivity.activityType isEqualToString:CSSearchableItemActionType]) {
+        
+    }
     
     TabBarController *tabBarVC = (TabBarController *)self.window.rootViewController;
     [tabBarVC.navigationController2.topViewController restoreUserActivityState:userActivity];
-    
-    
     
     return YES;
 }
