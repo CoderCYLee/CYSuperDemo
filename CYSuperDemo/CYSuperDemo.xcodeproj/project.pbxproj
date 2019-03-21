@@ -26,6 +26,7 @@
 		E723D5DC22432EFC00E37FFF /* CoreTelephonyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5DB22432EFC00E37FFF /* CoreTelephonyViewController.m */; };
 		E723D5E5224338C000E37FFF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5E4224338C000E37FFF /* KeyboardViewController.m */; };
 		E723D5E9224338C000E37FFF /* CustomKeyboardDemo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E723D5E1224338BF00E37FFF /* CustomKeyboardDemo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E723D5F022433AAB00E37FFF /* AdSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E723D5EF22433AAB00E37FFF /* AdSupportViewController.m */; };
 		E72BE2C421D374CC000BF716 /* PDFThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */; };
 		E72BE2C821D374FA000BF716 /* PDFThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2C621D374FA000BF716 /* PDFThumbnailCell.m */; };
 		E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2C721D374FA000BF716 /* PDFThumbnailCell.xib */; };
@@ -423,6 +424,8 @@
 		E723D5E3224338C000E37FFF /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
 		E723D5E4224338C000E37FFF /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 		E723D5E6224338C000E37FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E723D5EE22433AAB00E37FFF /* AdSupportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdSupportViewController.h; sourceTree = "<group>"; };
+		E723D5EF22433AAB00E37FFF /* AdSupportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdSupportViewController.m; sourceTree = "<group>"; };
 		E72BE2C221D374CC000BF716 /* PDFThumbnailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailViewController.h; sourceTree = "<group>"; };
 		E72BE2C321D374CC000BF716 /* PDFThumbnailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFThumbnailViewController.m; sourceTree = "<group>"; };
 		E72BE2C521D374FA000BF716 /* PDFThumbnailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFThumbnailCell.h; sourceTree = "<group>"; };
@@ -1086,6 +1089,15 @@
 			path = CustomKeyboardDemo;
 			sourceTree = "<group>";
 		};
+		E723D5ED22433A8E00E37FFF /* AdSupport */ = {
+			isa = PBXGroup;
+			children = (
+				E723D5EE22433AAB00E37FFF /* AdSupportViewController.h */,
+				E723D5EF22433AAB00E37FFF /* AdSupportViewController.m */,
+			);
+			path = AdSupport;
+			sourceTree = "<group>";
+		};
 		E72BE2DE21D4751B000BF716 /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
@@ -1117,6 +1129,7 @@
 			children = (
 				E74EC0DD219D406C0017A64D /* Accounts */,
 				E74EC0E7219D406C0017A64D /* AddressBook */,
+				E723D5ED22433A8E00E37FFF /* AdSupport */,
 				E74EC0EB219D406C0017A64D /* ARKit */,
 				E7C017B221D0E6420053EF09 /* AudioToolbox */,
 				E759B01721D5C3FA0016F14B /* AuthenticationServices */,
@@ -2913,6 +2926,7 @@
 				E7688E711E7A4B400064CD69 /* CALayer+CY.m in Sources */,
 				E7C017CA21D0E7450053EF09 /* CoreMLViewController.m in Sources */,
 				E7E6B6D221D4A849002F1C53 /* CoreTextData.m in Sources */,
+				E723D5F022433AAB00E37FFF /* AdSupportViewController.m in Sources */,
 				E7688E881E7A4B400064CD69 /* CYTitleButton.m in Sources */,
 				E7A9E39A21D0705800A64CAC /* SpeechDemo1ViewController.m in Sources */,
 				E7E6B6D821D4AA88002F1C53 /* CoreTextLinkData.m in Sources */,
