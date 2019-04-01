@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  根据当前设备是iphone4还是iphone5返回指定的值
  @param value4 iphone4时对应的值
@@ -293,3 +295,5 @@ static inline CGRect CGRectCenter(CGRect rect,CGSize size)
 
 
 @end
+
+NS_ASSUME_NONNULL_END
