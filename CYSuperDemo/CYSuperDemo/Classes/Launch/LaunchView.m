@@ -26,6 +26,7 @@
     [self.imageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
     self.versionLabel.text = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Version", @"Version"), AppVersion];
+//    self.versionLabel.text = AppVersion;
     [UIView animateWithDuration:0.3 animations:^{
         self.versionLabel.alpha = 1;
     } completion:^(BOOL finished) {

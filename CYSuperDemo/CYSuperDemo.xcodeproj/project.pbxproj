@@ -2283,7 +2283,7 @@
 		E70616B81E795BF200762B56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Cyrill;
 				TargetAttributes = {
 					E70616BF1E795BF200762B56 = {
@@ -2424,7 +2424,7 @@
 			};
 			buildConfigurationList = E70616BB1E795BF200762B56 /* Build configuration list for PBXProject "CYSuperDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -2701,7 +2701,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh",
 				"${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/GradientBar.png",
 				"${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileDisabledSelected.png",
 				"${PODS_ROOT}/ABCalendarPicker/ABCalendarPicker/TileNormal.png",
@@ -2812,7 +2812,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CYSuperDemo/Pods-CYSuperDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5B39C6D780CDDB918D95DC5 /* [CP] Check Pods Manifest.lock */ = {
@@ -3751,7 +3751,6 @@
 		E781B00321C8C7B600AA845B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -3775,7 +3774,6 @@
 		E781B00421C8C7B600AA845B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
