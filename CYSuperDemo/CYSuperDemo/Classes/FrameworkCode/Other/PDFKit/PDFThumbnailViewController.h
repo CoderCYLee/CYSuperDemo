@@ -10,6 +10,8 @@
 @class PDFThumbnailViewController;
 @class PDFDocument;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol PDFThumbnailViewControllerDelegate <NSObject>
 
 
@@ -22,8 +24,6 @@
 - (void)thumbnailViewController:(PDFThumbnailViewController *)controller didSelectAtIndex:(NSIndexPath *)indexPath;
 
 @end
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface PDFThumbnailViewController : ViewController
 
