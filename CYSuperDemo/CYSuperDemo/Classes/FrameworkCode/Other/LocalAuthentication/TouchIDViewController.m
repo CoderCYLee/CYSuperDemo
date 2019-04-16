@@ -25,15 +25,15 @@
     NSError *error = nil;
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-        
+
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"通过Home键验证已有指纹" reply:^(BOOL success, NSError * _Nullable error) {
-            
+
             if (success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     NSLog(@"TouchID 验证成功");
                 });
             } else if (error){
-                
+
                 switch (error.code) {
                     case LAErrorAuthenticationFailed:{
                         dispatch_async(dispatch_get_main_queue(), ^{
@@ -100,12 +100,26 @@
                 }
             }
         }];
-        
+
     } else {
-        
+
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"当前设备不支持TouchID");
         });
+        //创建安全验证对象
+        LAContext * con = [[LAContext alloc] init];
+        //判断是否支持密码验证
+        /**
+         *LAPolicyDeviceOwnerAuthentication 手机密码的验证方式
+         *LAPolicyDeviceOwnerAuthenticationWithBiometrics 指纹的验证方式
+         */
+        BOOL can = [con canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error];
+        if (can) {
+            [con evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"验证信息" reply:^(BOOL success, NSError * _Nullable error) {
+                NSLog(@"%d,%@",success,error);
+            }];
+            
+        }
         
     }
     

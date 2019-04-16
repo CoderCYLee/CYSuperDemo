@@ -21,7 +21,7 @@
     
     LAContext *context = [[LAContext alloc] init];
     
-    context.localizedFallbackTitle = @"通过Home键验证已有指纹";
+    context.localizedFallbackTitle = @"通过FaceID验证";
     
     NSError *error = nil;
     

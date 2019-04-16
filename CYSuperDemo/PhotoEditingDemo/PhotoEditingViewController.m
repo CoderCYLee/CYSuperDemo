@@ -71,7 +71,18 @@
     // If you returned YES from canHandleAdjustmentData:, contentEditingInput has the original image and adjustment data.
     // If you returned NO, the contentEditingInput has past edits "baked in".
     PHAdjustmentData *adjustmentData = contentEditingInput.adjustmentData;
-    filterName =  [NSKeyedUnarchiver unarchiveObjectWithData:adjustmentData.data];
+    
+    if (@available(iOS 11.0, *)) {
+        NSError *error = nil;
+        filterName = [NSKeyedUnarchiver unarchivedObjectOfClass:self.class fromData:adjustmentData.data error:&error];
+    } else {
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        filterName = [NSKeyedUnarchiver unarchiveObjectWithData:adjustmentData.data];
+        
+#pragma clang diagnostic pop
+    }
     self.input = contentEditingInput;
     
     if (filterName) {
@@ -90,7 +101,16 @@
         PHContentEditingOutput *output = [[PHContentEditingOutput alloc] initWithContentEditingInput:self.input];
         
         // Provide new adjustments and render output to given location.
-        NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject:filterName];
+        NSData *archivedData = nil;
+        if (@available(iOS 11.0, *)) {
+            archivedData = [NSKeyedArchiver archivedDataWithRootObject:self->filterName requiringSecureCoding:NO error:nil];
+        } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+            archivedData = [NSKeyedArchiver archivedDataWithRootObject:self->filterName];
+#pragma clang diagnostic pop
+        }
+        
         PHAdjustmentData *adjustmentData = [[PHAdjustmentData alloc] initWithFormatIdentifier:@"ckk.photoeditor" formatVersion:@"1.0" data:archivedData];
         output.adjustmentData = adjustmentData;
         

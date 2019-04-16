@@ -77,8 +77,7 @@
 + (BOOL)addressFromString:(NSString *)IPAddress address:(struct sockaddr_in *)address
 {
     if (!IPAddress || ![IPAddress length]) return NO;
-    
-    memset((char *) address, sizeof(struct sockaddr_in), 0);
+    memset((char *) address, sizeof(struct sockaddr_in), sizeof(0));
     address->sin_family = AF_INET;
     address->sin_len = sizeof(struct sockaddr_in);
     
