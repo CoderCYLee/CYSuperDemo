@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Foundation</string>
+	<string>UIKit</string>
+	<string>Accounts</string>
+	<string>AddressBook</string>
+	<string>AdSupport</string>
+	<string>ARKit</string>
+	<string>AudioToolbox</string>
+	<string>AuthenticationServices</string>
+	<string>AVFoundation</string>
+	<string>AVKit</string>
+	<string>BusinessChat</string>
+	<string>CallKit</string>
+	<string>CarPlay</string>
+	<string>CloudKit</string>
+	<string>Contacts</string>
+	<string>CoreAudioKit</string>
+	<string>CoreBluetooth</string>
+	<string>CoreML</string>
+	<string>CoreMotion</string>
+	<string>CoreNFC</string>
+	<string>CoreSpotlight</string>
+	<string>CoreTelephony</string>
+	<string>CoreText</string>
+	<string>CoreVideo</string>
+	<string>DeviceCheck</string>
+	<string>EventKit</string>
+	<string>HealthKit</string>
+	<string>IAD</string>
+	<string>LocalAuthentication</string>
+	<string>MapKit</string>
+	<string>MediaPlayer</string>
+	<string>Network</string>
+	<string>PassKit</string>
+	<string>PDFKit</string>
+	<string>PushKit</string>
+	<string>QuickLook</string>
+	<string>ReplayKit</string>
+	<string>SafariServices</string>
+	<string>Speech</string>
+	<string>StoreKit</string>
+	<string>UserNotifications</string>
+</array>
+</plist>

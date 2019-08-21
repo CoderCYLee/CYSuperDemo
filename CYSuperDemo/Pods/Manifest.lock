@@ -39,14 +39,14 @@ PODS:
   - CubeController (1.2.1)
   - DACircularProgress (2.3.1)
   - DateTools (2.0.0)
-  - DeviceUtil (5.0.0)
-  - DTCoreText (1.6.21):
-    - DTCoreText/Core (= 1.6.21)
+  - DeviceUtil (5.1.0)
+  - DTCoreText (1.6.22):
+    - DTCoreText/Core (= 1.6.22)
     - DTFoundation/Core (~> 1.7.5)
     - DTFoundation/DTAnimatedGIF (~> 1.7.5)
     - DTFoundation/DTHTMLParser (~> 1.7.5)
     - DTFoundation/UIKit (~> 1.7.5)
-  - DTCoreText/Core (1.6.21):
+  - DTCoreText/Core (1.6.22):
     - DTFoundation/Core (~> 1.7.5)
     - DTFoundation/DTAnimatedGIF (~> 1.7.5)
     - DTFoundation/DTHTMLParser (~> 1.7.5)
@@ -75,7 +75,7 @@ PODS:
   - iCarousel (1.8.3)
   - IGLDropDownMenu (1.0.0)
   - IQActionSheetPickerView (1.0.8)
-  - IQKeyboardManager (6.2.1)
+  - IQKeyboardManager (6.4.0)
   - JazzHands (2.0.8)
   - JJTabBarController (1.0.0)
   - KGModal (1.1.0)
@@ -89,8 +89,8 @@ PODS:
   - MBProgressHUD (0.9.2)
   - MDRadialProgress (1.3.2)
   - MGSwipeTableCell (1.5.6)
-  - MJExtension (3.0.16)
-  - MJRefresh (3.1.16)
+  - MJExtension (3.1.0)
+  - MJRefresh (3.2.0)
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
@@ -117,9 +117,9 @@ PODS:
   - REValidation (0.1.4)
   - RWDropdownMenu (1.0.3)
   - SAMTextView (0.2.2)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - SDWebImage (3.8.3):
+    - SDWebImage/Core (= 3.8.3)
+  - SDWebImage/Core (3.8.3)
   - StyledPageControl (1.0)
   - SVProgressHUD (2.2.5)
   - SWTableViewCell (0.3.7)
@@ -294,8 +294,8 @@ SPEC CHECKSUMS:
   CubeController: 817245a45f97b1285b0490440859bd3728f3c1ef
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
-  DeviceUtil: effb5fd6d301a1bd42e0ac367b3391696651431e
-  DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
+  DeviceUtil: e8de8005f896a082dbb39cfc7ffe11e2f8d218a3
+  DTCoreText: ad5135357a0e792f735970ed67d3ecda8b602d3d
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   DWBubbleMenuButton: 4d9bdbb9d662bdf65c93ceb7fc65901871143d1e
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -312,7 +312,7 @@ SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IGLDropDownMenu: 6fb4338dbf7092db9086ce61efd60c01d4ef717b
   IQActionSheetPickerView: 389b565a788b601cd0a4009cb4ba4debd94acfd2
-  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
   JJTabBarController: c031ad6dd78746fc172711dfdb731ada1802e2a9
   KGModal: 57277ac326498d9eebcdc677a59ff4528b21935f
@@ -326,8 +326,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MDRadialProgress: 1068574b9b4b870f64b605b07f734385bde5104d
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
-  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   MYBlurIntroductionView: b12651c25574580472ff34989a4c5b81c157009f
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
@@ -342,7 +342,7 @@ SPEC CHECKSUMS:
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
   RWDropdownMenu: c7fda4b7adf4f3f63a46d96359c2f490a7713795
   SAMTextView: 979c43bb1fa5859ddfbfeb35e9c296a2b0ec55fd
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
   StyledPageControl: b49f33cb65b99370a78a490fac127b1ca6472fd0
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
@@ -354,6 +354,6 @@ SPEC CHECKSUMS:
   UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 49c5d1a52acaeb36c6775f2b9b1a031f4a0b96d2
+PODFILE CHECKSUM: 789f7b1a16e9511dfa876c129a3b9222ddd15823
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4

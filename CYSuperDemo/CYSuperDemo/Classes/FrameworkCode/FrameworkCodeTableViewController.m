@@ -57,7 +57,9 @@
 - (NSArray *)titleArr
 {
     if (!_titleArr) {
-        _titleArr = @[@"Foundation", @"UIKit", @"Accounts", @"AddressBook", @"AdSupport", @"ARKit", @"AudioToolbox", @"AuthenticationServices", @"AVFoundation", @"AVKit", @"BusinessChat", @"CallKit", @"CarPlay", @"CloudKit", @"Contacts", @"CoreAudioKit", @"CoreBluetooth", @"CoreML", @"CoreMotion", @"CoreNFC", @"CoreSpotlight", @"CoreTelephony", @"CoreText", @"CoreVideo", @"DeviceCheck", @"EventKit", @"HealthKit", @"IAD", @"LocalAuthentication", @"MapKit", @"MediaPlayer", @"Network", @"PassKit", @"PDFKit", @"PushKit", @"QuickLook", @"ReplayKit", @"SafariServices", @"Speech", @"StoreKit", @"UserNotifications"];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"FrameworkList" ofType:@"plist"];
+        _titleArr = [NSArray arrayWithContentsOfFile:path];
     }
     return _titleArr;
 }

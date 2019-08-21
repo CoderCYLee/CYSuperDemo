@@ -39,6 +39,9 @@
 		E72BE2D921D462A1000BF716 /* PDFSeachCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72BE2D521D4629B000BF716 /* PDFSeachCell.xib */; };
 		E72BE2E121D47558000BF716 /* CoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2E021D47558000BF716 /* CoreTextViewController.m */; };
 		E72BE2E421D4A1F5000BF716 /* CTDemoView1.m in Sources */ = {isa = PBXBuildFile; fileRef = E72BE2E321D4A1F5000BF716 /* CTDemoView1.m */; };
+		E731E520230D20E000DF7B64 /* FrameworkList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E731E51F230D20E000DF7B64 /* FrameworkList.plist */; };
+		E731E521230D20E000DF7B64 /* FrameworkList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E731E51F230D20E000DF7B64 /* FrameworkList.plist */; };
+		E731E522230D20E000DF7B64 /* FrameworkList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E731E51F230D20E000DF7B64 /* FrameworkList.plist */; };
 		E74EC0EE219D406C0017A64D /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */; };
 		E74EC0EF219D406C0017A64D /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D0219D406C0017A64D /* ContactsViewController.m */; };
 		E74EC0F0219D406C0017A64D /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74EC0D3219D406C0017A64D /* NetworkViewController.m */; };
@@ -448,6 +451,7 @@
 		E72BE2E021D47558000BF716 /* CoreTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextViewController.m; sourceTree = "<group>"; };
 		E72BE2E221D4A1F5000BF716 /* CTDemoView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTDemoView1.h; sourceTree = "<group>"; };
 		E72BE2E321D4A1F5000BF716 /* CTDemoView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTDemoView1.m; sourceTree = "<group>"; };
+		E731E51F230D20E000DF7B64 /* FrameworkList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FrameworkList.plist; sourceTree = "<group>"; };
 		E74EC0CB219D406C0017A64D /* MediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; };
 		E74EC0CC219D406C0017A64D /* MediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
 		E74EC0CF219D406C0017A64D /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
@@ -1597,6 +1601,7 @@
 		E778089721952CE000E94CD3 /* FrameworkCode */ = {
 			isa = PBXGroup;
 			children = (
+				E731E51F230D20E000DF7B64 /* FrameworkList.plist */,
 				E778093721995F3000E94CD3 /* FrameworkCodeTableViewController.h */,
 				E778093821995F3000E94CD3 /* FrameworkCodeTableViewController.m */,
 				E77808D721952CE000E94CD3 /* Foundation */,
@@ -2478,6 +2483,7 @@
 				E72BE2C921D374FA000BF716 /* PDFThumbnailCell.xib in Resources */,
 				E792EDB121D4C87400D35F21 /* AccountsDetailViewController.xib in Resources */,
 				E781AFC321C3A9D700AA845B /* gif1.gif in Resources */,
+				E731E520230D20E000DF7B64 /* FrameworkList.plist in Resources */,
 				E7EE6C3121D34A3C005B2E9C /* pdf2.pdf in Resources */,
 				E7EE6C4421D36D20005B2E9C /* 滴滴出行iOS端瘦身实践.pdf in Resources */,
 				E7F73D5B21C0F6E4000ACDF4 /* Localizable.strings in Resources */,
@@ -2502,6 +2508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E731E521230D20E000DF7B64 /* FrameworkList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2509,6 +2516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E731E522230D20E000DF7B64 /* FrameworkList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2724,6 +2732,7 @@
 				"${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-star.png",
 				"${PODS_ROOT}/AwesomeMenu/AwesomeMenu/Images/icon-star@2x.png",
 				"${PODS_ROOT}/BButton/BButton/resources/FontAwesome.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DTCoreText/Resources.bundle",
 				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/DeviceUtil/DeviceUtil.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
@@ -2779,6 +2788,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon-star.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon-star@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DeviceUtil.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",

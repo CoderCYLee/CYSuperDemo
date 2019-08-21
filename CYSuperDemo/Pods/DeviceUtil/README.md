@@ -7,9 +7,9 @@ pod 'DeviceGuru'
 
 *DeviceUtil* helps identifying the exact harware type of the device. e.g. iPhone 6 or iPhone 6s.
 
-  - Easy to use
-  - Light weight
-  
+- Easy to use
+- Light weight
+
 **From version `4.0.2` it can also identify the simulator type, whether it's iPhone XR or iPhone 6**
 
 
@@ -25,10 +25,10 @@ pod 'DeviceUtil'
 
 ### Usage
 ```sh
-  DeviceUtil *deviceUtil = [[DeviceUtil alloc] init];
-  if ([deviceUtil hardware] == IPHONE_5C) {
-    NSLog(@"Device is iPhone 5c");
-  }
+DeviceUtil *deviceUtil = [[DeviceUtil alloc] init];
+if ([deviceUtil hardware] == IPHONE_5C) {
+NSLog(@"Device is iPhone 5c");
+}
 ```
 
 ### Device codes
@@ -97,9 +97,9 @@ iPad Mini Retina CDMA  | ```ipad_MINI_RETINA_WIFI_CDMA``` | ```iPad4,5```
 iPad Mini Retina Cellular CN  | ```ipad_MINI_RETINA_WIFI_CELLULAR_CN``` | ```iPad4,6```
 iPad Mini 3  | ```ipad_MINI_3_WIFI``` | ```iPad4,7```
 iPad Mini 3 Cellular  | ```ipad_MINI_3_WIFI_CELLULAR``` | ```iPad4,8```
-iPad Mini 4  | ```ipad_MINI_4_WIFI``` | ```iPad5.1```
-iPad Mini 4 Cellular  | ```ipad_MINI_4_WIFI_CELLULAR``` | ```iPad5.2```
-iPad Air 2  | ```ipad_AIR_2_WIFI``` | ```iPad5.3```
+iPad Mini 4  | ```ipad_MINI_4_WIFI``` | ```iPad5,1```
+iPad Mini 4 Cellular  | ```ipad_MINI_4_WIFI_CELLULAR``` | ```iPad5,2```
+iPad Air 2  | ```ipad_AIR_2_WIFI``` | ```iPad5,3```
 iPad Pro 9.7 Wifi Only  | ```ipad_PRO_97_WIFI``` | ```iPad6,3```
 iPad Pro 9.7 Wifi + Cellular  | ```ipad_PRO_97_WIFI_CELLULAR``` | ```iPad6,4```
 iPad Pro  | ```ipad_PRO_WIFI``` | ```iPad6,7```
@@ -112,15 +112,28 @@ iPad Pro 10.5-Inch (Wi-Fi Only) | ```ipad_PRO_105_WIFI``` | ```iPad7,3```
 iPad Pro 10.5-Inch (Wi-Fi/Cellular) | ```ipad_PRO_105_WIFI_CELLULAR``` | ```iPad7,4```
 iPad 9.7-Inch 6th Gen Wifi  | ```ipad_6_WIFI``` | ```iPad7,5```
 iPad 9.7-Inch 6th Gen Wifi + Cellular | ```ipad_6_WIFI_CELLULAR``` | ```iPad7,6```
+iPad Pro 11-Inch (Wi-Fi Only) | ```IPAD_PRO_11_WIFI``` | ```iPad8,1```
+iPad Pro 11-Inch 1TB (Wi-Fi Only) | ```IPAD_PRO_11_1TB_WIFI``` | ```iPad8,2```
+iPad Pro 11-Inch (Wi-Fi/Cellular) | ```IPAD_PRO_11_WIFI_CELLULAR``` | ```iPad8,3```
+iPad Pro 11-Inch 1TB (Wi-Fi/Cellular) | ```IPAD_PRO_11_1TB_WIFI_CELLULAR``` | ```iPad8,4```
+iPad Pro 12.9-Inch (Wi-Fi Only - 3rd Gen) | ```IPAD_PRO_3G_WIFI``` | ```iPad8,5```
+iPad Pro 12.9-Inch 1TB (Wi-Fi Only - 3rd Gen) | ```IPAD_PRO_3G_1TB_WIFI``` | ```iPad8,6```
+iPad Pro 12.9-Inch (Wi-Fi/Cell - 3rd Gen) | ```IPAD_PRO_3G_WIFI_CELLULAR``` | ```iPad8,7```
+iPad Pro 12.9-Inch 1TB (Wi-Fi/Cell - 3rd Gen) | ```IPAD_PRO_3G_1TB_WIFI_CELLULAR``` | ```iPad8,8```
+iPad mini 5 (Wi-Fi Only) | ```IPAD_MINI_5_WIFI``` | ```iPad11,1```
+iPad mini 5 (Wi-Fi/Cellular) | ```IPAD_MINI_5_WIFI_CELLULAR``` | ```iPad11,2```
+iPad Air 3 (Wi-Fi) | ```IPAD_AIR_3_WIFI``` | ```iPad11,3```
+iPad Air 3 (Wi-Fi + Cellular) | ```IPAD_AIR_3_WIFI_CELLULAR``` | ```iPad11,4```
 
 ##### Apple TV
 Device | hardware() | hardwareString()
 --- | --- | ---
-Apple TV 1G | ```appleTV_1G``` | ```appleTV1,1```
-Apple TV 2G | ```appleTV_2G``` | ```appleTV2,1```
-Apple TV 3G | ```appleTV_3G``` | ```appleTV3,1```
-Apple TV 3G rev A | ```appleTV_3_2G``` | ```appleTV3,2```
-Apple TV 4G | ```appleTV_4G``` | ```appleTV5,3```
+Apple TV 1G | ```APPLE_TV_1G``` | ```AppleTV1,1```
+Apple TV 2G | ```APPLE_TV_2G``` | ```AppleTV2,1```
+Apple TV 3G | ```APPLE_TV_3G``` | ```AppleTV3,1```
+Apple TV 3G rev A | ```APPLE_TV_3_2G``` | ```AppleTV3,2```
+Apple TV 4G | ```APPLE_TV_4G``` | ```AppleTV5,3```
+Apple TV 4K | ```APPLE_TV_4K``` | ```AppleTV6,2```
 
 ##### Apple Watch
 Device | hardware() | hardwareString()
@@ -151,5 +164,6 @@ Send the pull request :)
 
 ### License
 MIT
+
 
 
